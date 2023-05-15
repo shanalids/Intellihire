@@ -22,7 +22,7 @@
 
 ***MEMBER DETAILS***
 
-| IT NUMBER | NAME | COMPONENT TOPIC |
+| **IT NUMBER** | **NAME** | **COMPONENT TOPIC** |
 | ------ | ------ | ------ |
 | IT20207854 | De Silva M. (Leader) | Personality Prediction of Candidates |
 | IT20231200 | Zoysa E. S. | Professional User Profiling Using Digital Footprints |
