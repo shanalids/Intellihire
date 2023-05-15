@@ -1,4 +1,4 @@
-CV ANALYSIS AND OPTIMIZING THE RECRUITMENT PROCESS IN THE IT INDUSTRY USING MACHINE LEARNING
+**CV ANALYSIS AND OPTIMIZING THE RECRUITMENT PROCESS IN THE IT INDUSTRY USING MACHINE LEARNING**
 
 * **Research Objective:** Develop a system to comprehensively evaluate a candidate in all key areas and streamline the recruitment process
 
