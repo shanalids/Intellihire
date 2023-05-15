@@ -22,7 +22,12 @@
 
 ***MEMBER DETAILS***
 
-1. IT20207854 - De Silva M. (Leader)
-2. IT20231200 - Zoysa E. S.
-3. IT20203726 - Maldeniya M. M. D.
-4. IT20216900 - De Silva S. R.
+| IT NUMBER | NAME | COMPONENT TOPIC |
+| ------ | ------ | ------ |
+| IT20207854 | De Silva M. (Leader) | Personality Prediction of Candidates |
+| IT20231200 | Zoysa E. S. | Professional User Profiling Using Digital Footprints |
+| IT20203726 | Maldeniya M. M. D. | Optimizing Candidate Selection through CV and Job Description Matching Techniques |
+| IT20216900 | De Silva S. R. | Analyzing the Academic Transcript to Understand the Types of Skills and Knowledge that a Candidate has Gained During Their Degree Program |
+
+
+
