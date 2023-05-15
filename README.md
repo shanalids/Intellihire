@@ -1,3 +1,5 @@
+***PROJECT DETAILS***
+
 **CV ANALYSIS AND OPTIMIZING THE RECRUITMENT PROCESS IN THE IT INDUSTRY USING MACHINE LEARNING**
 
 * **Research Objective:** Develop a system to comprehensively evaluate a candidate in all key areas and streamline the recruitment process
@@ -15,3 +17,11 @@
     2. **IT20231200** - 
     3. **IT20203726** - 
     4. **IT20216900** - 
+
+
+***MEMBER DETAILS***
+
+1. IT20207854 - De Silva M. (Leader)
+2. IT20231200 - Zoysa E. S.
+3. IT20203726 - Maldeniya M. M. D.
+4. IT20216900 - De Silva S. R.
