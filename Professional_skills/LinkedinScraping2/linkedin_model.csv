@@ -1,0 +1,1252 @@
+index,category,clean_skills
+1,HR,"['Performance Management', 'Human Resources', 'Talent Management', 'Talent Acquisition', 'Recruiting', 'Strategy', 'Change Management', 'Deferred Compensation', 'Strategic HR', 'HR Policies', 'Compensation & Benefits', 'Business Strategy', 'Strategic Human Resource Planning', 'Succession Planning', 'Vendor Management', 'Workforce Planning', 'HRIS', 'Personnel Management', 'Employee Relations', 'Management', 'Employee Engagement', 'Leadership', 'Team Management', 'Conflict Management', 'People Skills', 'Performance Appraisal', 'Organizational Structure', 'Certified career coach', 'Certified Hogan assessor and coach']"
+2,HR,"['Talent Acquisition', 'Employee Engagement', 'Vendor Management', 'Human Resources', 'Recruiting', 'Performance Management', 'HR Policies', 'Resource Management', 'Program Management', 'Benefits Negotiation', 'CRM', 'SDLC', 'Telecommunications', 'Change Management', 'VAS', 'Project Planning', 'Strategic HR', 'Customer Relationship Management \\(CRM\\)', 'Budgets', 'HR Transformation', 'Service Delivery', 'Strategy', 'HRIS', 'MIS', 'Talent Management', 'Team Management', 'Employee Relations', 'Performance Appraisal', 'Personnel Management', 'Strategic Partnerships', 'Training Delivery', 'Management', 'Incentive Programs']"
+3,HR,"['Human Resources', 'Recruiting', 'Team Management', 'Talent Acquisition', 'Technical Recruiting', 'Screening', 'Vendor Management', 'SDLC', 'Business Development', 'Market Research', 'Strategic Planning', 'College Recruiting', 'Resource Management', 'Benefits Negotiation', 'Performance Management', 'Hiring', 'Executive Search', 'Management', 'Talent Management', 'Sourcing', 'Training', 'Employee Relations']"
+4,HR,['']
+5,HR,"['Team Management', 'Human Resources', 'Employee Engagement', 'Talent Acquisition', 'Deferred Compensation', 'ERP', 'SDLC', 'HR Consulting', 'Change Management', 'Strategic HR', 'Business Process Improvement', 'MIS', 'HRIS', 'PeopleSoft', 'Cognos', 'Management', 'Personnel Management', 'Talent Management', 'Employee Relations', 'Performance Appraisal', 'Process Improvement', 'Shared Services']"
+6,HR,"['Human Resources', 'Employee Engagement', 'Performance Appraisal', 'Performance Management', 'Benefits Negotiation', 'HRIS', 'Team Management', 'Management', 'Talent Management', 'Employee Relations', 'Negotiation', 'Team Building', 'Personnel Management']"
+7,HR,"['Retail Banking', 'Banking', 'Team Management', 'Branch Banking', 'Human Resources', 'Business Development', 'Vendor Management', 'Cross Selling', 'Strategic HR', 'MIS', 'Management Information Systems \\(MIS\\)', 'Management', 'Employee Engagement']"
+8,HR,"['Talent Management', 'Human Resources', 'Employee Engagement']"
+9,HR,"['Requirements Analysis', 'Software Project Management', 'Pre-sales', 'Agile Methodologies', 'Vendor Management', 'Business Analysis', 'SDLC', 'Program Management', 'Project Management', 'Business Intelligence', 'Product Management', 'Outsourcing', 'Business Strategy', 'Business Development', 'Project Planning', 'Sales Enablement', 'SOA', 'Global Delivery', 'Solution Architecture', '.NET', 'SaaS', 'Team Management']"
+10,HR,"['Performance Management', 'Employee Engagement', 'Training']"
+11,HR,"['Recruiting', 'Human Resources', 'Performance Appraisal', 'Strategic Human Resource Planning', 'Strategic HR', 'Technical Recruiting', 'Screening', 'Talent Acquisition', 'JavaScript', 'HRIS', 'Human Resources Information Systems \\(HRIS\\)', 'Management Information Systems \\(MIS\\)', 'MIS', 'Management', 'Employee Engagement', 'Team Management', 'Interviewing', 'Employee Relations', 'Sourcing', 'Team Leadership', 'Interviews']"
+12,HR,"['Administration:Coordinating & Handling operation works', 'keeping records \\(soft']"
+13,HR,"['Talent Management', 'Human Resources', 'Employee Engagement']"
+14,HR,"['Compensation & Benefits', 'HR Operations', 'Labor Relations', 'Employee Benefits', 'Team Management', 'Management', 'HR Analytics', 'HRIS Database Management', 'Employee Wellness']"
+15,HR,['']
+16,HR,"['Leadership', 'Strategic Human Resource Planning', 'Talent Management', 'Talent Acquisition', 'Onboarding', 'New Hire Orientations', 'Manpower Planning', 'Recruitment and Selection', 'Succession Planning', 'Performance Management', 'Organizational Development', 'Employee Relations', 'Exit Management', 'Stakeholder Management', 'Employee Engagement', 'Team Management', 'Career Development', 'Counseling', 'Conflict Resolution', 'Staff Retention', 'Employee Surveys', 'Coaching and Mentoring', 'Employee Grievance', 'Reward and Recognition']"
+17,HR,['']
+18,HR,"['HRIS', 'Human Resources', 'Employee Training', 'Performance Management', 'Recruiting', 'Strategic HR', 'Payroll', 'Benefits Administration', 'Screening', 'Business Strategy', 'Manpower Planning', 'Sourcing', 'Employee Relations', 'Talent Management', 'Training', 'Team Management', 'Management', 'Performance Appraisal', 'Training & Development']"
+19,HR,"['Performance Appraisal', 'HR Policies', 'Employee Relations', 'Recruiting', 'Human Resources', 'Strategic HR', 'Performance Management', 'Payroll', 'Screening', 'HR Consulting', 'Strategic Human Resource Planning', 'Talent Acquisition', 'Recruitments', 'HRIS', 'Human Resources Information Systems \\(HRIS\\)', 'Employee Engagement', 'Personnel Management', 'Industrial Relations', 'Talent Management', 'Training', 'Sourcing', 'Organizational Development', 'Labor Relations']"
+20,HR,"['Microsoft Office', 'Customer Service', 'Management']"
+21,HR,"['Recruiting', 'Employee Engagement', 'Team Management', 'Human Resources', 'Talent Acquisition', 'Payroll', 'Performance Management', 'Vendor Management', 'Recruitments', 'Sales', 'Technical Recruiting', 'Screening', 'Executive Search', 'MIS', 'Performance Appraisal', 'Training', 'Talent Management', 'Employee Relations', 'HR Automation']"
+22,HR,"['Microsoft Office', 'Microsoft Excel', 'Microsoft Word']"
+23,HR,"['HR Analytics', 'Workforce Analytics', 'Business Analytics', 'Project Management', 'Compensation & Benefits', 'Human Resources', 'Strategy', 'HR Policies', 'Customer Relationship Management \\(CRM\\)', 'Microsoft Office', 'Microsoft Excel', 'MIS Reporting', 'Management', 'Team Management', 'Training', 'Leadership', 'Employee Relations', 'Talent Management', 'Descriptive Analytics/Business Intelligence', 'Predictive Analytics', 'Prescriptive Analytics', 'Advanced knowledge in Microsoft Office', 'HR Dashboard', 'Total Rewards Strategies', 'Redundancy Programmes', 'People Analytics']"
+24,HR,"['Management', 'Microsoft Office', 'Screening']"
+25,HR,"['Business Analysis', 'Vendor Management', 'Team Management']"
+26,HR,['']
+27,HR,"['Operations Management', 'Program Management', 'Talent Management']"
+28,HR,"['Agile Methodologies', 'Software Project Management', 'Requirements Analysis']"
+29,HR,"['HR Policies', 'Management', 'Performance Appraisal', 'Human Resources', 'Recruiting', 'Marketing', 'Market Research', 'HR Consulting', 'Screening', 'Strategic Planning', 'Employer Branding', 'Performance Management', 'Vendor Management', 'Benefits Negotiation', 'Business Development', 'Marketing Strategy', 'Talent Acquisition', 'Recruitments', 'Strategic HR', 'Business Planning', 'Strategic Human Resource Planning', 'MIS', 'Team Management', 'Employee Engagement', 'Training', 'Sourcing', 'Employee Relations', 'Talent Management', 'Personnel Management', 'Interviews', 'New Business Development']"
+30,HR,['']
+31,HR,['']
+32,HR,['']
+33,HR,"['Employee Engagement', 'Performance Management', 'Recruiting', 'Human Resources', 'Talent Acquisition', 'Screening', 'Recruitments', 'Vendor Management', 'Business Development', 'Technical Recruiting', 'Business Strategy', 'HR Policies', 'HR Consulting', 'Compensation & Benefit', 'Compensation & Benefits', 'HRIS', 'Human Resources Information Systems \\(HRIS\\)', 'Team Management', 'Talent Management', 'Personnel Management', 'Management', 'Sourcing', 'Organizational Development', 'Employee Relations', 'Performance Appraisal', 'Leadership']"
+34,HR,"['Strategy', 'Human Resources', 'Management', 'Change Management', 'Program Management', 'Project Planning', 'Business Development', 'Leadership', 'Talent Management', 'Team Management', 'Stakeholder Management', 'Personnel Management', 'Employee Engagement', 'Performance Appraisal']"
+35,HR,"['Recruiting', 'Talent Acquisition', 'Human Resources', 'Screening', 'Technical Recruiting', 'Manufacturing', 'Automotive', 'Performance Management', 'Engineering', 'HR Policies', 'Business Intelligence', 'Operations Management', 'Benefits Negotiation', 'Research', 'Internal Communications', 'Telecommunications', 'Onboarding', 'College Recruiting', 'Hiring', 'Vendor Management', 'MIS', 'Microsoft Office', 'Management Information Systems \\(MIS\\)', 'Leadership', 'Employee Relations', 'Employee Engagement', 'Sourcing', 'Personnel Management', 'Negotiation', 'Time Management', 'People Skills', 'Team Management', 'Interviewing', 'Mentoring', 'Networking', 'Coordination', 'Recruitment / Training / PMS / Employee Relations']"
+36,HR,['']
+37,HR,"['Personnel Management', 'Human Resources', 'Team Management']"
+38,HR,"['Talent Acquisition', 'Employee Relations', 'Team Management', 'End to End Recruitments', 'Recruiting', 'Vendor Management', 'Succession Planning', 'Onboarding', 'Performance Management', 'Human Resources', 'New Hire Orientations', 'Temporary Placement', 'Technical Recruiting', 'Screening', 'Hiring', 'executive recruitment', 'HR Business Partner', 'Employee Engagement', 'Management', 'Talent Management', 'Leadership', 'Interviews', 'Sourcing', 'Interviewing', 'Induction Program', 'Process Improvement', 'Talent Scouting']"
+39,HR,"['HR Policy Formulation', 'Compensation & Benefits', 'Performance Management', 'Human Resources', 'Business Strategy', 'Recruiting', 'PowerPoint', 'Microsoft Office', 'Microsoft Excel', 'Human Resources Information Systems \\(HRIS\\)', 'Management', 'Team Management', 'Teamwork', 'Employee Engagement', 'SuccessFactors', 'Employee Learning & Development', 'HR Strategy']"
+40,HR,"['Human Resources', 'Training', 'Team Building', 'Recruiting', 'Change Management', 'Strategic Planning', 'Performance Management', 'Strategy', 'Management Consulting', 'Talent Acquisition', 'Operations Management', 'Organizational Development', 'Industrial Relations', 'Employee Engagement', 'Leadership', 'Personnel Management']"
+41,HR,"['Human Resources', 'Personnel Management', 'Performance Appraisal', 'HR Policies', 'Talent Acquisition', 'Job Descriptions', 'Deferred Compensation', 'HR Consulting', 'Strategic HR', 'Performance Management', 'Recruiting', 'Recruitments', 'Screening', 'HRIS', 'Employee Engagement', 'Employee Relations', 'Sourcing', 'Talent Management']"
+42,HR,"['Management', 'Team Management', 'Recruiting']"
+43,HR,"['Team Management', 'Microsoft Office', 'Microsoft Excel']"
+44,HR,['']
+45,HR,"['Business Development', 'Management', 'Human Resources']"
+46,HR,"['Human Resources', 'Team Management', 'Onboarding']"
+47,HR,"['Talent Acquisition', 'Leadership', 'Human Resources', 'Onboarding', 'Recruiting', 'Screening Resumes', 'Performance Management', 'Retail', 'Microsoft Office', 'Team Building', 'Employee Relations', 'Talent Management', 'Customer Service', 'Employee Training', 'Sourcing', 'Time Management', 'Training', 'Management', 'Negotiation', 'Staff Development', 'Interviews', 'Industrial Relations', 'Interviewing', 'Labor Relations', 'Human Capital']"
+48,HR,"['Microsoft Excel', 'HR Analytics', 'Talent Acquisition', 'Research', 'Start-ups', 'Information Technology', 'Banking', 'Applicant Tracking Systems', 'Talent Management', 'Client Co-ordination', 'Stakeholders Managment', 'Data Science and Analytice Hiring', 'Data Communication Hiring', 'Socila Media Hiring', 'Report']"
+49,HR,['']
+50,HR,"['Human Resources', 'Recruiting', 'Management']"
+51,Designing,"['Architecture', 'Interior Design', 'Project Management']"
+52,Designing,"['Packaging Design', 'Watercolor Illustration', 'Social Media Marketing']"
+53,Designing,"['Microsoft Office', 'Apparel', 'Fashion Illustration', 'Market Research', 'Real Estate', 'Textiles', 'Wovens', 'Denim', 'Fashion Design', 'Knitwear', 'Fashion', 'Trend Analysis', 'Styling', 'Sportswear', 'Textile Design', 'Merchandising', 'Product Development', 'Sketching', 'Fashion Buying', 'Fashion Shows', 'Trend Forecasting', 'Footwear', 'Visual Merchandising', 'Retail', 'Microsoft Excel', 'Photoshop', 'Illustrator', 'XML', 'Sourcing', 'Draping', 'Pattern', 'Embroidery', 'Textile Industry', 'Outerwear', 'Shirts', 'Leather', 'Fabric Development', 'Dyeing', 'Fit', 'Dresses', 'Tech Packs', 'Mood Boards', 'Garment Manufacturing', 'Trend']"
+54,Designing,['']
+55,Designing,"['Sketching', 'Industrial Design', 'Architectural Design', 'User-centered Design', 'Rendering', 'Design Research', 'Drawing', 'Architecture', 'Design Strategy', 'Research Design', 'Packaging', 'Packaging Design', 'Concept Development', 'Interior Design', 'Interaction Design', 'Concept Design', 'Photoshop', 'Toys', 'Toy Design']"
+56,Designing,['Sketching']
+57,Designing,"['Architectural Design', 'Architecture', 'Design Research', 'Photography', 'Sketching', 'Interior Design', 'Urban Design', 'Graphic Design', 'Interior Architecture', 'Revit', 'AutoCAD', 'SketchUp', 'Adobe Photoshop', 'Adobe Indesign CC', 'AutoCAD Architecture', 'Architectural Modeling', 'Architectural Photography', 'Urban', 'Architecture Master planning']"
+58,Designing,"['Project Planning', 'Construction', 'Consulting']"
+59,Designing,"['Microsoft Office', 'AutoCAD', 'Microsoft Word', 'Architecture', 'Strategic Planning', 'Design', 'Architectural Design', 'Interior Design', 'Sustainable Design', 'Sketching', 'Construction', 'Landscape Design', 'Photography', 'Design Research', 'SketchUp', 'Photoshop', 'PowerPoint', 'Adobe Photoshop', 'AutoCAD Architecture', 'Corel Draw', '3D Studio Max', 'Revit', 'Management', 'Customer Service', 'Leadership', 'Public Speaking']"
+60,Designing,"['Project Management', 'AutoCAD', 'New Business Development']"
+61,Designing,"['Interior Design', 'Interior Architecture', 'SketchUp']"
+62,Designing,['']
+63,Designing,"['Graphic Design', 'Web Design', 'Layout']"
+64,Designing,"['Design Thinking', 'Research Design', 'Trend Research']"
+65,Designing,['']
+66,Designing,"['Advertising', 'Market Research', 'Marketing Strategy', 'Marketing Communications', 'Business Development', 'CRM', 'Public Relations', 'Copywriting', 'Brand Management', 'Marketing', 'Media Planning', 'Financial Services', 'Marketing Management', 'Customer Relations', 'Business Strategy', 'Media Buying', 'Entrepreneurship', 'Digital Marketing', 'Business Planning', 'Client Acquisition', 'Client Retention', 'Customer Acquisition', 'Strategic Planning', 'Customer Retention', 'Web Design', 'Integrated Marketing', 'Social Media Marketing', 'Marketing Research', 'Management', 'Customer Service', 'Team Management', 'Negotiation', 'Client Relationship Building', 'Leadership', 'Lead Generation', 'Client Service', 'New Business Development', 'Custo']"
+67,Designing,"['Adobe Creative Suite', 'Art Direction', 'Illustration', 'Graphic Design', 'Layout', 'Typography', 'Advertising', 'Creative Direction', 'Interaction Design', 'Graphics', 'Social Media', 'Marketing', 'Magazines', 'User Interface Design', 'Branding', 'Digital Marketing', 'Copywriting', 'Mac', 'Illustrator', 'InDesign', 'Photoshop']"
+68,Designing,['']
+69,Designing,"['Marketing', 'Microsoft PowerPoint', 'Business Development', 'Fast-Moving Consumer Goods \\(FMCG\\)', 'Brand Management', 'Retail Marketing', 'Social Media Marketing', 'Content Development', 'Research', 'Social Media', 'Marketing Strategy', 'Retail', 'Consumer Behavior', 'Graphic Design', 'Event Management ', 'Sales Management', 'B2B Marketing', 'Digital Marketing', 'Branding', 'Advertising', 'International Marketing', 'Microsoft Excel', 'Microsoft Word', 'Microsoft Office', 'Management', 'Customer Service', 'Team Management', 'Presentation Skills', 'Written Communication', 'HubSpot', 'Consumer Goods', 'B2C Marketing', 'Marketing Campaigns', 'Business Administration']"
+70,Designing,['']
+71,Designing,"['Microsoft Office', 'Microsoft Excel', 'Microsoft Word']"
+72,Designing,['']
+73,Designing,"['Architectural Design', 'Graphic Design', 'Project Management']"
+74,Designing,"['Fashion', 'Textiles', 'Team Management']"
+75,Designing,"['Cisco Technologies', 'CCNA', 'Routing']"
+76,Designing,['Fashion Design']
+77,Designing,"['WordPress', 'WooCommerce', 'CodeIgniter']"
+78,Designing,"['Corporate Branding', 'Advertising', 'SEO']"
+79,Designing,['']
+80,Designing,"['Architecture', 'Interior Architecture', 'AutoCAD', 'Project Planning', 'Sustainable Design', 'Construction Drawings', 'Submittals', 'Project Management', 'Real Estate', 'Photoshop', 'SketchUp', 'Microsoft Office', 'InDesign', 'Construction Estimating']"
+81,Designing,"['Architecture', 'Interior Architecture', 'AutoCAD', 'Project Planning', 'Sustainable Design', 'Construction Drawings', 'Submittals', 'Project Management', 'Real Estate', 'Photoshop', 'SketchUp', 'Microsoft Office', 'InDesign', 'Construction Estimating']"
+82,Designing,['']
+83,Designing,"['Strategic Planning', 'Marketing', 'Market Research', 'Business Development', 'Marketing Strategy', 'Customer Relationship Management \\(CRM\\)', 'Social Media', 'Microsoft Office', 'Management', 'Team Management']"
+84,Designing,"['Entrepreneurship', '3D Printing', 'CNC Manufacturing']"
+85,Designing,"['Microsoft Office', 'Management', 'Microsoft Excel']"
+86,Designing,['']
+87,Designing,"['Indesign', 'Illustration', 'Corel Draw']"
+88,Designing,"['Project Management', 'Customer Service', 'AutoCAD', 'Construction', 'Engineering', 'Interior Design', 'Project Planning', 'Strategic Planning', 'Microsoft Excel', 'Microsoft Word', 'Adobe Photoshop', '3D Studio Max', 'Revit', 'Management', 'Leadership', 'Exterior Design']"
+89,Designing,['']
+90,Designing,['']
+91,Designing,"['Engineering', 'CAD', 'Inventor', 'Manufacturing', 'Strategy', 'Project Management', 'Program Management', 'Mechanical Engineering', 'Technical Writing', 'Solution Selling', 'Product Lifecycle Management', 'Sales', 'Product Management', 'Product Development', 'Business Development', 'Sales Operations', 'Software Industry', 'Sheet Metal', 'Product Marketing', 'Strategic Planning', 'CAD/CAM', 'Product Design', 'Cloud Computing', 'Account Management', 'Modeling', 'Channel Partners', 'Pre-sales', '3D visualization', 'Simulations', 'Direct Sales', 'Consulting', 'Go-to-market Strategy', 'CRM', 'AutoCAD', 'Autodesk Inventor', 'Enterprise Software', 'SaaS', 'Solidworks', 'Microsoft Office', 'Salesforce.com', 'Management', 'Strategi']"
+92,Designing,['']
+93,Designing,['']
+94,Designing,"['AutoCAD', 'Revit', 'Pile Foundations']"
+95,Designing,['']
+96,Designing,"['Sketching', 'Design Thinking', 'Photoshop']"
+97,Designing,"['Microsoft Excel', 'Microsoft Office', 'Microsoft Word', 'Strategic Planning', 'Budgets', 'Research', 'PowerPoint', 'Photoshop', 'Windows', 'Outlook', 'HTML', 'Customer Service', 'Public Speaking', 'Teaching', 'English']"
+98,Designing,['']
+99,Designing,"['New Client Acquisitions', 'Product Development', 'Business Development']"
+100,Designing,['']
+101,Managment,['']
+102,Managment,['']
+103,Managment,['']
+104,Managment,"['English', 'Employee Relations', 'Data Presentation', 'Interviewing', 'Coordination', 'Personality Development W/S']"
+105,Managment,"['Tourism', 'Team Management', 'Customer Service', 'Business Development', 'Leisure Travel', 'Travel Management', 'Marketing', 'Microsoft Office', 'PowerPoint', 'Leadership', 'Training', 'Coaching', 'Team Leadership', 'Teamwork', 'New Business Development']"
+106,Managment,['']
+107,Managment,['']
+108,Managment,['']
+109,Managment,['']
+110,Managment,"['Microsoft Office', 'Microsoft PowerPoint', 'Java']"
+111,Managment,"['Tourism', 'Team Management', 'Customer Service', 'Business Development', 'Leisure Travel', 'Travel Management', 'Marketing', 'Microsoft Office', 'PowerPoint', 'Leadership', 'Training', 'Coaching', 'Team Leadership', 'Teamwork', 'New Business Development']"
+112,Managment,"['C++', 'C \\(Programming Language\\)', 'SQL']"
+113,Managment,['']
+114,Managment,"['Customer Service', 'Training', 'Communication']"
+115,Managment,"['IT Service Management', 'Problem Management', 'PRINCE2']"
+116,Managment,['']
+117,Managment,['']
+118,Managment,['']
+119,Managment,"['Team Management', 'Business Development', 'Microsoft Excel', 'Recruiting', 'Talent Acquisition', 'Performance Management', 'Human Resources', 'Business Strategy', 'Internet Recruiting', 'Payroll', 'Technical Recruiting', 'Screening', 'HR Policies', 'Customer Relationship Management \\(CRM\\)', 'HR Consulting', 'Vendor Management', 'Benefits Negotiation', 'Executive Search', 'Administration', 'Strategic Planning', 'Strategic Human Resource Planning', 'Microsoft Office', 'PowerPoint', 'Microsoft Word', 'Human Resources Information Systems \\(HRIS\\)', 'Management Information Systems \\(MIS\\)', 'Employee Relations', 'Personnel Management', 'Talent Management', 'Training', 'Sourcing', 'Employee Engagement', 'Management', 'Teaching', 'Leadership', 'Customer Serv']"
+120,Managment,"['Telecommunications', 'Vendor Management', 'Pre-sales', 'Service Delivery', 'MPLS', 'Managed Services', 'Business Development', 'CRM', 'IP', 'Multiprotocol Label Switching \\(MPLS\\)', 'Product Management', 'Cloud Computing', 'VoIP', 'Broadband', 'Voice over IP \\(VoIP\\)', 'VAS', 'Wireless', 'Customer Relationship Management \\(CRM\\)', 'Team Management']"
+121,Managment,"['Team Management', 'Business Development', 'Microsoft Excel', 'Recruiting', 'Talent Acquisition', 'Performance Management', 'Human Resources', 'Business Strategy', 'Internet Recruiting', 'Payroll', 'Technical Recruiting', 'Screening', 'HR Policies', 'Customer Relationship Management \\(CRM\\)', 'HR Consulting', 'Vendor Management', 'Benefits Negotiation', 'Executive Search', 'Administration', 'Strategic Planning', 'Strategic Human Resource Planning', 'Microsoft Office', 'PowerPoint', 'Microsoft Word', 'Human Resources Information Systems \\(HRIS\\)', 'Management Information Systems \\(MIS\\)', 'Employee Relations', 'Personnel Management', 'Talent Management', 'Training', 'Sourcing', 'Employee Engagement', 'Management', 'Teaching', 'Leadership', 'Customer Serv']"
+122,Managment,"['Microsoft Office', 'Microsoft PowerPoint', 'Java']"
+123,Managment,"['Microsoft Word', 'Microsoft Office', 'Microsoft Excel']"
+124,Managment,"['JavaScript', 'HTML', 'Microsoft SQL Server', 'SDLC', 'Research', 'Project Management', 'ASP.NET', 'SQL', 'Windows', 'CSS', 'PowerPoint', 'C#', 'Microsoft Technologies', 'SQL Server 2005', 'SQL Server 2008R2', 'Customer Service', 'AJAX Toolkit', 'Open Office', 'Microsoft']"
+125,Managment,"['Microsoft Excel', 'Leadership', 'Microsoft Word', 'Project Management', 'Microsoft PowerPoint', 'Public Speaking']"
+126,Managment,"['Public Relations', 'Social Media', 'Social Media Marketing', 'Strategic Communications', 'Marketing Strategy', 'Marketing Communications', 'Online Marketing', 'Advertising', 'Research', 'Strategic Planning', 'Marketing', 'Media Relations', 'Digital Marketing', 'Event Management', 'Market Research', 'Proofreading', 'Online Advertising', 'Corporate Communications', 'Customer Service', 'New Business Development']"
+127,Managment,"['8051 Microcontroller', 'Microprocessors', 'C++', 'Microcontrollers', 'Programming', 'Matlab', 'Microsoft Office', 'VHDL', 'Verilog', 'C \\(Programming Language\\)', 'Teaching']"
+128,Managment,['']
+129,Managment,"['Event Management', 'Event Planning', 'Management']"
+130,Managment,['']
+131,Managment,"['Microsoft Office', 'Web Development', 'Graphic Design']"
+132,Managment,"['Photography', 'Web Development', 'C \\(Programming Language\\)', 'HTML', 'Java', 'Teamwork']"
+133,Managment,"['Management', 'Microsoft Excel', 'Leadership', 'Project Management', 'Strategic Planning', 'Marketing', 'Research', 'Microsoft Word', 'Microsoft PowerPoint', 'Public Speaking', 'Teamwork', 'Team Leadership', 'Team Building']"
+134,Managment,"['C \\(Programming Language\\)', 'C++', 'Programming']"
+135,Managment,['']
+136,Managment,"['Leadership', 'Management', 'Teamwork', 'Research', 'Marketing', 'Microsoft Excel', 'Microsoft Office', 'Microsoft PowerPoint', 'Microsoft Word', 'Public Speaking', 'Team Management', 'Team Leadership']"
+137,Managment,['']
+138,Managment,"['Microsoft Office', 'Leadership', 'Public Speaking']"
+139,Managment,['']
+140,Managment,['']
+141,Managment,"['Research', 'Siemens NX', 'AutoCAD']"
+142,Managment,['']
+143,Managment,"['Cost Management', 'Project Management', 'Billing Services']"
+144,Managment,"['Databases', 'SQL*Plus', 'Core Java']"
+145,Managment,"['Product Development', 'Quality Control', 'Quality Management']"
+146,Managment,"['Intel 8085', 'VHDL']"
+147,Managment,['']
+148,Managment,"['Data Structures', 'Database Management System \\(DBMS\\)', 'Web Development']"
+149,Managment,['']
+150,Managment,['']
+151,Information Technology,['']
+152,Information Technology,['']
+153,Information Technology,['']
+154,Information Technology,"['Management', 'Vendor Management', 'Team Management']"
+155,Information Technology,"['Content Development', 'Copy Editing', 'Communication']"
+156,Information Technology,"['Public Policy', 'Diplomacy', 'Strategy']"
+157,Information Technology,"['IT Management', 'Healthcare Information Technology \\(HIT\\)', 'Information Security Management']"
+158,Information Technology,"['Risk Management', 'Fraud', 'Risk Assessment', 'Investigation', 'Strategy', 'Security', 'Information Security', 'Financial Risk', 'Private Investigations', 'Information Security Management', 'Computer Security', 'Crisis Management', 'Banking', 'Security Audits', 'PCI DSS', 'Physical Security', 'Law Enforcement', 'Business Continuity', 'Security Management', 'Enterprise Risk Management', 'Information Technology', 'Vulnerability Assessment', 'Police', 'IT Audit', 'Enforcement', 'Cyber Security', 'Network Security', 'Payment Card Industry Data Security Standard \\(PCI DSS\\)', 'Investigations', 'ISO 27001', 'Operational Risk Management', 'Privacy Law', 'COBIT', 'Privacy', 'Penetration Testing', 'Risk Analysis', 'AML', 'Disaster Recovery', 'Di']"
+159,Information Technology,"['Integration', 'Strategy', '.NET', 'Software Development', 'IT Strategy', 'E-commerce', 'Software Engineering', 'IT Management', 'Software Project Management', 'Information Technology', 'Project Management', 'Web Applications', 'Business Intelligence', 'Enterprise Architecture', 'SDLC', 'Strategic Planning', 'Cloud Computing', 'Business Strategy', 'Vendor Management', 'Security', 'Consulting', 'Software Development Life Cycle \\(SDLC\\)', 'Requirements Analysis', 'SOA', 'Start-ups', 'Agile Methodologies', 'Business Analysis', 'Database Design', 'Risk Management', 'Business Process Improvement', 'SaaS', '.NET Framework', 'Microsoft SQL Server', 'C#', 'Enterprise Software', 'Databases', 'SQL Server', 'Software as a Service \\(SaaS\\)', 'Manageme']"
+160,Information Technology,"['Information Security', 'Strategic Planning', 'Windows Server']"
+161,Information Technology,"['IT Service Management', 'Network Security', 'IT Management', 'ITIL Certified', 'IT Operations', 'Operations Management', 'Vendor Management', 'TCP/IP', 'LAN-WAN', 'Security', 'Firewalls', 'Troubleshooting', 'Network Administration', 'Software Installation', 'System Administration', 'IT Audit', 'Procurement', 'Wide Area Network \\(WAN\\)', 'Project Management', 'Vendor management', 'Information Technology', 'Computer Networking', 'Asset Management', 'Technical Support', 'Dynamic Host Configuration Protocol \\(DHCP\\)', 'ITIL', 'Domain Name System \\(DNS\\)', 'SSL VPN', 'Windows Server', 'Microsoft Exchange', 'Active Directory', 'Office 365', 'Routers', 'Servers', 'Computer Hardware', 'Windows', 'Operating Systems', 'Team Management', 'Management']"
+162,Information Technology,"['Integration', 'Strategy', '.NET', 'Software Development', 'IT Strategy', 'E-commerce', 'Software Engineering', 'IT Management', 'Software Project Management', 'Information Technology', 'Project Management', 'Web Applications', 'Business Intelligence', 'Enterprise Architecture', 'SDLC', 'Strategic Planning', 'Cloud Computing', 'Business Strategy', 'Vendor Management', 'Security', 'Consulting', 'Software Development Life Cycle \\(SDLC\\)', 'Requirements Analysis', 'SOA', 'Start-ups', 'Agile Methodologies', 'Business Analysis', 'Database Design', 'Risk Management', 'Business Process Improvement', 'SaaS', '.NET Framework', 'Microsoft SQL Server', 'C#', 'Enterprise Software', 'Databases', 'SQL Server', 'Software as a Service \\(SaaS\\)', 'Manageme']"
+163,Information Technology,"['Data Warehousing', 'Database Design', 'PL/SQL']"
+164,Information Technology,['']
+165,Information Technology,"['CyberSecurity', 'Information Security Management', 'Information Security']"
+166,Information Technology,"['C++', 'Matlab', 'C', 'Electrical Engineering', 'Software Development', 'PLC Programming', 'Microcontrollers', 'Control Systems Design', 'Power Electronics', 'Power Systems', 'Energy Audits', 'Strategic Communications', 'System Administration', 'Account Management', 'Event Management', 'Data Analysis', 'Event Planning', 'Accounting', 'Strategic Planning', 'Business Development', 'Continuous Improvement', 'Forecasting', 'Marketing Strategy', 'Knowledge Management', 'Quality Assurance', 'Risk Management', 'Public Relations', 'Troubleshooting', 'Creative Writing', 'Banking', 'Government', 'PowerPoint', 'Microsoft Office', 'AutoCAD', 'Teamwork', 'Presentation Skills', 'Public Speaking', 'Team Building', 'Leadership Development', 'Quali']"
+167,Information Technology,"['GIS', 'Geomatics', 'Project Management', 'Integration', 'Program Management', 'Spatial Analysis', 'Government', 'Cartography', 'Geography', 'Project Planning', 'Remote Sensing', 'Cloud Computing', 'Data Analysis', 'GPS', 'Data Management', 'IT Service Management', 'Data Collection', 'Process Management', 'ITIL', 'Environmental Awareness', 'Databases', 'ArcGIS', 'Enterprise Software', 'SharePoint', 'Management', 'ESRI', 'ArcGIS Server', 'ArcMap', 'ArcSDE', 'Spatial Databases', 'ArcView', 'Google Earth', 'Geoprocessing', 'Geodatabase', 'ArcCatalog', 'Geospatial Data', 'ArcInfo', 'Data Mapping', 'Oracle Spatial', 'ERDAS Imagine', 'Web Mapping', 'LiDAR', 'ArcIMS', 'Photogrammetry', 'PostGIS', 'Digital Mapping']"
+168,Information Technology,"['Security', 'Cisco Technologies', 'Cross-functional Team Leadership', 'Strategy', 'Telecommunications', 'Channel Partners', 'Business Development', 'Strategic Planning', 'Network Engineering', 'Change Management', 'Data Center', 'Program Management', 'Sales Management', 'Cloud Computing', 'Information Security', 'Unified Communications', 'Network Design', 'Pre-sales', 'Routing', 'Network Security', 'IP', 'WAN', 'VoIP', 'Solution Selling', 'Managed Services', 'Marketing Strategy', 'Strategic Communications', 'Sales Operations', 'QoS', 'Change Leadership', 'BGP', 'Management', 'Team Leadership', 'Team Management', 'Leadership', 'Negotiation', 'Organizational Development', 'Public Speaking', 'Technical Leadership', 'Mentoring', 'L']"
+169,Information Technology,"['Data Center', 'Information Security', 'Information Technology', 'System Administration', 'Vendor Management', 'CISSP', 'ITIL', 'Project Management', 'Software Development', 'Storage', 'Computer Security', 'Infrastructure', 'Enterprise Architecture', 'Network Engineering', 'Identity Management', 'Cloud Computing', 'Privacy Law', 'Disaster Recovery', 'Architecture', 'Databases', 'Linux', 'Active Directory', 'Management', 'Networking', 'Data Privacy']"
+170,Information Technology,"['Strategy', 'Market Research', 'Competitive Analysis', 'Business Development', 'Management Consulting', 'Business Analysis', 'Business Strategy', 'Strategic Planning', 'Business Planning', 'Business', 'Analysis', 'Due Diligence', 'Marketing Strategy', 'Market Analysis', 'Business Process Improvement', 'Strategic Consulting', 'Feasibility Studies', 'Marketing Research', 'Financial Analysis', 'Key Account Management', 'Customer Insight', 'Data Collection', 'Strategic Analysis', 'Strategy Development', 'Industry Analysis', 'Consumer Insights', 'Management', 'Qualitative Research', 'New Business Development', 'Secondary Research', 'Market Entry', 'Primary Research', 'Business & Market Research', 'Business Development & Initiatives', 'Corporate Strategy an']"
+171,Information Technology,['']
+172,Information Technology,['']
+173,Information Technology,['']
+174,Information Technology,"['Project Management', 'Windows Server', 'ERP', 'Network Administration', 'Troubleshooting', 'CRM', 'Technical Support', 'Business Process Improvement', 'Enterprise Resource Planning \\(ERP\\)', 'Business Intelligence', 'Software Project Management', 'Customer Relationship Management \\(CRM\\)', 'Storage Area Networks', 'Account Management', 'CompTia Security+', 'EqualLogic SAN', 'Microsoft Office', 'SQL', 'Oracle', 'Enterprise Software', 'Microsoft SQL Server', 'Operating Systems', 'Servers', 'Databases', 'MCSE 2003', 'Leadership', 'Management', 'Team Building', 'Process Improvement', 'Dell PowerEdge Servers', 'VMware Certified Professional 4', 'Dell PowerVault']"
+175,Information Technology,['']
+176,Information Technology,"['Customer Service', 'Management', 'Microsoft Excel']"
+177,Information Technology,"['ERP', 'Process Improvement', 'Integration', 'Program Management', 'Business Process Improvement', 'Six Sigma', 'IT Strategy', 'Business Strategy', 'Business Process', 'IT Management', 'Supply Chain', 'Strategy', 'Enterprise Resource Planning \\(ERP\\)', 'Process Engineering', 'Acquisition Integration', 'Business Transformation', 'Enterprise Architecture', 'Enterprise Software', 'Oracle E-Business Suite', 'Oracle Applications', 'Leadership', 'Management']"
+178,Information Technology,"['E-commerce', 'IT Strategy', 'Enterprise Architecture', 'Integration', 'Strategy', 'Business Process', 'IT Management', 'ERP', 'Program Management', 'CRM', 'Project Management', 'Customer Relationship Management \\(CRM\\)', 'ITIL', 'Solution Selling', 'Business Process Improvement', 'Enterprise Resource Planning \\(ERP\\)', 'Security', 'Sales', 'Digital Marketing', 'Business Development', 'Digital Strategy', 'Vendor Management', 'Strategic Planning', 'Strategic Sourcing', 'Strategic Communications', 'Web 2.0', 'Management', 'Cross-functional Team Leadership', 'Leadership', 'Strategic Partnerships', 'Strategic Thinking', 'Enterprise 2.0', 'Process Improvement', 'Product Information Management', 'Creative Briefs', 'Commerce', 'Mobile Commerce']"
+179,Information Technology,"['Records Management', 'Document Management', 'Business Process Improvement']"
+180,Information Technology,"['JavaScript', 'SQL', 'HTML', 'Java', 'Servlets', 'Java Database Connectivity \\(JDBC\\)', 'C \\(Programming Language\\)', 'Maven', 'Leadership']"
+181,Information Technology,['']
+182,Information Technology,"['Integration', 'IT Management', 'Project Management', 'Strategy', 'ITIL', 'CRM', 'Vendor Management', 'Strategic Planning', 'Program Management', 'Disaster Recovery', 'IT Strategy', 'Business Process Improvement', 'Project Planning', 'Information Technology', 'Business Analysis', 'Business Process', 'Outsourcing', 'Analysis', 'Project Portfolio Management', 'IT Service Management', 'Telecommunications', 'Service Delivery', 'Infrastructure', 'Change Management', 'ERP', 'Testing', 'Data Center', 'Budgets', 'Business Intelligence', 'PMP', 'Active Directory', 'SAP', 'Management', 'Leadership', 'Team Building', 'Cross-functional Team Leadership', 'Process Improvement']"
+183,Information Technology,['']
+184,Information Technology,['AutoCAD']
+185,Information Technology,['']
+186,Information Technology,"['Service Delivery', 'IT Service Management', 'ITIL']"
+187,Information Technology,['']
+188,Information Technology,"['C++', 'C \\(Programming Language\\)', 'Digital Marketing']"
+189,Information Technology,"['Research and Development \\(R&D\\)', 'Electronic Waste Recycling Technology', 'Public Policy']"
+190,Information Technology,"['Python \\(Programming Language\\)', 'C \\(Programming Language\\)', 'HTML5', 'Data Structures', 'Cascading Style Sheets \\(CSS\\)', 'Neural Networks']"
+191,Information Technology,"['Leadership', 'Research', 'Microsoft PowerPoint', 'Social Media', 'C \\(Programming Language\\)', 'Microsoft Office', 'HTML', 'Public Speaking', 'Teamwork', 'Communication', 'English', 'Volleyball']"
+192,Information Technology,"['Management', 'Retail', 'Team Management', 'Business Development', 'Inventory Management', 'Competitive Analysis', 'Business Strategy', 'ERP', 'Forecasting', 'Project Management', 'Operations Management', 'Start-ups', 'Sales', 'Strategy', 'Business Process', 'Enterprise Resource Planning \\(ERP\\)', 'Training', 'JDA']"
+193,Information Technology,['']
+194,Information Technology,['']
+195,Information Technology,"['Library Science', 'Cataloging', 'Resource Description And Access', 'Library Management', 'Library', 'Collection Development', 'Information Management', 'Library Instruction', 'Knowledge Management', 'Information Literacy', 'Library Services', 'LCSH', 'LC Classfication', 'Classification Web', 'DDC', 'Digital Libraries', 'Bibliographic Instruction', 'Virtual Reference', 'Interlibrary Loan', 'Information Retrieval', 'Metadata', 'Academic Libraries', 'Libraries', 'Authority Control', 'Electronic Resources', 'Library Research', 'Integrated Library Systems', 'Library 2.0']"
+196,Information Technology,"['SQL', 'Microsoft Excel', 'Java']"
+197,Information Technology,"['Java', 'C \\(Programming Language\\)', 'C++']"
+198,Information Technology,"['ISO 27001', 'Vulnerability Assessment', 'Penetration Testing']"
+199,Information Technology,['']
+200,Information Technology,"['Program Management', 'Requirements Analysis', 'Government']"
+201,Education,"['Teaching', 'Training', 'Educational Consulting']"
+202,Education,['']
+203,Education,"['Corporate Social Responsibility', 'Sustainability', 'Sustainable Development']"
+204,Education,['']
+205,Education,"['Recruitments', 'Screening', 'Shortlisting']"
+206,Education,['']
+207,Education,"['Oncology', 'Pharmaceutical Industry', 'Medical Education']"
+208,Education,"['Contemporary Art', 'Visual Arts', 'Teaching']"
+209,Education,['']
+210,Education,['']
+211,Education,"['distance education', 'Admissions Counseling', 'Network Admission Control', 'Admissions', 'Admissions CounselingEducation Consultant Distance Education... Online Admissi', 'education consultant', 'online admission', 'b.ed admission', 'JBT admission', 'polytechnic courses', 'B.A/M.A/B.COM/M.COM and ALL MANAGEMENT PROGRAMS COURSE FROM MGU/KSOU', 'INFORMATION TECHNOLOGY PROGRAMS COURSE FROM MGU']"
+212,Education,"['Staff Development', 'Leadership Development', 'Educational Leadership']"
+213,Education,"['Change Management', 'Management', 'Process Improvement']"
+214,Education,"['Curriculum Development', 'Classroom', 'Teaching', 'Science', 'Lesson Planning', 'Curriculum Design', 'Differentiated Instruction', 'Higher Education', 'Research', 'Admissions', 'K-12', 'Educational Technology', 'Tutoring', 'Classroom Management', 'Educational Leadership', 'Public Speaking', 'Project-based Learning', 'STEM', 'Admissions Counseling', 'Master Scheduling', 'Sensor based data collection']"
+215,Education,"['Computer Hardware', 'Active Directory', 'Troubleshooting']"
+216,Education,"['Recruiting', 'Technical Recruiting', 'Sourcing', 'Screening', 'Benefits Negotiation', 'IT Recruitment', 'Screening Resumes', 'HR Consulting', 'Recruitments', 'Human Resources', 'Internet Recruiting', 'Contract Recruitment', 'Social Media', 'MIS', 'Databases', 'Team Building', 'Talent Management', 'Interviews', 'Database Auditing']"
+217,Education,"['Educational Leadership', 'Soft Skills', 'E-Learning', 'Curriculum Development', 'Curriculum Design', 'Blended Learning', 'Project Planning', 'Learning Management', 'K-12', 'Lesson Planning', 'Higher Education', 'Management Consulting', 'Educational Technology', 'Coaching', 'Staff Development', 'Teacher Training', 'Leadership Development', 'Team Building', 'Career Counseling', 'Training', 'Classroom', 'Teaching', 'Classroom Management', 'Team Management']"
+218,Education,"['Canadian Immigration Law', 'canadian immigration law', 'Management']"
+219,Education,"['Training', 'Microsoft Office', 'PowerPoint']"
+220,Education,"['Research', 'Wellness', 'Nutrition']"
+221,Education,['']
+222,Education,['']
+223,Education,['']
+224,Education,"['Child Development', 'Staff Development', 'Early Childhood Education']"
+225,Education,"['E-Learning', 'Microsoft Office', 'Customer Service', 'Social Media', 'Public Relations', 'Inventory Management', 'Video Editing', 'Graphic Design', 'Quality Management', 'Publications', 'Flash Animation', 'Tally ERP', 'HTML', 'Photoshop', 'Maya', 'Training']"
+226,Education,['']
+227,Education,['']
+228,Education,['']
+229,Education,['']
+230,Education,"['Analytics', 'Strategy', 'Market Research', 'Marketing Strategy', 'Competitive Analysis', 'Account Management', 'Sales', 'Digital Marketing', 'Advertising', 'Marketing Research', 'Business Development', 'Segmentation', 'Online Advertising', 'Customer Insight', 'Analysis', 'Consulting', 'Market Analysis', 'Business Strategy', 'Product Management', 'Program Management', 'Business Planning', 'Management Consulting', 'Direct Marketing', 'Data Analysis', 'Management', 'Leadership', 'Training', 'Lead Generation', 'Strategic Partnerships', 'Public Speaking', 'Team Leadership', 'Qualitative Research', 'Strategic Leadership', 'Consumer Insight', 'Helping Clients Succeed']"
+231,Education,['']
+232,Education,['']
+233,Education,['']
+234,Education,"['Microsoft Office', 'Management', 'Microsoft Excel']"
+235,Education,"['Molecular Biology', 'Research', 'Microbiology']"
+236,Education,"['Team Management', 'MIS', 'Negotiation']"
+237,Education,['']
+238,Education,"['HR Operations', 'Management', 'Computer Application Training', 'Recruiting', 'HR Management', 'Business Development', 'Data Management', 'IT Recruitment', 'Microsoft Excel', 'Employee Engagement', 'HR Solutions', 'Key Client Relationships', 'Key Account Acquisition & Retention', 'Global Talent Acquisition']"
+239,Education,"['Go-to-market Strategy', 'Solution Selling', 'Business Alliances']"
+240,Education,['']
+241,Education,"['Microsoft Office', 'Engineering', 'Matlab', 'Project Planning', 'Project Engineering', 'Commissioning', 'PLC Programming', 'Computer Vision', 'Automation', 'Robotics', 'Troubleshooting', 'Programming', 'Project Management', 'Navigation', 'SolidWorks', 'AutoCAD', 'C++', 'Microsoft Excel', 'PowerPoint', 'MS Office', 'Visual C++', 'Java', 'Solid Works', 'Auto CAD', 'WordPress', 'Photoshop', 'Programmable Logic Controller \\(PLC\\)', 'C \\(Programming Language\\)', 'Python \\(Programming Language\\)', 'MoveIT', 'C#', 'Point Cloud Library \\(PCL\\)', 'Linux', 'Teamwork', 'Management', 'Keil', 'Proteus', 'Mplab', 'Opencv', 'Robot Operating System \\(ROS\\)', 'SLAM', 'Machine Vision Using Matlab', 'Gazebo', 'Pointcloud', ' LiDAR', ' ']"
+242,Education,['']
+243,Education,"['English', 'Microsoft Office', 'Microsoft Excel']"
+244,Education,['']
+245,Education,['']
+246,Education,"['IT law', 'Trademarks', 'Entertainment Law']"
+247,Education,"['Information Technology', 'Coaching & Mentoring', 'Training', 'Big Data', 'Artificial Intelligence \\(AI\\)', 'Java']"
+248,Education,"['Sketching', 'Arts & Crafts', 'Baking']"
+249,Education,"['SEO', 'Content Writing', 'Google Analytics']"
+250,Education,"['Adobe Photoshop', 'AutoCAD', 'Submittals']"
+251,Advocate,"['Competition Law', 'Corporate Law', 'Legal Writing', 'Legal Advice', 'Joint Ventures', 'Commercial Litigation', 'Mergers & Acquisitions', 'Legal Assistance', 'International Law', 'Private Equity', 'Consumer Law', 'Legal Compliance', 'Trademarks', 'Employment Law', 'Dispute Resolution', 'Arbitration', 'Mediation', 'Antitrust Law']"
+252,Advocate,"['Litigation', 'Legal Advice', 'Corporate Law']"
+253,Advocate,"['Civil Litigation', 'Legal Assistance', 'Corporate Law']"
+254,Advocate,['']
+255,Advocate,['']
+256,Advocate,['']
+257,Advocate,"['Litigation', 'Civil Litigation', 'Courts']"
+258,Advocate,"['Intellectual Property', 'Legal Writing', 'Litigation', 'Civil Litigation', 'Legal Research', 'Courts', 'Legal Advice', 'Trademarks', 'Research', 'Corporate Law', 'Commercial Litigation', 'Legal Assistance', 'Pleadings', 'Arbitration', 'Prosecution', 'Contractual Agreements']"
+259,Advocate,['']
+260,Advocate,"['Arbitration', 'Litigation', 'Legal Advice']"
+261,Advocate,"['Legal Advice', 'Strategic Communications', 'Personality Development']"
+262,Advocate,['']
+263,Advocate,"['Litigation Support', 'Company Law', 'Litigation']"
+264,Advocate,"['Legal Writing', 'Litigation', 'Legal Assistance']"
+265,Advocate,"['Arbitration', 'Litigation', 'Legal Advice']"
+266,Advocate,"['Litigation Support', 'Company Law', 'Litigation']"
+267,Advocate,"['Contractual Agreements', 'Stamp Duty', 'Registration']"
+268,Advocate,"['Labor Union Dispute resolution', 'Disciplinary Proceedings', 'Legal due diligence']"
+269,Advocate,"['Civil Engineering', 'Contract Management', 'Construction Management']"
+270,Advocate,"['Legal Research', 'Legal Writing', 'Leadership']"
+271,Advocate,"['Legal Writing', 'Legal Advice', 'Commercial Litigation']"
+272,Advocate,"['Customer Service', 'Leadership', 'Research']"
+273,Advocate,['Commercial Litigation']
+274,Advocate,['']
+275,Advocate,"['Microsoft Office', 'Management']"
+276,Advocate,"['Business Strategy', 'Negotiation', 'New Business Development', 'Project Management', 'Strategic Planning', 'Sales Management', 'Business Planning', 'Business Development', 'Budgets', 'Microsoft Office', 'Microsoft Excel', 'Customer Service', 'Public Speaking']"
+277,Advocate,"['Corporate Law', 'Arbitration', 'Commercial Litigation', 'Legal Research', 'Joint Ventures', 'Litigation', 'Legal Writing', 'Corporate Governance', 'Cross-border Transactions', 'Intellectual Property', 'Due Diligence', 'Private Equity', 'Real Estate', 'Restructuring', 'Venture Capital', 'Competition Law', 'Mergers & Acquisitions', 'Intellectual Property Issues', 'M&A work', 'Strategic Negotiations', 'Foreign Investment', 'Corporate Advisory', 'Advocacy']"
+278,Advocate,"['Microsoft Office', 'Microsoft Excel', 'Microsoft Word']"
+279,Advocate,"['Legal Research', 'International Law', 'Litigation', 'Legal Writing', 'Legal Advice', 'Commercial Litigation', 'Competition Law', 'Corporate Law', 'Civil Litigation', 'Mergers & Acquisitions', 'Criminal Law', 'Project Finance', 'Arbitration', 'Dispute Resolution', 'Alternative Dispute Resolution', 'Public International Law', 'International Humanitarian Law', 'International Arbitration']"
+280,Advocate,"['Arbitration', 'Dispute Resolution', 'Legal Advice']"
+281,Advocate,['']
+282,Advocate,"['Legal Advice', 'Online Advocacy', 'Court Appearances']"
+283,Advocate,"['Customer Service', 'Research', 'Microsoft Excel']"
+284,Advocate,['']
+285,Advocate,['']
+286,Advocate,['']
+287,Advocate,"['Legal Writing', 'Litigation', 'Legal Research']"
+288,Advocate,['']
+289,Advocate,['']
+290,Advocate,['']
+291,Advocate,"['Litigation', 'Legal Assistance', 'Civil Litigation']"
+292,Advocate,"['WTO', 'International Trade Law', 'Litigation', 'International Law', 'Tax', 'Tax Law', 'Dispute Resolution', 'Indian Taxation', 'Foreign Investment']"
+293,Advocate,"['Litigation', 'Legal Research', 'Legal Writing']"
+294,Advocate,"['Corporate Law', 'Legal Advice', 'Arbitration', 'Corporate Governance', 'Mergers & Acquisitions', 'Legal Writing', 'Due Diligence', 'Intellectual Property', 'Courts', 'Legal Assistance', 'Legal Research', 'Litigation', 'Criminal Law', 'Contract Management', 'Document Drafting', 'Commercial Litigation', 'Recruiting', 'Human Resources', 'System Administration', 'Project Finance', 'Income Tax', 'Risk Management', 'General Insurance', 'Life Insurance', 'Microsoft Office', 'Microsoft Excel', 'Microsoft Word', 'Management', 'Negotiation', 'Dispute Resolution', 'Teaching', 'Coaching', 'Employee Training', 'Legal Opinions', 'Company Secretarial Work', 'medico-legal', 'Legal and company secretarial services', 'Inhouse counselling', 'Administrat']"
+295,Advocate,"['Research', 'Strategic Planning', 'Customer Service']"
+296,Advocate,['']
+297,Advocate,"['Film', 'Entertainment', 'Feature Films']"
+298,Advocate,"['Civil Litigation', 'Legal Advice', 'Legal Research', 'Legal Writing', 'Litigation', 'Corporate Law', 'Criminal Law', 'Research', 'Public Speaking']"
+299,Advocate,['']
+300,Advocate,['']
+301,Advocate,"['Customer Service', 'Negotiation', 'Research']"
+302,Advocate,"['Microsoft Office', 'Financial Accounting', 'Financial Analysis', 'Financial Reporting', 'Tax', 'Auditing']"
+303,Advocate,"['Legal Advice', 'Corporate Law', 'Microsoft Office']"
+304,Business Development,"['Sales Management', 'Account Management', 'New Business Development', 'Selling', 'Sales', 'Solution Selling', 'Strategic Planning', 'Marketing Strategy', 'Business Development', 'Direct Sales', 'Sales Process', 'Sales Operations', 'B2B', 'Marketing', 'Consultative Selling', 'Salesforce.com', 'Management', 'Lead Generation', 'Cold Calling', 'Team Building']"
+305,Business Development,"['Human Resources', 'Management', 'Business Development', 'Market Research', 'Marketing', 'Talent Acquisition', 'Business Analysis', 'Business Strategy', 'Competitive Analysis', 'CRM', 'Screening', 'Advertising', 'Consulting', 'Recruiting', 'MIS', 'Team Management', 'Employee Engagement', 'Sourcing', 'Employee Relations']"
+306,Business Development,"['Market Research', 'Marketing Strategy', 'Marketing', 'Business Development', 'Marketing Communications', 'Social Media', 'Digital Marketing', 'CRM', 'Event Planning', 'Research', 'Business Strategy', 'Sales', 'Advertising', 'Strategic Planning', 'Marketing Management', 'Retail Marketing', 'Vendor Management', 'Customer Satisfaction', 'Long-term Customer Relationships', 'Marketing Research', 'Market Analysis', 'Social Media Marketing', 'Competitive Analysis', 'Retail', 'Online Marketing', 'Public Relations', 'Project Management', 'Brand Management', 'Product Launch', 'Product Marketing', 'Social Networking', 'Microsoft Office', 'PowerPoint', 'Microsoft Word', 'Microsoft Excel', 'Windows', 'MIS', 'Team Management', 'Teamwork', 'Mana']"
+307,Business Development,"['Catia', 'Kaizen', 'AutoCAD']"
+308,Business Development,"['Pre-sales', 'Vendor Management', 'Service Delivery', 'SDH', 'CDMA', 'Troubleshooting', 'Business Development', 'Wireless', 'IP', '3G', 'UMTS', 'Business Analysis', 'Resource Management', 'Fiber Optics', 'SS7', 'VoIP', 'Transmission', 'Ethernet', 'Microwave', 'Requirements Analysis', 'Customer Relationship Management \\(CRM\\)', 'Outsourcing', 'Performance Management', 'Microsoft Office', 'GSM', 'LTE', 'C', 'Microsoft Excel', 'Team Management', 'Management']"
+309,Business Development,"['Business Development', 'Key Account Management', 'Sales Management']"
+310,Business Development,['']
+311,Business Development,"['Team Management', 'Business Development', 'CRM', 'Cloud Computing', 'Business Analysis', 'Customer Relationship Management \\(CRM\\)', 'Account Management', 'Pre-sales', 'Integration', 'Vendor Management', 'Solution Selling', 'Sales', 'Sales Management', 'Professional Services', 'Sales Operations', 'BPO', 'Operations Management', 'Business Process Improvement', 'ERP', 'Enterprise Resource Planning \\(ERP\\)', 'Enterprise Software', 'Salesforce.com', 'SaaS', 'Software as a Service \\(SaaS\\)', 'Management', 'Training', 'Leadership', 'Team Leadership', 'Process Improvement']"
+312,Business Development,['']
+313,Business Development,"['Product Marketing', 'Sales', 'Business Development', 'Marketing Strategy', 'Market Research', 'Business Analysis', 'Project Planning', 'Business Planning', 'Vendor Management', 'Branding', 'Logistics Management', 'Key Account Management', 'Product Development', 'Strategy', 'Marketing', 'Analysis', 'Pricing', 'Product Management', 'Business Strategy', 'Sales Management', 'Project Management', 'Competitive Analysis', 'Management', 'Training', 'Team Management', 'Cross-functional Team Leadership', 'Negotiation', 'New Business Development']"
+314,Business Development,"['Business Development', 'Team Management', 'Pre-sales']"
+315,Business Development,"['hardworking ', 'passionate ', 'dedicated ', 'quick learner ', 'focused ']"
+316,Business Development,"['Marketing Communications', 'Business Development', 'Strategy', 'Business Strategy', 'Sales', 'Joint Ventures', 'Professional Services', 'Marketing Strategy', 'Venture Capital', 'Start-ups', 'New Business Development']"
+317,Business Development,"['Business Development', 'Strategy', 'Marketing Communications', 'Marketing Management', 'Marketing', 'Competitive Analysis', 'Business Strategy', 'Strategic Planning', 'Entrepreneurship', 'Product Development', 'Market Planning', 'B2B', 'Sales', 'B2B Marketing', 'Brand Management', 'BtoB', 'Outsourcing', 'Leadership', 'Web Strategy', 'Développement commercial', 'Communication marketing', 'Stratégie', 'Stratégie commerciale', 'Analyse de la compétition', 'Management marketing', 'Planification stratégique', 'Planification d’évènements', 'Marketing numérique', 'Gestion de la relation client \\(CRM\\)', 'Partenariat distribution', 'Anglais', 'Français', 'Marketing des services', 'Marketing stratégique', 'Lancement de produit', 'Formation en ligne', 'E']"
+318,Business Development,"['Lead Generation', 'New Business Development', 'Business Development', 'Sales', 'Direct Marketing', 'B2B', 'Marketing', 'B2B Marketing', 'Relationship Marketing', 'Customer Acquisition', 'Email Marketing', 'Integrated Marketing', 'Marketing Strategy', 'Strategy', 'Key Account Management', 'Business-to-Business \\(B2B\\)', 'Account Management', 'Customer Relationship Management \\(CRM\\)', 'Training', 'Sales Promotion', 'Loyalty Programs', 'Incentives', 'Product Placement', 'Promotions', 'sales mentor']"
+319,Business Development,"['Marketing Strategy', 'Business Development', 'Business Strategy', 'Business Analysis', 'Business Analytics', 'Strategy', 'Sponsorship', 'Strategic Planning', 'Sports Management', 'Sports Marketing', 'Digital Marketing', 'Research', 'Digital Media', 'CRM', 'Social Media Marketing', 'Digital Strategy', 'Sales', 'Account Management', 'Sales Management', 'Analytics', 'Brand Management', 'Data Analysis', 'Management Consulting', 'Competitive Analysis', 'Project Management', 'Pricing Strategy', 'Valuation', 'Forecasting', 'Market Research', 'Microsoft Excel', 'Strategic Partnerships', 'Business Insights', 'Ticket Sales', 'Digital', 'Process Consulting', 'Industry Research', 'Sales Planning']"
+320,Business Development,"['Cloud Computing', 'Business Alliances', 'Business Intelligence', 'Go-to-market Strategy', 'Pre-sales', 'Product Management', 'CRM', 'Master Data Management', 'Strategy', 'Integration', 'Product Marketing', 'Business Development', 'Solution Architecture', 'Consulting', 'Professional Services', 'Big Data', 'Solution Selling', 'Program Management', 'Sales Enablement', 'Global Business Development', 'Data Integration', 'Demand Generation', 'Account Management', 'Product Launch', 'Channel Partners', 'M&A experience', 'Enterprise Software', 'SaaS', 'Salesforce.com', 'Informatica', 'Partner Management', 'Strategic Partnerships', 'Leadership', 'Cross-functional Team Leadership', 'Lead Generation', 'Software Solutions', 'Partnerships', 'Strategic ']"
+321,Business Development,"['Team Management', 'Derivatives', 'Capital Markets', 'Commodity', 'Trading', 'Business Development', 'Equities', 'Risk Management', 'Financial Markets', 'Business Strategy', 'Financial Analysis', 'Business Planning', 'Financial Services', 'Management', 'Leadership', 'Training', 'Relationship Management', 'Business Relationship Management', 'Problem Solving', 'Critical Thinking', 'Teamwork', 'Work ethic']"
+322,Business Development,"['PowerPoint', 'Microsoft Excel', 'Microsoft Office', 'Market Research', 'Stata', 'Excel', 'Nielsen Galaxy Explorer', 'Nielsen', 'Experian Simmons']"
+323,Business Development,"['Product Marketing', 'Marketing Strategy', 'Marketing', 'Business Development', 'Strategy', 'Sales', 'Retail', 'Event Planning', 'Mobile Devices', 'Product Launch', 'Merchandising', 'Public Relations', 'Social Media', 'Entertainment', 'Advertising', 'Brand Development', 'Social Media Marketing', 'Brand Management', 'Business Strategy', 'Digital Media', 'Retail Marketing', 'Digital Marketing', 'Digital Strategy', 'Start-ups', 'Integrated Marketing', 'E-commerce', 'Media Buying', 'Sponsorship', 'Go-to-market Strategy', 'Sponsorships', 'Branding & Identity', 'Trademarks', 'Consumer Electronics', 'Multi-channel Marketing', 'Relationship Marketing', 'Trade Shows', 'Brand Architecture', 'Product Launches', 'Branding Development', 'Creati']"
+324,Business Development,"['Business Development', 'Market Research', 'Lead Generation', 'Business Analysis', 'Marketing', 'Competitive Analysis', 'Sales', 'Marketing Strategy', 'Vendor Management', 'Pre-sales', 'Account Management', 'Analysis', 'Key Account Management', 'E-Learning', 'Customer Relationship Management \\(CRM\\)', 'Translation', 'Localization', 'Microsoft Office', 'Management', 'Team Management', 'New Business Development']"
+325,Business Development,"['Recruiting', 'Human Resources', 'Sourcing', 'Executive Search', 'Screening', 'Business Development', 'Hiring', 'Strategic Planning', 'Job Descriptions', 'HR Consulting', 'Business Strategy', 'Recruitment Advertising', 'Contract Recruitment', 'Screening Resumes', 'HR Policies', 'Marketing Communications', 'Risk Management', 'Succession Planning', 'International Business', 'Staff Training', 'Customer Relations', 'Onboarding', 'Talent Acquisition', 'Social Networking', 'Recruitment/Retention', 'Microsoft Office', 'HRIS', 'Interviews', 'Management', 'Training', 'Negotiation', 'Leadership', 'Team Management', 'Interviewing', 'Team Leadership', 'Employee Relations', 'Organizational Development', 'Talent Management', 'Team Building', 'Ti']"
+326,Business Development,"['Management', 'Pre-sales', 'Business Development']"
+327,Business Development,"['Business Development', 'Product Marketing', 'Key Account Management']"
+328,Business Development,"['Marketing', 'Marketing Communications', 'Marketing Strategy']"
+329,Business Development,"['Business Development', 'Retail', 'Market Research', 'Strategy', 'Business Strategy', 'Real Estate', 'Business Planning', 'Entrepreneurship', 'Brand Management', 'Marketing Strategy', 'Strategic Planning', 'Marketing', 'Project Management', 'Competitive Analysis', 'Project Planning', 'Competitive Intelligence', 'Key Account Management', 'Product Development', 'Marketing Management', 'Operations Management', 'Value Engineering', 'Sales', 'Negotiation', 'Team Management', 'Management', 'Leadership', 'New Business Development', 'Networking', 'Strategic Alliances', 'Profit', 'Communication of Brand Vision', 'Driving Transformational change', 'Global to Regional strategy development']"
+330,Business Development,"['Team Management', 'Sales', 'Business Development']"
+331,Business Development,"['Business Development', 'Management', 'Sales']"
+332,Business Development,"['Financial Modeling', 'Valuation', 'Corporate Finance', 'Due Diligence', 'Finance', 'Energy', 'Mergers & Acquisitions', 'Project Finance', 'Portfolio Management', 'Investment Banking', 'Strategy', 'Structured Finance', 'Business Strategy', 'Capital Markets', 'Financial Analysis', 'Investments', 'Financial Structuring', 'Emerging Markets', 'Big Data', 'Data Analysis', 'Business Development', 'Strategic Planning', 'Entrepreneurship', 'Wealth Management', 'Corporate Development', 'Start-ups', 'Product Development', 'Business Planning', 'Mergers & Acquisitions \\(M&A\\)', 'Banking', 'Financial Services', 'Sales', 'Business Analysis', 'Bloomberg', 'R', 'Python', 'SQL', 'Microsoft Office', 'Microsoft Excel', 'C++', 'Leadership', 'Tea']"
+333,Business Development,"['Strategic Partnerships', 'Go-to-market Strategy', 'Enterprise Software', 'Product Management', 'Cloud Computing', 'Start-ups', 'Business Strategy', 'Mobile Applications', 'Mergers & Acquisitions', 'Entrepreneurship', 'Mobile Devices', 'Security', 'Strategy', 'Business Development', 'M&A experience', 'Business Management', 'Venture Capital', 'Corporate Development', 'Mobile', 'Mergers', 'Management Consulting', 'Strategic Planning', 'Big Data', 'Machine Learning', 'Consulting', 'SaaS', 'Software as a Service \\(SaaS\\)', 'Salesforce.com', 'Business Alliances', 'Strategic Leadership', 'Alliances', 'Organizational Leadership', 'Leadership', 'Management', 'Strategic Alliances', 'New Business Development', 'Managing High Performance Teams', 'OEM']"
+334,Business Development,"['Microsoft Office', 'Customer Service', 'Microsoft Excel']"
+335,Business Development,"['Strategic Planning', 'Project Management', 'Sales']"
+336,Business Development,"['Strategic Partnerships', 'Start-ups', 'Business Strategy', 'Entrepreneurship', 'Business Development', 'Market Research', 'Competitive Analysis', 'Management Consulting', 'Email Marketing', 'Financial Modeling', 'Strategy', 'Digital Media', 'Marketing', 'Analytics', 'Mobile Devices', 'Valuation', 'Mergers & Acquisitions', 'Marketing Communications', 'Analysis', 'Marketing Strategy', 'Entrepreneur', 'Leadership', 'Management', 'Training', 'Media Strategy']"
+337,Business Development,"['Marketing Communications', 'Marketing Strategy', 'Marketing']"
+338,Business Development,"['Strategic Planning', 'Management', 'Retail', 'Strategy', 'Sales', 'Human Resources', 'Product Management', 'Market Planning', 'Marketing', 'Business Development', 'Business Planning', 'Business Strategy', 'Sales Management', 'Team Management', 'Negotiation', 'Effective leader', 'New Business Development', 'Distributor/Dealer Management .National/Regional Sales Management', 'Marketing & Advertising,•\\tAccount Management •\\tBusiness Development', '•\\tTeam Leadership/Training •\\tReseller Accounts •\\tCustomer Base Expansion', '•\\tTerritory Sales Management •\\tPull-through Marketing•\\tMarket Share Expansion', '•\\tProduct Training & Placement •\\tSales & Distribution Channels', '•\\tPublic Relation & Promotions •\\tPresentation & Proposals', '•\\tBrand Awareness/Development •\\tHospitality-Mktg. & Admini']"
+339,Business Development,"['Leadership', 'Strategic Planning', 'Cross-functional Team Leadership', 'Managed Care', 'Business Development', 'Strategy', 'Healthcare', 'Employee Benefits', 'Medicare', 'Selling', 'Business Strategy', 'Sales', 'Human Resources', 'Medicaid', 'Health Insurance', 'Pharmaceutical Industry', 'Consulting', 'Health Policy', 'Pharmacy', 'Disease Management', 'Healthcare Industry', 'Management', 'Pharmacy Benefit Management', 'Process Improvement']"
+340,Business Development,"['Management', 'Project Management', 'Engineering']"
+341,Business Development,['']
+342,Business Development,"['Strategy', 'Business Development', 'Strategic Partnerships', 'Analytics', 'Mobile Devices', 'Business Strategy', 'Digital Media', 'Strategic Planning', 'Entrepreneurship', 'Social Media Marketing', 'Project Management', 'Account Management', 'Management Consulting', 'Product Management', 'Product Development', 'Go-to-market Strategy', 'Integration', 'Cloud Computing', 'Mergers & Acquisitions', 'Telecommunications', 'Sales', 'SaaS', 'Management', 'Leadership', 'Cross-functional Team Leadership']"
+343,Business Development,"['Product Marketing', 'Go-to-market Strategy', 'Product Management', 'Network Security', 'Channel Partners', 'Demand Generation', 'Strategy', 'Cloud Computing', 'Multi-channel Marketing', 'Firewalls', 'Security', 'IP', 'Product Development', 'Solution Selling', 'Business Development', 'LAN-WAN', 'Sales Operations', 'Product Lifecycle Management', 'Market Research', 'Product Launch', 'Sales', 'Sales Process', 'Professional Services', 'Sales Enablement', 'Marketing', 'Competitive Analysis', 'Business Strategy', 'Mobile Devices', 'Corporate Branding', 'Computer Security', 'Security Technologies', 'Public Relations', 'Channel Marketing', 'Email Marketing', 'LAN/WAN', 'SaaS', 'Enterprise Software', 'Salesforce.com', 'Lead Generation', 'S']"
+344,Business Development,['']
+345,Business Development,"['Microsoft Office', 'Customer Service', 'Management']"
+346,Business Development,"['Growth Strategies', 'Business Development', 'Business Analysis']"
+347,Business Development,"['Sports', 'Sports Marketing', 'Sponsorship Sales', 'Basketball', 'International Relations', 'International Business Development', 'Sponsorship Activation', 'Bilingual']"
+348,Business Development,"['Team Management', 'Corporate Finance', 'Business Development']"
+349,Business Development,"['SEO', 'PPC', 'Online Marketing', 'Online Advertising', 'Email Marketing', 'SEM', 'SMM', 'Business Development', 'Marketing Strategy', 'Team Building', 'Online Branding']"
+350,Business Development,['']
+351,Business Development,"['Key Account Management', 'Business Development', 'Sales Management', 'Competitive Analysis', 'Marketing', 'Sales', 'Market Research', 'Recruiting', 'Team Management', 'Management', 'Negotiation', 'Customer Service', 'Distributed Team Management', 'New Business Development']"
+352,Business Development,['']
+353,Business Development,"['Healthcare', 'Healthcare Management', 'Healthcare Information Technology']"
+354,Health & Fitness,"['Entrepreneur', 'Health and Fitness', 'Business Coaching', 'Project Management', 'Business Analysis', 'Business Development', 'Agile Methodologies', 'Enterprise Resource Planning \\(ERP\\)', 'Consulting', 'Software Development Life Cycle \\(SDLC\\)', 'Software Project Management', 'Business Planning', 'Strategic Communications', 'Corporate Communications', 'Social Media Communications', 'Team Management', 'Leadership Development', 'Community Development', 'Interpersonal Communication', 'Storytelling', 'Marathon Runner', 'Member of Toastmasters', 'Small Business Development', 'Business Decision Making', 'Weight Loss Coaching', 'Personal Coaching', 'Leadership Development Coaching', 'Sales Management Coaching', 'Story Pitching', 'Entrepreneurship Education', 'Soft skill traine']"
+355,Health & Fitness,"['Personal Training', 'Fitness', 'Nutrition', 'Fitness Training', 'Strength Training', 'Sports', 'Weight Training', 'Wellness', 'Sports Nutrition', 'Functional Training', 'Exercise Physiology', 'Coaching', 'Nutritional Counseling', 'Fitness Industry', 'Weight Management']"
+356,Health & Fitness,"['Fitness', 'Wellness', 'Exercise Physiology', 'Nutrition', 'Fitness Training', 'Sports Nutrition', 'Personal Training', 'Strength Training', 'Weight Training', 'Athletics', 'Wellness Coaching', 'Nutritional Counseling', 'Coaching', 'Public Speaking', 'Lifestyle']"
+357,Health & Fitness,['']
+358,Health & Fitness,"['Healthcare', 'Public Speaking', 'Microsoft Office', 'Fitness', 'Wellness', 'Microsoft Excel', 'Microsoft PowerPoint', 'Management', 'Leadership']"
+359,Health & Fitness,"['Wellness', 'Fitness', 'Yoga', 'Wellbeing', 'Holistic Health', 'Nutrition', 'Small Business', 'Recruiting', 'Personal Training', 'Fitness Training', 'Wellness Coaching', 'Stress Management', 'Nutritional Counseling', 'Hatha Yoga', 'Lifestyle']"
+360,Health & Fitness,"['Wellness', 'Weight Training', 'Wellbeing', 'Fitness', 'Sports Nutrition', 'Functional Training', 'Healing', 'Sports', 'Exercise Physiology', 'Nutritional Counseling', 'Wellness Coaching', 'Lifestyle', 'Weight']"
+361,Health & Fitness,"['Fitness', 'Sports Injuries', 'Injury Prevention', 'Rehabilitation', 'Strength Training', 'Personal Training', 'Physical Therapy', 'Wellness', 'Manual Therapy', 'Musculoskeletal', 'Healthcare', 'Treatment', 'Sports Medicine', 'Back Pain', 'Exercise Prescription', 'Pain Management', 'Exercise Physiology', 'Sports', 'Orthopedics', 'Strategy', 'Business Development', 'Project Management', 'Marketing', 'Entrepreneurship', 'Business Strategy', 'Event Management', 'Hospitals', 'Event Planning', 'Training', 'Teaching', 'Leadership', 'Management', 'Customer Service', 'Public Speaking', 'Coaching', 'Team Building', 'Time Management', 'Leadership Development', 'Team Leadership']"
+362,Health & Fitness,"['Public Speaking', 'Customer Service', 'Training', 'Strategic Planning', 'Change Management', 'Personal Training', 'Therapeutic Massage', 'Executive Administrative Assistance', 'Fitness Training', 'Project Management', 'Operations Management', 'Strength & Conditioning', 'Sports Nutrition', 'Teaching Adults', 'Budgets', 'Project Planning', 'First Aid', 'Research', 'Human Resources', 'Contract Management', 'Social Media', 'Administration', 'Health & Fitness', 'Writer', 'Microsoft Excel', 'Microsoft Office', 'Microsoft Word', 'PowerPoint', 'Coaching', 'Team Leader', 'Management', 'Team Leadership', 'Teaching ', 'Team Building', 'Supervisory Skills', 'Contract Negotiation', 'Motivational Speaking', 'Business Administration', 'Dental Assist']"
+363,Health & Fitness,['']
+364,Health & Fitness,"['Functional Training', 'Weight Loss Coaching', 'High Intensity Interval Training']"
+365,Health & Fitness,['']
+366,Health & Fitness,['']
+367,Health & Fitness,"['Public Speaking', 'Customer Service', 'Training', 'Strategic Planning', 'Change Management', 'Personal Training', 'Therapeutic Massage', 'Executive Administrative Assistance', 'Fitness Training', 'Project Management', 'Operations Management', 'Strength & Conditioning', 'Sports Nutrition', 'Teaching Adults', 'Budgets', 'Project Planning', 'First Aid', 'Research', 'Human Resources', 'Contract Management', 'Social Media', 'Administration', 'Health & Fitness', 'Writer', 'Microsoft Excel', 'Microsoft Office', 'Microsoft Word', 'PowerPoint', 'Coaching', 'Team Leader', 'Management', 'Team Leadership', 'Teaching ', 'Team Building', 'Supervisory Skills', 'Contract Negotiation', 'Motivational Speaking', 'Business Administration', 'Dental Assist']"
+368,Health & Fitness,"['Sports Nutrition', 'Fitness Training', 'Fitness']"
+369,Health & Fitness,"['Fitness Training', 'Weight Management', 'Strength & Conditioning', 'Strength Training', 'Sports Nutrition', 'Real Estate', 'Loans', 'Marketing', 'Analytical Skills', 'Mortgage Lending', 'Investment Properties', 'Finance', 'Sales', 'CRM', 'Financial Risk', 'Investments', 'Portfolio Management', 'Risk Management', 'Sports', 'Nutrition', 'Weight Training', 'Cardiopulmonary Resuscitation \\(CPR\\)', 'Strong oral and written communication skills', 'Leadership', 'Management', 'Team Leadership', 'Negotiation', 'Training', 'Excellent time management skills', 'Wellness Coaching', 'Nutritional Counseling', 'Fitness Instruction', 'Aerobics', 'Plyometrics', 'High Intensity Interval Training', 'Calisthenics', 'Spinning', 'TRX Suspension Training', 'Ex']"
+370,Health & Fitness,"['Wellness', 'Fitness Training', 'Fitness', 'Exercise Physiology', 'Health Education', 'Strength Training', 'Personal Training', 'Nutrition', 'Cpr Certified', 'Program Development', 'Event Planning', 'Social Media', 'Health Promotion', 'Public Speaking', 'Wellness Coaching', 'Customer Service', 'Coaching', 'Fitness Industry', 'Cardiovascular Fitness', 'Fitness Center', 'Employee Wellness', 'Corporate Wellness', 'Health & Wellness']"
+371,Health & Fitness,"['Fitness', 'Wellness', 'Training']"
+372,Health & Fitness,"['Strength Training', 'Weight Training', 'Personal Training', 'Fitness Training', 'Fitness', 'Nutrition', 'Functional Training', 'Sports Nutrition', 'Wellbeing', 'Sports', 'Sports Injuries', 'Wellness', 'Exercise Physiology', 'Injury Prevention', 'Athletics', 'Exercise Prescription', 'Strength ', 'Rehabilitation', 'Military', 'Strength & Conditioning', 'Coaching', 'Training', 'Wellness Coaching', 'Lifestyle Coaching', 'Sports Coaching', 'Personal Development', 'Nutritional Counseling', 'Circuit Training', 'Kettlebells', 'Corrective Exercise', 'Core Strength', 'Fitness Consulting', 'Endurance', 'Weight Loss Coaching', 'Cardio', 'Agility', 'Performance Enhancement', 'Boot Camp', 'Operant Conditioning', 'Boxing', 'Weight Management']"
+373,Health & Fitness,"['Fitness', 'Personal Training', 'Strength Training', 'Wellness', 'Nutrition', 'Fitness Training', 'Strength & Conditioning', 'Holistic Health', 'Functional Training', 'Pain Management', 'Sports', 'Weight Training', 'Back Pain', 'Exercise Physiology', 'Musculoskeletal', 'Sports Injuries', 'Rehabilitation', 'Injury Prevention', 'Sports Medicine', 'Yoga', 'Wellbeing', 'Physical Therapy', 'Athletics', 'Healing', 'Sports Nutrition', 'Supplements', 'Lifestyle Coaching', 'Wellness Coaching', 'Nutritional Counseling', 'Stress Management', 'Operant Conditioning', 'Kinesiology', 'Pilates', 'Corrective Exercise', 'Endurance', 'Functional Medicine', 'Weight Management', 'Core Strength', 'Lifestyle', 'Weight']"
+374,Health & Fitness,"['Nutrition', 'Fitness', 'Coaching']"
+375,Health & Fitness,['']
+376,Health & Fitness,"['Weight Training', 'Personal Training', 'Nutrition']"
+377,Health & Fitness,"['Fitness Training', 'Fitness Instruction', 'Fitness Consulting', 'Creative Writing', 'Personal Training', 'Public Speaking', 'Wellness Coaching', 'Coaching', 'Leadership']"
+378,Health & Fitness,"['Sales Process', 'Business Development', 'Creative']"
+379,Health & Fitness,"['Fitness', 'Personal Training', 'Strength Training']"
+380,Health & Fitness,"['Research', 'Event Planning', 'Public Speaking', 'Fitness', 'Nutrition', 'Customer Service']"
+381,Health & Fitness,['']
+382,Health & Fitness,['']
+383,Health & Fitness,"['Fitness', 'Personal Training', 'Strength Training']"
+384,Health & Fitness,"['Marketing', 'Marketing Strategy', 'Social Media Marketing', 'Social Media', 'Sales', 'Market Research', 'Trade Shows', 'Product Marketing', 'Retail', 'Sales Management', 'Newsletters', 'Public Relations', 'Market Planning', 'Account Management', 'Program Management', 'Event Planning', 'Marketing Communications', 'Management']"
+385,Health & Fitness,"['Coaching', 'Wellness', 'Empower']"
+386,Health & Fitness,"['Strength Training', 'Fitness', 'Wellness']"
+387,Health & Fitness,"['Nutrition', 'Cardio', 'Personal Training', 'Weight Training', 'Fitness Training', 'Wellness', 'Functional Training', 'Sports Nutrition', 'Strength Training', 'Sports', 'Healthcare', 'Strategic Planning', 'Social Media', 'Research', 'Event Planning', 'Cpr Certified', 'Exercise Physiology', 'Injury Prevention', 'Strength ', 'Microsoft Office', 'Microsoft Excel', 'Microsoft Word', 'PowerPoint', 'Teaching', 'Training', 'Coaching', 'Customer Service', 'Wellness Coaching', 'Public Speaking', 'Leadership Development', 'Nutritional Counseling', 'Health Promotion', 'Toning', 'Core Strength', 'Corrective Exercise', 'Stretching', 'Pilates', 'Fitness Consulting', 'Plyometrics', 'Lifestyle', 'Weight']"
+388,Health & Fitness,"['Fitness', 'Healthcare', 'Manual Therapy']"
+389,Health & Fitness,['']
+390,Health & Fitness,"['Team Building', 'Customer Service', 'Coaching']"
+391,Health & Fitness,"['Fitness', 'Sports Nutrition', 'Nutrition']"
+392,Health & Fitness,"['Personal Training', 'Fitness', 'Fitness Training', 'Functional Training', 'Sports', 'Strength Training', 'Sports Nutrition', 'Weight Training', 'Athletics', 'Exercise Physiology', 'Strength & Conditioning', 'Toning', 'Circuit Training', 'Endurance', 'Operant Conditioning', 'Lifestyle']"
+393,Health & Fitness,"['Wellness', 'Public Speaking', 'Fitness Training']"
+394,Health & Fitness,"['Fitness', 'Sports Nutrition', 'Nutrition', 'Fitness Training', 'Personal Training', 'Weight Training', 'Sports', 'Strength Training', 'First Aid', 'Athletics', 'Functional Training', 'Occupational First Aid', 'Strength', 'Strength & Conditioning', 'Exercise Physiology', 'ECDL Certification', 'Kettlebells', 'Plyometrics', 'Endurance', 'Lifestyle', 'Reebok Spin Instructor', 'Reebok Kettlebell Instructor', 'Rip:60 Instructor', 'Sandcore 101 Instructor', 'Reebok HIIT', 'Reebok BodySmart', 'Metafit', 'Metafit Coach ']"
+395,Health & Fitness,"['Fitness', 'Personal Training', 'Fitness Training']"
+396,Health & Fitness,"['Fitness', 'Wellness', 'Nutrition']"
+397,Health & Fitness,"['Publishing', 'Mac', 'Social Media Marketing']"
+398,Health & Fitness,"['Health Promotion', 'Health Education', 'Sports Nutrition', 'Personal Training', 'Nutrition', 'Public Health', 'First Aid', 'Exercise Physiology', 'Fitness Training', 'Microsoft Office', 'Customer Service', 'Sports Coaching', 'Critical Thinking', 'Health Economics', 'Weight Management', 'Identifying Client Needs']"
+399,Health & Fitness,['']
+400,Health & Fitness,"['Nutrition', 'Personal Training', 'Rehabilitation', 'Functional Training', 'Sports', 'Strength Training', 'Fitness', 'Fitness Training', 'Wellness', 'Secondary Education', 'Customer Service', 'Leadership', 'Coaching', 'Training', 'Public Speaking', 'Functional Movement', 'Functional Movement Screen', 'Injury Rehabilitation', 'Further Education', 'Self-confidence']"
+401,Health & Fitness,"['Accounting', 'Forecasting', 'Financial Reporting', 'Analysis', 'Financial Analysis', 'General Ledger', 'Budgets', 'Finance', 'Strategic Planning', 'Sarbanes-Oxley Act', 'Internal Controls', 'Business Planning', 'Project Management', 'Business Process Improvement', 'GAAP', 'Manufacturing', 'Financial Modeling', 'Budgeting', 'Consolidation', 'Cost Accounting', 'Mergers', 'Microsoft Excel', 'Access', 'QuickBooks', 'Microsoft Office', 'JD Edwards', 'Team Building', 'Cross-functional Team Leadership', 'Process Improvement']"
+402,Health & Fitness,"['Social Media', 'Marketing', 'Marketing Strategy']"
+403,Health & Fitness,"['Fitness', 'Nutrition', 'Wellness']"
+404,Agricultural,"['High technology greenhouses ', 'Growing vegetables ', 'Medical Cannabis ', 'Budgets', 'Strategic Planning', 'Agriculture', 'Business vision', 'Agribusiness', 'Soil', 'Employee Training', 'Management', 'Negotiation', 'Technical Skillset', 'Employee high manageability', 'New Business Development', 'raised planting beds ', 'fertilization and irrigation', 'soil disease and pests', 'integrated biological pest management', 'IPM certification', 'Growing with artificial light', ' Post harvest management', 'Agricultural Training', 'Planning and establishing agricultural projects', 'global gap', 'Isso', 'Matching the technology to the growing conditions and the climate ', 'Agriculture Consultant', 'Agriculture Consultancy for Investors ', 'Agriculture Consultancy for Agricultural']"
+405,Agricultural,['']
+406,Agricultural,"['Rural Development', 'Business Strategy', 'Sustainable Agriculture', 'Agriculture policies', 'Food Safety and GAP ', 'Agro Processing and Marketing', 'Global Partnerships for Food Security ', 'Food and Nutrition ', 'African Agriculture Development ', 'Enterprenership and Skills Development ', 'Seeds biotechnology crop protection plant health', 'International Agro Trade', 'Environment and Climate Change ', 'Agro Media and Consulting ', 'GAP certification and crop stewardship', 'Dairy poultry aqua fish farming and trade']"
+407,Agricultural,"['Business Planning', 'Business Strategy', 'Agribusiness', 'Business Development', 'Strategy', 'Market Research', 'Strategic Planning', 'Finance', 'Agriculture', 'Product Development', 'Project Management', 'Banking', 'Marketing Strategy', 'Analysis', 'Supply Chain Management', 'Market Analysis', 'Rural Development', 'Investment Banking', 'Corporate Finance', 'Restructuring', 'Internal Audit', 'Food', 'Project Finance', 'Energy', 'Financial Structuring', 'Consulting', 'Management Consulting', 'Business Transformation', 'Food Safety', 'Food Processing', 'Negotiation', 'Leadership', 'Strategic Partnerships', 'Management', 'Team Management', 'Organizational Development', 'New Business Development', 'Value Chain Analysis', 'Value Chain Mana']"
+408,Agricultural,['']
+409,Agricultural,"['Research', 'Public Speaking', 'Community Outreach', 'Microsoft Office', 'Microsoft Excel', 'Microsoft Word', 'Microsoft PowerPoint', 'English']"
+410,Agricultural,"['Research', 'Technology Management', 'Technology Transfer']"
+411,Agricultural,['']
+412,Agricultural,"['agriculture', 'Equestrian', 'Groundworks', 'Construction', 'Landscaping', 'Farms', 'Agriculture', 'Fences', 'Electric Fencing', 'Tractor', 'Contract Farming', 'Farmers', 'Livestock', 'Pigs', 'Horses']"
+413,Agricultural,"['New Item Development', 'Item Analysis', 'New Item Introduction', 'Item Master', 'Item Processing', 'New Item Launches', 'Item Response Theory']"
+414,Agricultural,"['Capacity Building', 'International Development', 'Sustainable Development']"
+415,Agricultural,"['Agricultural Engineering', 'Irrigation', 'Irrigation Management', 'Water', 'Water Management', 'Water Resources', 'Energy', 'Energy Efficiency', 'Energy Audits', 'Engineering', 'Project Engineering', 'Agriculture', 'Sustainable Agriculture', 'Farms', 'Consulting', 'Management Consulting', 'Adult Education', 'Technical Training', 'Report Writing', 'Environmental Awareness', 'Strategic Planning', 'Research', 'Agribusiness', 'Agronomy', 'Sustainability', 'Public Speaking', 'Drip Irrigation', 'Center Pivot Irrigation', 'Agricultural Production', 'Water Supply', 'Fresh Produce', 'Precision Agriculture', 'Agricultural Economics', 'Farmers', 'Organic Farming', 'Conference Speaking']"
+416,Agricultural,"['Entrepreneurship', 'Start-ups', 'Business Development', 'Social Media Marketing', 'Digital Marketing', 'Business Strategy', 'Sales Management', 'Marketing Strategy', 'Event Management', 'Intellectual Property', 'Market Research', 'Marketing', 'Marketing Communications', 'Creative Writing', 'Social Networking', 'Marketing Research', 'Research', 'Editing', 'SEO', 'Telecommunications', 'SMO', 'Account Management', 'Venture Capital', 'Microsoft Excel', 'PowerPoint', 'Microsoft Word', 'Photoshop', 'Microsoft Office', 'Team Building', 'Leadership', 'Teamwork', 'Team Management', 'Channel Account Management', 'business deve', 'market', 'Start-up Consulting']"
+417,Agricultural,['']
+418,Agricultural,"['agriculture', 'Equestrian', 'Groundworks', 'Construction', 'Landscaping', 'Farms', 'Agriculture', 'Fences', 'Electric Fencing', 'Tractor', 'Contract Farming', 'Farmers', 'Livestock', 'Pigs', 'Horses']"
+419,Agricultural,"['International Development', 'Capacity Building', 'Policy Analysis', 'NGOs', 'Project Management', 'Program Evaluation', 'Rural Development', 'Proposal Writing', 'Program Management', 'International Relations', 'Nonprofits', 'Analysis', 'Project Planning', 'Market Research', 'Non-profits', 'Stata', 'Microsoft Office', 'Grants', 'Training', 'Microfinance', 'Value Chain Analysis', 'Technical Assistance', 'Public/private Partnerships', 'Policy', 'Africa', 'Field Operations Security and First Aid Training \\(2008\\)', 'Workshop on Results Based Planning \\(2007\\)', 'USAID Grants Management Training \\(2005\\)', 'Proficient with Mac and PC', 'MS Office', 'Photoshop', 'STATA Statistics Software']"
+420,Agricultural,"['Research', 'Management', 'Environmental Awareness', 'Blogging', 'Social Media', 'Event Management', 'Journalism', 'Environmental Issues', 'Writing', 'Data Analysis', 'Editing', 'Marketing', 'Press Releases', 'Events Organisation', 'Business Development', 'Agriculture', 'Conservation Issues', 'Sustainable Agriculture', 'Report Writing', 'Microsoft Office', 'Teamwork', 'Leadership', 'Public Speaking', 'Teaching', 'Time Management', 'Written & Oral Presentation Skills', 'People-oriented', 'Communication', 'Environmental History', 'Wildlife Conservation', 'Networking', 'Engaging People', 'Creativity']"
+421,Agricultural,['']
+422,Agricultural,"['Auditing', 'Accounting', 'Team Management', 'Business Planning', 'Finance', 'Financial Audits', 'Banking', 'Vendor Management', 'Business Analysis', 'Tax', 'Project Planning', 'Business Strategy', 'MIS', 'Working Capital Management']"
+423,Agricultural,"['SAP', 'Team Management', 'Operating Systems']"
+424,Agricultural,"['ERP', 'Manufacturing', 'Steel']"
+425,Agricultural,['']
+426,Agricultural,"['Research', 'Soil', 'Sustainable Development', 'Water', 'Data Analysis', 'Science', 'Sustainability', 'Ecology', 'Climate Change', 'Environmental Science', 'Environmental Awareness', 'Agriculture', 'Management', 'Soil Management', 'Irrigation Agronomy or Agronomist', 'crop water requirement', 'salt affected soils']"
+427,Agricultural,"['Microsoft Office', 'Customer Service', 'Management']"
+428,Agricultural,"['Marketing Strategy', 'Marketing', 'Customer Service']"
+429,Agricultural,"['Agriculture', 'Strategic Planning', 'Business Strategy', 'Farms', 'Agribusiness', 'Research', 'Business Planning', 'Marketing Strategy', 'Marketing', 'Animal Nutrition', 'Sustainable Agriculture', 'Dairy', 'Rural Development', 'Entrepreneurship', 'Project Planning', 'Veterinary Medicine', 'Horticulture', 'International Business', 'Business Development', 'Market Research', 'Product Development', 'Microsoft Office', 'Microsoft Excel', 'Management', 'Negotiation', 'Training', 'Capacity Building', 'Leadership', 'Customer Service', 'Poultry', 'Organic Farming', 'Livestock', 'Aquaculture', 'Equestrian', 'New Business Development', 'Policy']"
+430,Agricultural,"['Veterinary Medicine', 'Veterinary', 'Animal Welfare']"
+431,Agricultural,['']
+432,Agricultural,['']
+433,Agricultural,"['Strategic Planning', 'Research', 'Biotechnology', 'Business Strategy', 'Agriculture', 'Product Development', 'Life Sciences', 'Project Management', 'R&D', 'Strategy', 'Proposal Writing', 'Agronomy', 'Business Development', 'Data Analysis', 'Data Management', 'Project Planning', 'Microsoft Office', 'Management', 'Customer Service', 'Agricultural Policy', 'Plant Breeding', 'Research Management']"
+434,Agricultural,['']
+435,Agricultural,['']
+436,Agricultural,['']
+437,Agricultural,"['Team Management', 'Business Development', 'Business Strategy', 'Product Development', 'Strategy', 'Marketing', 'Strategic Planning', 'Key Account Management', 'Business Planning', 'Marketing Strategy', 'Market Research', 'Sales Management', 'Sales Operations', 'Management', 'Strategic Partnerships', 'Negotiation', 'Team Building', 'New Business Development']"
+438,Agricultural,['']
+439,Agricultural,"['Manufacturing', 'Engineering', 'Kaizen']"
+440,Agricultural,"['Food Science', 'Food Safety', 'Food Technology']"
+441,Agricultural,['']
+442,Agricultural,['']
+443,Agricultural,['']
+444,Agricultural,['']
+445,Agricultural,['']
+446,Agricultural,['']
+447,Agricultural,"['Quality Control', 'Team Management', 'Food Processing']"
+448,Agricultural,['']
+449,Agricultural,"['Management', 'Leadership', 'Microsoft Office']"
+450,Agricultural,"['Hazard Analysis and Critical Control Points \\(HACCP\\)', 'Quality Control']"
+451,Agricultural,['']
+452,Agricultural,"['Horticulture', 'Farms', 'Agronomy']"
+883,BPO,"['Team Management', 'Outsourcing', 'Business Development']"
+884,BPO,"['Team Management', 'Outsourcing', 'Business Development']"
+885,BPO,"['Business Development', 'Team Management', 'CRM']"
+886,BPO,"['BPO', 'Outsourcing', 'Telemarketing']"
+887,BPO,['']
+888,BPO,"['Management', 'Team Management', 'PHP']"
+889,BPO,"['Call Centers', 'Project Management', 'Microsoft Office']"
+890,BPO,"['Management', 'Business Development', 'Team Management']"
+891,BPO,['']
+892,BPO,['']
+893,BPO,['']
+894,BPO,"['Team Management', 'Management', 'Business Development']"
+895,BPO,['']
+896,BPO,['']
+897,BPO,['']
+898,BPO,['']
+899,BPO,"['BPO', 'Joomla', 'Service Delivery']"
+900,BPO,['']
+901,BPO,['']
+902,BPO,"['Call Centers', 'Microsoft Office', 'Customer Service']"
+903,BPO,['']
+904,BPO,['']
+905,BPO,"['BPO', 'Team Management', 'Outsourcing']"
+906,BPO,"['Outsourcing', 'Vendor Management', 'Strategy']"
+907,BPO,['']
+908,BPO,"['Management', 'Project Management', 'Microsoft Office']"
+909,BPO,['']
+910,BPO,"['Call Centers', 'Outsourcing', 'Lead Generation', 'Contact Centers', 'BPO', 'Business Development', 'Telemarketing', 'Telecommunications', 'Call Center', 'Sales', 'CRM', 'Customer Experience', 'Customer Retention', 'Customer Satisfaction', 'Marketing', 'Consulting', 'Account Management', 'Email Marketing', 'Start-ups', 'Solution Selling', 'Sales Management', 'B2B', 'Technical Support', 'Direct Sales', 'Customer Acquisition', 'Sales Process', 'Financial Services', 'Direct Marketing', 'Cloud Computing', 'Wireless', 'Broadband', 'Cloud-based', 'Entrepreneurship', 'SaaS', 'Leadership', 'Management', 'Strategic Partnerships', 'Customer Service', 'Team Management', 'Cross-functional Team Leadership', 'Brokers', 'New Business Deve']"
+911,BPO,['']
+912,BPO,['']
+913,BPO,['']
+914,BPO,['']
+915,BPO,['']
+916,BPO,['']
+917,BPO,"['Dance', 'High Level Of Accuracy', 'Strategic Thinking']"
+918,BPO,['']
+919,BPO,"['CRM', 'Outsourcing', 'Contact Centers', 'BPO', 'Call Centers', 'Business Development', 'Marketing', 'B2B', 'Marketing Strategy', 'Telemarketing', 'Customer Relationship Management \\(CRM\\)', 'Business-to-Business \\(B2B\\)', 'Business Process Outsourcing \\(BPO\\)', 'Solution Selling', 'Account Management', 'Enterprise Software', 'Management', 'Lead Generation', 'Leadership', 'Customer Service', 'Contract Negotiation', 'New Business Development', 'Offshore Outsourcing']"
+920,BPO,['']
+921,BPO,['']
+922,BPO,['']
+923,BPO,['']
+924,BPO,['']
+925,BPO,['']
+926,BPO,"['Recruiting', 'Project Management', 'Project Planning']"
+927,BPO,"['Team Management', 'Management', 'Product Development']"
+928,BPO,"['Outsourcing', 'BPO', 'CRM']"
+929,BPO,['']
+930,BPO,['']
+931,BPO,"['Microsoft Office', 'Editing', 'HTML']"
+932,BPO,['']
+933,Sales,"['Telecommunications', 'Product Management', 'Business Development', 'Solution Selling', 'Sales', 'Managed Services', 'Operations Management', 'Wireless', 'Mobile Devices', 'Strategic Planning', 'Channel Partners', '3G', 'Business Strategy', 'Key Account Management', 'Mobile Payments', 'Program Management', 'IT Service Management', 'Sales Operations', 'Consulting', 'B2B', 'Outsourcing', 'Pre-sales', 'Key Performance Indicators', 'Vendor Management', 'Strategy', 'Account Management', 'Mobile Communications', 'Product Marketing', 'CRM', 'VAS', 'Marketing', 'Product Development', 'Marketing Strategy', 'Mobile Technology', 'IP', 'GSM', 'LTE', 'BSS', 'WiMAX', 'Team Management', 'Management', 'Leadership', 'RFP', 'Mobile I']"
+934,Sales,"['Telecommunications', 'Pre-sales', 'Team Management', 'Product Management', 'Requirements Analysis', 'Business Analysis', 'Strategy', 'Business Development', 'Key Account Management', 'Product Development', 'CRM', 'Business Intelligence', 'Electronics', 'Project Planning', 'Product Marketing', 'Customer Relationship Management \\(CRM\\)', 'Account Management', 'IP', 'GSM', 'C']"
+935,Sales,"['Integrated Marketing', 'Marketing Strategy', 'Advertising', 'Marketing', 'Business Development', 'Marketing Management', 'Marketing Communications', 'Sales Management', 'Social Media Marketing', 'Business Strategy', 'CRM', 'Strategic Planning', 'Brand Development', 'Event Management', 'Competitive Analysis', 'Market Research', 'Product Launch', 'Sales', 'Corporate Communications', 'Public Relations', 'Media Planning', 'Brand Management', 'Brand Communication', 'Product Development', 'Real Estate', 'Customer Relationship Management \\(CRM\\)', 'Market Planning', 'Product Launches', 'Event Planning', 'Marketing Research', 'Vendor Management', 'Strategy', 'Business Planning', 'Team Management', 'Leadership', 'Management', 'Team Building', 'New B']"
+936,Sales,"['Team Management', 'Sales', 'Marketing', 'Business Strategy', 'Competitive Analysis', 'Market Research', 'Business Development', 'Customer Relationship Management \\(CRM\\)', 'Marketing Strategy', 'CRM', 'Sales Management', 'Start-ups', 'Microsoft Office', 'Microsoft PowerPoint', 'PowerPoint', 'Management', 'Lead Generation', 'Leadership', 'Teamwork', 'Training', 'Customer Service', 'Team Motivation', 'Team Leadership', 'New Business Development', 'Exceeding Targets']"
+937,Sales,"['Microsoft Office', 'Microsoft Excel', 'Social Media']"
+938,Sales,"['Key Account Management', 'Sales & Marketing Leadership', 'Team Management']"
+939,Sales,"['Strategy', 'Product Management', 'Go-to-market Strategy', 'Business Strategy', 'Business Analysis', 'Pre-sales', 'Business Process Improvement', 'Business Process Management', 'Solution Architecture', 'Key Account Management', 'Sales', 'Business Intelligence', 'ERP', 'Telecommunications', 'IT Service Management', 'Selling', 'Sales Operations', 'Business Development', 'Requirements Analysis', 'Account Management', 'Consulting', 'Vendor Management', 'CRM', 'Business Process', 'Solution Selling', 'IT Strategy', 'Analysis', 'Sales Management', 'Competitive Analysis', 'Project Management', 'Marketing', 'Business Transformation', 'Direct Sales', 'Product Marketing', 'Customer Relationship Management \\(CRM\\)', 'SaaS', 'Enterprise Software', 'Manag']"
+940,Sales,"['Futuristic', 'Ideation', 'Activator', 'Strategic Planning', 'Pharmaceutical Industry', 'Competitive Analysis', 'Market Research', 'Product Launch', 'Market Analysis', 'Pharmaceutical Sales', 'Sales Effectiveness', 'Marketing Management', 'Key Account Management', 'Pharmaceutics', 'Marketing Strategy', 'Business Development', 'Product Management', 'Sales Operations', 'Strategy', 'Negotiation', 'Public Speaking', 'Management', 'Team Management', 'Competition', 'Learner', 'New Business Development', 'Kol Development']"
+941,Sales,"['Sales Operations', 'Sales', 'Dairy', 'FMCG', 'Market Research', 'Business Development', 'Agribusiness', 'Strategy', 'Business Planning', 'Business Strategy', 'Market Planning', 'Marketing', 'Fast-Moving Consumer Goods \\(FMCG\\)', 'Rural Development', 'Product Development', 'Sales Management', 'Account Management', 'Channel Sales', 'Team Management', 'Distributed Team Management', 'Management', 'Rural Marketing', 'Channel']"
+942,Sales,"['Automotive', 'Product Planning', 'Team Management']"
+943,Sales,"['Requirements Analysis', 'Java Enterprise Edition', 'Java', 'Business Development', 'Strategy', 'Marketing Strategy', 'Market Research', 'Pre-sales', 'Unix Shell Scripting', 'PL/SQL', 'Core Java', 'Unix', 'Oracle', 'JSP', 'JavaScript', 'C', 'Databases', 'MySQL']"
+944,Sales,"['Inside Sales', 'customer success', 'Business Development']"
+945,Sales,"['sales and marketing', 'commercial training', 'Project Management', 'Instructional Design', 'Sales Process', 'Performance Management', 'Management Consulting', 'Business Development', 'Strategy', 'Business Strategy', 'Sales', 'Sales Management', 'Market Research', 'Key Account Management', 'Talent Acquisition', 'CRM', 'Marketing', 'Executive Coaching', 'Team Leadership', 'Team Management', 'Management', 'Negotiation', 'Training', 'Team Building', 'Employee Engagement', 'Talent Management', 'Sales Leadership Training', 'Engineering Change Management', 'B2B Marketing Strategy', 'Business Consulting', 'New Business Development']"
+946,Sales,"['Petroleum', 'Energy', 'Oil/Gas']"
+947,Sales,"['Microsoft Excel', 'Microsoft Office', 'Customer Service', 'Business Development', 'Choreography', 'Dance', 'Customer Experience', 'Sales Management', 'Strategic Planning', 'PowerPoint', 'Microsoft Word', 'Windows', 'Microsoft PowerPoint', 'Microsoft Outlook', 'Management', 'Team Management', 'Leadership', 'Training', 'Teamwork', 'Communication', 'Team Building', 'Team Leadership', 'Time Management', 'Presentations', 'English', 'Ballroom Dance']"
+948,Sales,"['Sales Operations', 'Sales', 'Dairy', 'FMCG', 'Market Research', 'Business Development', 'Agribusiness', 'Strategy', 'Business Planning', 'Business Strategy', 'Market Planning', 'Marketing', 'Fast-Moving Consumer Goods \\(FMCG\\)', 'Rural Development', 'Product Development', 'Sales Management', 'Account Management', 'Channel Sales', 'Team Management', 'Distributed Team Management', 'Management', 'Rural Marketing', 'Channel']"
+949,Sales,"['Microsoft Office', 'Microsoft Excel', 'Chemical Engineering', 'Chemistry', 'Engineering', 'Product Development', 'HPLC', 'Research', 'Business Strategy', 'Business Development', 'Marketing', 'Market Research', 'Go-to-market Strategy', 'Marketing Strategy', 'Customer Relationship Management \\(CRM\\)', 'Microsoft Word', 'PowerPoint', 'Matlab', 'C', 'C++', 'Windows', 'Photoshop', 'Microsoft PowerPoint', 'Teamwork', 'Team Management', 'Management', 'English', 'Reaction Engineering', 'Distillation']"
+950,Sales,"['Business Development', 'Team Management', 'Business Strategy', 'Product Development', 'Sales Management', 'Marketing Strategy', 'Marketing', 'Customer Relationship Management \\(CRM\\)', 'Strategic Planning', 'Strategic Business Planning', 'Marketing Management', 'Key Account Management', 'Product Management', 'Branding & Identity', 'Digital Marketing', 'Six Sigma', 'Key Account Development', 'Advertising', 'Change Management', 'Business Process Improvement', 'Digital Media', 'Account Management', 'Market Research', 'Analytical Skills', 'Troubleshooting', 'Negotiation', 'Leadership', 'Management', 'Coaching', 'Training', 'Cross-functional Team Leadership', 'University Teaching', 'NPI Management', 'Aftersales', 'Technical Product Sales', 'Channel Deve']"
+951,Sales,['']
+952,Sales,"['Product Development', 'Engineering', 'Negotiation']"
+953,Sales,"['Sales', 'Customer Service', 'Market Research']"
+954,Sales,"['Management', 'Team Management', 'Project Planning', 'Business Development', 'Market Research', 'Marketing Management', 'Business Strategy', 'Business Analysis', 'Marketing Strategy', 'Business Planning', 'Customer Service', 'New Business Development']"
+955,Sales,['']
+956,Sales,['']
+957,Sales,['']
+958,Sales,['']
+959,Sales,"['Market Research', 'Business Strategy', 'New Business Development']"
+960,Sales,['']
+961,Sales,"['Airlines', 'Business Travel', 'Travel Management']"
+962,Sales,"['Business Development', 'CRM', 'Team Management', 'Key Account Management', 'Customer Satisfaction', 'Marketing', 'Strategy', 'Event Management', 'Sales Management', 'Customer Relationship Management \\(CRM\\)', 'Online Marketing', 'Proposal Writing', 'Digital Marketing', 'Online Advertising', 'Direct Marketing', 'Market Planning', 'Talent Acquisition', 'Recruiting', 'Analysis', 'Market Research', 'Integrated Marketing', 'Advertising', 'Sales', 'Business Strategy', 'Marketing Strategy', 'Account Management', 'Marketing Communications', 'Channel Partners', 'Social Media Marketing', 'Strategic Planning', 'Business Analysis', 'Project Management', 'Competitive Analysis', 'E-commerce', 'Business Planning', 'SEO', 'Management', 'Sourcing', 'Con']"
+963,Sales,"['Business Development', 'Management', 'Account Management']"
+964,Sales,"['Negotiation', 'Team Management', 'Business Development', 'Real Estate', 'Real Estate Development', 'Marketing Strategy', 'Business Strategy', 'Market Research', 'Investment Properties', 'Sales', 'Land Acquisition', 'Property Management', 'Real Estate Transactions', 'Strategic Planning', 'Marketing', 'Residential Homes', 'Selling', 'Project Planning', 'Marketing Communications', 'Investments', 'Leases', 'Investors', 'New Business Development', 'Property']"
+965,Sales,['']
+966,Sales,"['Energy', 'Petroleum', 'Gas']"
+967,Sales,"['Digital Marketing', 'Online Advertising', 'E-commerce', 'Affiliate Marketing', 'Online Marketing', 'Marketing', 'Email Marketing', 'SEM', 'Brand Management', 'PPC', 'Web Marketing', 'Advertising', 'Social Media', 'Digital Strategy', 'Media Buying', 'Mobile Applications', 'Media Planning', 'Web Analytics', 'Mobile Marketing', 'SMO', 'Mobile Advertising', 'Search Engine Marketing \\(SEM\\)', 'Pay Per Click \\(PPC\\)', 'Management', 'Lead Generation', 'Mobile Commerce', 'M-commerce']"
+968,Sales,"['Automotive', 'Automobile', 'Sales Operations', 'Sales', 'Sales Management', 'Sales Process', 'Business Planning', 'Marketing', 'Product Development', 'Marketing Strategy', 'Competitive Analysis', 'Business Strategy', 'CRM', 'Team Building', 'Management', 'Training', 'Team Management']"
+969,Sales,['']
+970,Sales,"['Mobile Communications', 'Online Marketing', 'Customer Support']"
+971,Sales,['']
+972,Sales,"['Pharmaceutical Sales', 'Pharmaceutical Industry', 'Sales Effectiveness']"
+973,Sales,['']
+974,Sales,"['Team Management', 'Marketing', 'Microsoft Office', 'Market Research', 'Marketing Strategy', 'Business Strategy', 'Media Planning', 'Advertising', 'Corporate Communications', 'Business Development', 'Digital Marketing', 'Content Management', 'Vendor Relationship Management', 'Internal Communications', 'Brand Management', 'Branding & Identity', 'Corporate Identity', 'Campaign Management', 'Event Management', 'Corporate Events', 'Facebook Marketing', 'Editing', 'Content Strategy', 'Communications Planning', 'Press Releases', 'Public Relations', 'Web Content Writing', 'Email Marketing', 'Event Planning', 'Writing', 'Creative Writing', 'Microsoft Excel', 'PowerPoint', 'Windows', 'Microsoft Word', 'Negotiation', 'Management', 'Communication,']"
+975,Sales,"['Strategy', 'Leadership', 'Cross-functional Team Leadership', 'Product Management', 'Product Marketing', 'Analytics', 'Business Development', 'Marketing', 'Digital Marketing', 'Marketing Strategy', 'Business Strategy', 'Entrepreneurship', 'Market Research', 'Program Management', 'Sales', 'Product Development', 'Analysis', 'Business Process', 'Management Consulting', 'Speech Writing', 'Competitive Analysis', 'Professional Services', 'Mergers & Acquisitions', 'Solution Selling', 'Integration', 'Go-to-market Strategy', 'Writing', 'Integrated Marketing', 'Demand Generation', 'Project Planning', 'Semiconductor Industry', 'Telecommunications', 'Strategy Development', 'Enterprise Software', 'SaaS', 'Management', 'Public Speaking', 'Thought Leader']"
+976,Sales,['']
+977,Sales,"['Microsoft Excel', 'PowerPoint', 'Marketing']"
+978,Sales,"['Management', 'Marketing', 'Sales']"
+979,Sales,"['Selling', 'Real Estate', 'Negotiation']"
+980,Sales,"['Marketing Strategy', 'Management Consulting', 'Pricing Strategy']"
+981,Sales,"['ITIL', 'Outsourcing', 'IT Service Management', 'IT Strategy', 'Project Management', 'IT Management', 'IT Operations', 'Telecommunications', 'SAP Implementation', 'Vendor Management', 'ERP', 'Call Centers', 'Call Center', 'Enterprise Resource Planning \\(ERP\\)', 'Agile Product Owner', 'Sales', 'Marketing', 'Product Development', 'Pre-sales', 'Business Process', 'Change Management', 'SAP', 'SharePoint', 'SAP R/3', 'SAP ERP', 'Microsoft Exchange', 'SAP Products', 'Leadership', 'Team Management', 'Management', 'Employee Training', 'Process Improvement']"
+982,Sales,['']
+1030,Consultant,"['Outsourcing', 'Technical Support', 'SAP Products']"
+1031,Consultant,"['Consulting', 'E-commerce', 'Project Management']"
+1032,Consultant,"['Microsoft Office', 'Management', 'Leadership']"
+1034,Consultant,"['Employee Engagement', 'Human Resources', 'HRIS']"
+1036,Consultant,"['Training', 'Risk Management', 'Management Consulting']"
+1038,Consultant,"['AutoCAD', 'ArcGIS', 'ERDAS Imagine']"
+1040,Consultant,"['Executive Search', 'Screening', 'Human Resources']"
+1041,Consultant,"['Team Management', 'Management', 'Vendor Management']"
+1042,Consultant,"['Human Resources', 'Recruiting', 'Temporary Placement']"
+1043,Consultant,"['Pre-sales', 'Solution Selling', 'Team Management']"
+1044,Consultant,"['Microsoft Office', 'Customer Service', 'Leadership', 'Recruiting', 'Technical Recruiting', 'Recruitment', 'placement Consultants', 'H R', 'Divya placement ', 'Manpower', 'Manpower Consultant']"
+1045,Consultant,['']
+1046,Consultant,"['Pre-sales', 'Solution Selling', 'Team Management']"
+1047,Consultant,"['Team Management', 'Sourcing', 'Sales&Marketing']"
+1048,Consultant,"['Automotive', 'Six Sigma', 'Quality Assurance']"
+1049,Consultant,"['Team Management', 'Business Analysis', 'Business Strategy', 'CRM', 'Business Development', 'Business Process', 'Business Intelligence', 'Change Management', 'Requirements Analysis', 'ERP', 'Customer Relationship Management \\(CRM\\)', 'Management', 'Soft Skills', 'Team Building', 'Training']"
+1050,Consultant,['HR Management']
+1051,Consultant,"['Project Planning', 'Mentoring', 'Proposal Writing', 'Research', 'Nonprofit Organizations', 'Program Management', 'Project Management', 'Strategic Planning', 'Public Speaking', 'Fundraising', 'Leadership', 'Teaching', 'Community Development']"
+1052,Consultant,['']
+1053,Consultant,['']
+1054,Consultant,"['AutoCAD', 'Electrical Design', 'Electrical Engineering']"
+1055,Consultant,['']
+1056,Consultant,['']
+1057,Consultant,['']
+1058,Consultant,['']
+1059,Consultant,['']
+1060,Consultant,['']
+1061,Consultant,['']
+1062,Consultant,['']
+1063,Consultant,['']
+1064,Consultant,['']
+1065,Consultant,['']
+1066,Consultant,"['Hospitality Management', 'Hotels', 'Hospitality', 'Food & Beverage', 'Hotel Management', 'Front Office', 'Menu Development', 'Event Management', 'Catering', 'Pre-opening', 'Rooms Division', 'Restaurant Management', 'Culinary Skills', 'Revenue Analysis', 'Fine Dining', 'Yield Management', 'Banquet Operations', 'Food Safety', 'Cost Control', 'Customer Satisfaction', 'Human Resources', 'Opening Hotels', 'Budgeting', 'Business Development', 'Cooking', 'Microsoft Office', 'Microsoft Excel', 'Property Management Systems', 'Customer Service', 'Management', 'Team Building', 'Team Management', 'Guest Service Management', 'Leadership', 'Hospitality Industry', 'Restaurants', 'Resorts', 'Quick service restaurant ', 'Menu Costing', 'Menu Engin']"
+1067,Consultant,['']
+1068,Consultant,['']
+1069,Consultant,['']
+1070,Consultant,['']
+1071,Consultant,['']
+1072,Consultant,['']
+1073,Consultant,"['US GAAP', 'Finance', 'Financial Analysis']"
+1074,Consultant,['']
+1075,Consultant,['']
+1076,Consultant,['']
+1077,Consultant,['']
+1078,Consultant,['']
+1079,Consultant,['']
+1080,Consultant,['']
+1081,Consultant,['']
+1082,Consultant,['']
+1083,Consultant,['']
+1093,Digital Media,['']
+1094,Digital Media,"['Social Media Marketing', 'Mobile Application Development', 'Website Developer']"
+1095,Building & Construction,['']
+1096,Digital Media,"['Google Adwords', 'Bing Ads', 'Facebook Marketing']"
+1097,Building & Construction,['']
+1098,Digital Media,['']
+1099,Building & Construction,['']
+1100,Digital Media,"['SEO', 'SEM', 'PPC', 'Digital Marketing', 'Conversion Optimization', 'Online Advertising', 'SMO', 'Web Design', 'Online Marketing', 'Digital Media', 'Content Strategy', 'Email Marketing', 'Web Analytics', 'Social Media Marketing', 'Marketing', 'Business Development', 'E-commerce', 'Affiliate Marketing', 'Search Engine Optimization \\(SEO\\)', 'Search Engine Marketing \\(SEM\\)', 'Web Marketing', 'SEO copywriting', 'Account Management', 'Digital Strategy', 'Marketing Research', 'Website Development', 'Search Advertising', 'Display Advertising', 'Pay Per Click \\(PPC\\)', 'Competitive Analysis', 'Integrated Marketing', 'Social Media Optimization \\(SMO\\)', 'Web Development', 'Google Analytics', 'Google Adwords', 'WordPress', 'Google Webmaster Tools', 'Goog']"
+1101,Building & Construction,['']
+1102,Digital Media,"['Digital Marketing', 'Digital Media', 'Online Advertising']"
+1103,Building & Construction,"['AutoCAD', 'Surveying', 'foundation marking']"
+1104,Digital Media,['']
+1105,Building & Construction,"['Procurement', 'Materials', 'Construction']"
+1106,Digital Media,"['Digital Marketing', 'Online Reputation Management', 'Web Development']"
+1107,Building & Construction,"['Project Planning', 'Project Management', 'Procurement', 'Construction Management', 'Project Estimation', 'Construction', 'Contract Management', 'Submittals', 'Change Orders', 'LEED', 'Mixed-use', 'Business Development', 'PMP', 'Strategic Planning', 'Business Strategy', 'Value Engineering', 'Pre-construction', 'Green Building', 'Real Estate Development', 'Architectural Design', 'LEED AP', 'Risk Management', 'Land Development', 'CPM Scheduling', 'Vendor Management', 'Comprehensive Planning', 'Leadership in Energy and Environmental Design \\(LEED\\)', 'Primavera P6', 'Microsoft Project', 'MS Project', 'Management', 'Negotiation']"
+1108,Digital Media,['']
+1109,Building & Construction,['']
+1110,Digital Media,"['Digital Media', 'Digital Marketing', 'Social Media Marketing', 'Social Media', 'Online Marketing', 'Blogging', 'Digital Strategy', 'Marketing Strategy', 'Entertainment', 'Online Advertising', 'Marketing Communications', 'Social Media Strategist', 'Social Networking', 'CRM', 'Social Media Measurement', 'Interactive Marketing', 'Mobile Marketing', 'SEO', 'Email Marketing', 'Brand Development', 'Account Management', 'Product Development', 'Product Management', 'Web Analytics', 'Talent Acquisition', 'Writing', 'Sales Management', 'Campaign Management', 'Content Management', 'Analytics', 'Website Development', 'Product Marketing', 'Web Project Management', 'User Experience', 'Customer Relations', 'Competitive Analysis', 'Web Content Management,']"
+1111,Building & Construction,"['Management', 'Customer Service', 'Team Management']"
+1112,Digital Media,['']
+1113,Building & Construction,"['Construction', 'Project Planning', 'Construction Management', 'Contract Management', 'Value Engineering', 'Procurement', 'Project Management', 'Engineering', 'Project Estimation', 'Project Control', 'Concrete', 'Subcontracting', 'Project Engineering', 'Quantity Surveying', 'Inspection', 'Structural Engineering', 'Cost Management', 'Cost Control', 'Feasibility Studies', 'Project Coordination', 'Materials', 'Design Management', 'Operations Management', 'Budgets', 'Cost Engineering', 'Civil Engineering', 'Steel Structures', 'Drainage', 'CAD', 'Consulting', 'Commercial Management', 'Submittals', 'Project Bidding', 'MEP', 'Earthworks', 'Commissioning', 'AutoCAD', 'Primavera P6', 'Microsoft Project', 'Process Scheduler', 'Microsoft ']"
+1114,Digital Media,['']
+1115,Building & Construction,"['Construction', 'Project Planning', 'Construction Management', 'Contract Management', 'Value Engineering', 'Procurement', 'Project Management', 'Engineering', 'Project Estimation', 'Project Control', 'Concrete', 'Subcontracting', 'Project Engineering', 'Quantity Surveying', 'Inspection', 'Structural Engineering', 'Cost Management', 'Cost Control', 'Feasibility Studies', 'Project Coordination', 'Materials', 'Design Management', 'Operations Management', 'Budgets', 'Cost Engineering', 'Civil Engineering', 'Steel Structures', 'Drainage', 'CAD', 'Consulting', 'Commercial Management', 'Submittals', 'Project Bidding', 'MEP', 'Earthworks', 'Commissioning', 'AutoCAD', 'Primavera P6', 'Microsoft Project', 'Process Scheduler', 'Microsoft ']"
+1116,Digital Media,"['Facebook Marketing Expert ', 'E-com Funnel Creator ', 'Social Media Marketing Consultant']"
+1117,Building & Construction,"['Microsoft Office', 'Microsoft Excel', 'Microsoft PowerPoint']"
+1118,Digital Media,"['Social Media Marketing', 'Digital Marketing', 'Marketing Strategy']"
+1119,Building & Construction,['']
+1120,Digital Media,"['Web Development', 'PHP', 'JavaScript', 'Web Services', 'Mobile Applications', 'Web Applications', 'E-commerce', 'CRM', 'Project Management', 'iOS development', 'Software Development', 'SEO', 'Agile Methodologies', 'Business Analysis', 'WordPress', 'jQuery', 'Joomla', 'HTML', 'AJAX', 'Wordpress', 'MySQL', 'CSS', 'CMS', 'HTML 5', 'Drupal', 'Apache', 'HTML5', 'XML', 'XHTML', 'Open Source', 'Web 2.0', 'LAMP', 'JSON', 'Twitter Bootstrap', 'Bootstrap', 'Android', 'Magento', 'SQL', 'Java', 'C++', 'Microsoft SQL Server', 'C', 'Team Management', 'Management', 'Team Leadership', 'Leadership', 'Opencart', 'Smarty', 'MVC', 'Facebook API']"
+1121,Building & Construction,"['Subcontracting', 'Construction', 'Decks', 'Renovation', 'Project Management', 'Facilities Management', 'Design-Build', 'Construction Management', 'Contract Management', 'Bathrooms', 'Custom Built Decks', 'Kitchens', 'Bathrooms', 'Basements', 'Shelf Built-Ins', 'and more', 'Restoration,ceramic tile. Listed with Community Focus Online', 'Howard County']"
+1122,Digital Media,"['Digital Marketing', 'Online Advertising', 'Product Marketing', 'CRM', 'Media Planning', 'Product Management', 'SEM', 'Web Analytics', 'Online Marketing', 'Strategy', 'Mobile Advertising', 'E-commerce', 'Digital Media', 'Competitive Analysis', 'Customer Relationship Management \\(CRM\\)', 'Campaign Strategy', 'Start-ups', 'Digital Advertising', 'Marketing', 'Consumer Insights', 'Advertising', 'Audience Segmentation', 'Product Strategy', 'Digital CRM']"
+1123,Building & Construction,['']
+1124,Digital Media,"['Search Engine Marketing \\(SEM\\)', 'Media Planning', 'Team Management']"
+1125,Building & Construction,"['Construction', 'Civil Engineering', 'Real Estate']"
+1126,Digital Media,"['Google Adwords', 'Digital Marketing', 'Digital Strategy', 'Online Advertising', 'Online Marketing', 'Social Media Marketing', 'SEO', 'Facebook Marketing', 'SEM', 'Business Development', 'Marketing', 'Analytics', 'Web Analytics', 'E-commerce', 'Mobile Marketing', 'Search Engine Optimization \\(SEO\\)', 'Social Media Management', 'Brand Management', 'Marketing Strategy', 'Analytical Skills', 'Content Marketing', 'Market Research', 'Pay Per Click \\(PPC\\)', 'Business Strategy', 'Website Development', 'Web Marketing', 'Account Management', 'Media Relations', 'Corporate Communications', 'Google Analytics', 'HTML', 'Management', 'Lead Generation', 'Team Management', 'leadership', 'Search Engine Technology', 'PPC Bid Management', 'Google Website Optimi']"
+1127,Building & Construction,"['Building Materials', 'Building Maintenance', 'Building Surveying']"
+1128,Digital Media,"['Digital Marketing', 'Market Research', 'Competitive Analysis', 'Brand Management', 'Strategy', 'Marketing Strategy', 'Marketing', 'Marketing Management', 'Online Marketing', 'Social Media Marketing', 'Marketing Research', 'Product Marketing', 'Advertising', 'Analytics', 'SEO', 'E-commerce', 'SEM', 'Media Planning', 'Team Management', 'Lead Generation']"
+1129,Building & Construction,['Team Leadership']
+1130,Digital Media,['Digital Marketing']
+1131,Building & Construction,"['Construction', 'Residential Homes', 'Team Building']"
+1132,Digital Media,"['Entrepreneurship', 'Mobile Applications', 'CRM', 'Business Development', 'Mobile Devices', 'Pre-sales', 'Product Management', 'Business Strategy', 'Competitive Analysis', 'Key Account Management', 'Strategy', 'Product Development', 'Channel Partners', 'Product Marketing', 'Sales', 'International Sales', 'Marketing Strategy', 'Market Analysis', 'Market Research', 'B2B', 'Start-ups', 'Account Management', 'VAS', 'Vendor Management', 'Consulting', 'Digital Marketing', 'Telecommunications', 'Go-to-market Strategy', 'Channel Sales', 'Cloud Computing', 'Sales Management', 'Mobile Marketing', 'Marketing', 'P&L Management', 'Brand Management', 'Customer Relationship Management \\(CRM\\)', 'Virtualization', 'Enterprise Software', 'Team Management\\']"
+1133,Building & Construction,"['Construction', 'Construction Management', 'Contract Management']"
+1134,Digital Media,"['Team Management', 'Market Research', 'Management', 'Research', 'Media Planning', 'Project Management', 'Media Buying', 'Digital Marketing', 'Online Marketing', 'Email Marketing', 'Media Relations', 'Business Development', 'Online Advertising', 'Search Engine Marketing \\(SEM\\)', 'Facebook Marketing', 'Microsoft Office', 'Microsoft Excel', 'Microsoft Word', 'PowerPoint', 'Public Speaking', 'Leadership', 'Client Development', 'Teamwork', 'Time Management', 'Digital Communication Strategy']"
+1135,Building & Construction,['']
+1136,Digital Media,"['Public Speaking', 'International Relations', 'Project Management', 'Social Media', 'Political Science', 'Public Administration', 'PowerPoint', 'Microsoft PowerPoint', 'Fundraising', 'Troubleshooting reflexes', 'conscientuous']"
+1137,Building & Construction,"['Construction', 'Residential Homes', 'Team Building']"
+1138,Digital Media,['']
+1139,Building & Construction,"['Construction', 'Construction Management', 'Contract Management']"
+1140,Digital Media,"['Team Management', 'Business Analysis', 'Vendor Management']"
+1141,Building & Construction,['']
+1142,Digital Media,"['Strategic Planning', 'Marketing', 'Digital Marketing']"
+1143,Building & Construction,"['Real Estate', 'Real Estate Development', 'Property Management']"
+1144,Digital Media,"['Entrepreneurship', 'Social Media Marketing', 'Business Planning']"
+1145,Building & Construction,['']
+1146,Digital Media,"['Digital Marketing', 'Search Engine Optimization \\(SEO\\)', 'Social Media Optimization \\(SMO\\)', 'Social Media Marketing', 'Online Advertising', 'Marketing', 'Research', 'Strategic Planning', 'Project Management', 'Search Engine Marketing \\(SEM\\)', 'Analytics', 'Pay Per Click \\(PPC\\)', 'Blogging', 'Online Research', 'Business Analysis', 'Social Media', 'Market Research', 'Marketing Strategy', 'Google Analytics', 'Google Adwords', 'Website Promotion']"
+1147,Building & Construction,"['Engineering', 'Civil Engineering', 'Construction', 'Project Planning', 'Procurement', 'Water', 'Highways', 'Concrete', 'Project Management', 'EPC', 'Contract Management', 'Project Engineering', 'Project Estimation', 'Construction Management', 'Road', 'CAD', 'Project Coordination', 'OPERATION MANAGEMENT', 'Operations Management', 'Rail', 'Power Plants', 'Primavera P6', 'MS Project', 'AutoCAD', 'Contractors']"
+1148,Digital Media,"['Media Planning', 'Brand Management', 'Digital Media']"
+1149,Building & Construction,"['Construction Management', 'AutoCAD', 'Civil Engineering']"
+1150,Digital Media,"['Social Media Marketing', 'Marketing Strategy', 'Search Engine Optimization \\(SEO\\)']"
+1151,Building & Construction,"['Architectural Design', 'Renovation', 'Construction']"
+1152,Digital Media,"['Social Media Marketing', 'Social Media', 'Content Strategy', 'Strategic Communications', 'Marketing Communications', 'Brand Development', 'Publications', 'Magazines', 'Publishing', 'Content Development', 'Copywriting', 'Web Content', 'Blogging', 'Interior Design', 'Art', 'Fashion', 'Architecture', 'Project Management', 'Data Analysis', 'Marketing Strategy', 'Public Relations', 'Digital Marketing', 'Advertising', 'Search Engine Marketing \\(SEM\\)', 'Search Engine Optimization \\(SEO\\)', 'E-commerce', 'Reputation Management', 'Web Design', 'Digital Strategy', 'Digital Publishing', 'Content Marketing', 'Email Marketing', 'Integrated Marketing', 'Digital Media', 'Web Analytics', 'Conversion Optimization', 'Content Management', 'Social Media Optimiz']"
+1153,Building & Construction,['']
+1154,Digital Media,"['WordPress', 'Social Media', 'SEO', 'Advertising', 'Copywriting', 'Social Media Marketing', 'Marketing', 'Research', 'Digital Marketing', 'Email Marketing', 'Graphic Design', 'Public Relations', 'Photography', 'Photojournalism', 'Editing', 'Blogging', 'Content Strategy', 'Web Analytics', 'Sales', 'Press Releases', 'Web Content Writing', 'Newsletters', 'B2B Marketing', 'Corporate Events', 'Intergrated Marketing', 'Facebook', 'Adobe Photoshop', 'Microsoft Office', 'Content Management Systems \\(CMS\\)', 'Google Analytics', 'Problem Solving', 'Intercultural Communication', 'Interpersonal Communication', 'Public Speaking', 'Leadership', 'Customer Service', 'Time Management', 'Communication', 'Teamwork', 'Client Relations', 'Social Coll']"
+1155,Building & Construction,['']
+1156,Digital Media,['']
+1157,Building & Construction,"['Construction Management', 'Project Management', 'Microsoft Office']"
+1158,Digital Media,"['Social Media', 'Social Networking', 'Microsoft Office', 'Event Planning', 'Theatre', 'Editing', 'Entertainment', 'Social Media Marketing', 'Marketing', 'Public Relations', 'Facebook', 'Microsoft Excel', 'Microsoft PowerPoint', 'Management', 'Public Speaking', 'Leadership', 'Customer Service', 'Fundraising', 'Stage']"
+1159,Building & Construction,"['Construction', 'teachical drawing ']"
+1160,Digital Media,"['Web Design', 'Web Development', 'Web Analytics']"
+1161,Building & Construction,"['Construction Management', 'Project Management', 'AutoCAD Architecture']"
+1162,Digital Media,['']
+1163,Building & Construction,"['Quote', 'Account Executives', 'New Opportunities']"
+1164,Digital Media,"['Government', 'Strategic Communications', 'Public Policy']"
+1165,Building & Construction,['']
+1166,Digital Media,['']
+1167,Building & Construction,['']
+1168,Digital Media,"['Digital Media', 'Video Production', 'Broadcast']"
+1183,Building & Construction,"['Sales', 'Business Development', 'New Business Development', 'Marketing', 'Team Building', 'People Development', 'closing sales', 'Enquiry Generations', 'Techno-commercial meeting', 'Presentation to Architect & consultants for Pre Engineered Building', 'payment collection']"
+1184,Building & Construction,['']
+1185,Building & Construction,"['Construction', 'Contract Management', 'Civil Engineering']"
+1186,Building & Construction,"['Construction', 'Construction Management', 'Contract Negotiation', 'Project Management', 'Contract Management', 'Design-Build', 'Operations Management', 'Project Planning', 'Steel Structures', 'Budgets', 'Site Planning', 'Reinforced Concrete', 'Sales Management', 'Account Management', '3D rendering', 'Budgeting', 'Business Development', 'Negotiation', 'Customer Service', 'Management', 'New Business Development', 'Site Development', 'Foundation Design', 'Building Design', 'Process Improvement', 'Hazmat Operations', 'Sanitary Sewer', 'Storm Damage', 'Underground Storage Tanks', 'Septic Systems', 'Steel Buildings']"
+1187,Building & Construction,['']
+1188,Building & Construction,"['Research', 'C', 'Microsoft Excel']"
+1189,Building & Construction,"['Renovation', 'Customer Service', 'Project Management']"
+1190,Building & Construction,['AutoCAD']
+1191,Building & Construction,"['Construction', 'Project Management', 'Microsoft Office']"
+1192,Building & Construction,"['Building Construction', 'Indoor Air Quality', 'Labour Contractor']"
+1193,Building & Construction,"['Mivan Shuttering', 'Residential Homes', 'Project Management']"
+1194,Building & Construction,['']
+1195,Building & Construction,"['Change Orders', 'Value Engineering', 'Process Scheduler']"
+1196,Digital Media,['']
+1197,Digital Media,"['Video Editing', 'Video Production', 'Film Production']"
+1198,Digital Media,"['Microsoft Office', 'Customer Service', 'Microsoft Excel', 'Research', 'Web Design', 'Photography', 'Video Production', 'Video Editing', 'Digital Media', 'Social Media', 'Sales', 'Microsoft Word', 'Microsoft PowerPoint', 'Leadership', 'Public Speaking', 'Management', 'Team Building', 'Creativity Skills', '360 photography', '360 Tours']"
+1199,Digital Media,['']
+1200,Digital Media,['']
+1201,Digital Media,"['Digital Marketing', 'Social Media Marketing', 'Digital Media']"
+1202,Digital Media,['']
+1203,Digital Media,"['Digital Marketing', 'Email Marketing', 'Social Media Marketing']"
+1204,Digital Media,"['Media Planning', 'Digital Media', 'Online Marketing', 'Media Buying', 'Social Media Marketing', 'Marketing', 'Mobile Marketing', 'Digital Marketing', 'Campaign Management', 'Business Development', 'Brand Management', 'Marketing Strategy', 'Strategy', 'Mobile Advertising', 'Marketing Communications', 'Customer Insight', 'Online Advertising', 'Integrated Marketing', 'Social Media', 'Analytics', 'Digital Strategy', 'Google Analytics', 'Team Management', 'Lead Generation', 'Internet Strategy', 'Media Strategy', 'Consumer Insight Generation', 'New Business Development', 'New Media']"
+1205,Digital Media,"['Customer Service', 'Leadership', 'Sales', 'Marketing', 'Project Management', 'Strategic Planning', 'Research', 'Social Media', 'Microsoft Office', 'Microsoft Excel', 'Microsoft Word', 'PowerPoint', 'Management', 'Public Speaking', 'Training']"
+1206,Digital Media,"['Microsoft Office', 'Management', 'Project Management', 'Market Research', 'Sales', 'Marketing', 'Business Development', 'Customer Relationship Management \\(CRM\\)', 'Branding', 'Research', 'Microsoft Excel', 'Microsoft PowerPoint', 'Microsoft Word', 'Teamwork', 'Negotiation', 'Customer Service', 'Leadership', 'Networking']"
+1207,Automobile,['']
+1208,Automobile,['']
+1209,Banking,"['Team Management', 'Banking', 'Finance', 'Risk Management', 'Foreign Exchange', 'Corporate Finance', 'Credit Risk', 'Financial Risk', 'Credit', 'Microsoft Office', 'Bank Mergers', 'Banking Regulation and supervision']"
+1210,Engineering,"['Operations Management', 'Supply Chain Management', 'Logistics']"
+1211,Automobile,['']
+1212,Banking,"['Finance', 'Risk Management', 'Team Management']"
+1213,Engineering,"['Continuous Improvement', 'Product Development', 'Project Management']"
+1214,Automobile,['']
+1215,Banking,"['Banking', 'Credit', 'Credit Analysis']"
+1216,Engineering,"['Piping', 'AutoCAD', 'Petrochemical']"
+1217,Automobile,['']
+1218,Banking,"['MIS', 'Financial Analysis', 'Financial Reporting']"
+1219,Engineering,"['Engineering', 'AutoCAD', 'Electrical Engineering']"
+1220,Automobile,"['Procurement', 'Supply Chain Management', 'Six Sigma']"
+1221,Banking,"['Trade Finance', 'Banking', 'Commercial Banking', 'Foreign Exchange', 'Core Banking']"
+1222,Engineering,['']
+1223,Automobile,['']
+1224,Banking,"['Banking', 'Credit', 'Risk Management']"
+1225,Engineering,"['Microsoft Project', 'AutoCAD', 'CATIA']"
+1226,Automobile,['']
+1227,Banking,"['Marketing', 'Banking', 'Insurance', 'Risk Management', 'Business Analysis', 'Underwriting', 'Portfolio Management', 'Business Development', 'Loans', 'Credit', 'Retail Banking', 'Life Insurance', 'General Insurance', 'Investments', 'Commercial Banking', 'Management Information Systems \\(MIS\\)', 'MIS', 'Relationship Management', 'Management', 'Sales Team Management Channel Marketing Manager Channel Sales Manager BankTeller', 'Area Sales Manager ,Business Banking ,Sales ,Claims Management ,Claims Processin']"
+1228,Engineering,['']
+1229,Automobile,"['Unix', 'Data Warehousing', 'Informatica']"
+1230,Banking,"['Banking', 'Risk Management', 'Corporate Finance', 'Credit Risk', 'Regulatory Affairs', 'Human Resources ', 'Retail Banking', 'Commercial Banking', 'Branch Banking', 'Management', 'industrial relations', 'SME ', 'Banking Law', 'Core Banking Implementation', 'Senior Professional in Human Resources \\(SPHR\\)']"
+1231,Engineering,"['Purchasing', 'Materials Management', 'SAP MM Module']"
+1232,Automobile,['']
+1233,Banking,['']
+1234,Engineering,['']
+1235,Automobile,['']
+1236,Banking,"['Banking', 'Trade Finance', 'Loans']"
+1237,Engineering,"['C', 'Manufacturing', 'Microsoft Office']"
+1238,Automobile,['']
+1239,Banking,"['Banking', 'Finance', 'Credit Risk']"
+1240,Engineering,"['Management', 'Risk Assessment', 'Safety Management Systems']"
+1241,Automobile,['']
+1242,Banking,"['Banking', 'Relationship Management', 'Business Development', 'Insurance', 'Strategy', 'Finance', 'Financial Services', 'Business Strategy', 'Project Management', 'Risk Management', 'Business Analysis', 'Budgets', 'Performance Management', 'Business Planning', 'Portfolio Management', 'Operations Management', 'Auditing', 'Financial Accounting', 'Budget', 'Financial Risk', 'Key Account Management', 'Management Consulting', 'MIS', 'Team Management', 'Management', 'Training', 'Customer Service', 'Team Building', 'Organizational Leadership', 'Transaction Processing']"
+1243,Engineering,"['C', 'Manufacturing', 'Microsoft Office']"
+1244,Automobile,"['Photography', 'Portrait Photography', 'Magazines', 'Photos', 'Fashion Photography', 'Digital Photography', 'Fine Art Photography', 'Travel Photography', 'Commercial Photography', 'Portraits', 'Studio Lighting', 'Image Editing', 'Wedding Photography', 'Weddings', 'Headshots', 'Lightroom', 'Microsoft Office', 'Adobe Creative Suite', 'Architectural Photography', 'Food Photography']"
+1245,Banking,"['Teaching', 'Microsoft Office', 'Research']"
+1246,Engineering,"['Engineering', 'Project Engineering', 'AutoCAD']"
+1247,Automobile,['']
+1248,Banking,"['Management', 'Team Management', 'Microsoft Office']"
+1249,Engineering,"['Algorithms', 'Simulations', 'Embedded Systems', 'Distributed Systems', 'Computer Science', 'Research', 'Programming', 'Software Engineering', 'SoC', 'Machine Learning', 'Software Development', 'Testing', 'Statistics', 'Artificial Intelligence', 'Simulation', 'Architecture', 'Architectures', 'Modeling', 'Mathematical Modeling', 'C', 'C++', 'Embedded Software', 'Matlab', 'LaTeX', 'Java', 'Verilog', 'Perl', 'Linux', 'Operating Systems', 'Simulink', 'XML', 'Teaching', 'High Performance Computing', 'Formal Verification', 'Computer Architecture', 'Compilers']"
+1250,Automobile,['Agriculture']
+1251,Banking,"['Banking', 'Finance', 'Management']"
+1252,Automobile,['']
+1253,Engineering,"['Construction', 'Civil Engineering', 'Construction Management']"
+1254,Banking,"['Investment Banking', 'Trade Finance', 'Negotiation']"
+1255,Automobile,"['Digital Media Services', 'Online Video Production', 'Content Strategy', 'Television', 'Automotive', 'Video Production', 'Media Production', 'Post Production', 'Film Production', 'Broadcast Television', 'Broadcast', 'Journalism', 'Production Planning', 'Program Management', 'Broadcasting', 'Digital Media', 'Social Media', 'Advertising', 'Marketing', 'Editing', 'Marketing Strategy', 'Social Media Marketing', 'Content Marketing', 'Digital Marketing', 'Creative Writing', 'Copywriting', 'Brand Management', 'Final Cut Pro', 'Photoshop', 'Content Management Systems \\(CMS\\)', 'YouTube', 'Management', 'Storytelling', 'New Media', 'Technology', 'Technology Reviews', 'TV Presenter', 'Anchoring', 'Selfie Interview', 'Website Building', 'New']"
+1256,Engineering,"['Naval Architecture', 'AutoCAD', 'Shipbuilding']"
+1257,Banking,"['Business Analysis', 'Requirements Analysis', 'Payments', 'Retail Banking', 'Business Process', 'Consulting', 'Business Process Improvement', 'Core Banking', 'Banking', 'Commercial Banking', 'Software Project Management', 'Internet Banking', 'Analysis', 'Requirements Gathering', 'Team Management', 'SWIFT payments']"
+1258,Automobile,['']
+1261,Banking,"['Finance', 'Accounting', 'Banking']"
+1262,Banking,"['Team Management', 'Management', 'Banking']"
+1263,Banking,"['Vendor Management', 'Business Analysis', 'Banking']"
+1264,Banking,"['Finance', 'Management', 'Banking']"
+1265,Banking,['']
+1266,Banking,['']
+1267,Banking,['']
+1268,Banking,"['Microsoft Office', 'PowerPoint', 'Microsoft Word']"
+1269,Banking,['']
+1270,Banking,"['Accounting', 'Auditing', 'Private Equity']"
+1271,Banking,"['Payments', 'KYC', 'Team Management']"
+1272,Banking,['']
+1273,Banking,"['Treasury Management', 'Trading Systems', 'Banking', 'Forecasting', 'Hedging', 'Treasury', 'Cash Flow', 'Hedge Funds', 'Financial Services', 'Cash Management', 'Internal Controls', 'Credit', 'Payments', 'Project Management', 'Finance', 'Big Data', 'Business Strategy', 'SWIFT', 'Management', 'Communication', 'Leadership', 'Conference Speaking', 'Digital Transformation']"
+1274,Banking,['']
+1275,Banking,"['Export-Import', 'Microsoft Office', 'Photoshop']"
+1276,Banking,"['Banking', 'Financial Services', 'Credit']"
+1277,Banking,['']
+1278,Banking,"['Financial Analysis', 'Bank Reconciliation', 'General Ledger']"
+1279,Banking,['']
+1280,Banking,['Banking']
+1281,Banking,"['Project Management', 'Customer Relationship Management \\(CRM\\)', 'Public Relations']"
+1282,Banking,['']
+1283,Banking,"['Data Analysis', 'Analysis', 'Strategy']"
+1284,Banking,"['Funding', 'New Business Development', 'Business Planning']"
+1285,Banking,['']
+1286,Banking,"['Direct Sales', 'Sales', 'Management', 'Account Management', 'Business Development', 'Sales Operations', 'Solution Selling', 'Cloud Computing', 'Sales Management', 'Sales Process', 'Strategic Planning', 'Strategy', 'Managed Services', 'B2B', 'Retail', 'Business-to-Business \\(B2B\\)', 'SaaS', 'Salesforce.com', 'Software as a Service \\(SaaS\\)', 'Cold Calling', 'New Business Development']"
+1287,Banking,['']
+1288,Banking,"['Internal Audit', 'Banking', 'Finance']"
+1289,Banking,['Highly motivated self-starter']
+1290,Banking,"['Mortgage Lending', 'Loans', 'Credit', 'Business Development', 'Investments', 'Finance', 'Sales', 'Commercial Lending', 'Small Business Lending', 'Commercial Banking', 'Retail Banking', 'Banking', 'business lending', 'Customer Service', 'Relationship Management']"
+1291,Banking,['']
+1292,Banking,['']
+1293,Engineering,['']
+1294,Engineering,['']
+1295,Engineering,['']
+1296,Engineering,['']
+1297,Engineering,"['Project Management', 'Technical Leadership', 'Marketing Communications']"
+1298,Engineering,"['Piping', 'PDMS', 'Plant Design']"
+1299,Engineering,"['Engineering Design', 'Design Engineering', 'Mechanical Engineering']"
+1300,Engineering,"['Civil Engineering', 'Project Engineering', 'Project Planning']"
+1301,Engineering,['']
+1302,Engineering,"['AutoCAD', 'Automotive', 'Catia']"
+1303,Engineering,"['Teaching', 'Research', 'Public Speaking']"
+1304,Engineering,"['Procurement', 'Project Planning', 'Engineering']"
+1305,Engineering,"['Petrochemical', 'Process Simulation', 'FEED']"
+1306,Engineering,"['Marketing', 'Business Planning', 'Business Strategy']"
+1307,Engineering,['']
+1308,Engineering,"['Power Generation', 'Substation', 'Transformer']"
+1309,Engineering,"['Publishing', 'Textbooks', 'Editorial', 'Online Publishing', 'Content Development', 'Text Editing', 'Content Management', 'Publications', 'Higher Education', 'Project Management', 'Research', 'Ebooks', 'Digital Publishing', 'Content Strategy', 'International Project Management', 'Web Content', 'Editing', 'Digital Media', 'E-Learning', 'Educational Technology', 'Management', 'Academic Publishing', 'Journals', 'Engineering Education', 'Manuscript Development', 'Metric Development', 'New Media', 'Books', 'Training and Managing Developmental Editors', 'Higher Education Publishing', 'Author Talent Recruitment', 'STM Publishing', 'Publishing Processes Flow Design and Implementation']"
+1310,Engineering,"['Analytics', 'Business Intelligence', 'Predictive Analytics', 'Big Data', 'Product Management', 'Business Analytics', 'Scalability', 'Web Analytics', 'Data Visualization', 'Agile Methodologies', 'Professional Services', 'Segmentation', 'Market Analysis', 'Enterprise Software', 'SaaS', 'Predictive Modeling', 'A/B testing', 'Microstrategy', 'Customer Analysis']"
+1311,Engineering,"['Engineering', 'Plant Layout', 'Cement']"
+1312,Engineering,"['Academic Publishing', 'Conference Proceedings', 'Books']"
+1313,Engineering,['']
+1314,Engineering,['']
+1315,Engineering,['']
+1316,Engineering,"['Procurement', 'Consulting', 'Project Management']"
+1317,Engineering,['']
+1318,Engineering,"['C', 'C++', 'Data Structures', 'Programming', 'Machine Learning', 'Distributed Systems', 'Software Engineering', 'Software Development', 'Image Processing', 'Computer Science', 'Data Mining', 'Artificial Intelligence', 'Database Management', 'Algorithms', 'Cloud Computing', 'Java', 'Linux', 'Python', 'HTML', 'Operating Systems', 'Perl', 'Pattern Recognition', 'Web Engineering', 'Data Science', 'Big Data Analytics']"
+1319,Engineering,"['Manufacturing Scale-up', 'Flow chemistry in continuous reactors', 'Mixing study with MixIT tool']"
+1320,Engineering,"['Product Development', 'Footwear', 'Shoes']"
+1321,Engineering,['']
+1322,Engineering,"['Employee Relations', 'Recruitments', 'Employee Engagement']"
+1323,Engineering,"['Project Management', 'Business Development', 'Change Management', 'Architectural Design', 'Concept Design', 'Surveying', 'Valuation', '3D Modeling', 'Strategic Planning', 'AutoCAD Architecture', 'Revit Architecture', 'Team Management', 'Leadership', 'Time Management', 'Arbitration', 'Sustainable Architecture', 'Building Surveying', '3D Architectural Rendering', 'Architecture Audits', 'Design Audits', 'Quality Audits', 'Safety Audits. Liasioning.', 'Design Scrutiny', 'Contracts Tendering,', 'Autocad 3d Amination.']"
+1324,Engineering,"['Automation', 'Engineering', 'Pneumatics', 'Manufacturing', 'Engineering Design', 'Robotics', 'Mechanical Engineering', 'Product Development', 'Automotive', 'Product Design', 'Project Management', 'CAD', 'Business Development', 'Design for Manufacturing', 'Computer-Aided Design \\(CAD\\)', 'Program Management', 'Solidworks', 'SolidWorks', 'PLC', 'Conveyors', 'New Business Development', 'Robotics and Automation', 'Special Purpose Machine Design']"
+1325,Engineering,"['AutoCAD', 'PDMS Draft', 'PDMS Design']"
+1326,Engineering,['']
+1327,Automobile,['']
+1328,Automobile,['']
+1329,Automobile,"['Strategic Planning', 'Sales', 'Sales Management', 'Marketing', 'Negotiation', 'Team Building']"
+1330,Automobile,['']
+1331,Automobile,['']
+1332,Automobile,"['Business Strategy', 'Microsoft Excel', 'Microsoft Word']"
+1333,Automobile,"['Automotive', 'Manufacturing', 'Automobile']"
+1334,Automobile,['']
+1335,Automobile,['']
+1336,Automobile,"['Mechanical Engineering', 'Engineering', 'SolidWorks']"
+1337,Automobile,['']
+1338,Automobile,['']
+1339,Automobile,"['Logistics Management', 'Automotive', 'Transportation']"
+1340,Automobile,"['Product Development', 'CAD', 'Manufacturing']"
+1341,Automobile,"['Journalism', 'Advertising', 'Content Development', 'Marketing Communications', 'Magazines', 'Content Management', 'Marketing Strategy', 'Editorial', 'Corporate Communications', 'Content Writing', 'Marketing', 'Direct Marketing', 'Media Relations', 'Market Research', 'Social Media Marketing', 'Publishing', 'Entrepreneurship', 'Public Relations', 'Copy Editing', 'Media Planning', 'Social Media', 'Research', 'Sales', 'Copywriting', 'Newspapers', 'Feature Articles', 'Creative Writing', 'Outdoor Advertising', 'B2B', 'Social Networking', 'Blogging', 'Editing', 'Space Selling', 'Digital Media', 'News Writing', 'Digital Marketing', 'SEO', 'Microsoft Office', 'Team Management', 'New Media', 'Secondary Research', 'Primary Research']"
+1342,Automobile,['']
+1343,Automobile,"['Automobile', 'Real Estate Development']"
+1344,Automobile,['']
+1345,Automobile,['']
+1346,Automobile,"['Marketing', 'Graphic Design', 'Customer Service', 'Product Development', 'Microsoft Office', 'Photoshop', 'Microsoft Excel', 'Negotiation']"
+1347,Automobile,"['Microsoft Office', 'Microsoft Word', 'PowerPoint', 'Marketing', 'Project Management', 'Automotive Engineering', 'Sales', 'Mechanical Engineering', 'Engineering', 'Writing', 'Blogging', 'AutoCAD', 'Public Speaking', 'Customer Service', 'Management']"
+1348,Automobile,"['Sketching', 'Product Design', 'Industrial Design', 'Concept Development', 'Design Strategy', 'Rapid Prototyping', '3D Modeling', 'Automotive', 'Rendering', 'Model Making', 'Software', 'Photoshop', 'AutoCAD', 'Adobe Photoshop', 'Sketchbook Pro', 'SolidWorks', 'Solidworks', 'Design Thinking', 'Automotive Design', 'Concept Generation', 'Alias Studio Tools', 'Corel Painter', 'Automobile design']"
+1349,Automobile,['']
+1350,Automobile,"['Engineering', 'Team Building']"
+1351,Automobile,['']
+1352,Automobile,['']
+1353,Automobile,"['Microsoft Excel', 'Strategic Planning', 'Outlook']"
+1354,Automobile,['']
+1355,Automobile,['']
+1356,Automobile,['']
+1357,Automobile,"['CATIA', 'Unigraphics', 'AutoCAD Mechanical']"
+1358,Food & Beverages,['']
+1359,Food & Beverages,"['Banquets', 'Pre-opening', 'Menu Development', 'Food & Beverage', 'Restaurant Management', 'Food', 'Hospitality Management', 'Hotel Management', 'Catering', 'Recruiting', 'Micros', 'Training', 'Hospitality', 'Hospitality Industry', 'Italian cuisine', 'Hotels', 'Restaurants', 'Multicultural']"
+1360,Food & Beverages,"['Microsoft Office', 'Microsoft Excel', 'Microsoft Word']"
+1361,Food & Beverages,['']
+1362,Food & Beverages,"['Design for Manufacturing', 'Business Process Improvement', 'Lean Manufacturing']"
+1363,Food & Beverages,"['Engineering', 'Management', 'Aerospace', 'Manufacturing', 'Project Management', 'Composites', 'Aircraft', 'Aviation', 'Business Strategy', 'Aeronautics', 'Aircraft Maintenance', 'Finite Element Analysis', 'CFD', 'Marketing', 'Microsoft Excel', 'Catia', 'AutoCAD', 'CATIA', 'ANSYS', 'Solidworks', 'SolidWorks', 'Team Management', 'Training', 'Aerodynamics', 'Hypermesh']"
+1364,Food & Beverages,"['Wine', 'Hospitality', 'New Business Development']"
+1365,Food & Beverages,"['FMCG', 'Product Development', 'Marketing Strategy']"
+1366,Food & Beverages,"['Entrepreneurship', 'Social Impact']"
+1367,Food & Beverages,"['Marketing Strategy', 'Business Development', 'New Business Development']"
+1368,Food & Beverages,"['Product Development', 'HACCP', 'Quality Control']"
+1369,Food & Beverages,['']
+1370,Food & Beverages,['']
+1371,Food & Beverages,"['Project Planning', 'Strategy', 'Restaurant Management']"
+1372,Food & Beverages,['Team Management']
+1373,Food & Beverages,"['Mergers & Acquisitions', 'Strategy', 'Due Diligence', 'Finance', 'Business Strategy', 'Corporate Finance', 'Financial Analysis', 'Financial Reporting', 'Accounting', 'Financial Modeling', 'Mergers', 'Valuation', 'Financial Accounting', 'IFRS', 'Strategic Financial Planning', 'US GAAP', 'Private Equity', 'Capital Markets', 'Auditing', 'Business Valuation', 'Managerial Finance', 'Project Finance', 'Tax', 'Sarbanes-Oxley Act', 'Internal Controls', 'IPO']"
+1374,Food & Beverages,"['Sales', 'new product development', 'Brand Management']"
+1375,Food & Beverages,"['Market Research', 'Marketing Strategy', 'New Business Development']"
+1376,Food & Beverages,"['Automation', 'PLC', 'SCADA', 'Process Automation', 'DCS', 'Process Control', 'Instrumentation', 'Control Systems Design', 'Project Engineering', 'Engineering', 'Commissioning', 'Switchgear', 'Electrical Engineering', 'Power Plants', 'Transformer', 'Business Development', 'Power Distribution', 'Manufacturing', 'Project Management', 'Key Account Management', 'Project Planning', 'Distributed Control System \\(DCS\\)', 'Sales & Marketing', 'Dairy', 'Sales Management', 'Product Development', 'Programmable Logic Controller \\(PLC\\)', 'Management', 'Team Management', 'Strategic Planning for Growth', 'New Business Development']"
+1377,Food & Beverages,['']
+1378,Food & Beverages,"['Hospitality', 'Hotel Management', 'Hospitality Industry', 'Hospitality Management', 'Event Management', 'Pre-opening', 'Food & Beverage', 'Rooms Division', 'Event Planning', 'Customer Satisfaction', 'Catering', 'Social Media', 'Food ', 'Menu Development', 'Inventory Management', 'Banquets', 'Microsoft Office', 'PowerPoint', 'Microsoft Excel', 'Microsoft Word', 'Micros', 'Customer Service', 'Teamwork', 'Team Management', 'Training', 'Team Building', 'Public Speaking', 'Guest Service Management', 'Hotels', 'Restaurants']"
+1379,Food & Beverages,['']
+1380,Food & Beverages,['']
+1381,Food & Beverages,"['Pre-opening', 'Food & Beverage', 'Hospitality Industry', 'Restaurant Management', 'Fine Dining', 'Banquets', 'Menu Development', 'Hotel Management', 'Pre-opening experience', 'Hospitality Management', 'Food', 'Competitive Analysis', 'Cuisine', 'Catering', 'Business Development', 'Banquet Operations', 'Revenue Analysis', 'Rooms Division', 'Budgets', 'Customer Satisfaction', 'Wine', 'Cost Control', 'Front Office', 'Hotel Booking', 'New Restaurant Openings', 'Opening Hotels', 'Recipes', 'Yield Management', 'Opera', 'Tourism', 'Culinary Skills', 'Micros', 'MICROS', 'Property Management Systems', 'F', 'Customer Service', 'Management', 'Training', 'Guest Service Management', 'Hospitality', 'Resorts', 'Food Service', 'Guest R']"
+1382,Food & Beverages,"['Hospitality Industry', 'Hospitality', 'Customer Service', 'Pre-opening', 'Yield Management', 'Hotel Management', 'Food ', 'Banquets', 'Fine Dining', 'Catering', 'Revenue Analysis', 'Hotels']"
+1383,Food & Beverages,"['Quality Assurance', 'HACCP', 'Food Technology', 'Food Science', 'Food Safety', 'GMP', 'Quality System', 'Food Processing', 'FMCG', 'Food Industry', 'Wastewater Treatment', 'Dairy', 'ISO 14001', 'ISO 9000', 'Marketing', 'Sustainability', 'Production Planning', 'Business Planning', 'Product Development', 'Project Management', 'Manufacturing', 'Business Development', 'Food & Beverage', 'Project Planning', 'Hazard Analysis and Critical Control Points \\(HACCP\\)', 'Fast-Moving Consumer Goods \\(FMCG\\)', 'Microsoft Office', 'Microsoft Excel', 'Management', 'Customer Service', 'Leadership', 'Team Leadership', 'Negotiation', 'Team Management', 'ISO 22000', 'Food Microbiology', 'Sensory Evaluation', 'ISO 17025', 'Recycled Water', 'Beverage Indus']"
+1384,Food & Beverages,"['Food & Beverage', 'Microsoft Office', 'Customer Service']"
+1385,Food & Beverages,"['Microsoft Excel', 'PowerPoint', 'Microsoft Word']"
+1386,Food & Beverages,['']
+1387,Food & Beverages,"['Pre-opening', 'Banquets', 'Menu Development']"
+1388,Food & Beverages,"['Pre-opening', 'Banquets', 'Menu Development']"
+1389,Food & Beverages,['']
+1390,Food & Beverages,"['Hospitality Management', 'Hospitality Industry', 'Pre-opening', 'Hotel Management', 'Food & Beverage', 'Revenue Analysis', 'Fine Dining', 'Menu Development', 'Catering']"
+1391,Food & Beverages,"['Banquets', 'Pre-opening', 'Food & Beverage', 'Menu Development', 'Hotel Management', 'Cuisine', 'Customer Satisfaction', 'Wine', 'Revenue Analysis', 'Recipes', 'Rooms Division', 'Hospitality Management', 'Vendor Management', 'Micros', 'MICROS', 'Leadership', 'Resorts', 'Restaurants']"
+1392,Food & Beverages,['']
+1393,Food & Beverages,['']
+1394,Food & Beverages,['']
+1395,Food & Beverages,"['Wine', 'Food & Beverage', 'Hospitality Management']"
+1396,Food & Beverages,"['Human Resources', 'Employee Engagement', 'Performance Management']"
+1397,Food & Beverages,['']
+1398,Food & Beverages,['']
+1399,Food & Beverages,['']
+1400,Food & Beverages,['']
+1401,Food & Beverages,"['Budgets', 'Management', 'Hospitality Management']"
+1402,Food & Beverages,['']
+1403,Food & Beverages,"['HACCP', 'ISO 22000', 'Food Safety']"
+1404,Food & Beverages,"['Customer Service', 'Hospitality Management', 'Food & Beverage']"
+1405,Food & Beverages,['']
+1406,Food & Beverages,['']
+1407,Food & Beverages,"['Pre-opening', 'Food & Beverage', 'Menu Development']"
+1408,Finance,['']
+1409,Finance,"['Strategic Planning', 'Team Management', 'Business Development']"
+1410,Finance,['']
+1411,Finance,"['Business Development', 'Financial Analysis', 'Banking']"
+1412,Finance,"['Channel Handling', 'Floor Management', 'Managing multiple locations', 'Cash Collection', 'Process Excellence', 'Managing Associates', 'Attrition Reduction', 'Microfinance']"
+1413,Finance,['']
+1414,Finance,"['Accounting', 'Finance', 'Budgets']"
+1415,Finance,"['Corporate Finance', 'Financial Analysis', 'Financial Modeling']"
+1416,Finance,"['Business Strategy', 'Business Development', 'Product Development']"
+1417,Finance,"['Team Management', 'Team Coordination', 'Team Development']"
+1418,Finance,"['SAP FICO', 'SAP Materials Management \\(SAP MM\\)', 'Supplier Negotiation']"
+1419,Finance,"['Management', 'Finance', 'Microsoft Excel']"
+1420,Finance,"['Team Management', 'Banking', 'Investment Banking']"
+1421,Finance,['']
+1422,Finance,"['Talent Acquisition', 'Sourcing', 'Screening', 'Recruiting', 'Human Resources', 'Executive Search', 'BPO', 'Temporary Placement', 'Benefits Negotiation', 'Hiring', 'Technical Recruiting', 'Business Process Outsourcing \\(BPO\\)', 'Recruitments', 'Screening Resumes', 'Consulting', 'Customer Relationship Management \\(CRM\\)', 'HR Policies', 'Internet Recruiting', 'IT Recruitment', 'Performance Management', 'Strategic HR', 'Strategy', 'Headhunt', 'Job Descriptions', 'Onboarding', 'Staff Augmentation', 'Staffing Services', 'Vendor Management', 'MIS', 'HRIS', 'Team Management', 'Personnel Management', 'Relationship Management', 'Interviews', 'Employee Training', 'Employee Engagement', 'Training', 'Employee Relations', 'Management', 'Performanc']"
+1423,Finance,['']
+1424,Finance,"['Mutual Funds', 'Bancassurance', 'Retail Banking']"
+1425,Finance,"['Finance', 'Insurance', 'Investments', 'Investment Banking', 'Corporate Finance', 'Start-ups', 'Business Development Consultancy']"
+1426,Finance,['']
+1427,Finance,['']
+1428,Finance,"['Financial Analysis', 'Account Reconciliation', 'Auditing', 'Business Development', 'Business Planning', 'Business Strategy', 'P&L', 'MIS', 'Microsoft Office', 'Accounts Finalization', 'ACCOUNTS', 'INCOME TAX', 'COMPANIES ACT.']"
+1429,Finance,['']
+1430,Finance,['']
+1431,Finance,"['Telecommunications', 'Sales', 'Management', 'Business Development', 'Sales Management', 'Key Account Management', 'Sales Operations', 'Product Management', 'Direct Sales', 'Digital Marketing', 'Cross Selling', 'Team Management', 'Relationship Management', 'Communication', 'Customer Service', 'New Business Development', 'Modern Trade', 'Channel Account Management', 'Small Business Management']"
+1432,Finance,"['Financial Modeling', 'Valuation', 'Investment Banking']"
+1433,Finance,"['Microsoft Excel', 'Financial Analysis', 'Accounting']"
+1434,Finance,"['Team Management', 'Automobile', 'Automotive']"
+1435,Finance,['']
+1436,Finance,"['Financial Modeling', 'Team Management', 'Management Information Systems \\(MIS\\)']"
+1437,Finance,"['Team Management', 'Public Speaking', 'Strategic Planning']"
+1438,Finance,['']
+1439,Finance,"['Accounting', 'Management', 'Finance']"
+1440,Finance,['']
+1441,Finance,"['PowerPoint', 'Budgets', 'Functional Analysis']"
+1442,Finance,['']
+1443,Finance,"['Banking', 'IT Recruitment', 'Working Abroad']"
+1444,Finance,"['Financial Accounting', 'Cost Accounting', 'Auditing']"
+1445,Finance,['']
+1446,Finance,['']
+1447,Finance,"['Management', 'Financial Analysis', 'Business Strategy']"
+1448,Finance,['']
+1449,Finance,"['Risk Management', 'Team Management', 'Credit Risk', 'Strategic Planning', 'Call Centers', 'CRM', 'Cash Management', 'Collection Development', 'Retail Banking', 'Credit', 'Banking', 'Business Development', 'Vendor Management', 'Portfolio Management', 'Credit Analysis', 'Loans', 'Customer Relationship Management \\(CRM\\)', 'Financial Risk', 'Legal Assistance', 'MIS', 'Management Information Systems \\(MIS\\)', 'Management', 'Relationship Management', 'Leadership', 'Debt Recovery', 'Legal', 'Debt Settlement', 'Collections']"
+1450,Finance,"['Management', 'Vendor Management']"
+1451,Finance,"['Analytical Skills', 'Financial Analysis', 'Financial Planning', 'Quantitative Analytics', 'Microsoft Excel', 'Microsoft Word', 'Microsoft PowerPoint', 'Communication', 'Team Management', 'English']"
+1452,Finance,['']
+1453,Finance,"['Microsoft Office', 'Customer Service', 'Microsoft Excel', 'Research', 'Project Management', 'Accounting', 'Sales', 'Microsoft Word', 'PowerPoint', 'Management', 'Public Speaking', 'Leadership', 'Time Management']"
+1454,Finance,['']
+1455,Finance,"['Corporate Finance', 'Financial Analysis', 'Loans']"
+1456,Finance,['']
+1457,Finance,['']
+1458,Apparel,['']
+1459,Apparel,"['Textiles', 'Apparel', 'Textile Industry']"
+1460,Apparel,['Textiles']
+1461,Apparel,"['Microsoft Office', 'Microsoft Excel', 'Management']"
+1462,Apparel,"['Nonprofits', 'Community Outreach', 'Higher Education']"
+1463,Apparel,"['Research', 'Textiles', 'Microsoft Office']"
+1464,Apparel,"['Apparel', 'Textiles', 'Merchandising']"
+1465,Apparel,['']
+1466,Apparel,['']
+1467,Apparel,"['Sourcing', 'Merchandising', 'Supply Chain Management', 'Textiles', 'Apparel', 'Global Sourcing', 'Retail', 'Fashion', 'Denim', 'Production Planning', 'Wovens', 'Trend Analysis', 'Operations Management', 'Business Strategy', 'Outsourcing', 'Knitwear', 'Export', 'Strategic Sourcing', 'Marketing', 'Business Development', 'Manufacturing', 'Strategic Planning', 'Inventory Management', 'Supply Chain', 'Purchasing', 'Import', 'Styling', 'Marketing Strategy', 'Management', 'Negotiation', 'Leadership', 'Textile Industry', 'Target Costing', 'New Business Development', 'Trend', 'india Bangladesh Apparel trade', 'sourcing apparel for india']"
+1468,Apparel,"['Marketing', 'Strategic Planning', 'Management']"
+1469,Apparel,"['Apparel', 'Merchandising', 'Retail']"
+1470,Apparel,"['Sourcing', 'Merchandising', 'Supply Chain Management', 'Textiles', 'Apparel', 'Global Sourcing', 'Retail', 'Fashion', 'Denim', 'Production Planning', 'Wovens', 'Trend Analysis', 'Operations Management', 'Business Strategy', 'Outsourcing', 'Knitwear', 'Export', 'Strategic Sourcing', 'Marketing', 'Business Development', 'Manufacturing', 'Strategic Planning', 'Inventory Management', 'Supply Chain', 'Purchasing', 'Import', 'Styling', 'Marketing Strategy', 'Management', 'Negotiation', 'Leadership', 'Textile Industry', 'Target Costing', 'New Business Development', 'Trend', 'india Bangladesh Apparel trade', 'sourcing apparel for india']"
+1471,Apparel,['']
+1472,Apparel,['']
+1473,Apparel,['']
+1474,Apparel,"['HR Compliance', 'KRAs', 'Recruitments']"
+1475,Apparel,"['Advertising', 'Customer Service', 'Strategic Planning']"
+1476,Apparel,['']
+1477,Apparel,['']
+1478,Apparel,['']
+1479,Apparel,"['Teamwork', 'Photoshop', 'Customer Service']"
+1480,Apparel,['']
+1481,Apparel,['']
+1482,Apparel,['']
+1483,Apparel,['']
+1484,Apparel,['']
+1485,Apparel,['']
+1486,Apparel,['']
+1487,Apparel,['']
+1488,Apparel,"['Fashion Design', 'Fashion Photography', 'Marketing Communications']"
+1489,Apparel,"['screenprinting', 'Heat Transfer', 'Embroidery']"
+1490,Apparel,['']
+1491,Apparel,['']
+1492,Apparel,['']
+1493,Apparel,['']
+1494,Apparel,['']
+1495,Apparel,['']
+1496,Apparel,"['Microsoft Office', 'Apparel', 'Retail']"
+1497,Apparel,"['Supply Chain Management', 'Sourcing', 'Supply Chain']"
+1498,Apparel,"['Fashion Design', 'Management', 'Retail']"
+1499,Apparel,"['Microsoft Excel', 'Management', 'Business Strategy']"
+1500,Apparel,['']
+1501,Apparel,"['Textiles', 'Retail', 'Wholesale']"
+1502,Apparel,['']
+1503,Apparel,"['Negotiation', 'Field Marketing', 'Training Delivery']"
+1504,Apparel,['']
+1505,Apparel,['']
+1506,Apparel,['']
+1507,Apparel,['']
+1508,Accountant,"['Corporate Finance', 'Accounting', 'Value-Added Tax \\(VAT\\)']"
+1509,Accountant,"['Balance Sheet', 'Profit & Loss Management', 'Income Tax']"
+1510,Accountant,"['Accounting', 'Financial Accounting', 'Microsoft Excel']"
+1511,Accountant,"['Leadership', 'Problem Solving', 'Microsoft Office']"
+1512,Accountant,"['Microsoft Office', 'Leadership', 'Customer Service']"
+1513,Accountant,"['Accounting', 'Auditing', 'Tax']"
+1514,Accountant,"['Microsoft Office', 'Customer Service', 'Management']"
+1515,Accountant,"['Tax', 'Income Tax', 'Accounting']"
+1516,Accountant,"['Tax', 'Income Tax', 'Tax Accounting']"
+1517,Accountant,"['Financial Reporting', 'Financial Analysis', 'Accounting', 'Tax', 'Financial Accounting', 'Account Reconciliation', 'Accounts Payable', 'General Ledger', 'Auditing', 'Accounts Receivable', 'Budgets', 'Payroll', 'Internal Controls', 'Bookkeeping', 'Forecasting', 'Journal Entries', 'Microsoft Excel', 'Microsoft Office', 'QuickBooks', 'Microsoft Word']"
+1518,Accountant,['Accounting']
+1519,Accountant,"['Microsoft Office', 'Customer Service', 'Management']"
+1520,Accountant,"['Financial Accounting', 'Customer Service', 'Tax']"
+1521,Accountant,"['Tax', 'Income Tax', 'Tax Accounting']"
+1522,Accountant,['']
+1523,Accountant,['']
+1524,Accountant,"['Accounting', 'Financial Accounting', 'Tax']"
+1525,Accountant,"['Bookkeeping', 'Payroll', 'IFRS']"
+1526,Accountant,"['Tax', 'Tax Accounting', 'Accounting', 'Financial Reporting', 'Tax Advisory', 'Budgets', 'Account Reconciliation', 'Financial Accounting', 'Income Tax', 'Payroll', 'International Tax', 'Microsoft Excel', 'Microsoft Office', 'Property Tax', 'FBT', 'Accountants']"
+1527,Accountant,"['Account Reconciliation', 'Accounting', 'Auditing', 'Financial Statements', 'General Ledger', 'Accounts Payable', 'Financial Accounting', 'Financial Reporting', 'Accounts Receivable', 'Financial Analysis', 'Payroll', 'Management Accounting', 'Tax', 'IFRS', 'Bookkeeping', 'Income Tax', 'Tax Preparation', 'Strategic Planning', 'Social Media', 'GAAP', 'Business Planning', 'Tax Returns', 'Research', 'Public Relations', 'Account Management', 'Small Business', 'Tax Accounting', 'Microsoft Excel', 'Microsoft Office', 'Microsoft Word', 'PowerPoint', 'QuickBooks', 'Sage', 'Time Management', 'Management', 'Teaching', 'Fundraising', 'Teamwork', 'Team Building', 'Training']"
+1528,Accountant,"['Account Reconciliation', 'Accounting', 'Auditing', 'Financial Statements', 'General Ledger', 'Accounts Payable', 'Financial Accounting', 'Financial Reporting', 'Accounts Receivable', 'Financial Analysis', 'Payroll', 'Management Accounting', 'Tax', 'IFRS', 'Bookkeeping', 'Income Tax', 'Tax Preparation', 'Strategic Planning', 'Social Media', 'GAAP', 'Business Planning', 'Tax Returns', 'Research', 'Public Relations', 'Account Management', 'Small Business', 'Tax Accounting', 'Microsoft Excel', 'Microsoft Office', 'Microsoft Word', 'PowerPoint', 'QuickBooks', 'Sage', 'Time Management', 'Management', 'Teaching', 'Fundraising', 'Teamwork', 'Team Building', 'Training']"
+1529,Accountant,"['Income Tax', 'Tax', 'Accounting', 'Corporate Tax', 'International Tax', 'Restructuring', 'VAT', 'Tax Advisory', 'Tax Accounting', 'Due Diligence', 'IFRS', 'Bookkeeping', 'Tax Research', 'Finance', 'Entrepreneurship', 'Consulting', 'Managerial Finance', 'Management Consulting', 'Account Reconciliation', 'Management Accounting', 'Cash Flow', 'Mergers & Acquisitions', 'Value-Added Tax \\(VAT\\)', 'International Financial Reporting Standards \\(IFRS\\)', 'Management', 'Tax Compliance', 'Business Tax Planning', 'Tax Treaties', 'Company formations and Company Secretary']"
+1530,Accountant,"['Tax', 'Accounting', 'Corporate Tax']"
+1531,Accountant,['']
+1532,Accountant,"['Management', 'Microsoft Office', 'PowerPoint']"
+1533,Accountant,['']
+1534,Accountant,"['Income Tax', 'QuickBooks', 'Payroll Taxes', 'Tax Preparation', 'Tax', 'Bookkeeping', 'Corporate Tax', 'Payroll', 'Account Reconciliation', 'Accounting', 'Business Planning', 'Tax Accounting', 'Finance', 'Computer Repair', 'Access', 'Microsoft Office', 'Computer Hardware', 'Payroll Services', 'Computer Nerworking']"
+1535,Accountant,"['Financial Analysis', 'Financial Reporting', 'Financial Accounting', 'Accounting', 'Data Analysis', 'Change Management', 'Editing', 'Finance', 'Higher Education', 'Budgeting', 'Business Process Improvement', 'Business Planning', 'Business Strategy', 'Business Intelligence', 'Supply Chain Management', 'E-commerce', 'Event Planning', 'Forecasting', 'Food & Beverage', 'General Ledger', 'Oil & Gas', 'Fast-Moving Consumer Goods \\(FMCG\\)', 'Hospitals', 'Inventory Management', 'Investments', 'Key Performance Indicators', 'Knowledge Management', 'Lean Manufacturing', 'Social Media', 'Nonprofit Organizations', 'Operations Management', 'Project Management', 'Strategic Planning', 'Risk Management', 'Tax', 'Microsoft Office', 'Microsoft Excel', 'QuickBo']"
+1536,Accountant,"['Accounting', 'Tax', 'Auditing', 'Business Valuation', 'Corporate Tax', 'Small Business', 'Valuation', 'Business Planning', 'Assurance', 'Mergers & Acquisitions', 'Financial Accounting', 'Strategic Planning', 'Financial Reporting', 'Investments', 'Internal Controls', 'Audit and Assurance', 'Litigation Support', 'Financial Statements', 'Budgets', 'Business Coaching', 'Corporate Tax Planning', 'Personal Tax Planning', 'Small Business Consulting', 'Personal Income Tax Returns']"
+1537,Accountant,"['Accounting', 'Tax', 'Financial Reporting']"
+1538,Accountant,['Account Management']
+1539,Accountant,"['Account Reconciliation', 'Accounting', 'Accounts Receivable', 'Accounts Payable', 'Bank Reconciliation', 'Accruals', 'Analysis', 'Variance Analysis', 'General Ledger', 'Microsoft Excel', 'Essbase']"
+1540,Accountant,"['Tax Preparation', 'Corporate Tax', 'Microsoft Excel']"
+1541,Accountant,"['Accounting', 'Tax', 'Business Planning']"
+1542,Accountant,"['PowerPoint', 'Microsoft Office', 'Accounting']"
+1543,Accountant,['']
+1544,Accountant,"['Accounting', 'Accounts Receivable', 'Income Tax']"
+1545,Accountant,"['Accounting', 'Tax Preparation', 'QuickBooks']"
+1546,Accountant,"['Tax Preparation', 'Accounting', 'Personal Tax Planning']"
+1547,Accountant,"['Tax', 'Income Tax', 'Financial Reporting']"
+1548,Accountant,"['Tally', 'Auditing', 'Accounting']"
+1549,Accountant,['']
+1550,Accountant,"['Financial Reporting', 'Tax', 'Microsoft Excel']"
+1551,Accountant,"['Mutual Funds', 'Financial Analysis', 'Derivatives']"
+1552,Accountant,"['Accounts Receivable', 'Budgets', 'Financial Accounting', 'Account Management', 'Accounts Payable', 'Budget Management', 'Information Technology', 'Corporate Finance', 'Forecasting', 'Business Planning', 'Project Management', 'Financial Analysis', 'Financial Reporting', 'Corporate Tax', 'Government Reporting', 'Microsoft Excel', 'QuickBooks', 'Microsoft Dynamics NAV', 'Taxations', 'Personal Finance', 'Personal Income Tax Returns', 'Charity Returns', 'MCSS /MCYS Reporting', 'MTCU Reporting', 'LHIN Reporting', 'MOE Reporting', 'Accpac', 'Simply Accounting', 'Tax prep', 'Cantax', 'Forms Master Gold', 'Payment Payroll', 'Microsoft Dynamics GP', 'FX Reporting', 'HRIS Quadrant Payroll', 'Sunsystem']"
+1553,Accountant,['good at data entry and basics of ms office']
+1554,Accountant,['']
+1555,Accountant,"['Tax', 'Accounting', 'Tax Preparation']"
+1556,Accountant,['']
+1557,Accountant,"['Microsoft Office', 'Sage 50', 'Tax Profile']"
+1558,Architects,"['Interior Design', 'Architectural Design', 'Mixed-use']"
+1559,Architects,"['Architectural Design', 'AutoCAD', 'Interior Design']"
+1560,Architects,"['Architectural Design', 'Interior Design', 'Architecture']"
+1561,Architects,['']
+1562,Architects,"['AutoCAD', 'InDesign', 'Interior Design']"
+1563,Architects,"['Customer Service', 'Management', 'Project Management']"
+1564,Architects,['']
+1565,Architects,['']
+1566,Architects,['']
+1567,Architects,"['Sustainable Design', 'Architecture', 'Construction']"
+1568,Architects,"['Microsoft Office', 'Microsoft Word', 'Management']"
+1569,Architects,"['Sustainable Design', 'Architecture', 'Construction']"
+1570,Architects,"['Architecture', 'Interior Architecture', 'Infrastructure Planning']"
+1571,Architects,"['Architecture', 'Architectural Design', 'SketchUp']"
+1572,Architects,"['Landscape Design', 'Site Planning', 'Residential Design']"
+1573,Architects,"['Architectural Design', 'Sustainable Design', 'Residential Design']"
+1574,Architects,['']
+1575,Architects,"['Architectural Design', 'Architecture', 'Sustainable Design']"
+1576,Architects,"['AutoCAD', 'Architectural Design', 'SketchUp', 'Architecture', 'Urban Design', 'Urban Planning', 'Interior Design', 'Sustainable Design', 'Project Management', 'Sustainability', 'Interior Architecture', 'Feasibility Studies', 'Architectural Drawings', 'Business Development', 'Construction Management', 'Strategic Planning', 'Sustainable Development', 'Surveying', 'Construction', 'Computer-Aided Design \\(CAD\\)', 'Sketching', 'Project Bidding', 'Transportation', 'Research', 'Design Research', 'Project Planning', 'Comprehensive Planning', 'Land Use Planning', 'Residential Design', 'Construction Drawings', 'Consulting', 'Proposal Writing', 'Adobe Photoshop', 'Microsoft Office', 'AutoCAD Architecture', 'PowerPoint', 'Microsoft Word', 'Geographic I']"
+1577,Architects,['']
+1578,Architects,"['AutoCAD Architecture', 'Land Development', 'Home Builders']"
+1579,Architects,['']
+1580,Architects,"['Architecture', 'Architectural Design', 'Project Planning']"
+1581,Architects,"['Architecture', 'Submittals', 'Rendering']"
+1582,Architects,['']
+1583,Architects,"['AutoCAD', 'SketchUp', 'Photoshop']"
+1584,Architects,"['MicroStation', 'AutoCAD Architecture', 'google sketchup']"
+1585,Architects,"['Recruiting', 'Screening Resumes', 'Headhunting', 'Technical Recruiting', 'Screening', 'Job Descriptions', 'Customer Satisfaction', 'Talent Acquisition', 'Hiring', 'CRM', 'Leadership', 'Interviewing Skills', 'Client Relations', 'Interviews', 'Job Coaching', 'Job Search Strategies', 'Sales Recruitment', 'Job Portals', ' Hand-holding Candidates']"
+1586,Architects,['']
+1587,Architects,['']
+1588,Architects,"['Microsoft Office', 'Research', 'Public Speaking']"
+1589,Architects,['']
+1590,Architects,"['PowerPoint', 'Microsoft Word', 'Leadership']"
+1591,Architects,['']
+1592,Architects,"['AutoCAD', 'SketchUp', '3D Studio Max']"
+1593,Architects,"['Architectural Design', 'Comprehensive Planning', 'Sustainable Design']"
+1594,Architects,['']
+1595,Architects,"['CCTV', 'Project Management', 'Access Control', 'Security', 'Operations Management', 'Fire Alarm', 'Cabling', 'Recruiting', 'ERP', 'Surveillance', 'Technical Recruiting', 'Executive Protection', 'Customer Service', 'Interior designing and consultant', 'Interior Projects']"
+1596,Architects,"['Microsoft Office', 'Microsoft Word', 'Management']"
+1597,Architects,['']
+1598,Architects,['']
+1599,Architects,"['Revit', 'Adobe Photoshop', 'SketchUp']"
+1600,Architects,"['Microsoft Office', 'Adobe Photoshop', 'Research']"
+1601,Architects,['']
+1602,Architects,['']
+1603,Architects,['']
+1604,Architects,"['Interior Design', 'Interior Architecture', 'Management']"
+1605,Architects,['']
+1606,Architects,"['AutoCAD Architecture', 'Revit', 'SketchUp']"
+1607,Architects,"['AutoCAD', 'Photoshop', '3D Studio Max']"
+1608,Public Relations,"['Corporate Communications', 'Market Research', 'Media Relations', 'Public Relations', 'Press Releases', 'Marketing', 'Business Development', 'Media Planning', 'Marketing Strategy', 'Marketing Communications', 'Advertising', 'Social Media', 'Content Strategy', 'Content Development', 'Social Media Marketing', 'CRM', 'Strategy', 'Social Networking', 'Brand Management', 'Internal Communications', 'Brand Awareness', 'Brand Development', 'Digital Media', 'Online Advertising', 'Content Management', 'Strategic Communications', 'Online Marketing', 'Email Marketing', 'Copy Writing', 'Copywriting', 'Digital Marketing', 'Product Marketing', 'Outdoor Advertising', 'Marketing Research', 'Marketing Management', 'SEO', 'Digital Strategy', 'Corporate Brand']"
+1609,Public Relations,"['Social Media ', 'Public Relations', 'Media Management', 'Content Development ', 'Social Media Marketing ', 'Public Relations Strategy', 'Event promotion and Publicity']"
+1610,Public Relations,"['Public Relations', 'Corporate Communications', 'Integrated Marketing']"
+1611,Public Relations,"['Microsoft Excel', 'Microsoft Office', 'Management']"
+1612,Public Relations,"['Public Relations', 'Corporate Communications', 'Media Relations', 'Marketing Communications', 'Business Development', 'Content Development', 'Market Research', 'Business Strategy', 'Event Management', 'Internal Communications', 'CRM', 'Marketing', 'Press Releases', 'Marketing Strategy', 'Strategy', 'Crisis Management', 'Social Media', 'Social Media Marketing', 'Brand Management', 'Strategic Communications', 'Crisis Communications', 'Advertising', 'Integrated Marketing', 'Digital Marketing', 'Media Planning', 'Reputation Management', 'Content Management', 'Content Strategy', 'Team Management', 'Management', 'Leadership', 'New Media', 'New Business Development', 'Strategic Brand Communication']"
+1613,Public Relations,"['Management', 'Public Relations', 'Communication']"
+1614,Public Relations,"['Public Relations', 'Media Relations', 'Press Releases']"
+1615,Public Relations,"['Corporate Communications', 'Public Relations', 'Brand Management']"
+1616,Public Relations,"['Corporate Communications', 'Media Relations', 'Marketing Communications', 'Public Relations', 'Brand Management', 'Internal Communications', 'Vendor Management', 'Marketing Strategy', 'Market Research', 'Crisis Management', 'Advertising', 'Content Management', 'Strategy', 'Strategic Communications', 'Strategic Planning', 'Brand Awareness', 'Social Media Marketing', 'Business Development', 'Talent Acquisition', 'Business', 'Event Management', 'Media Planning', 'Marketing', 'Crisis Communications', 'Newspapers', 'Reputation Management', 'Social Media', 'Sponsorship', 'Leadership', 'Team Management', 'Management', 'Employee Engagement', 'Below the Line Advertising', 'Internal & External Communications', 'Market Intelligence']"
+1617,Public Relations,"['Public Relations', 'Media Relations', 'Marketing']"
+1618,Public Relations,"['Corporate Communications', 'Media Relations', 'Marketing Communications', 'Public Relations', 'Brand Management', 'Internal Communications', 'Vendor Management', 'Marketing Strategy', 'Market Research', 'Crisis Management', 'Advertising', 'Content Management', 'Strategy', 'Strategic Communications', 'Strategic Planning', 'Brand Awareness', 'Social Media Marketing', 'Business Development', 'Talent Acquisition', 'Business', 'Event Management', 'Media Planning', 'Marketing', 'Crisis Communications', 'Newspapers', 'Reputation Management', 'Social Media', 'Sponsorship', 'Leadership', 'Team Management', 'Management', 'Employee Engagement', 'Below the Line Advertising', 'Internal & External Communications', 'Market Intelligence']"
+1619,Public Relations,"['Media Relations', 'Public Relations', 'Press Releases']"
+1620,Public Relations,"['Integrated Marketing', 'Marketing Communications', 'Corporate Communications', 'Media Relations', 'Brand Management', 'Public Relations', 'Social Media Marketing', 'Marketing', 'Brand Development', 'Copywriting', 'Internal Communications', 'Advertising', 'Business Strategy', 'Strategic Planning', 'Marketing Strategy', 'Corporate Branding', 'Reputation Management', 'FMCG', 'Luxury', 'Sponsorship', 'luxury', 'Management', 'Lifestyle Brands', 'F&B Management']"
+1621,Public Relations,"['Public Relations', 'Media Relations', 'Marketing Communications', 'Market Research', 'Media Planning', 'Editing', 'CRM', 'Corporate Communications', 'Online Marketing', 'Press Releases', 'Social Media Marketing', 'Marketing Strategy', 'Advertising', 'Photography', 'Brand Management', 'Event Management', 'Marketing', 'Social Media', 'Internal Communications', 'Online Advertising', 'Digital Media', 'Integrated Marketing', 'Copywriting', 'Direct Marketing', 'Digital Marketing', 'Strategic Communications', 'Crisis Communications', 'Photoshop', 'Team Management', 'Management']"
+1622,Public Relations,"['Media Relations', 'Public Relations', 'Crisis Communications']"
+1623,Public Relations,"['Media Relations', 'Public Relations', 'Advertising', 'Press Releases', 'Online Marketing', 'Marketing Communications', 'Content Development', 'Corporate Communications', 'Social Media', 'Media Planning', 'Blogging', 'Strategic Planning', 'Graphic Design', 'Brand Management', 'E-commerce', 'Copywriting', 'Integrated Marketing', 'New Media']"
+1624,Public Relations,"['Social Media Marketing', 'Brand Development', 'Media Relations']"
+1625,Public Relations,"['Reputation Management', 'Marketing Communications', 'Start-ups', 'Crisis Communications', 'Public Relations', 'Strategic Communications', 'Brand Management', 'Marketing Strategy', 'Corporate Communications', 'Marketing', 'Content Development', 'Editing', 'Digital Media', 'Copy Editing', 'Journalism', 'Management', 'New Media']"
+1626,Public Relations,"['Business Strategy', 'Microsoft Office', 'Market Research']"
+1627,Public Relations,"['Media Relations', 'Public Relations', 'Marketing']"
+1628,Public Relations,"['Public Relations', 'Marketing Communications', 'Content Marketing']"
+1629,Public Relations,"['Corporate Communications', 'Social Media Marketing', 'Public Relations', 'Strategic Communications', 'Digital Marketing', 'Strategy', 'Internal Communications', 'Event Management', 'Marketing Communications', 'Media Relations', 'Brand Management', 'Marketing Strategy', 'Content Development', 'Marketing', 'Digital Media', 'Online Advertising', 'Advertising', 'Press Releases', 'Social Media', 'Blogging', 'E-commerce', 'Content Strategy', 'B2B', 'Product Marketing', 'SEM', 'Entertainment', 'Client Relations Skills', 'New Media', 'Advertising Management', 'Media Strategy', 'Managing Media Relations', 'Campaign Strategy Development', 'Corporate Affairs', 'Design Strategic Communication']"
+1630,Public Relations,"['Public Relations', 'Corporate Communications', 'Strategic Communications', 'Advertising', 'Market Research', 'Internal Communications', 'Media Relations', 'Speech Writing', 'Marketing Communications', 'Media Planning', 'Strategy', 'Blogging', 'Marketing', 'Press Releases', 'Digital Media', 'Brand Management', 'Social Media', 'Marketing Strategy', 'Content Development', 'Marketing Management', 'Publicity', 'CRM', 'Reputation Management', 'Corporate Social Responsibility', 'Public Affairs', 'Creative Strategy', 'Crisis Communications', 'Communications Planning', 'Newsletters', 'Customer Relationship Management \\(CRM\\)', 'Corporate Branding', 'Program Management', 'Management', 'Team Management', 'Employee Engagement', 'New Media', 'Policy']"
+1631,Public Relations,"['Corporate Communications', 'Public Relations', 'Management']"
+1632,Public Relations,"['Lead Generation', 'Corporate Communications', 'Marketing Communications', 'Public Relations', 'Strategy', 'Marketing', 'Strategic Communications', 'CRM', 'Analytics', 'Press Releases', 'Internal Communications', 'Social Media', 'E-commerce', 'Enterprise Software', 'Leadership', 'Strategic Partnerships']"
+1633,Public Relations,"['Public Relations', 'Media Relations', 'Social Media', 'Corporate Communications', 'Marketing', 'Nonprofits', 'Marketing Strategy', 'Editing', 'Strategy', 'Writing', 'Marketing Communications', 'Architecture', 'Proposal Writing', 'Advertising', 'Strategic Communications', 'Journalism', 'Event Planning', 'Architectural Design', 'Social Media Marketing', 'Non-profits', 'Adobe Creative Suite', 'Microsoft Office', 'Employee Relations', 'Leadership']"
+1634,Public Relations,"['Brand Management', 'Public Relations', 'Event Management', 'Social Media Marketing', 'marketing', 'Event Planning', 'Writing', 'Creative Writing', 'News Writing', 'Resume Writing', 'Consulting', 'Entertainment', 'Film', 'Digital Marketing', 'Promotional Marketing', 'stratergic planner']"
+1635,Public Relations,"['Press Releases', 'Media Relations', 'Public Relations']"
+1636,Public Relations,"['Marketing Strategy', 'Hotel Management', 'Marketing', 'Business Development', 'Social Media', 'Tourism', 'Hospitality Management', 'Revenue Analysis', 'Food & Beverage', 'Pre-opening', 'Management Consulting', 'Management', 'French', 'Hospitality', 'New Business Development', 'Hospitality Industry', 'Resorts', 'Hotels']"
+1637,Public Relations,"['Strategic Planning', 'Business Strategy', 'Market Research', 'Strategy', 'Marketing Communications', 'Business Planning', 'Management Consulting', 'Public Relations', 'Project Management', 'International Business', 'Marketing Strategy', 'Entrepreneurship', 'Event Management', 'Business Development', 'Project Planning', 'Corporate Finance', 'Marketing', 'Analytical Skills', 'Social Media', 'Sales', 'Budgeting', 'Social Media Marketing', 'Media Relations', 'Market Planning', 'Analysis', 'Internal Communications', 'Marketing Management', 'Budgets', 'Press Releases', 'Strategic Communications', 'Publicity', 'Online Advertising', 'Brand Management', 'Event Planning', 'Corporate Communications', 'Advertising', 'Tourism', 'Microsoft Office', '']"
+1638,Public Relations,"['Public Relations', 'Media Relations', 'Press Releases']"
+1639,Public Relations,['']
+1640,Public Relations,"['Reputation Management', 'Crisis Management', 'Corporate Communications']"
+1641,Public Relations,['']
+1642,Public Relations,"['Media Relations', 'Public Relations', 'Corporate Communications', 'Social Media Marketing', 'Marketing Communications', 'Social Media', 'Publicity', 'Crisis Communications', 'Press Releases', 'Marketing Strategy', 'Event Management', 'Strategic Communications', 'Strategy', 'Brand Awareness', 'Public Affairs', 'Internal Communications', 'Reputation Management', 'Speech Writing', 'Marketing Management', 'Online PR', 'Social Media Relations', 'Brand Communication', 'Blogger Relations', 'Strategy Development', 'Blogger Outreach', 'Public Speaking', 'Training', 'Community Outreach', 'Community Development', 'Team Leadership', 'Community Engagement', 'Employee Relations', 'Fundraising', 'Employee Engagement', 'Executive Coaching', 'Decision Making', '']"
+1643,Public Relations,['']
+1644,Public Relations,"['Brand Management', 'Marketing Communications', 'Marketing', 'Public Relations', 'Integrated Marketing', 'Marketing Strategy', 'Corporate Communications', 'Event Management', 'Marketing Management', 'Media Planning', 'Automotive', 'Brand Development', 'Social Media Marketing', 'Strategic Planning', 'Online Advertising', 'Employer Branding', 'Market Analysis', 'Sports Marketing', 'Corporate Branding', 'Leadership', 'Motorsports Marketing']"
+1645,Public Relations,"['Media Relations', 'Public Relations', 'Reputation Management', 'Crisis Communications', 'Publicity', 'Blogging', 'Social Media', 'Social Media Marketing', 'Marketing Communications', 'Press Releases', 'Corporate Communications', 'Broadcast', 'Editing', 'Copywriting', 'Nonprofits', 'Television', 'Internal Communications', 'Marketing', 'Newsletters', 'Digital Media', 'Nonprofit Organizations', 'Public Speaking', 'Storytelling', 'Legal Public Relations', 'New Media', 'Strategic Media Relations', 'Legal Marketing', 'Strategic Public Relations Planning', 'Marketing Communications Planning', 'Trade Media Relations', 'Online Reputation Management', 'Managing Media Relations', 'Attorney Marketing', 'Attorney Public Relations']"
+1646,Public Relations,"['Press Releases', 'Media Relations', 'Public Relations']"
+1647,Public Relations,"['Media Relations', 'Marketing Communications', 'Corporate Communications', 'Public Relations', 'Integrated Marketing', 'Social Media', 'Marketing', 'Strategic Communications', 'Social Media Marketing', 'Digital Media', 'Crisis Communications', 'Press Releases', 'Publicity', 'Internal Communications', 'Brand Development', 'Digital Marketing', 'Strategy', 'Management']"
+1648,Public Relations,"['Public Relations', 'Corporate Communications', 'Hospitality']"
+1649,Public Relations,['']
+1650,Public Relations,"['Media Relations', 'Public Relations', 'Press Releases', 'Event Management', 'Social Media', 'Corporate Communications', 'Crisis Communications', 'Social Media Marketing', 'Event Planning', 'Marketing Communications', 'Strategic Communications', 'Tourism', 'Blogging', 'Copywriting', 'Internal Communications', 'Writing', 'Copy Editing', 'Creative Writing', 'Marketing', 'Hotel Management', 'Databases', 'Leadership', 'Hospitality', 'Resorts', 'Hospitality Industry', 'Strategic Public Relations Planning', 'Media Agencies', 'External Agencies', 'Hotels']"
+1651,Public Relations,"['Business Development', 'Social Media', 'Leadership']"
+1652,Public Relations,['']
+1653,Public Relations,"['Public Relations', 'Media Relations', 'Marketing']"
+1654,Public Relations,"['Corporate Communications', 'Media Relations', 'Strategic Communications', 'Public Relations', 'Crisis Communications', 'Marketing Communications', 'Press Releases', 'Corporate Social Responsibility', 'Social Media', 'Reputation Management', 'Internal Communications', 'Integrated Marketing', 'Speech Writing', 'Corporate Branding', 'Strategy', 'Content Management', 'Digital Marketing', 'Communications Planning', 'Brand Management', 'Content Development', 'Newsletters', 'Marketing', 'Event Planning', 'Digital Media', 'Crisis Management', 'Brand Development', 'Blogging', 'Event Management', 'Content Strategy', 'Sponsorship', 'Public Affairs', 'Web Content', 'Social Media Measurement', 'Copywriting', 'Program Management', 'B2B Marketing', 'Digital']"
+1655,Public Relations,"['Media Relations', 'Digital Media', 'Public Relations', 'Strategy', 'Corporate Communications', 'Mobile Devices', 'Start-ups', 'Digital Marketing', 'Social Media Marketing', 'Social Media', 'Product Marketing', 'Market Research', 'Music Industry', 'Digital Strategy', 'Music', 'Mobile Technology', 'Copywriting', 'Investor Relations', 'Publicity', 'Online Marketing', 'Entertainment', 'Online Advertising', 'Mobile Marketing', 'Content Management', 'Creative Writing', 'Content Development', 'Writing', 'Integrated Marketing', 'Social Networking', 'Strategic Partnerships', 'Leadership', 'Storytelling', 'Mobile Media', 'Spokesperson', 'New Media', 'Digital Distribution']"
+1656,Public Relations,"['Media Relations', 'Corporate Communications', 'Public Relations']"
+1657,Public Relations,"['Strategic Communications', 'Media Relations', 'Press Releases', 'Public Relations', 'Government', 'Public Affairs', 'Crisis Communications', 'Public Policy', 'Program Management', 'Defense', 'Editing', 'Crisis Management', 'Social Media', 'Writing', 'Policy Analysis', 'Marketing Communications', 'Marketing Strategy', 'Social Networking', 'Newsletters', 'Strategic Planning', 'National Security', 'Political Communication', 'Legislative Relations', 'Political Campaigns', 'Newspapers', 'Marketing', 'Leadership', 'Public Speaking', 'Management', 'Team Leadership', 'Spokesperson', 'Government Relations', 'Government Liaison', 'Policy', 'Security Clearance']"
+1658,Arts,['']
+1659,Arts,"['Banners', 'Business Cards', 'Brochures']"
+1660,Arts,['']
+1661,Arts,"['Emerging Artists', 'Artistic Abilities', 'Wellness']"
+1662,Arts,['']
+1663,Arts,"['Interior Architecture', 'Space planning', 'Interior Design']"
+1664,Arts,"['Marketing Strategy', 'Project Management', 'Arts Engagement ', 'Account Management', 'Art Education', 'Art Direction', 'Art Exhibitions', 'Event Management', 'art management', 'Video Post-Production', 'Strategy', 'Business Development', 'Event Planning', 'Digital Marketing', 'Marketing', 'Visual Arts', 'Digital Strategy', 'Editing', 'Marketing Communications', 'Social Media Marketing', 'Art', 'International Education', 'Microsoft Office', 'Public Speaking', 'Management', 'Facilitation', 'Presentation Skills', 'Audience engagement', 'Facilitator', 'English', 'Arts network', 'Arts Organizations', 'Cultural Arts', 'Educational Workshops', 'Modern Art', 'Art programming', 'Interpretive arts engagement', 'Art blogging', 'Panel Moderator']"
+1665,Arts,['']
+1666,Arts,['International Sales & Marketing']
+1667,Arts,['']
+1668,Arts,['']
+1669,Arts,['']
+1670,Arts,['']
+1671,Arts,['']
+1672,Arts,"['Fashion Design', 'Fashion Illustration', 'Fashion Styling']"
+1673,Arts,"['Art', 'Interior Design', 'Customer Service']"
+1674,Arts,['']
+1675,Arts,['']
+1676,Arts,['']
+1677,Arts,"['Soft Skills', 'Team Management', 'Team Building']"
+1678,Arts,['']
+1679,Arts,"['music production', 'music composer and arranger', 'businessman']"
+1680,Arts,"['Microsoft Excel', 'Microsoft Office', 'PowerPoint']"
+1681,Arts,"['Public Speaking', 'Teaching', 'Event Planning', 'Non-profits', 'Microsoft Office']"
+1682,Arts,['']
+1683,Arts,"['Logo Design', 'Illustration', 'Graphic Design']"
+1684,Arts,"['Music Education', 'Musician', 'Entrepreneurship']"
+1685,Arts,"['Stock Management', 'Help Desk Implementation', 'Microsoft Excel']"
+1686,Arts,"['Event Management', 'Corporate Events', 'Marketing Communications']"
+1687,Arts,['']
+1688,Arts,"['Teaching', 'Higher Education', 'Public Lectures']"
+1689,Arts,['']
+1690,Arts,['']
+1691,Arts,"['Psychotherapy', 'Psychology', 'Counseling Psychology', 'Psychological Assessment', 'Mental Health', 'Anger Management', 'Psychological Testing', 'Dance', 'Photography', 'Project Management', 'Psychometrics', 'Arts', 'Graphic Design', 'Training', 'Conflict Resolution', 'Family Therapy', 'Therapists', 'Group Therapy', 'Adolescents', 'Interventions', 'Mental Health Counseling', 'Soft Skills', 'Grief Counseling', 'CBT', 'Working with Adolescents', 'Addiction Recovery', 'Small Group Counseling', 'Psychoeducational', 'Life Skills', 'MovieMaker']"
+1692,Arts,"['Customer Service', 'Machining', 'Mechanical Engineering', 'Plumbing', 'Boilers', 'Pneumatics', 'HVAC', 'Welding', 'Architectural Design', 'Engineering', 'Budgets', 'CAD', 'Microsoft Office', 'Microsoft Word', 'Contractors', 'Mechanical Systems', 'Chillers']"
+1693,Arts,['']
+1694,Arts,['']
+1695,Arts,['']
+1696,Arts,"['Inventory Management', 'Customer Service', 'Team Building']"
+1697,Arts,"['Art', 'Fine Art', 'Visual Arts', 'Contemporary Art', 'Painting', 'Photography', 'Business Planning', 'Sculpture', 'Writing', 'Jewelry Design', 'Illustrator', 'Team Leadership', 'Teaching', 'Customer Service', 'Leadership', 'Spanish', 'English', 'Carving', 'Work with recycled materials', 'Custom Dyeing and Break Down FX', 'Clay and Plasticine Modeling', 'Strong Mixing Colour', 'Set up and Backround for theatre']"
+1698,Arts,"['Art', 'Teaching', 'Painting']"
+1699,Arts,['']
+1700,Arts,['']
+1701,Arts,['']
+1702,Arts,['']
+1703,Arts,['']
+1704,Arts,['']
+1705,Arts,"['Customer Service', 'Sales', 'Sales Management']"
+1706,Arts,['']
+1707,Arts,"['Microsoft Office', 'Microsoft Excel', 'Microsoft Word']"
+1708,Aviation,['']
+1709,Aviation,['']
+1710,Aviation,['']
+1711,Aviation,"['Commerce', 'Operations Management', 'Hospitality']"
+1712,Aviation,"['Team Management', 'Telecommunications', 'Supply Chain Management']"
+1713,Aviation,"['Aircraft', 'Flight Safety', 'Flights']"
+1714,Aviation,['']
+1715,Aviation,"['Aircraft Maintenance', 'Commercial Aviation', 'Aircraft']"
+1716,Aviation,"['Charter', 'Civil Aviation', 'Aviation Security']"
+1717,Aviation,"['Entrepreneurship', 'Business Planning', 'Real Estate']"
+1718,Aviation,"['Aircraft', 'Airlines', 'Aircraft Maintenance']"
+1719,Aviation,"['Freight Forwarding', 'Ports', 'Customs Regulations']"
+1720,Aviation,"['Microsoft Excel', 'Import Export', 'Customer Experience']"
+1721,Aviation,"['Entrepreneurship', 'Business Planning', 'Real Estate']"
+1722,Aviation,"['Aviation', 'image consultant ', 'personality development trainer']"
+1723,Aviation,"['Operations Management', 'Airlines', 'Aviation']"
+1724,Aviation,['']
+1725,Aviation,"['Commercial Aviation', 'Piloting', 'Aircraft']"
+1726,Aviation,"['Recruiting', 'Hospitality Industry', 'Customer Service']"
+1727,Aviation,"['Management', 'Project Planning', 'Customer Service', 'Mergers & Acquisitions', 'Corporate Finance', 'Start-ups', 'Operations Management', 'Business Development', 'Business Planning', 'Aviation', 'Airlines', 'Airports', 'Business Strategy', 'Team Leadership', 'Negotiation']"
+1728,Aviation,"['Aircraft Maintenance', 'Aviation', 'Aerospace']"
+1729,Aviation,"['Aviation', 'Avionics']"
+1730,Aviation,['']
+1731,Aviation,"['Aircraft', 'Airworthiness', 'Maintenance & Repair', 'Manufacturing', 'Aviation', 'Aircraft Maintenance', 'Flights', 'Aerospace', 'Automobile', 'Airlines', 'Airports', 'Commercial Aviation', 'Project Management', 'Strategic Planning', 'Program Management', 'Microsoft Office', 'Microsoft Excel', 'Management', 'Customer Service', 'Negotiation', 'AS9100', 'Motors']"
+1732,Aviation,['']
+1733,Aviation,['']
+1734,Aviation,"['Aviation', 'Customer Service', 'Management']"
+1735,Aviation,"['Interpersonal Communication', 'Writing', 'Microsoft Office']"
+1736,Aviation,['']
+1737,Aviation,"['Catia', 'Finite Element Analysis', 'Manufacturing']"
+1738,Aviation,"['Team Management', 'Volunteer Management', 'Corporate Communications']"
+1739,Aviation,['Designing']
+1740,Aviation,['']
+1741,Aviation,"['Airlines', 'Engineering', 'Management']"
+1742,Aviation,['']
+1743,Aviation,"['Airworthiness', 'Aircraft', 'Aircraft Maintenance']"
+1744,Aviation,['']
+1745,Aviation,"['Management', 'Leadership', 'Microsoft PowerPoint']"
+1746,Aviation,"['Matlab', 'Circuit Design', 'Microsoft Office']"
+1747,Aviation,"['Customer Service', 'Microsoft Office', 'Aircraft']"
+1748,Aviation,"['Aviation', 'Aerospace', 'Airlines', 'Commercial Aviation', 'Aircraft Maintenance', 'Avionics', 'Aircraft', 'Maintenance & Repair', 'Engineering', 'Airports', 'Human Factors', 'Flights', 'Civil Aviation', 'Airworthiness', 'Flight Safety', 'Aeronautics', 'Overhaul']"
+1749,Aviation,"['Aviation', 'Project Management', 'Program Management', 'Manufacturing', 'Aerospace', 'Project Planning', 'Engineering', 'Lean Six Sigma', 'Business Strategy', 'Product Development', 'Quality Management', 'Yield Management', 'Financial Analysis', 'Business Analytics', 'Computer-Aided Design \\(CAD\\)', 'Marketing Strategy', 'Operations Management', 'Risk Management', 'Vendor Management', 'Geometric Dimensioning & Tolerancing', 'Business Planning', 'Mergers & Acquisitions', 'Revenue Management', 'Supply Chain Optimization', 'Defense', 'Change Management', 'Business Development', 'Business Process Improvement', 'Strategy', 'Team Management', 'Management', 'Cross-functional Team Leadership', 'Value Chain Management', 'Yoga Instructor', 'Aircraft Leasing', '']"
+1750,Aviation,"['Social Media', '3D Studio Max', 'Aircraft Maintenance']"
+1751,Aviation,"['Civil Aviation', 'Overhaul', 'Flight Safety']"
+1752,Aviation,['']
+1753,Aviation,['']
+1754,Aviation,['']
+1755,Aviation,"['Management', 'Goal Seek', 'Customer Service']"
+1756,Aviation,"['Tally ERP', 'Workshops']"
+1757,Aviation,"['Six Sigma', 'Management', 'Teamwork']"
