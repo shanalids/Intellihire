@@ -15,7 +15,7 @@ import FindInPageIcon from '@mui/icons-material/FindInPage';
 import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
 import ShareIcon from '@mui/icons-material/Share';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAlt';
-import Personality from "./Personality";
+import Personality from "./Personality/Personality_Home";
 
 const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false);
