@@ -5,9 +5,6 @@ import Footer from '../Footer';
 import BigFive from '../../Assets/BigFive3.jpg';
 import '../../App.css'; // Import the CSS file
 
-// Rest of your code...
-
-
 const Personality = () => {
   const [data, setData] = useState([]);
 
@@ -24,6 +21,13 @@ const Personality = () => {
     };
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    // You can access the table data in the 'data' state variable
+    console.log(data);
+  };
+
   return (
     <div className="personalityMCQ">
       <Navbar />
@@ -34,30 +38,33 @@ const Personality = () => {
         accept=".xlsx, .xls"
         onChange={handleFileUpload}
       />
+      <br></br>
 
       {data.length > 0 && (
-        <table className="table">
-          <thead>
-            <tr>
-              {Object.keys(data[0]).map((key) => (
-                <th key={key}>{key}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((row, index) => (
-              <tr key={index}>
-                {Object.values(row).map((value, index) => (
-                  <td key={index}>{value}</td>
+        <form onSubmit={handleSubmit}>
+          <table className="table">
+            <thead>
+              <tr>
+                {Object.keys(data[0]).map((key) => (
+                  <th key={key}>{key}</th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {data.map((row, index) => (
+                <tr key={index}>
+                  {Object.values(row).map((value, index) => (
+                    <td key={index}>
+                      <input type="text" value={value} name={`data${index}${Object.keys(row)[index]}`} readOnly />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <button type="submit">Submit</button>
+        </form>
       )}
-
-      <br /><br />
-      ... webstylepress ...
     </div>
   );
 };
