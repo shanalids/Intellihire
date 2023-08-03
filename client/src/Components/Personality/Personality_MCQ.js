@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import * as XLSX from "xlsx";
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import BigFive from '../../Assets/BigFive3.jpg';
@@ -8,94 +9,55 @@ import '../../App.css'; // Import the CSS file
 
 
 const Personality = () => {
-  const [question1, setQuestion1] = useState(3);
-  const [question2, setQuestion2] = useState(3);
-  const [question3, setQuestion3] = useState(3);
-  const [question4, setQuestion4] = useState(3);
-  const [question5, setQuestion5] = useState(3);
+  const [data, setData] = useState([]);
+
+  const handleFileUpload = (e) => {
+    const reader = new FileReader();
+    reader.readAsBinaryString(e.target.files[0]);
+    reader.onload = (e) => {
+      const data = e.target.result;
+      const workbook = XLSX.read(data, { type: "binary" });
+      const sheetName = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[sheetName];
+      const parsedData = XLSX.utils.sheet_to_json(sheet);
+      setData(parsedData);
+    };
+  }
 
   return (
-    <div className="home-container">
+    <div className="personalityMCQ">
       <Navbar />
-      <div className="home-banner-container">
-        <div className="home-bannerImage-container">
-          {/* <img src={BannerImage} alt="" /> */}
-        </div>
-        <form action='/predict' method="post">
-          <div>
-            <div className="contact-form-container">
-              <p>I am the life of the party.</p>
-            </div>
-            <div className="contact-form-container">
-              <input
-                type="range"
-                min="1"
-                max="5"
-                value={question1}
-                onChange={(e) => setQuestion1(parseInt(e.target.value))}
-              />
-              <span>{question1}</span>
-            </div>
+      <br></br>
 
-            <div className="contact-form-container">
-              <p>I don't talk a lot.</p>
-            </div>
-            <div className="contact-form-container">
-              <input
-                type="range"
-                min="1"
-                max="5"
-                value={question2}
-                onChange={(e) => setQuestion2(parseInt(e.target.value))}
-              />
-              <span>{question2}</span>
-            </div>
+      <input
+        type="file"
+        accept=".xlsx, .xls"
+        onChange={handleFileUpload}
+      />
 
-            <div className="contact-form-container">
-              <p>I feel comfortable around people.</p>
-            </div>
-            <div className="contact-form-container">
-              <input
-                type="range"
-                min="1"
-                max="5"
-                value={question3}
-                onChange={(e) => setQuestion3(parseInt(e.target.value))}
-              />
-              <span>{question3}</span>
-            </div>
+      {data.length > 0 && (
+        <table className="table">
+          <thead>
+            <tr>
+              {Object.keys(data[0]).map((key) => (
+                <th key={key}>{key}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((row, index) => (
+              <tr key={index}>
+                {Object.values(row).map((value, index) => (
+                  <td key={index}>{value}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
 
-            <div className="contact-form-container">
-              <p>I keep in the background.</p>
-            </div>
-            <div className="contact-form-container">
-              <input
-                type="range"
-                min="1"
-                max="5"
-                value={question4}
-                onChange={(e) => setQuestion4(parseInt(e.target.value))}
-              />
-              <span>{question4}</span>
-            </div>
-
-            <div className="contact-form-container">
-              <p>I start conversations.</p>
-            </div>
-            <div className="contact-form-container">
-              <input
-                type="range"
-                min="1"
-                max="5"
-                value={question5}
-                onChange={(e) => setQuestion5(parseInt(e.target.value))}
-              />
-              <span>{question5}</span>
-            </div>
-          </div>
-        </form>
-      </div>
-      <Footer />
+      <br /><br />
+      ... webstylepress ...
     </div>
   );
 };

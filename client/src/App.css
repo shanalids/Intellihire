@@ -539,7 +539,7 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 input[type='range']::-moz-range-thumb {
-  width: 20px;
+  width: 50px;
   height: 20px;
   background-color: #4c9aff;
   /* Change the color of the thumb */
