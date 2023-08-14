@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <title>SpaCify</title> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/custom.css')}}">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo-container">
+            <img src="static/images/Logo.png" alt="">
+        </div>
+        <div class="navbar-links-container">
+            <a href="#">Home</a>
+            <a href="#">CV Ranking</a>
+            <a href="#">Academic Transcript</a>
+            <a href="#">Professional Skills</a>
+            <a href="#">Personality</a>
+        </div>
+        <div class="navbar-menu-container">
+            <span class="bars-icon" onclick="openMenu()">&#9776;</span>
+        </div>
+        <div id="drawer" class="drawer">
+            <div class="drawer-content">
+                <ul>
+                    <!-- Add your menu items dynamically using JavaScript -->
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Include your JavaScript files here -->
+
+    <script>
+        function openMenu() {
+            var drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
+        }
+    </script>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="jumbotron">
+        <div class="titlecontainer">
+            <h1>Big Five Trait Prediction</h1>
+            <br />
+            <a class="btn btn-lg btn-primary" href="#" role="button">Refresh</a>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="csv_file">
+            <input type="submit" value="Upload CSV">
+        </form>
+
+        <br />
+        <form class="form-group mt-2 mt-md-0" method="POST" action="/predict_opn">
+
+            <h3>Enter candidate responses for open-ended questions below</h3>
+            <div>
+                <p>How often do you seek out new experiences or take risks?</p>
+                <textarea name="opn" cols="3" rows="3" class="form-control" required="true"
+                    placeholder="Paste text here"></textarea>
+            </div><br />
+
+            <div>
+                <p>How do you ensure that your work is completed accurately and on time?</p>
+                <textarea name="csn" cols="3" rows="3" class="form-control" required="true"
+                    placeholder="Paste text here"></textarea>
+            </div><br />
+
+            <div>
+                <p>How do you feel about social situations and making new connections?</p>
+                <textarea name="ext" cols="3" rows="3" class="form-control" required="true"
+                    placeholder="Paste text here"></textarea>
+            </div><br />
+
+            <div>
+                <p>How do you handle feedback or criticism from others?</p>
+                <textarea name="agr" cols="3" rows="3" class="form-control" required="true"
+                    placeholder="Paste text here"></textarea>
+            </div><br />
+
+            <div>
+                <p>Can you tell me about a time when you had to deal with a difficult or stressful situation? How did
+                    you handle it?</p>
+                <textarea name="neu" cols="3" rows="3" class="form-control" required="true"
+                    placeholder="Paste text here"></textarea>
+            </div>
+            <br />
+            <button class="btn btn-outline-success " type="reset">Clear</button>
+            <button class="btn btn-outline-primary " type="submit">Predict</button>
+        </form>
+
+        <div class="home-image-section">
+            <img src="static/images/hr.jpeg" alt="HR Background Image">
+        </div>
+    </div>
+
+
+    <!-- Inside the 'Tokens' tab content -->
+    <!-- <div class="tab-pane active" id="1a">
+        <h3>Openness Tokens</h3>
+        <ul>
+            {% for token in opn_lemmatized_tokens %}
+            <li>{{ token }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Concientiousness Tokens</h3>
+        <ul>
+            {% for token in csn_lemmatized_tokens %}
+            <li>{{ token }}</li>
+            {% endfor %}
+        </ul>
+    </div> -->
+
+    <!-- Outside of tab content, display word counts -->
+    <h3>Count of Common Words</h3>
+    <table>
+        <tr>
+            <th>Openness</th>
+            <th>Concientiousness</th>
+            <th>Extraversion</th>
+            <th>Agreeableness</th>
+            <th>Neuroticism</th>
+            <th>Final Score</th>
+        </tr>
+        <tr>
+            <td>{{ opn_score }}</td>
+            <td>{{ csn_score }}</td>
+            <td>{{ ext_score }}</td>
+            <td>{{ agr_score }}</td>
+            <td>{{ neu_score }}</td>
+            <td>{{ opn_ended_score }}</td>
+        </tr>
+    </table>
+
+</body>
