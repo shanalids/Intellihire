@@ -59,50 +59,52 @@
             <a class="btn btn-lg btn-primary" href="#" role="button">Refresh</a>
         </div>
     </div>
-
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input class="btn btn-lg btn-primary" role="button" type="file" name="csv_file">
+        <input class="btn btn-lg btn-primary" role="button" type="submit" value="Upload CSV">
+    </form>
 
     <div class="container">
 
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="csv_file">
-            <input type="submit" value="Upload CSV">
-        </form>
+
 
         <br />
         <form class="form-group mt-2 mt-md-0" method="POST" action="/predict_opn">
 
-            <h3>Enter candidate responses for open-ended questions below</h3>
+            <h3>Upload candidate responses</h3>
             <div>
                 <p>How often do you seek out new experiences or take risks?</p>
-                <textarea name="opn" cols="3" rows="3" class="form-control" required="true"
-                    placeholder="Paste text here"></textarea>
-            </div><br />
+                <textarea name='opn' rows="3" class="form-control" required="true"
+                    readonly>{{ textarea_content[0] }} </textarea>
+            </div>
 
             <div>
                 <p>How do you ensure that your work is completed accurately and on time?</p>
-                <textarea name="csn" cols="3" rows="3" class="form-control" required="true"
-                    placeholder="Paste text here"></textarea>
-            </div><br />
+                <textarea name='csn' rows="3" class="form-control" required="true"
+                    readonly>{{ textarea_content[1] }}</textarea>
+            </div>
 
             <div>
                 <p>How do you feel about social situations and making new connections?</p>
-                <textarea name="ext" cols="3" rows="3" class="form-control" required="true"
-                    placeholder="Paste text here"></textarea>
-            </div><br />
+                <textarea name='ext' rows="3" class="form-control" required="true"
+                    readonly>{{ textarea_content[2] }}</textarea>
+            </div>
 
             <div>
                 <p>How do you handle feedback or criticism from others?</p>
-                <textarea name="agr" cols="3" rows="3" class="form-control" required="true"
-                    placeholder="Paste text here"></textarea>
-            </div><br />
+                <textarea name='agr' rows="3" class="form-control" required="true"
+                    readonly>{{ textarea_content[3] }}</textarea>
+            </div>
 
             <div>
                 <p>Can you tell me about a time when you had to deal with a difficult or stressful situation? How did
                     you handle it?</p>
-                <textarea name="neu" cols="3" rows="3" class="form-control" required="true"
-                    placeholder="Paste text here"></textarea>
+                <textarea name='neu' rows="3" class="form-control" required="true"
+                    readonly>{{ textarea_content[4] }}</textarea>
             </div>
+
             <br />
+
             <button class="btn btn-outline-success " type="reset">Clear</button>
             <button class="btn btn-outline-primary " type="submit">Predict</button>
         </form>
@@ -150,5 +152,6 @@
             <td>{{ opn_ended_score }}</td>
         </tr>
     </table>
+    <br />
 
 </body>

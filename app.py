@@ -20,13 +20,13 @@ app = Flask(__name__)
 # model=pickle.load(open('ff_model.pkl','rb'))
 
 
-@app.route('/')
-def hello_world():
-    return render_template('open_ended.html')
-
 # @app.route('/')
-# def index():
-#     return render_template('csv.html', textarea_content="")
+# def hello_world():
+#     return render_template('open_ended.html')
+
+@app.route('/')
+def index():
+    return render_template('Personality_prediction/open_ended.html', textarea_content="")
 
 # working - but takes column
 # @app.route('/upload', methods=['POST'])
@@ -81,7 +81,7 @@ def upload():
                 # Add the datum to the textarea content list
                 textarea_content.append(datum)
 
-            return render_template('open_ended.html', textarea_content=textarea_content)
+            return render_template('Personality_prediction/open_ended.html', textarea_content=textarea_content)
     return "No CSV file uploaded."
 
 
@@ -199,10 +199,10 @@ def predict():
         opn_ended_score = round(opn_ended_score, 2)
 
         # Pass the processed data to the template
-        return render_template('open_ended.html', opn_lemmatized_tokens=opn_lemmatized_tokens, csn_lemmatized_tokens=csn_lemmatized_tokens, ext_lemmatized_tokens=ext_lemmatized_tokens, agr_lemmatized_tokens=agr_lemmatized_tokens, neu_lemmatized_tokens=neu_lemmatized_tokens, opn_score=opn_score, csn_score=csn_score, ext_score=ext_score, agr_score=agr_score, neu_score=neu_score, opn_ended_score=opn_ended_score)
+        return render_template('Personality_prediction/open_ended.html', opn_lemmatized_tokens=opn_lemmatized_tokens, csn_lemmatized_tokens=csn_lemmatized_tokens, ext_lemmatized_tokens=ext_lemmatized_tokens, agr_lemmatized_tokens=agr_lemmatized_tokens, neu_lemmatized_tokens=neu_lemmatized_tokens, opn_score=opn_score, csn_score=csn_score, ext_score=ext_score, agr_score=agr_score, neu_score=neu_score, opn_ended_score=opn_ended_score, textarea_content="")
 
     # Return the template for GET requests
-    return render_template('open_ended.html')
+    return render_template('Personality_prediction/open_ended.html')
 
 
 def preprocess_text(text):
@@ -227,6 +227,46 @@ def preprocess_text(text):
         word) for word in tokens if word.lower() not in stop_words]
 
     return lemmatized_tokens
+
+
+@app.route('/bar_chart', methods=['POST', 'GET'])
+def bar_chart():
+    if request.method == 'POST':
+        # Get the scores from the form
+        opn_score = float(request.form['opn_score'])
+        csn_score = float(request.form['csn_score'])
+        ext_score = float(request.form['ext_score'])
+        agr_score = float(request.form['agr_score'])
+        neu_score = float(request.form['neu_score'])
+        opn_ended_score = float(request.form['opn_ended_score'])
+
+        # Labels for the personality traits
+        traits = ['Openness', 'Conscientiousness', 'Extraversion',
+                  'Agreeableness', 'Neuroticism', 'Final Score']
+
+        # Corresponding scores
+        scores = [opn_score, csn_score, ext_score,
+                  agr_score, neu_score, opn_ended_score]
+
+        # Create a bar chart
+        plt.figure(figsize=(10, 6))
+        plt.bar(traits, scores, color=[
+                'blue', 'green', 'red', 'purple', 'orange', 'gray'])
+        plt.xlabel('Personality Traits')
+        plt.ylabel('Scores')
+        plt.title('Personality Trait Scores')
+        plt.ylim(0, 5)  # Set y-axis range
+        plt.tight_layout()
+
+        # Save the bar chart as a PNG image
+        chart_path = 'static/personality_scores.png'
+        plt.savefig(chart_path)
+
+        # Pass the chart path to the template
+        return render_template('Personality_prediction/bar_chart.html', chart_path=chart_path)
+
+    # Return the template for GET requests
+    return render_template('Personality_prediction/open_ended.html')
 
 
 if __name__ == '__main__':
