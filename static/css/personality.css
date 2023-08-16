@@ -185,3 +185,45 @@ tr:nth-child(even) {
 #navButton:hover {
     color: white
 }
+
+/* slider */
+input[type='range'] {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 10px;
+    background-color: #494949;
+    outline: none;
+    opacity: 0.7;
+    border-radius: 5px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #4c9aff;
+    /* Change the color of the thumb */
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: -7px;
+}
+
+input[type='range']::-moz-range-thumb {
+    width: 50px;
+    height: 20px;
+    background-color: #4c9aff;
+    /* Change the color of the thumb */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+    background-color: #3772e6;
+    /* Change the color when hovering over the thumb */
+}
+
+input[type='range']::-moz-range-thumb:hover {
+    background-color: #3772e6;
+    /* Change the color when hovering over the thumb */
+}

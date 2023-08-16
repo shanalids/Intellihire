@@ -22,39 +22,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template('Personality_prediction/self-rating.html', textarea_content="", slider_values="")
+    return render_template('Personality_prediction/requirement.html', textarea_content="", slider_values="")
 
 # @app.route('/')
 # def index():
 #     return render_template('Personality_prediction/open_ended.html', textarea_content="")
-
-# working - but takes column
-# @app.route('/upload', methods=['POST'])
-# def upload():
-#     if 'csv_file' in request.files:
-#         csv_file = request.files['csv_file']
-#         if csv_file.filename != '':
-#             csv_stream = io.StringIO(
-#                 csv_file.stream.read().decode("UTF-8"), newline=None)
-#             csv_reader = csv.reader(csv_stream, delimiter=',')
-
-#             # Read the first row of the CSV (assuming it contains the column headers)
-#             # Use [] as default if no header row
-#             header_row = next(csv_reader, [])
-
-#             # Initialize a list to store textarea content
-#             textarea_content = []
-
-#             # Iterate over each column header and append the corresponding cell value
-#             for header in header_row:
-#                 # Use [""] as default if no cell value
-#                 cell_value = next(csv_reader, [""])[0]
-#                 textarea_content.append(cell_value)
-
-#             return render_template('csv.html', textarea_content=textarea_content)
-#     return "No CSV file uploaded."
-
-# working
 
 
 @app.route('/upload', methods=['POST'])
@@ -281,6 +253,33 @@ def preprocess_text(text):
         word) for word in tokens if word.lower() not in stop_words]
 
     return lemmatized_tokens
+
+
+@app.route('/calc_expected', methods=['POST', 'GET'])
+def calcExpected():
+    if request.method == 'POST':
+        job_role = request.form.get('jobrole')
+        innovative = int(request.form.get('innovative'))
+        fast_learner = int(request.form.get('fastlearner'))
+        organization_skills = int(request.form.get('organizationskills'))
+        attention_to_detail = int(request.form.get('attentiontodetail'))
+        assertiveness = int(request.form.get('assertiveness'))
+        leadership_skills = int(request.form.get('leadershipskills'))
+        team_player = int(request.form.get('teamplayer'))
+        communication_skills = int(request.form.get('communicationskills'))
+        confidence = int(request.form.get('confidence'))
+        adaptability_to_changes = int(
+            request.form.get('adaptabilitytochanges'))
+
+        exp_openness = (fast_learner + innovative)/2
+        exp_conscientiousness = (attention_to_detail + organization_skills)/2
+        exp_extraversion = (assertiveness + leadership_skills)/2
+        exp_agreeableness = (team_player + communication_skills)/2
+
+        # expected (anti-)neuroticism score
+        exp_neuroticism = (confidence + adaptability_to_changes)/2
+
+    return render_template('Personality_prediction/requirement.html', job_role=job_role, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, textarea_content="", slider_values="")
 
 
 # @app.route('/bar_chart', methods=['POST', 'GET'])
