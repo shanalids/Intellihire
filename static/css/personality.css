@@ -3,6 +3,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     min-height: 90px;
+    background-color: #088F8F;
+    padding: 10px;
 }
 
 .navbar-menu-container {
@@ -10,10 +12,10 @@ nav {
 }
 
 .navbar-links-container a {
-    margin-right: 3rem;
+    margin-right: 3.5rem;
     text-decoration: none;
     color: black;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -101,4 +103,85 @@ th {
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+.container_bigfive_home {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#getstarted {
+    padding: 1rem 2rem;
+    background-color: #39C973;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    /* Adjusted width */
+}
+
+#getstarted svg {
+    margin-left: 0.75rem;
+    font-size: 1.5rem;
+}
+
+#getstarted:hover {
+    background-color: #e48f0f;
+}
+
+.bigfive3 {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.center-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bigFiveTitle {
+    font-size: 2.7rem;
+    color: #39C973;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.small-image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.phrase {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    max-width: 80%;
+}
+
+#navButton {
+    color: black;
+}
+
+#navButton:hover {
+    color: white
 }

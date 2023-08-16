@@ -20,13 +20,13 @@ app = Flask(__name__)
 # model=pickle.load(open('ff_model.pkl','rb'))
 
 
-# @app.route('/')
-# def hello_world():
-#     return render_template('open_ended.html')
-
 @app.route('/')
-def index():
-    return render_template('Personality_prediction/open_ended.html', textarea_content="")
+def hello_world():
+    return render_template('Personality_prediction/self-rating.html', textarea_content="", slider_values="")
+
+# @app.route('/')
+# def index():
+#     return render_template('Personality_prediction/open_ended.html', textarea_content="")
 
 # working - but takes column
 # @app.route('/upload', methods=['POST'])
@@ -85,26 +85,34 @@ def upload():
     return "No CSV file uploaded."
 
 
-# @app.route('/predict_opn',methods=['POST','GET'])
-# def predict():
-#     text = 'I actively pursue new experiences and take calculated risks both personally and professionally. I believe in stepping out of my comfort zone to grow and learn. Embracing challenges has strengthened my adaptability, problem-solving, and innovation abilities, allowing me to contribute valuable perspectives to the teams I work with.'
+@app.route('/upload_selfrate', methods=['POST'])
+def upload_selfrate():
+    if 'csv_file' in request.files:
+        csv_file = request.files['csv_file']
+        if csv_file.filename != '':
+            csv_stream = io.StringIO(
+                csv_file.stream.read().decode("UTF-8"), newline=None)
+            csv_reader = csv.reader(csv_stream, delimiter=',')
 
-#     # Convert to lowercase
-#     text = text.lower()
+            # Skip the first row, which contains the column headers
+            next(csv_reader, [])
 
-#     # Remove non-word and non-whitespace characters
-#     text = re.sub(r'[^\w\s]', '', text)
+            # Read the first row of the CSV (assuming it contains the data)
+            # Use [] as default if no header row
+            data_row = next(csv_reader, [])
 
-#     # Remove digits
-#     text = re.sub(r'\d', '', text)
+            # Initialize a list to store slider values
+            slider_values = []
 
-#     tokens = word_tokenize(text)
-#     # Initialize lemmatizer
-#     lemmatizer = WordNetLemmatizer()
-#     stop_words = set(stopwords.words('english'))
-#     # Lemmatize tokens
-#     lemmatized_tokens = [lemmatizer.lemmatize(word) for word in tokens if word.lower() not in stop_words]
-#     return lemmatized_tokens
+            # Iterate over each data in the first row and convert them to integers
+            for datum in data_row:
+                # Convert the datum to an integer and append it to the slider values list
+                slider_values.append(int(datum))
+
+            return render_template('Personality_prediction/self-rating.html', slider_values=slider_values)
+    return "No CSV file uploaded."
+
+
 # Define the list of words you want to count
 opn_target_words = ['new', 'risk', 'try', 'believe', 'learn', 'opportunity',
                     'potential', 'experience', 'challenge', 'growth', 'look', 'explore', 'enjoy', 'seek']
@@ -199,10 +207,56 @@ def predict():
         opn_ended_score = round(opn_ended_score, 2)
 
         # Pass the processed data to the template
-        return render_template('Personality_prediction/open_ended.html', opn_lemmatized_tokens=opn_lemmatized_tokens, csn_lemmatized_tokens=csn_lemmatized_tokens, ext_lemmatized_tokens=ext_lemmatized_tokens, agr_lemmatized_tokens=agr_lemmatized_tokens, neu_lemmatized_tokens=neu_lemmatized_tokens, opn_score=opn_score, csn_score=csn_score, ext_score=ext_score, agr_score=agr_score, neu_score=neu_score, opn_ended_score=opn_ended_score, textarea_content="")
+        return render_template('Personality_prediction/self-rating.html', opn_lemmatized_tokens=opn_lemmatized_tokens, csn_lemmatized_tokens=csn_lemmatized_tokens, ext_lemmatized_tokens=ext_lemmatized_tokens, agr_lemmatized_tokens=agr_lemmatized_tokens, neu_lemmatized_tokens=neu_lemmatized_tokens, opn_score=opn_score, csn_score=csn_score, ext_score=ext_score, agr_score=agr_score, neu_score=neu_score, opn_ended_score=opn_ended_score, textarea_content="", slider_values="")
 
     # Return the template for GET requests
-    return render_template('Personality_prediction/open_ended.html')
+    return render_template('Personality_prediction/self-rating.html')
+
+
+@app.route('/predict_selfrate', methods=['POST', 'GET'])
+def predict_selfrate():
+    if request.method == 'POST':
+        ext_1 = int(request.form['ext_1'])
+        ext_2 = int(request.form['ext_2'])
+        ext_3 = int(request.form['ext_3'])
+        ext_4 = int(request.form['ext_4'])
+        ext_5 = int(request.form['ext_5'])
+
+        neu_1 = int(request.form['neu_1'])
+        neu_2 = int(request.form['neu_2'])
+        neu_3 = int(request.form['neu_3'])
+        neu_4 = int(request.form['neu_4'])
+        neu_5 = int(request.form['neu_5'])
+
+        agr_1 = int(request.form['agr_1'])
+        agr_2 = int(request.form['agr_2'])
+        agr_3 = int(request.form['agr_3'])
+        agr_4 = int(request.form['agr_4'])
+        agr_5 = int(request.form['agr_5'])
+
+        csn_1 = int(request.form['csn_1'])
+        csn_2 = int(request.form['csn_2'])
+        csn_3 = int(request.form['csn_3'])
+        csn_4 = int(request.form['csn_4'])
+        csn_5 = int(request.form['csn_5'])
+
+        opn_1 = int(request.form['opn_1'])
+        opn_2 = int(request.form['opn_2'])
+        opn_3 = int(request.form['opn_3'])
+        opn_4 = int(request.form['opn_4'])
+        opn_5 = int(request.form['opn_5'])
+
+        ext_score = (ext_1 + ext_2 + ext_3 + ext_4 + ext_5)/5
+        neu_score = (neu_1 + neu_2 + neu_3 + neu_4 + neu_5)/5
+        agr_score = (agr_1 + agr_2 + agr_3 + agr_4 + agr_5)/5
+        csn_score = (csn_1 + csn_2 + csn_3 + csn_4 + csn_5)/5
+        opn_score = (opn_1 + opn_2 + opn_3 + opn_4 + opn_5)/5
+
+        # Pass the processed data to the template
+        return render_template('Personality_prediction/self-rating.html', ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, textarea_content="", slider_values="")
+
+    # Return the template for GET requests
+    return render_template('Personality_prediction/self-rating.html')
 
 
 def preprocess_text(text):
@@ -229,44 +283,44 @@ def preprocess_text(text):
     return lemmatized_tokens
 
 
-@app.route('/bar_chart', methods=['POST', 'GET'])
-def bar_chart():
-    if request.method == 'POST':
-        # Get the scores from the form
-        opn_score = float(request.form['opn_score'])
-        csn_score = float(request.form['csn_score'])
-        ext_score = float(request.form['ext_score'])
-        agr_score = float(request.form['agr_score'])
-        neu_score = float(request.form['neu_score'])
-        opn_ended_score = float(request.form['opn_ended_score'])
+# @app.route('/bar_chart', methods=['POST', 'GET'])
+# def bar_chart():
+#     if request.method == 'POST':
+#         # Get the scores from the form
+#         opn_score = float(request.form['opn_score'])
+#         csn_score = float(request.form['csn_score'])
+#         ext_score = float(request.form['ext_score'])
+#         agr_score = float(request.form['agr_score'])
+#         neu_score = float(request.form['neu_score'])
+#         opn_ended_score = float(request.form['opn_ended_score'])
 
-        # Labels for the personality traits
-        traits = ['Openness', 'Conscientiousness', 'Extraversion',
-                  'Agreeableness', 'Neuroticism', 'Final Score']
+#         # Labels for the personality traits
+#         traits = ['Openness', 'Conscientiousness', 'Extraversion',
+#                   'Agreeableness', 'Neuroticism', 'Final Score']
 
-        # Corresponding scores
-        scores = [opn_score, csn_score, ext_score,
-                  agr_score, neu_score, opn_ended_score]
+#         # Corresponding scores
+#         scores = [opn_score, csn_score, ext_score,
+#                   agr_score, neu_score, opn_ended_score]
 
-        # Create a bar chart
-        plt.figure(figsize=(10, 6))
-        plt.bar(traits, scores, color=[
-                'blue', 'green', 'red', 'purple', 'orange', 'gray'])
-        plt.xlabel('Personality Traits')
-        plt.ylabel('Scores')
-        plt.title('Personality Trait Scores')
-        plt.ylim(0, 5)  # Set y-axis range
-        plt.tight_layout()
+#         # Create a bar chart
+#         plt.figure(figsize=(10, 6))
+#         plt.bar(traits, scores, color=[
+#                 'blue', 'green', 'red', 'purple', 'orange', 'gray'])
+#         plt.xlabel('Personality Traits')
+#         plt.ylabel('Scores')
+#         plt.title('Personality Trait Scores')
+#         plt.ylim(0, 5)  # Set y-axis range
+#         plt.tight_layout()
 
-        # Save the bar chart as a PNG image
-        chart_path = 'static/personality_scores.png'
-        plt.savefig(chart_path)
+#         # Save the bar chart as a PNG image
+#         chart_path = 'static/personality_scores.png'
+#         plt.savefig(chart_path)
 
-        # Pass the chart path to the template
-        return render_template('Personality_prediction/bar_chart.html', chart_path=chart_path)
+#         # Pass the chart path to the template
+#         return render_template('Personality_prediction/bar_chart.html', chart_path=chart_path)
 
-    # Return the template for GET requests
-    return render_template('Personality_prediction/open_ended.html')
+#     # Return the template for GET requests
+#     return render_template('Personality_prediction/open_ended.html')
 
 
 if __name__ == '__main__':
