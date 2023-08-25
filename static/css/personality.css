@@ -44,18 +44,55 @@ nav {
     cursor: pointer;
 }
 
-.jumbotron {
-    background-color: #39C973;
+.navbar-links-container a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
 }
 
-/* Add this CSS code to your stylesheet */
+.navbar-links-container a:hover {
+    background-color: rgba(5, 169, 199, 0.7);
+    border-radius: 0.5rem;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: white;
+}
 
-/* Adjust the spacing between form and image */
+.bars-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.drawer {
+    display: none;
+}
+
+.drawer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.drawer-content ul li {
+    margin-bottom: 10px;
+}
+
+.jumbotron {
+    background-color: #FFC300;
+    height: 30px;
+    padding-top: 10px;
+    padding-top: 10px;
+
+}
+
+.titlecontainer {
+    margin-left: 370px;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 50px 0;
 }
 
 /* Style the form container */
@@ -189,9 +226,9 @@ tr:nth-child(even) {
 /* slider */
 input[type='range'] {
     -webkit-appearance: none;
-    width: 50%;
+    width: 90%;
     height: 10px;
-    background-color: #494949;
+    background-color: #888B8D;
     outline: none;
     opacity: 0.7;
     border-radius: 5px;
@@ -202,7 +239,7 @@ input[type='range']::-webkit-slider-thumb {
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #4c9aff;
+    background-color: #01735C;
     /* Change the color of the thumb */
     cursor: pointer;
     border-radius: 50%;
@@ -212,18 +249,111 @@ input[type='range']::-webkit-slider-thumb {
 input[type='range']::-moz-range-thumb {
     width: 50px;
     height: 20px;
-    background-color: #4c9aff;
+    background-color: #01735C;
     /* Change the color of the thumb */
     cursor: pointer;
     border-radius: 50%;
 }
 
 input[type='range']::-webkit-slider-thumb:hover {
-    background-color: #3772e6;
+    background-color: #013329;
     /* Change the color when hovering over the thumb */
 }
 
 input[type='range']::-moz-range-thumb:hover {
-    background-color: #3772e6;
+    background-color: #013329;
     /* Change the color when hovering over the thumb */
+}
+
+.next {
+    border-radius: 10px;
+    background-color: #004225;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 23px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 580px;
+    margin-bottom: 20px;
+}
+
+.next span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.next span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.next:hover span {
+    padding-right: 25px;
+}
+
+.next:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#requirement-form {
+    max-width: 100%;
+    padding: 20px;
+    background-color: #E5E1E6;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    background-color: white;
+}
+
+#responses-form {
+    max-width: 100%;
+    padding: 20px;
+    background-color: #E5E1E6;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.requirement-image {
+    margin-top: 280px;
+    max-width: 160%;
+    /* Set the maximum width for responsiveness */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.requirement-table {
+    margin-left: 350px;
+}
+
+#refresh-button {
+    margin-left: 10px;
+}
+
+.requirement-body {
+    background-color: #A2E4B8;
+}
+
+.responses-body {
+    background-color: #A2E4B8;
+}
+
+.responses-image-section {
+    margin-top: 280px;
+    max-width: 155%;
+    /* Set the maximum width for responsiveness */
+    height: auto;
+    /* Maintain aspect ratio */
+
 }

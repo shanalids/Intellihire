@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <title>SpaCify</title> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/personality.css')}}">
+</head>
+
+<body class="responses-body">
+    <nav>
+        <div class="nav-logo-container">
+            <img src="static/images/Logo.png" alt="">
+        </div>
+        <div class="navbar-links-container">
+            <a href="#">Home</a>
+            <a href="#">CV Ranking</a>
+            <a href="#">Academic Transcript</a>
+            <a href="#">Professional Skills</a>
+            <a href="#">Personality</a>
+        </div>
+        <div class="navbar-menu-container">
+            <span class="bars-icon" onclick="openMenu()">&#9776;</span>
+        </div>
+        <div id="drawer" class="drawer">
+            <div class="drawer-content">
+                <ul>
+                    <!-- Add your menu items dynamically using JavaScript -->
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="titlecontainer">
+            <h1>Big Five Trait Prediction</h1>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="/upload_selfrate" method="post" enctype="multipart/form-data">
+                    <input class="btn btn-lg btn-primary" role="button" type="file" name="csv_file">
+                    <input class="btn btn-lg btn-primary" role="button" type="submit" value="Upload CSV">
+                </form>
+                <div class="responses-container">
+                    <form id="responses-form" class="form-group mt-2 mt-md-0" method="POST" action="/predict_selfrate">
+                        <h3>Upload candidate responses</h3>
+                        <div>
+                            <p>1. I prefer working as a team</p>
+                            <input type="range" name="ext_1" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[0] }}">
+                        </div>
+                        <div>
+                            <p>2. I feel comfortable around people</p>
+                            <input type="range" name="ext_2" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[1] }}">
+                        </div>
+                        <div>
+                            <p>3. I find it easy to strike up a conversation with strangers</p>
+                            <input type="range" name="ext_3" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[2] }}">
+                        </div>
+
+                        <div>
+                            <p>4. I don't mind being the center of attention</p>
+                            <input type="range" name="ext_4" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[3] }}">
+                        </div>
+                        <div>
+                            <p>5. I prefer spending time with friends and engaging in social activities rather than
+                                being alone</p>
+                            <input type="range" name="ext_5" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[4] }}">
+                        </div>
+                        <div>
+                            <p>6. I often feel insecure or self-conscious about myself</p>
+                            <input type="range" name="neu_1" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[5] }}">
+                        </div>
+                        <div>
+                            <p>7. My mood changes a lot throughout the day</p>
+                            <input type="range" name="neu_2" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[6] }}">
+                        </div>
+                        <div>
+                            <p>8. I often tend to worry about little things</p>
+                            <input type="range" name="neu_3" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[7] }}">
+                        </div>
+                        <div>
+                            <p>9. I often feel anxious or worried about the future</p>
+                            <input type="range" name="neu_4" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[8] }}">
+                        </div>
+                        <div>
+                            <p>10. I often feel tense or nervous in new or unfamiliar situations</p>
+                            <input type="range" name="neu_5" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[9] }}">
+                        </div>
+                        <div>
+                            <p>11. I am interested in people and their opinions</p>
+                            <input type="range" name="agr_1" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[10] }}">
+                        </div>
+                        <div>
+                            <p>12. I am willing to compromise and accommodate others' viewpoints</p>
+                            <input type="range" name="agr_2" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[11] }}">
+                        </div>
+                        <div>
+                            <p>13. I sympathize with others' feelings</p>
+                            <input type="range" name="agr_3" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[12] }}">
+                        </div>
+                        <div>
+                            <p>14. I find it difficult to say "no" when people ask for my help or assistance</p>
+                            <input type="range" name="agr_4" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[13] }}">
+                        </div>
+                        <div>
+                            <p>15. I am understanding and forgiving of people's mistakes and shortcomings</p>
+                            <input type="range" name="agr_5" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[14] }}">
+                        </div>
+                        <div>
+                            <p>16. I am always prepared</p>
+                            <input type="range" name="csn_1" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[15] }}">
+                        </div>
+                        <div>
+                            <p>17. I pay attention to details</p>
+                            <input type="range" name="csn_2" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[16] }}">
+                        </div>
+                        <div>
+                            <p>18. I always make plans and follow through with them</p>
+                            <input type="range" name="csn_3" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[17] }}">
+                        </div>
+                        <div>
+                            <p>19. I set high standards for myself and strive to meet them</p>
+                            <input type="range" name="csn_4" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[18] }}">
+                        </div>
+                        <div>
+                            <p>20. I am a self-disciplined person, even when faced with distractions</p>
+                            <input type="range" name="csn_5" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[19] }}">
+                        </div>
+                        <div>
+                            <p>21. To what extent do you enjoy exploring new ideas and concepts, even if they challenge
+                                your current
+                                beliefs?</p>
+                            <input type="range" name="opn_1" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[20] }}">
+                        </div>
+                        <div>
+                            <p>22. I often daydream and have an active imagination</p>
+                            <input type="range" name="opn_2" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[21] }}">
+                        </div>
+                        <div>
+                            <p>23. How often do you find yourself drawn to unique and unconventional ideas or
+                                approaches?</p>
+                            <input type="range" name="opn_3" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[22] }}">
+                        </div>
+                        <div>
+                            <p>24. How willing are you to take risks in trying new things or exploring different paths
+                                in life?</p>
+                            <input type="range" name="opn_4" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[23] }}">
+                        </div>
+                        <div>
+                            <p>25. I am willing to adapt to change and embrace new opportunities</p>
+                            <input type="range" name="opn_5" min="0" max="5" step="1" class="form-control"
+                                required="true" value="{{ slider_values[24] }}">
+                        </div>
+                        <br />
+                        <button class="btn btn-outline-success " type="reset">Clear</button>
+                        <button class="btn btn-outline-primary " type="submit">Predict</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input class="btn btn-lg btn-primary" role="button" type="file" name="csv_file">
+                    <input class="btn btn-lg btn-primary" role="button" type="submit" value="Upload CSV">
+                </form>
+
+                <form id="responses-form" class="form-group mt-2 mt-md-0" method="POST" action="/predict_opn">
+                    <br />
+                    <h3>Upload candidate responses</h3>
+                    <div>
+                        <p>How often do you seek out new experiences or take risks?</p>
+                        <textarea name='opn' rows="3" class="form-control" required="true"
+                            readonly>{{ textarea_content[0] }} </textarea>
+                    </div>
+                    <div>
+                        <p>How do you ensure that your work is completed accurately and on time?</p>
+                        <textarea name='csn' rows="3" class="form-control" required="true"
+                            readonly>{{ textarea_content[1] }}</textarea>
+                    </div>
+                    <div>
+                        <p>How do you feel about social situations and making new connections?</p>
+                        <textarea name='ext' rows="3" class="form-control" required="true"
+                            readonly>{{ textarea_content[2] }}</textarea>
+                    </div>
+                    <div>
+                        <p>How do you handle feedback or criticism from others?</p>
+                        <textarea name='agr' rows="3" class="form-control" required="true"
+                            readonly>{{ textarea_content[3] }}</textarea>
+                    </div>
+                    <div>
+                        <p>Can you tell me about a time when you had to deal with a difficult or stressful situation?
+                            How did
+                            you handle it?</p>
+                        <textarea name='neu' rows="3" class="form-control" required="true"
+                            readonly>{{ textarea_content[4] }}</textarea>
+                    </div>
+                    <br />
+                    <button class="btn btn-outline-success " type="reset">Clear</button>
+                    <button class="btn btn-outline-primary " type="submit">Predict</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <h3>Scores</h3>
+    <table>
+        <tr>
+            <th>Openness</th>
+            <th>Concientiousness</th>
+            <th>Extraversion</th>
+            <th>Agreeableness</th>
+            <th>Neuroticism</th>
+        </tr>
+        <tr>
+            <td>{{ opn_score }}</td>
+            <td>{{ csn_score }}</td>
+            <td>{{ ext_score }}</td>
+            <td>{{ agr_score }}</td>
+            <td>{{ neu_score }}</td>
+        </tr>
+    </table>
+    <br />
+
+</body>

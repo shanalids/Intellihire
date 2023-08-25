@@ -1,4 +1,4 @@
-from flask import Flask, request, url_for, redirect, render_template
+from flask import Flask, request, url_for, redirect, render_template, render_template_string
 import pickle
 import numpy as np
 import nltk
@@ -6,6 +6,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import re
 from nltk.stem import WordNetLemmatizer
+import matplotlib.pyplot as plt
 
 #####
 import csv
@@ -22,11 +23,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template('Personality_prediction/requirement.html', textarea_content="", slider_values="")
+    return render_template('Personality_prediction/open_ended.html', textarea_content="", slider_values="")
+
 
 # @app.route('/')
-# def index():
-#     return render_template('Personality_prediction/open_ended.html', textarea_content="")
+# def hello_world():
+#     return render_template('home.html', textarea_content="", slider_values="")
 
 
 @app.route('/upload', methods=['POST'])
@@ -259,16 +261,16 @@ def preprocess_text(text):
 def calcExpected():
     if request.method == 'POST':
         job_role = request.form.get('jobrole')
-        innovative = int(request.form.get('innovative'))
-        fast_learner = int(request.form.get('fastlearner'))
-        organization_skills = int(request.form.get('organizationskills'))
-        attention_to_detail = int(request.form.get('attentiontodetail'))
-        assertiveness = int(request.form.get('assertiveness'))
-        leadership_skills = int(request.form.get('leadershipskills'))
-        team_player = int(request.form.get('teamplayer'))
-        communication_skills = int(request.form.get('communicationskills'))
-        confidence = int(request.form.get('confidence'))
-        adaptability_to_changes = int(
+        innovative = float(request.form.get('innovative'))
+        fast_learner = float(request.form.get('fastlearner'))
+        organization_skills = float(request.form.get('organizationskills'))
+        attention_to_detail = float(request.form.get('attentiontodetail'))
+        assertiveness = float(request.form.get('assertiveness'))
+        leadership_skills = float(request.form.get('leadershipskills'))
+        team_player = float(request.form.get('teamplayer'))
+        communication_skills = float(request.form.get('communicationskills'))
+        confidence = float(request.form.get('confidence'))
+        adaptability_to_changes = float(
             request.form.get('adaptabilitytochanges'))
 
         exp_openness = (fast_learner + innovative)/2
@@ -282,44 +284,33 @@ def calcExpected():
     return render_template('Personality_prediction/requirement.html', job_role=job_role, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, textarea_content="", slider_values="")
 
 
-# @app.route('/bar_chart', methods=['POST', 'GET'])
-# def bar_chart():
-#     if request.method == 'POST':
-#         # Get the scores from the form
-#         opn_score = float(request.form['opn_score'])
-#         csn_score = float(request.form['csn_score'])
-#         ext_score = float(request.form['ext_score'])
-#         agr_score = float(request.form['agr_score'])
-#         neu_score = float(request.form['neu_score'])
-#         opn_ended_score = float(request.form['opn_ended_score'])
+@app.route('/radar', methods=['POST', 'GET'])
+def plot_radar_graph():
+    job_role = "Software Engineer"
+    openness = 0.7
+    conscientiousness = 0.5
+    extraversion = 0.6
+    agreeableness = 0.8
+    neuroticism = 0.3
 
-#         # Labels for the personality traits
-#         traits = ['Openness', 'Conscientiousness', 'Extraversion',
-#                   'Agreeableness', 'Neuroticism', 'Final Score']
+    categories = ['Openness', 'Conscientiousness',
+                  'Extraversion', 'Agreeableness', 'Neuroticism']
+    values = [openness, conscientiousness, extraversion, agreeableness,
+              neuroticism, openness]  # Duplicate the first value to close the loop
 
-#         # Corresponding scores
-#         scores = [opn_score, csn_score, ext_score,
-#                   agr_score, neu_score, opn_ended_score]
+    fig, ax = plt.subplots(figsize=(8, 6), subplot_kw=dict(polar=True))
+    lines, labels = plt.thetagrids(
+        range(0, 360, int(360 / len(categories))), labels=categories)
 
-#         # Create a bar chart
-#         plt.figure(figsize=(10, 6))
-#         plt.bar(traits, scores, color=[
-#                 'blue', 'green', 'red', 'purple', 'orange', 'gray'])
-#         plt.xlabel('Personality Traits')
-#         plt.ylabel('Scores')
-#         plt.title('Personality Trait Scores')
-#         plt.ylim(0, 5)  # Set y-axis range
-#         plt.tight_layout()
-
-#         # Save the bar chart as a PNG image
-#         chart_path = 'static/personality_scores.png'
-#         plt.savefig(chart_path)
-
-#         # Pass the chart path to the template
-#         return render_template('Personality_prediction/bar_chart.html', chart_path=chart_path)
-
-#     # Return the template for GET requests
-#     return render_template('Personality_prediction/open_ended.html')
+    ax.plot(np.deg2rad(range(0, 360, int(360 / len(categories)))),
+            values, marker='o')
+    ax.fill(np.deg2rad(range(0, 360, int(360 / len(categories)))),
+            values, alpha=0.25)
+    ax.set_title(f'Personality Traits for {job_role}')
+    ax.set_yticks([0.2, 0.4, 0.6, 0.8])
+    ax.set_yticklabels(['0.2', '0.4', '0.6', '0.8'])
+    ax.spines['polar'].set_visible(False)
+    ax.grid(False)
 
 
 if __name__ == '__main__':

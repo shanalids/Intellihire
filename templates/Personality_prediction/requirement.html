@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/personality.css')}}">
 </head>
 
-<body>
+<body class="requirement-body">
     <nav>
         <div class="nav-logo-container">
             <img src="static/images/Logo.png" alt="">
@@ -38,125 +38,126 @@
         </div>
     </nav>
 
-    <!-- Include your JavaScript files here -->
-
-    <script>
-        function openMenu() {
-            var drawer = document.getElementById('drawer');
-            drawer.classList.toggle('open');
-        }
-    </script>
-
     <div class="jumbotron">
         <div class="titlecontainer">
-            <h1>Personality Traits for Job Role</h1>
-            <p>Use this interface to provide the personality trait requirement for the job role associated with the
-                candidate</p>
-            <br />
-            <a class="btn btn-lg btn-primary" href="#" role="button">Refresh</a>
+            <h3>Personality Traits Required for the Job Role</h3>
         </div>
     </div>
 
-    <div class="requirement-container">
-        <br />
-        <form class="form-group mt-2 mt-md-0" method="POST" action="/calc_expected">
+    <a class="btn btn-lg btn-primary" href="#" role="button" id="refresh-button">Refresh</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="requirement-container">
+                    <br />
+                    <form id="requirement-form" class="form-group mt-2 mt-md-0" method="POST" action="/calc_expected">
 
-            <h3>Move the slider to indicate the importance of each trait for the job role</h3>
-            <br />
+                        <h4>Move the slider to indicate the importance of each trait for the job role</h4>
+                        <br />
 
-            <div>
-                <p>Job Role</p>
-                <textarea name='jobrole' rows="1" class="form-control" placeholder="Enter job role"></textarea>
+                        <div>
+                            <p>Job Role</p>
+                            <textarea name='jobrole' rows="1" class="form-control"
+                                placeholder="Enter job role"></textarea>
+                        </div>
+
+                        <div>
+                            <p>1. Innovative</p>
+                            <input type="range" name="innovative" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+
+                        <div>
+                            <p>2. Fast learner</p>
+                            <input type="range" name="fastlearner" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+
+                        <div>
+                            <p>3. Organization skills</p>
+                            <input type="range" name="organizationskills" min="0" max="5" step="0.5"
+                                class="form-control" required="true">
+                        </div>
+
+                        <div>
+                            <p>4. Attention to detail</p>
+                            <input type="range" name="attentiontodetail" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+
+                        <div>
+                            <p>5. Assertiveness</p>
+                            <input type="range" name="assertiveness" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+
+                        <div>
+                            <p>6. Leadership skills</p>
+                            <input type="range" name="leadershipskills" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+
+                        <div>
+                            <p>7. Team Player</p>
+                            <input type="range" name="teamplayer" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+
+                        <div>
+                            <p>8. Communication skills</p>
+                            <input type="range" name="communicationskills" min="0" max="5" step="0.5"
+                                class="form-control" required="true">
+                        </div>
+
+                        <div>
+                            <p>9. Confidence</p>
+                            <input type="range" name="confidence" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+
+                        <div>
+                            <p>10. Adaptability to changes</p>
+                            <input type="range" name="adaptabilitytochanges" min="0" max="5" step="0.5"
+                                class="form-control" required="true">
+                        </div>
+
+                        <br />
+
+                        <button class="btn btn-outline-success " type="reset">Clear</button>
+                        <button class="btn btn-outline-primary " type="submit">Predict</button>
+                    </form>
+                    <br />
+
+                </div>
             </div>
 
-            <div>
-                <p>1. Innovative</p>
-                <input type="range" name="innovative" min="0" max="5" step="0.5" class="form-control" required="true">
+            <div class="col-md-4">
+                <img src="static/images/hr.png" alt="HR Background Image" class="requirement-image">
             </div>
-
-            <div>
-                <p>2. Fast learner</p>
-                <input type="range" name="fastlearner" min="0" max="5" step="0.5" class="form-control" required="true">
-            </div>
-
-            <div>
-                <p>3. Organization skills</p>
-                <input type="range" name="organizationskills" min="0" max="5" step="0.5" class="form-control"
-                    required="true">
-            </div>
-
-            <div>
-                <p>4. Attention to detail</p>
-                <input type="range" name="attentiontodetail" min="0" max="5" step="0.5" class="form-control"
-                    required="true">
-            </div>
-
-            <div>
-                <p>5. Assertiveness</p>
-                <input type="range" name="assertiveness" min="0" max="5" step="0.5" class="form-control"
-                    required="true">
-            </div>
-
-            <div>
-                <p>6. Leadership skills</p>
-                <input type="range" name="leadershipskills" min="0" max="5" step="0.5" class="form-control"
-                    required="true">
-            </div>
-
-            <div>
-                <p>7. Team Player</p>
-                <input type="range" name="teamplayer" min="0" max="5" step="0.5" class="form-control" required="true">
-            </div>
-
-            <div>
-                <p>8. Communication skills</p>
-                <input type="range" name="communicationskills" min="0" max="0.5" step="1" class="form-control"
-                    required="true">
-            </div>
-
-            <div>
-                <p>9. Confidence</p>
-                <input type="range" name="confidence" min="0" max="5" step="0.5" class="form-control" required="true">
-            </div>
-
-            <div>
-                <p>10. Adaptability to changes</p>
-                <input type="range" name="adaptabilitytochanges" min="0" max="0.5" step="1" class="form-control"
-                    required="true">
-            </div>
-
-            <br />
-
-            <button class="btn btn-outline-success " type="reset">Clear</button>
-            <button class="btn btn-outline-primary " type="submit">Predict</button>
-        </form>
-        <br />
-
-        <div class="requirement-image-section">
-            <img src="static/images/personality.png" alt="HR Background Image">
         </div>
+    </div>
 
-        <br />
-        <h3>Personality traits mapped to Big Five traits:</h3>
-        <br />
-        <table>
-            <tr>
-                <th>Position</th>
-                <th>Openness</th>
-                <th>Concientiousness</th>
-                <th>Extraversion</th>
-                <th>Agreeableness</th>
-                <th>Neuroticism</th>
-            </tr>
-            <tr>
-                <td>{{ job_role }}</td>
-                <td>{{ exp_openness }}</td>
-                <td>{{ exp_conscientiousness }}</td>
-                <td>{{ exp_extraversion }}</td>
-                <td>{{ exp_agreeableness }}</td>
-                <td>{{ exp_neuroticism }}</td>
-            </tr>
-        </table>
-        <br />
+    <h3>Personality traits mapped to Big Five traits:</h3>
+    <br />
+    <table class="requirement-table">
+        <tr>
+            <th>Position</th>
+            <th>Openness</th>
+            <th>Concientiousness</th>
+            <th>Extraversion</th>
+            <th>Agreeableness</th>
+            <th>Neuroticism</th>
+        </tr>
+        <tr>
+            <td>{{ job_role }}</td>
+            <td>{{ exp_openness }}</td>
+            <td>{{ exp_conscientiousness }}</td>
+            <td>{{ exp_extraversion }}</td>
+            <td>{{ exp_agreeableness }}</td>
+            <td>{{ exp_neuroticism }}</td>
+        </tr>
+    </table>
+    <br />
+    <button class="next"><span>Next </span></button>
 
 </body>
