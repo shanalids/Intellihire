@@ -70,7 +70,7 @@ def generate_pie_chart(percentage_scores):
 def index():
     return render_template('plp_form.html')
 
-@app.route('/index3', methods=['GET', 'POST'])
+@app.route('/plp', methods=['GET', 'POST'])
 def plp():
     if request.method == 'POST':
         username = request.form.get('username')
