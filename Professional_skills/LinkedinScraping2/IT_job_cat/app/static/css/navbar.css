@@ -1,0 +1,78 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+    background-color: #088F8F;
+    padding: 10px;
+}
+
+.navbar-menu-container {
+    display: none;
+}
+
+.navbar-links-container a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.primary-button {
+    padding: 0.9rem 1.75rem;
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.navbar-cart-icon {
+    font-size: 1.15rem;
+}
+
+.primary-button:hover {
+    background-color: rgb(234, 234, 234);
+}
+
+.navbar-menu-container svg {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar-links-container a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links-container a:hover {
+    background-color: rgba(5, 169, 199, 0.7);
+    border-radius: 0.5rem;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.bars-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.drawer {
+    display: none;
+}
+
+.drawer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.drawer-content ul li {
+    margin-bottom: 10px;
+}

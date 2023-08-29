@@ -18,7 +18,7 @@ def index():
             predicted_category = model.predict([skills])  #model takes a list of skills
            # predicted_category = model.predict(fitted_vectorizer.transform([skills]))
             result = f"Predicted Job Category: {predicted_category[0]}"
-    return render_template('index.html', result=result)
+    return render_template('job_cat_form.html', result=result)
 
 if __name__ == '__main__':
     app.run(debug=True)
