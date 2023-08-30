@@ -86,7 +86,7 @@ nav {
 }
 
 .titlecontainer {
-    margin-left: 370px;
+    margin-left: 420px;
 }
 
 .container {
@@ -356,4 +356,57 @@ textarea {
     height: auto;
     /* Maintain aspect ratio */
 
+}
+
+.results-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.results-table th,
+.results-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #006E33;
+}
+
+.results-table th,
+.results-table th {
+    background-color: white;
+}
+
+.results-table tr {
+    background-color: white;
+}
+
+.results-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 20%;
+    height: auto;
+}
+
+#radarChart {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    height: auto;
+}
+
+.results-title {
+    color: #088F8F;
+    margin-left: 550px;
+}
+
+body.results-container {
+    /* Set the background image */
+    background-image: url('../images/bg.png');
+    /* Update the path to your image */
+    background-size: cover;
+    /* Adjust the image sizing */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
 }

@@ -116,11 +116,12 @@ nav {
 
 .start {
     border-radius: 20px;
-    background-color: #004225;
+    background-color: #088F8F;
     border: none;
-    color: #FFFFFF;
+    color: black;
     text-align: center;
     font-size: 23px;
+    font-weight: bold;
     padding: 20px;
     width: 200px;
     transition: all 0.5s;

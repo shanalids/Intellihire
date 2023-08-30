@@ -8,7 +8,6 @@ import re
 from nltk.stem import WordNetLemmatizer
 import matplotlib.pyplot as plt
 
-#####
 import csv
 import requests
 import io  # Import the io module for working with bytes streams
@@ -23,43 +22,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template('Personality_prediction/open_ended.html', textarea_content="", slider_values="")
+    return render_template('Personality_prediction/requirement.html', textarea_content="", slider_values="")
 
 
-# @app.route('/')
-# def hello_world():
-#     return render_template('home.html', textarea_content="", slider_values="")
+@app.route('/responses')
+def go_to_responses():
+    return render_template('Personality_prediction/responses.html', textarea_content="", slider_values="")
 
 
-@app.route('/upload', methods=['POST'])
-def upload():
-    if 'csv_file' in request.files:
-        csv_file = request.files['csv_file']
-        if csv_file.filename != '':
-            csv_stream = io.StringIO(
-                csv_file.stream.read().decode("UTF-8"), newline=None)
-            csv_reader = csv.reader(csv_stream, delimiter=',')
-
-            # Skip the first row, which contains the column headers
-            next(csv_reader, [])
-
-            # Read the first row of the CSV (assuming it contains the data)
-            # Use [] as default if no header row
-            data_row = next(csv_reader, [])
-
-            # Initialize a list to store textarea content
-            textarea_content = []
-
-            # Iterate over each data in the first row
-            for datum in data_row:
-                # Add the datum to the textarea content list
-                textarea_content.append(datum)
-
-            return render_template('Personality_prediction/open_ended.html', textarea_content=textarea_content)
-    return "No CSV file uploaded."
-
-
-@app.route('/upload_selfrate', methods=['POST'])
+@app.route('/upload_responses', methods=['POST'])
 def upload_selfrate():
     if 'csv_file' in request.files:
         csv_file = request.files['csv_file']
@@ -75,15 +46,25 @@ def upload_selfrate():
             # Use [] as default if no header row
             data_row = next(csv_reader, [])
 
-            # Initialize a list to store slider values
+            # Initialize lists to store slider values and textarea content
             slider_values = []
+            textarea_content = []
 
-            # Iterate over each data in the first row and convert them to integers
-            for datum in data_row:
-                # Convert the datum to an integer and append it to the slider values list
-                slider_values.append(int(datum))
+            # Iterate over each data in the first 25 columns and convert them to integers
+            for i in range(25):
+                if i < len(data_row):
+                    datum = data_row[i]
+                    # Convert the datum to an integer and append it to the slider values list
+                    slider_values.append(int(datum))
 
-            return render_template('Personality_prediction/self-rating.html', slider_values=slider_values)
+            # Iterate over the next 5 columns for textarea content
+            for i in range(25, 30):
+                if i < len(data_row):
+                    datum = data_row[i]
+                    # Append the datum to the textarea content list
+                    textarea_content.append(datum)
+
+            return render_template('Personality_prediction/responses.html', slider_values=slider_values, textarea_content=textarea_content)
     return "No CSV file uploaded."
 
 
@@ -187,8 +168,8 @@ def predict():
     return render_template('Personality_prediction/self-rating.html')
 
 
-@app.route('/predict_selfrate', methods=['POST', 'GET'])
-def predict_selfrate():
+@app.route('/predict_scores', methods=['POST', 'GET'])
+def predict_scores():
     if request.method == 'POST':
         ext_1 = int(request.form['ext_1'])
         ext_2 = int(request.form['ext_2'])
@@ -220,17 +201,99 @@ def predict_selfrate():
         opn_4 = int(request.form['opn_4'])
         opn_5 = int(request.form['opn_5'])
 
-        ext_score = (ext_1 + ext_2 + ext_3 + ext_4 + ext_5)/5
-        neu_score = (neu_1 + neu_2 + neu_3 + neu_4 + neu_5)/5
-        agr_score = (agr_1 + agr_2 + agr_3 + agr_4 + agr_5)/5
-        csn_score = (csn_1 + csn_2 + csn_3 + csn_4 + csn_5)/5
-        opn_score = (opn_1 + opn_2 + opn_3 + opn_4 + opn_5)/5
+        ext_score1 = (ext_1 + ext_2 + ext_3 + ext_4 + ext_5)/5
+        neu_score1 = (neu_1 + neu_2 + neu_3 + neu_4 + neu_5)/5
+        agr_score1 = (agr_1 + agr_2 + agr_3 + agr_4 + agr_5)/5
+        csn_score1 = (csn_1 + csn_2 + csn_3 + csn_4 + csn_5)/5
+        opn_score1 = (opn_1 + opn_2 + opn_3 + opn_4 + opn_5)/5
+
+        opn_text = request.form['opn']
+        csn_text = request.form['csn']
+        ext_text = request.form['ext']
+        agr_text = request.form['agr']
+        neu_text = request.form['neu']
+
+        # openness
+        # Perform text processing (tokenization, lemmatization, etc.)
+        opn_lemmatized_tokens = preprocess_text(opn_text)
+
+        # Count occurrences of common words in lemmatized_tokens
+        opn_word_count = sum(
+            1 for word in opn_lemmatized_tokens if word in opn_target_words)
+
+        opn_score2 = opn_word_count/len(opn_target_words)*5
+        opn_score2 = round(opn_score2, 2)  # Round off to 2 decimal places
+
+        # concientiousness
+        # Perform text processing (tokenization, lemmatization, etc.)
+        csn_lemmatized_tokens = preprocess_text(csn_text)
+
+        # Count occurrences of common words in lemmatized_tokens
+        csn_word_count = sum(
+            1 for word in csn_lemmatized_tokens if word in csn_target_words)
+
+        csn_score2 = csn_word_count/len(csn_target_words)*5
+        csn_score2 = round(csn_score2, 2)  # Round off to 2 decimal places
+
+        # extraversion
+        # Perform text processing (tokenization, lemmatization, etc.)
+        ext_lemmatized_tokens = preprocess_text(ext_text)
+
+        # Count occurrences of common words in lemmatized_tokens
+        ext_word_count = sum(
+            1 for word in ext_lemmatized_tokens if word in ext_target_words)
+
+        ext_score2 = ext_word_count/len(ext_target_words)*5
+        ext_score2 = round(ext_score2, 2)  # Round off to 2 decimal places
+
+        # agreeableness
+        # Perform text processing (tokenization, lemmatization, etc.)
+        agr_lemmatized_tokens = preprocess_text(agr_text)
+
+        # Count occurrences of common words in lemmatized_tokens
+        agr_word_count = sum(
+            1 for word in agr_lemmatized_tokens if word in agr_target_words)
+
+        agr_score2 = agr_word_count/len(agr_target_words)*5
+        agr_score2 = round(agr_score2, 2)  # Round off to 2 decimal places
+
+        # neuroticism
+        # Perform text processing (tokenization, lemmatization, etc.)
+        neu_lemmatized_tokens = preprocess_text(neu_text)
+
+        # Count occurrences of common words in lemmatized_tokens
+        neu_word_count = sum(
+            1 for word in neu_lemmatized_tokens if word in neu_target_words)
+
+        neu_score2 = neu_word_count/len(neu_target_words)*5
+        neu_score2 = round(neu_score2, 2)  # Round off to 2 decimal places
+
+        # Final Score
+        opn_score = (opn_score1*0.4) + (opn_score2*0.6)
+        opn_score = round(opn_score, 2)
+        csn_score = (csn_score1*0.4) + (csn_score2*0.6)
+        csn_score = round(csn_score, 2)
+        ext_score = (ext_score1*0.4) + (ext_score2*0.6)
+        ext_score = round(ext_score, 2)
+        agr_score = (agr_score1*0.4) + (agr_score2*0.6)
+        agr_score = round(agr_score, 2)
+        neu_score = (neu_score1*0.4) + (neu_score2*0.6)
+        neu_score = round(neu_score, 2)
+
+        # expected scores
+        # Retrieve the calculated values from the query parameters
+        exp_openness = float(request.args.get('exp_openness'))
+        exp_conscientiousness = float(
+            request.args.get('exp_conscientiousness'))
+        exp_extraversion = float(request.args.get('exp_extraversion'))
+        exp_agreeableness = float(request.args.get('exp_agreeableness'))
+        exp_neuroticism = float(request.args.get('exp_neuroticism'))
 
         # Pass the processed data to the template
-        return render_template('Personality_prediction/self-rating.html', ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, textarea_content="", slider_values="")
+        return render_template('Personality_prediction/results.html', ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, textarea_content="", slider_values="")
 
     # Return the template for GET requests
-    return render_template('Personality_prediction/self-rating.html')
+    return render_template('Personality_prediction/results.html', ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, textarea_content="", slider_values="")
 
 
 def preprocess_text(text):
@@ -282,35 +345,6 @@ def calcExpected():
         exp_neuroticism = (confidence + adaptability_to_changes)/2
 
     return render_template('Personality_prediction/requirement.html', job_role=job_role, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, textarea_content="", slider_values="")
-
-
-@app.route('/radar', methods=['POST', 'GET'])
-def plot_radar_graph():
-    job_role = "Software Engineer"
-    openness = 0.7
-    conscientiousness = 0.5
-    extraversion = 0.6
-    agreeableness = 0.8
-    neuroticism = 0.3
-
-    categories = ['Openness', 'Conscientiousness',
-                  'Extraversion', 'Agreeableness', 'Neuroticism']
-    values = [openness, conscientiousness, extraversion, agreeableness,
-              neuroticism, openness]  # Duplicate the first value to close the loop
-
-    fig, ax = plt.subplots(figsize=(8, 6), subplot_kw=dict(polar=True))
-    lines, labels = plt.thetagrids(
-        range(0, 360, int(360 / len(categories))), labels=categories)
-
-    ax.plot(np.deg2rad(range(0, 360, int(360 / len(categories)))),
-            values, marker='o')
-    ax.fill(np.deg2rad(range(0, 360, int(360 / len(categories)))),
-            values, alpha=0.25)
-    ax.set_title(f'Personality Traits for {job_role}')
-    ax.set_yticks([0.2, 0.4, 0.6, 0.8])
-    ax.set_yticklabels(['0.2', '0.4', '0.6', '0.8'])
-    ax.spines['polar'].set_visible(False)
-    ax.grid(False)
 
 
 if __name__ == '__main__':
