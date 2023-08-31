@@ -69,24 +69,24 @@
             <td>{{ neu_score2 }}</td>
         </tr>
         <tr>
-            <th>Final Scores</th>
-            <td>{{ opn_score }}</td>
-            <td>{{ csn_score }}</td>
-            <td>{{ ext_score }}</td>
-            <td>{{ agr_score }}</td>
-            <td>{{ neu_score }}</td>
+            <th class="final-scores">Final Scores</th>
+            <td class="final-scores">{{ opn_score }}</td>
+            <td class="final-scores">{{ csn_score }}</td>
+            <td class="final-scores">{{ ext_score }}</td>
+            <td class="final-scores">{{ agr_score }}</td>
+            <td class="final-scores">{{ neu_score }}</td>
         </tr>
         <tr>
-            <th>Expected Scores</th>
-            <td>{{ exp_openness }}</td>
-            <td>{{ exp_conscientiousness }}</td>
-            <td>{{ exp_extraversion }}</td>
-            <td>{{ exp_agreeableness }}</td>
-            <td>{{ exp_neuroticism }}</td>
+            <th class="expected-scores">Expected Scores</th>
+            <td class="expected-scores">{{ exp_openness }}</td>
+            <td class="expected-scores">{{ exp_conscientiousness }}</td>
+            <td class="expected-scores">{{ exp_extraversion }}</td>
+            <td class="expected-scores">{{ exp_agreeableness }}</td>
+            <td class="expected-scores">{{ exp_neuroticism }}</td>
         </tr>
     </table>
 
-    <canvas id="radarChart" width="400" height="400"></canvas>
+    <canvas id="radarChart" width="450" height="450"></canvas>
 
     <!-- <img class="results-image" src="static/images/results-image.jpg" alt="Results Image"> -->
 
@@ -97,13 +97,34 @@
         // Data for the radar chart
         var radarData = {
             labels: ['Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Neuroticism'],
-            datasets: [{
-                label: 'Big Five Distributions',
-                data: [3, 4, 2, 5, 1],
-                backgroundColor: 'rgba(54, 162, 235, 0.2)', // Adjust the color
-                borderColor: 'rgba(0,110,51,1)', // Adjust the color
-                borderWidth: 2
-            }]
+            datasets: [
+                {
+                    label: 'Expected Scores',
+                    data: [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ],
+                    backgroundColor: 'rgba(252,143,50, 0.2)', // Adjust the color
+                    borderColor: 'rgba(237,139,0,1)', // Adjust the color
+                    borderWidth: 2
+                },
+                {
+                    label: 'Candidate Scores',
+                    data: [
+                        4.9,
+                        4.5,
+                        3.5,
+                        2.5,
+                        1.5
+                    ],
+                    backgroundColor: 'rgba(119,221,119, 0.2)', // Adjust the color
+                    borderColor: 'rgba(0,135,62,1)', // Adjust the color
+                    borderWidth: 2
+                }
+            ]
         };
 
         // Radar chart configuration
@@ -115,7 +136,7 @@
                     ticks: {
                         beginAtZero: true,
                         max: 5,
-                        stepSize: 1 // Adjust the step size
+                        stepSize: 0.5 // Adjust the step size
                     },
                     pointLabels: {
                         fontSize: 14 // Adjust font size

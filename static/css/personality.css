@@ -370,12 +370,7 @@ textarea {
 .results-table td {
     padding: 10px;
     text-align: center;
-    border: 1px solid #006E33;
-}
-
-.results-table th,
-.results-table th {
-    background-color: white;
+    border: 2px solid black;
 }
 
 .results-table tr {
@@ -397,7 +392,7 @@ textarea {
 }
 
 .results-title {
-    color: #088F8F;
+    color: whitesmoke;
     margin-left: 550px;
 }
 
@@ -409,4 +404,46 @@ body.results-container {
     /* Adjust the image sizing */
     background-repeat: no-repeat;
     /* Prevent the image from repeating */
+}
+
+body.requirement-body {
+    /* Set the background image */
+    background-image: url('../images/bg2.jpg');
+    /* Update the path to your image */
+    background-size: cover;
+    /* Adjust the image sizing */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+}
+
+body.responses-body {
+    /* Set the background image */
+    background-image: url('../images/bg2.jpg');
+    /* Update the path to your image */
+    background-size: cover;
+    /* Adjust the image sizing */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+}
+
+.final-scores {
+    background-color: #77DD77;
+    /* Light orange background for final scores */
+}
+
+.expected-scores {
+    background-color: #FFB673;
+    /* Light blue background for expected scores */
+}
+
+.final {
+    background-color: #77DD77;
+    /* Light gray background for score type labels */
+    font-weight: bold;
+}
+
+.expected {
+    background-color: #FFB673;
+    /* Light gray background for score type labels */
+    font-weight: bold;
 }

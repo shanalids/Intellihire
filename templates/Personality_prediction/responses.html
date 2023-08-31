@@ -59,6 +59,11 @@
                 <form id="responses-form" class="form-group mt-2 mt-md-0" method="POST" action="/predict_scores">
                     <h3>Upload candidate responses</h3>
                     <div>
+                        <p>Full Name of Candidate</p>
+                        <textarea name='name' rows="1" class="form-control" required="true"
+                            readonly>{{ textarea_first_value }}</textarea>
+                    </div>
+                    <div>
                         <p>1. I prefer working as a team</p>
                         <input type="range" name="ext_1" min="0" max="5" step="1" class="form-control" required="true"
                             value="{{ slider_values[0] }}">
