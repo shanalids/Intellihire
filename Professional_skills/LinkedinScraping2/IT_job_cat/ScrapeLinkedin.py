@@ -7,7 +7,7 @@
 import requests
 api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
 linkedin_profile_url = 'https://www.linkedin.com/in/chanuxbro/'
-api_key = 'jtiOFtUah7GkK79fcRQqww'
+api_key = 'f-lU6GZbwRXk9GWghrhDQw'
 headers = {'Authorization': 'Bearer ' + api_key}
 
 response = requests.get(api_endpoint,
