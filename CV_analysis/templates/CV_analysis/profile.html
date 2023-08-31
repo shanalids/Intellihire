@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Profile: {{ pdf_filename }}</h1>
+    <p>Matching Percentage: {{ matching_percentage }}</p>
+    <p>Resume Text: {{ pdf_text }}</p>
+    
+    <h2>Keywords in Resume</h2>
+    <p>{{matching_keywords}}</p>
+    {{ jd_keywords_in_resume_table | safe }} <!-- Use the | safe filter to render raw content -->
+</body>
+</html>

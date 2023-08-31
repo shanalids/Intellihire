@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Matching App</title>
+</head>
+<body>
+    <h1>PDF Matching App</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="pdf">Select PDF files:</label>
+        <input type="file" name="pdf" accept=".pdf" multiple><br><br>
+        <label for="jd">Select Job Description (JD) PDF:</label>
+        <input type="file" name="jd" accept=".pdf"><br><br>
+        <input type="submit" value="Match">
+    </form>
+    
+    <h2>Matching Outputs:</h2>
+    {% if predictions %}
+        <ul>
+            {% for prediction in predictions %}
+                <li>{{ prediction }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

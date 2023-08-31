@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matching Results</title>
+</head>
+<body>
+    <h1>Matching Results</h1>
+    <ul>
+        {% for result in ranking %}
+            <li>
+                <a href="{{ url_for('profile', filename=result.pdf_filename, percentage=result.matching_percentage, text=result.pdf_text,table=result.jd_keywords_in_resume_table,match=result.matching_keywords)}}">{{ result.pdf_filename }}</a>
+
+                <p>Matching Percentage: {{ result.matching_percentage }}</p>
+                
+                
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
