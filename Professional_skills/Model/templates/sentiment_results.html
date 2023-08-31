@@ -15,7 +15,7 @@
     <title>Sentiment Analysis</title>
     
 </head>
-<body background="static/images/back1.jpg">
+<body>
     <nav>
         <div class="nav-logo-container">
             <img src="static/images/Logo.png" alt="">
@@ -39,33 +39,37 @@
             </div>
         </div>
     </nav>
+  
+    
+    <div class="container">
+        <div class="left">
+            {% if column_names and row_content %}
+                <!-- Display column names as questions and row contents as answers -->
 
-
-
-
-
-    <div class="row d-flex justify-content-center align-items-center rows">
-        <div class="col-md-6" class="text-center">
-            <div class="card">
-                <div class="text-center">
-                    <h2>Employee Reference Analysis</h2>
-                    <br>
-                    <img src="static/images/upload.gif" width="200" alt="">
-                    <span class="d-block mt-3"> <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Upload referee feedback responses here!</h6></span>
-                    <div class="mx-5">
-                        <form method="POST" action="/sentiment_results" enctype="multipart/form-data">
-                         <div class="input-group mb-3 mt-4">
-                            <ul>
-                                <input type="file" name="file" accept=".csv">
-                                <button type="submit" class="btn btn-success">Upload and Analyze CSV</button> 
-                            </ul>
-                             
-                        </div>
-                        </form>
-                        </div>
-                    </div>
-                </div>
-            </div> 
+                <h2>Referee Feedback on candidate</h2>
+                <br>
+                <dl>
+                    {% for index in range(column_names|length) %}
+                    <dt>{{ index + 1 }}. {{ column_names[index] }}</dt>
+                        <dd><li>{{ row_content[index] }}</li></dd>
+                        <br>
+                    {% endfor %}
+                </dl>
+            {% endif %}
         </div>
+        
+        <div class="right">
+            {% if plot_data %}
+                <!-- Display sentiment analysis plot -->
+                <img src="data:image/png;base64,{{ plot_data }}" alt="Sentiment Analysis Plot" class="plot">
+            {% endif %}
+        </div>
+    </div>
+    
+    <!-- <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv">
+        <button type="submit">Upload and Analyze CSV</button>
+    </form> -->
+    <a href="/" style="color: #007bff; text-decoration: none;">Back to Analysis</a>
 </body>
 </html>

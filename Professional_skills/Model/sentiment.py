@@ -50,10 +50,13 @@ def analyze_sentiment_and_visualize(row):
     plot_data = base64.b64encode(sentiment_plot.getvalue()).decode('utf-8')
     return plot_data
 
-
-
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index1():
+    return render_template('sentiment.html')
+
+
+@app.route('/sentiment_results', methods=['GET', 'POST'])
+def index2():
     plot_data = None
     column_names = None
     row_content = None
@@ -74,13 +77,13 @@ def index1():
             plot_data = analyze_sentiment_and_visualize(last_row)
             row_content = last_row.values.tolist()
 
-    return render_template('sentiment.html', plot_data=plot_data, column_names=column_names, row_content=row_content)
+    return render_template('sentiment_results.html', plot_data=plot_data, column_names=column_names, row_content=row_content)
 
 
 
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
+@app.route('/sentiment_results', methods=['GET', 'POST'])
+def index3():
     plot_data = None
     if request.method == 'POST':
         # Get uploaded file
@@ -101,7 +104,7 @@ def index():
             # Apply sentiment analysis and visualization to the last row
             plot_data = analyze_sentiment_and_visualize(last_row)
 
-    return render_template('sentiment.html', plot_data=plot_data)
+    return render_template('sentiment_results.html', plot_data=plot_data)
 
 if __name__ == '__main__':
     app.run(debug=True)

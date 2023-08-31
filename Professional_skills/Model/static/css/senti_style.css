@@ -5,14 +5,23 @@
 }
 .left {
     flex: 1;
-    padding: 20px;
+    padding: 50px;
 }
 .right {
     flex: 1;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
 }
 img.plot {
-    max-width: 100%;
+    max-width: 200%;
     height: auto;
 }
+
+/* body {
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+
+
+  } */
