@@ -25,6 +25,21 @@
 
     <!--fotter styles-->
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
+
+    <script>
+        function validateSkills() {
+            var skillsInput = document.querySelector('input[name="skills"]').value;
+    
+            if (skillsInput.trim() === "") {
+                // Skills input is empty, prevent the form submission
+                alert("Please enter skills before matching.");
+                return false;
+            }
+            
+            // Skills input is not empty, allow the form submission
+            return true;
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -89,6 +104,18 @@
             </div>
           
     
+        </div>
+    </div>
+
+    <div class="frame-skills">
+        <div class="center-skills">
+            <div class="title-skills">
+                <h1>Enter Skills</h1>
+            </div>
+
+            <div class="input-skills">
+                <input type="text" name="skills" placeholder="Enter skills here">
+            </div>
         </div>
     </div>
     <div class="match-recruitment">
