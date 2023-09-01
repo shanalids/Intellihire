@@ -39,8 +39,11 @@ def home():
 
 @app.route('/pf_home')
 def pf_home():
-    # You can add any necessary logic here before rendering pf_home.html
     return render_template('professional_skills/pf_home.html')
+
+@app.route('/personality-home')
+def personality_home():
+    return render_template('personality_skills/personality-home.html')
 
 @app.route('/responses', methods=['GET', 'POST'])
 def responses():
