@@ -31,20 +31,15 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 app = Flask(__name__)
 app.secret_key = 'personality-prediction-2023'
 
-# personality prediction
+
 
 @app.route('/')
 def home():
     return render_template('home.html', textarea_content="", slider_values="")
 
-@app.route('/pf_home')
-def pf_home():
-    return render_template('professional_skills/pf_home.html')
 
-@app.route('/personality-home')
-def personality_home():
-    return render_template('personality_skills/personality-home.html')
 
+# personality prediction - Maleesha - start
 @app.route('/responses', methods=['GET', 'POST'])
 def responses():
     return render_template('personality_prediction/responses.html', textarea_content="", slider_values="")
@@ -312,7 +307,14 @@ def calcExpected():
 
     return render_template('personality_prediction/requirement.html', job_role=job_role, experience=experience, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, textarea_content="", slider_values="")
 
-# professional skills - github-plp
+# personality prediction - Maleesha - END
+
+
+# professional skills - Sandani - START
+
+@app.route('/pf_home')
+def pf_home():
+    return render_template('professional_skills/pf_home.html')
 
 def calculate_language_proficiency(username, access_token):
     # Authenticate with GitHub
@@ -396,6 +398,15 @@ def plp():
         return render_template('professional_skills/plp.html', username=username, percentage_scores=percentage_scores, pie_chart=pie_chart)
     
     return render_template('professional_skills/plp.html', username=None, percentage_scores=None, pie_chart=None)
+
+# professional skills - Sandani - END
+
+
+# CV Analysis - Manushi - START
+# CV Analysis - Manushi - END
+
+# Academic Transcript - Shanali - START
+#Academic Transcript - Shanali - END
 
 if __name__ == '__main__':
     app.run(debug=True)
