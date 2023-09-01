@@ -3,6 +3,7 @@ import joblib
 from tabulate import tabulate
 import pandas as pd
 import nltk
+import numpy as np
 import pickle
 import file_new as dp
 from helper import *
@@ -43,7 +44,8 @@ def index():
 
                     new_data_transformed = vectorizer.transform([pdf_text + " " + jd_text])
                     new_data_prediction = model.predict(new_data_transformed)
-
+                    new_data_prediction = np.round(new_data_prediction, 2)
+                    
                     jd_keywords_in_resume_table = []
                     matching_keywords=[]
                     for word in keywords_jd:

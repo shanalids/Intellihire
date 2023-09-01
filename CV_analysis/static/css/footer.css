@@ -1,0 +1,75 @@
+.site-footer {
+    background-color: #088F8F;
+    padding: 2px 0; /* Further reduce the vertical padding to make the footer thinner */
+    font-size: 12px; /* Adjust the font size to make the text smaller */
+    line-height: 16px; /* Adjust the line height to match the smaller font size */
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5;
+}
+
+.site-footer hr.small {
+    margin: 1px 0; /* Further reduce the margin to make the horizontal line thinner */
+}
+
+.site-footer h4 {
+    color: #fff;
+    font-size: 14px; /* Further adjust the font size for the heading */
+    text-transform: uppercase;
+    margin-top: 1px;
+    letter-spacing: 0.5px; /* Further adjust the letter spacing */
+}
+
+.footer-about {
+    margin-left: 15px; /* Further adjust the margin to make the content area narrower */
+}
+
+.site-footer a {
+    color: white;
+}
+
+.quick-links {
+    margin-left: 120px; /* Further adjust the margin to make the content area narrower */
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+    margin-left: 120px; /* Further adjust the margin to make the content area narrower */
+}
+
+.footer-links li {
+    display: block;
+}
+
+.footer-links a {
+    color: white;
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: #06038D;
+    text-decoration: none;
+}
+
+.footer-links.inline li {
+    display: inline-block;
+}
+
+.text-justify {
+    color: white;
+    margin-left: 15px; /* Further adjust the margin to make the content area narrower */
+    margin-right: 5px; /* Further adjust the margin to make the content area narrower */
+}
+
+/* Add this rule to ensure proper spacing at the bottom of the content */
+.content-container {
+    padding-bottom: 20px; /* Adjust as needed */
+}

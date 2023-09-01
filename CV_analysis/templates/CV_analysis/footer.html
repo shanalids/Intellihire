@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Profile</title>
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/pro.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/progress.css')}}">
- 
-     <!--fotter styles-->
+    <title></title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
-    
-
 </head>
-<body>
-    <h1>Profile: {{ pdf_filename }}</h1>
 
-   <p>{{matching_percentage}}</p>
-   <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: {{ matching_percentage }}%;" aria-valuenow="{{ matching_percentage }}" aria-valuemin="0" aria-valuemax="100">{{ matching_percentage }}%</div>
-</div>
-</div>
-    
-    <h2>Keywords in Resume</h2>
-    <div>
-        {% set keywords_list = matching_keywords.strip("[]").split(',') %}
-        {% for keyword in keywords_list %}
-            {% set cleaned_keyword = keyword.strip("' ").strip() %}
-            <span class="badge">
-                <span class="tick">&#10004;</span> <!-- Tick icon -->
-                {{ cleaned_keyword }}
-            </span>
-        {% endfor %}
-    </div>
+<body>
+
+
 </body>
-<!-- footer begins-->
 
 <footer class="site-footer">
     <div class="footer-container">

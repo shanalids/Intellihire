@@ -1,0 +1,17 @@
+.badge {
+            background-color: transparent;
+            color: #28a745; /* Set color for the tick icon */
+            border: 1px solid #28a745;
+ }
+        
+.badge:hover {
+            background-color: #28a745; /* Hover background color */
+            color: white;
+}
+        
+        
+.badge .tick {
+            display: inline-block;
+            margin-right: 3px;
+            font-size: 12px; /* Adjust the font size for a thinner tick */
+}
