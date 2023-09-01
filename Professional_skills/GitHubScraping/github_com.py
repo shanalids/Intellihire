@@ -7,6 +7,7 @@ from github import Github
 app = Flask(__name__)
 
 def get_language_proficiency(username):
+    # Authenticate with GitHub
     access_token = "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"
     g = Github(access_token)
     user = g.get_user(username)
@@ -85,6 +86,7 @@ def compare():
         current_user_scores = get_language_proficiency(current_username)
         other_user_scores = get_language_proficiency(other_username)
 
+        # Compare language proficiency
         common_languages = list(set(current_user_scores.keys()) & set(other_user_scores.keys()))
 
         img_base64 = generate_comparison_chart(

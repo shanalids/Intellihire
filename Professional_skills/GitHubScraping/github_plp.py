@@ -8,10 +8,12 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 app = Flask(__name__)
 
 def calculate_language_proficiency(username, access_token):
+    # Authenticate with GitHub
     access_token = "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"
     g = Github(access_token)
     user = g.get_user(username)
     
+    # Calculate language proficiency
     language_proficiency = {}
     repository_count = user.public_repos
     
@@ -23,12 +25,14 @@ def calculate_language_proficiency(username, access_token):
             else:
                 language_proficiency[language] = value
     
+    # Calculate weighted language proficiency scores
     weighted_scores = {}
     
     for language, value in language_proficiency.items():
         weighted_score = value * (1 / repository_count)
         weighted_scores[language] = weighted_score
     
+    # Normalize and convert scores to percentages
     total_score = sum(weighted_scores.values())
     
     percentage_scores = {
@@ -39,12 +43,15 @@ def calculate_language_proficiency(username, access_token):
     return percentage_scores
 
 def generate_pie_chart(percentage_scores):
+    # Programming Language Proficiency Data
     languages = list(percentage_scores.keys())
     percentages = list(percentage_scores.values())
     
+    # Create a pie chart
     fig, ax = plt.subplots()
     ax.pie(percentages, labels=languages, autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
-    ax.axis('equal')
+
+    ax.axis('equal') # Equal aspect ratio ensures the pie chart is circular
     plt.title('Programming Language Proficiency (Percentage)')
     
     canvas = FigureCanvas(fig)
