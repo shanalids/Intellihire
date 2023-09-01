@@ -39,6 +39,10 @@ def home():
 
 
 # personality prediction - Maleesha - start
+@app.route('/personality-home')
+def personality_home():
+    return render_template('personality_prediction/personality-home.html')
+
 @app.route('/responses', methods=['GET', 'POST'])
 def responses():
     return render_template('personality_prediction/responses.html', textarea_content="", slider_values="")
