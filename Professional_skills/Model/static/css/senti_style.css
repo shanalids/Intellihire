@@ -1,0 +1,31 @@
+/* style.css */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    flex: 1;
+    padding: 10px;
+}
+.right {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+img.plot {
+    max-width: 200%;
+    height: auto;
+}
+
+/* body {
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+
+
+  } */
+  body{
+
+    background-color: #b0f1ff;
+}

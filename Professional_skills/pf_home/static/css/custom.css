@@ -1,0 +1,59 @@
+body {
+	/* padding-top: 50px; */
+	color: #959595;
+	background-color: #EFFFFD;
+	}
+	
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	font-weight: bold;
+	}
+	
+.feature {
+	/* background: rgb(131, 90, 253) linear-gradient(to bottom, rgb(112, 76, 255), rgb(49, 76, 185)); */
+	background: #47fc00 linear-gradient(to bottom, #00FFCA, #4B7BE5 );
+	
+	color: black;
+	}
+
+#feature-carousel {
+	min-height: 250px;
+	}
+	
+.article-intro {
+    margin-bottom: 25px;
+}
+
+.footer-blurb {
+    padding: 30px 0;
+    background-color: yellowgreen;
+    color: black;
+}
+    
+.footer-blurb-item {
+    padding: 30px;
+    }
+ 
+.small-print {
+	background-color: #fff;
+	padding: 30px 0;
+}
+
+.feature,
+.page-intro,
+.article-intro,
+.footer-blurb,
+.small-print {
+	text-align: center;
+	}
+
+	
+	
+	
+	
+	.button-container a {
+		margin-right: 10px; /* Add margin between the buttons for spacing */
+	}
+	
+	
+	
