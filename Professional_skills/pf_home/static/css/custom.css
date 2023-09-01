@@ -1,5 +1,5 @@
 body {
-	padding-top: 50px;
+	/* padding-top: 50px; */
 	color: #959595;
 	}
 	
@@ -8,7 +8,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	
 .feature {
-	background: yellowgreen linear-gradient(to bottom, greenyellow, olivedrab);
+	/* background: rgb(131, 90, 253) linear-gradient(to bottom, rgb(112, 76, 255), rgb(49, 76, 185)); */
+	background: #FCE700 linear-gradient(to bottom, #00FFCA, #4B7BE5);
+	
 	color: black;
 	}
 
