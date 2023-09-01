@@ -1,3 +1,4 @@
+# personality prediction
 from flask import Flask, request, url_for, redirect, render_template, render_template_string, session
 import pickle
 import numpy as np
@@ -7,31 +8,48 @@ from nltk.corpus import stopwords
 import re
 from nltk.stem import WordNetLemmatizer
 import matplotlib.pyplot as plt
-
 import csv
 import requests
 import io  # Import the io module for working with bytes streams
-
 nltk.download('punkt')
 nltk.download('stopwords')
+
+
+# professional skills
+from flask import Flask, render_template, request
+from github import Github
+import matplotlib.pyplot as plt
+import io
+import base64
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+
+
+
+
+
 
 app = Flask(__name__)
 app.secret_key = 'personality-prediction-2023'
 
+# personality prediction
 
 @app.route('/')
-def hello_world():
-    return render_template('Personality_prediction/personality-home.html', textarea_content="", slider_values="")
+def home():
+    return render_template('home.html', textarea_content="", slider_values="")
 
+@app.route('/pf_home')
+def pf_home():
+    # You can add any necessary logic here before rendering pf_home.html
+    return render_template('professional_skills/pf_home.html')
 
 @app.route('/responses', methods=['GET', 'POST'])
 def responses():
-    return render_template('Personality_prediction/responses.html', textarea_content="", slider_values="")
+    return render_template('personality_prediction/responses.html', textarea_content="", slider_values="")
 
 
 @app.route('/requirement', methods=['GET', 'POST'])
 def requirement():
-    return render_template('Personality_prediction/requirement.html', textarea_content="", slider_values="")
+    return render_template('personality_prediction/requirement.html', textarea_content="", slider_values="")
 
 
 @app.route('/upload_responses', methods=['POST'])
@@ -71,7 +89,7 @@ def upload_selfrate():
                         datum = last_data_row[i]
                         textarea_content.append(datum)
 
-                return render_template('Personality_prediction/responses.html', textarea_first_value=textarea_first_value, slider_values=slider_values, textarea_content=textarea_content)
+                return render_template('personality_prediction/responses.html', textarea_first_value=textarea_first_value, slider_values=slider_values, textarea_content=textarea_content)
 
     return "No CSV file uploaded."
 
@@ -227,10 +245,10 @@ def predict_scores():
         match_percentage = round(match_percentage, 2)
 
         # Pass the processed data to the template
-        return render_template('Personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
+        return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
 
     # Return the template for GET requests
-    return render_template('Personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
+    return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
 
 
 def preprocess_text(text):
@@ -289,8 +307,92 @@ def calcExpected():
         session['exp_openness'] = exp_openness
         session['exp_neuroticism'] = exp_neuroticism
 
-    return render_template('Personality_prediction/requirement.html', job_role=job_role, experience=experience, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, textarea_content="", slider_values="")
+    return render_template('personality_prediction/requirement.html', job_role=job_role, experience=experience, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, textarea_content="", slider_values="")
 
+# professional skills - github-plp
+
+def calculate_language_proficiency(username, access_token):
+    # Authenticate with GitHub
+    access_token = "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"
+    g = Github(access_token)
+    user = g.get_user(username)
+    
+    # Calculate language proficiency
+    language_proficiency = {}
+    repository_count = user.public_repos
+    
+    for repo in user.get_repos():
+        languages = repo.get_languages()
+        for language, value in languages.items():
+            if language in language_proficiency:
+                language_proficiency[language] += value
+            else:
+                language_proficiency[language] = value
+    
+    # Calculate weighted language proficiency scores
+    weighted_scores = {}
+    
+    for language, value in language_proficiency.items():
+        weighted_score = value * (1 / repository_count)
+        weighted_scores[language] = weighted_score
+    
+    # Normalize and convert scores to percentages
+    total_score = sum(weighted_scores.values())
+    
+    percentage_scores = {
+        language: (score / total_score) * 100
+        for language, score in weighted_scores.items()
+    }
+    
+    return percentage_scores
+
+def generate_pie_chart(percentage_scores):
+    # Programming Language Proficiency Data
+    languages = list(percentage_scores.keys())
+    percentages = list(percentage_scores.values())
+    
+    # Create a pie chart
+    fig, ax = plt.subplots()
+    ax.pie(percentages, labels=languages, autopct='%1.1f%%', startangle=90, colors=plt.cm.Paired.colors)
+
+    ax.axis('equal') # Equal aspect ratio ensures the pie chart is circular
+    plt.title('Programming Language Proficiency (Percentage)')
+    
+    canvas = FigureCanvas(fig)
+    img = io.BytesIO()
+    canvas.print_png(img)
+    img.seek(0)
+    return base64.b64encode(img.getvalue()).decode('utf-8')
+
+# @app.route('/', methods=['GET', 'POST'])
+# def index():
+#     if request.method == 'POST':
+#         username = request.form.get('username')
+#         access_token = "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"
+        
+#         percentage_scores = calculate_language_proficiency(username, access_token)
+#         pie_chart = generate_pie_chart(percentage_scores)
+        
+#         return render_template('index2.html', username=username, percentage_scores=percentage_scores, pie_chart=pie_chart)
+    
+#     return render_template('index2.html', username=None, percentage_scores=None, pie_chart=None)
+
+@app.route('/')
+def index():
+    return render_template('professional_skills/plp_form.html')
+
+@app.route('/plp', methods=['GET', 'POST'])
+def plp():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        access_token = "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"
+        
+        percentage_scores = calculate_language_proficiency(username, access_token)
+        pie_chart = generate_pie_chart(percentage_scores)
+        
+        return render_template('professional_skills/plp.html', username=username, percentage_scores=percentage_scores, pie_chart=pie_chart)
+    
+    return render_template('professional_skills/plp.html', username=None, percentage_scores=None, pie_chart=None)
 
 if __name__ == '__main__':
     app.run(debug=True)
