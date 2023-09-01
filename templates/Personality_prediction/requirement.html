@@ -10,8 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/personality.css')}}">
-</head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/personality.css')}}" </head>
 
 <body class="requirement-body">
     <nav>
@@ -25,160 +24,189 @@
             <a href="#">Professional Skills</a>
             <a href="#">Personality</a>
         </div>
-        <div class="navbar-menu-container">
-            <span class="bars-icon" onclick="openMenu()">&#9776;</span>
-        </div>
-        <div id="drawer" class="drawer">
-            <div class="drawer-content">
-                <ul>
-                    <!-- Add your menu items dynamically using JavaScript -->
-                </ul>
-                <hr>
-            </div>
-        </div>
     </nav>
 
-    <div class="jumbotron">
+    <!-- <div class="jumbotron">
         <div class="titlecontainer">
-            <h3>Personality Traits Required for the Job Role</h3>
         </div>
-    </div>
-
-    <a class="btn btn-lg btn-primary" href="#" role="button" id="refresh-button">Refresh</a>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="requirement-container">
-                    <br />
-                    <form id="requirement-form" class="form-group mt-2 mt-md-0" method="POST" action="/calc_expected">
-
-                        <h4>Move the slider to indicate the importance of each trait for the job role</h4>
+    </div> -->
+    <div class="content-wrapper">
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="requirement-container">
                         <br />
+                        <form id="requirement-form" class="form-group mt-2 mt-md-0" method="POST"
+                            action="/calc_expected">
 
-                        <div>
-                            <p>Job Role</p>
-                            <select name="jobrole" class="form-control" required="true">
-                                <option value="" disabled selected>Select a job role</option>
-                                <option value="Software Engineering">Software Engineering</option>
-                                <option value="Data Engineering">Data Engineering</option>
-                                <option value="Data Analyst">Data Analyst</option>
-                                <option value="Database Administrator">Database Administrator</option>
-                                <option value="Project Management">Project Management</option>
-                                <option value="Network Engineer">Network Engineer</option>
-                                <option value="IT Support/Help Desk">IT Support/Help Desk</option>
-                                <option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
-                                <option value="Cloud Engineer">Cloud Engineer</option>
-                                <option value="Quality Assurance Engineer">Quality Assurance Engineer</option>
-                                <!-- Add more job roles as needed -->
-                            </select>
-                        </div>
-
-                        <div>
-                            <p>Experience Level</p>
-                            <label><input type="radio" name="experience" value="Intern" required> Intern</label>
-                            <label><input type="radio" name="experience" value="Associate">Associate</label>
-                            <label><input type="radio" name="experience" value="Senior Level"> Senior Level</label>
-
-                        </div>
-
-                        <div>
-                            <p>1. Innovative</p>
-                            <input type="range" name="innovative" min="0" max="5" step="0.5" class="form-control"
-                                required="true">
-                        </div>
-
-                        <div>
-                            <p>2. Fast learner</p>
-                            <input type="range" name="fastlearner" min="0" max="5" step="0.5" class="form-control"
-                                required="true">
-                        </div>
-
-                        <div>
-                            <p>3. Organization skills</p>
-                            <input type="range" name="organizationskills" min="0" max="5" step="0.5"
-                                class="form-control" required="true">
-                        </div>
-
-                        <div>
-                            <p>4. Attention to detail</p>
-                            <input type="range" name="attentiontodetail" min="0" max="5" step="0.5" class="form-control"
-                                required="true">
-                        </div>
-
-                        <div>
-                            <p>5. Assertiveness</p>
-                            <input type="range" name="assertiveness" min="0" max="5" step="0.5" class="form-control"
-                                required="true">
-                        </div>
-
-                        <div>
-                            <p>6. Leadership skills</p>
-                            <input type="range" name="leadershipskills" min="0" max="5" step="0.5" class="form-control"
-                                required="true">
-                        </div>
-
-                        <div>
-                            <p>7. Team Player</p>
-                            <input type="range" name="teamplayer" min="0" max="5" step="0.5" class="form-control"
-                                required="true">
-                        </div>
-
-                        <div>
-                            <p>8. Communication skills</p>
-                            <input type="range" name="communicationskills" min="0" max="5" step="0.5"
-                                class="form-control" required="true">
-                        </div>
-
-                        <div>
-                            <p>9. Confidence</p>
-                            <input type="range" name="confidence" min="0" max="5" step="0.5" class="form-control"
-                                required="true">
-                        </div>
-
-                        <div>
-                            <p>10. Adaptability to changes</p>
-                            <input type="range" name="adaptabilitytochanges" min="0" max="5" step="0.5"
-                                class="form-control" required="true">
-                        </div>
-
+                            <h4>Move the slider to indicate the importance of each trait for the job role</h4>
+                            <br />
+                            <div>
+                                <p>Job Role</p>
+                                <select name="jobrole" class="form-control" required="true">
+                                    <option value="" disabled selected>Select a job role</option>
+                                    <option value="Software Engineering">Software Engineering</option>
+                                    <option value="Data Engineering">Data Engineering</option>
+                                    <option value="Data Analyst">Data Analyst</option>
+                                    <option value="Database Administrator">Database Administrator</option>
+                                    <option value="Project Management">Project Management</option>
+                                    <option value="Network Engineer">Network Engineer</option>
+                                    <option value="IT Support/Help Desk">IT Support/Help Desk</option>
+                                    <option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
+                                    <option value="Cloud Engineer">Cloud Engineer</option>
+                                    <option value="Quality Assurance Engineer">Quality Assurance Engineer</option>
+                                    <!-- Add more job roles as needed -->
+                                </select>
+                            </div>
+                            <br />
+                            <div>
+                                <p>Experience Level</p>
+                                <label class="req-radio-btn"><input type="radio" name="experience" value="Intern"
+                                        required> Intern</label>
+                                <label class="req-radio-btn"><input type="radio" name="experience"
+                                        value="Associate">Associate</label>
+                                <label class="req-radio-btn"><input type="radio" name="experience" value="Senior Level">
+                                    Senior Level</label>
+                            </div>
+                            <br />
+                            <div>
+                                <p>1. Innovative: <span id="innovative-value">2.5</span></p>
+                                <input type="range" name="innovative" min="0" max="5" step="0.5" class="form-control"
+                                    required="true">
+                            </div>
+                            <br />
+                            <div>
+                                <p>2. Fast learner: <span id="fastlearner-value">2.5</span></p>
+                                <input type="range" name="fastlearner" min="0" max="5" step="0.5" class="form-control"
+                                    required="true">
+                            </div>
+                            <br />
+                            <div>
+                                <p>3. Organization skills: <span id="organizationskills-value">2.5</span></p>
+                                <input type="range" name="organizationskills" min="0" max="5" step="0.5"
+                                    class="form-control" required="true">
+                            </div>
+                            <br />
+                            <div>
+                                <p>4. Attention to detail: <span id="attentiontodetail-value">2.5</span></p>
+                                <input type="range" name="attentiontodetail" min="0" max="5" step="0.5"
+                                    class="form-control" required="true">
+                            </div>
+                            <br />
+                            <div>
+                                <p>5. Assertiveness: <span id="assertiveness-value">2.5</span></p>
+                                <input type="range" name="assertiveness" min="0" max="5" step="0.5" class="form-control"
+                                    required="true">
+                            </div>
+                            <br />
+                            <div>
+                                <p>6. Leadership skills: <span id="leadershipskills-value">2.5</span></p>
+                                <input type="range" name="leadershipskills" min="0" max="5" step="0.5"
+                                    class="form-control" required="true">
+                            </div>
+                            <br />
+                            <div>
+                                <p>7. Team Player: <span id="teamplayer-value">2.5</span></p>
+                                <input type="range" name="teamplayer" min="0" max="5" step="0.5" class="form-control"
+                                    required="true">
+                            </div>
+                            <br />
+                            <div>
+                                <p>8. Communication skills: <span id="communicationskills-value">2.5</span></p>
+                                <input type="range" name="communicationskills" min="0" max="5" step="0.5"
+                                    class="form-control" required="true">
+                            </div>
+                            <br />
+                            <div>
+                                <p>9. Confidence: <span id="confidence-value">2.5</span></p>
+                                <input type="range" name="confidence" min="0" max="5" step="0.5" class="form-control"
+                                    required="true">
+                            </div>
+                            <br />
+                            <div>
+                                <p>10. Adaptability to changes: <span id="adaptabilitytochanges-value">2.5</span></p>
+                                <input type="range" name="adaptabilitytochanges" min="0" max="5" step="0.5"
+                                    class="form-control" required="true">
+                            </div>
+                            <br />
+                            <button class="btn btn-outline-success " type="reset">Clear</button>
+                            <button class="btn btn-outline-primary " type="submit">Calculate</button>
+                        </form>
                         <br />
-
-                        <button class="btn btn-outline-success " type="reset">Clear</button>
-                        <button class="btn btn-outline-primary " type="submit">Predict</button>
-                    </form>
-                    <br />
-
+                    </div>
                 </div>
             </div>
         </div>
+
+        <h3>Personality traits mapped to Big Five traits:</h3>
+        <br />
+        <table class="requirement-table">
+            <tr>
+                <th>Position</th>
+                <th>Experience</th>
+                <th>Openness</th>
+                <th>Concientiousness</th>
+                <th>Extraversion</th>
+                <th>Agreeableness</th>
+                <th>Neuroticism</th>
+            </tr>
+            <tr>
+                <td>{{ job_role }}</td>
+                <td>{{ experience }}</td>
+                <td>{{ exp_openness }}</td>
+                <td>{{ exp_conscientiousness }}</td>
+                <td>{{ exp_extraversion }}</td>
+                <td>{{ exp_agreeableness }}</td>
+                <td>{{ exp_neuroticism }}</td>
+            </tr>
+        </table>
+        <br />
+
+        <form method="POST" action="/responses">
+            <button id="next" class="btn btn-lg btn-warning" type="submit"><span>Next</span></button>
+        </form>
+
     </div>
 
-    <h3>Personality traits mapped to Big Five traits:</h3>
-    <br />
-    <table class="requirement-table">
-        <tr>
-            <th>Position</th>
-            <th>Experience</th>
-            <th>Openness</th>
-            <th>Concientiousness</th>
-            <th>Extraversion</th>
-            <th>Agreeableness</th>
-            <th>Neuroticism</th>
-        </tr>
-        <tr>
-            <td>{{ job_role }}</td>
-            <td>{{ experience }}</td>
-            <td>{{ exp_openness }}</td>
-            <td>{{ exp_conscientiousness }}</td>
-            <td>{{ exp_extraversion }}</td>
-            <td>{{ exp_agreeableness }}</td>
-            <td>{{ exp_neuroticism }}</td>
-        </tr>
-    </table>
-    <br />
 
-    <form method="POST" action="/responses">
-        <button class="next" type="submit"><span>Next</span></button>
-    </form>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h4 class="footer-about">About</h4>
+                    <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire, we're
+                        dedicated to
+                        simplifying talent acquisition. Our initiative strives to empower HR professionals and
+                        recruiters of
+                        the future by offering innovative solutions. We specialize in transforming the hiring landscape
+                        through smart technology, AI-driven assessments, and seamless integrations. Join us to reshape
+                        the
+                        way you hire, embracing a future where hiring complexities are a thing of the past.</p>
+                </div>
 
+
+
+                <div class="col-xs-6 col-md-3">
+                    <h4 class="quick-links">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="copyright-container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
+                        <a href="#">Intellihire</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../static/js/personality.js"></script>
 </body>

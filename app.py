@@ -21,7 +21,7 @@ app.secret_key = 'personality-prediction-2023'
 
 @app.route('/')
 def hello_world():
-    return render_template('Personality_prediction/requirement.html', textarea_content="", slider_values="")
+    return render_template('Personality_prediction/personality-home.html', textarea_content="", slider_values="")
 
 
 @app.route('/responses', methods=['GET', 'POST'])
@@ -29,7 +29,10 @@ def responses():
     return render_template('Personality_prediction/responses.html', textarea_content="", slider_values="")
 
 
-# ... (previous code)
+@app.route('/requirement', methods=['GET', 'POST'])
+def requirement():
+    return render_template('Personality_prediction/requirement.html', textarea_content="", slider_values="")
+
 
 @app.route('/upload_responses', methods=['POST'])
 def upload_selfrate():
@@ -101,6 +104,8 @@ def predict_scores():
         exp_extraversion = session.get('exp_extraversion')
         exp_agreeableness = session.get('exp_agreeableness')
         exp_neuroticism = session.get('exp_neuroticism')
+
+        name = (request.form['name'])
 
         ext_1 = int(request.form['ext_1'])
         ext_2 = int(request.form['ext_2'])
@@ -211,11 +216,21 @@ def predict_scores():
         neu_score = (neu_score1*0.4) + (neu_score2*0.6)
         neu_score = round(neu_score, 2)
 
+        # Matching Percentage
+        opn = (opn_score/exp_openness)*20
+        csn = (csn_score/exp_conscientiousness)*20
+        ext = (ext_score/exp_extraversion)*20
+        agr = (agr_score/exp_agreeableness)*20
+        neu = (neu_score/exp_neuroticism)*20
+
+        match_percentage = (opn+csn+ext+agr+neu)
+        match_percentage = round(match_percentage, 2)
+
         # Pass the processed data to the template
-        return render_template('Personality_prediction/results.html', ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, textarea_content="", slider_values="")
+        return render_template('Personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
 
     # Return the template for GET requests
-    return render_template('Personality_prediction/results.html', ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, textarea_content="", slider_values="")
+    return render_template('Personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
 
 
 def preprocess_text(text):
