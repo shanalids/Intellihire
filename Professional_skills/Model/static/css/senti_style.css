@@ -5,11 +5,11 @@
 }
 .left {
     flex: 1;
-    padding: 50px;
+    padding: 10px;
 }
 .right {
     flex: 1;
-    padding: 50px;
+    padding: 10px;
     text-align: center;
 }
 img.plot {
@@ -25,3 +25,7 @@ img.plot {
 
 
   } */
+  body{
+
+    background-color: #b0f1ff;
+}
