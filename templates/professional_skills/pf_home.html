@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- Template by Quackit.com -->
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,10 @@
     <title>Professional Skills</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/professional_skills/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
-    <link href="static/css/custom.css" rel="stylesheet">
+    <link href="static/css/professional_skills/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,9 +29,9 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> -->
 
-    <link rel="stylesheet" type="text/css" href="static/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="static/css/footer.css">
-   
+    <link rel="stylesheet" type="text/css" href="../../static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/footer.css">
+
 
 
 </head>
@@ -38,7 +39,7 @@
 <body>
     <nav>
         <div class="nav-logo-container">
-            <img src="static/images/Logo.png" alt="">
+            <img src="../../static/images/professional_skills/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
             <a href="#">Home</a>
@@ -59,48 +60,50 @@
             </div>
         </div>
     </nav>
-   
-	<div class="jumbotron feature">
-		<div class="container">
-		
-		<div id="feature-carousel" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-			  <li data-target="#feature-carousel" data-slide-to="0" class="active"></li>
-			  <li data-target="#feature-carousel" data-slide-to="1"></li>
-			  <li data-target="#feature-carousel" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner" role="listbox">
-				<div class="item active" >
-					<h2>GitHub Polygraph</h2>
-					<p>Analyze GitHub programming language proficinecy & compare with peer candidates.</p>
-					<div class="button-container">
-                        <a class="btn btn-primary" href="../GitHubScraping/templates/plp_form.html">Calculator</a>
-                        <a class="btn btn-primary" href="../GitHubScraping/templates/compare_form.html">Comparator</a>
-                    </div>
-				</div>
-				<div class="item">
-					<h2>SkillSage:LinkedIn Alchemist</h2>
-					<p>Classify job category through LinkedIn skills based analyzer</p>
-					<p><a class="btn btn-primary" href="../LinkedinScraping2/IT_job_cat/app/templates/job_cat_form.html">Predict</a></p>
-				</div>
-				<div class="item">
-					<h2>PastPort</h2>
-					<p>Analyze canidate background efficiently and smartly</p>
-					<p><a class="btn btn-primary" href="../Model/templates/sentiment.html">Analyze</a></p>
-				</div>			  
-			</div>
-			<a class="left carousel-control" href="#feature-carousel" role="button" data-slide="prev">
-			  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			  <span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#feature-carousel" role="button" data-slide="next">
-			  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			  <span class="sr-only">Next</span>
-			</a>
-		  </div>
 
-		</div>
-	</div>
+    <div class="jumbotron feature">
+        <div class="container">
+
+            <div id="feature-carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#feature-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#feature-carousel" data-slide-to="1"></li>
+                    <li data-target="#feature-carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <h2>GitHub Polygraph</h2>
+                        <p>Analyze GitHub programming language proficinecy & compare with peer candidates.</p>
+                        <div class="button-container">
+                            <a class="btn btn-primary" href="../GitHubScraping/templates/plp_form.html">Calculator</a>
+                            <a class="btn btn-primary"
+                                href="../GitHubScraping/templates/compare_form.html">Comparator</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h2>SkillSage:LinkedIn Alchemist</h2>
+                        <p>Classify job category through LinkedIn skills based analyzer</p>
+                        <p><a class="btn btn-primary"
+                                href="../LinkedinScraping2/IT_job_cat/app/templates/job_cat_form.html">Predict</a></p>
+                    </div>
+                    <div class="item">
+                        <h2>PastPort</h2>
+                        <p>Analyze canidate background efficiently and smartly</p>
+                        <p><a class="btn btn-primary" href="../Model/templates/sentiment.html">Analyze</a></p>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#feature-carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#feature-carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
 
 
 
@@ -113,7 +116,10 @@
                 <h1>Professional Skills
                     <small>for better decision making</small>
                 </h1>
-                <p>Professional skills are crucial in the recruitment process because they play a significant role in determining whether a candidate is a good fit for a particular job and organization. These skills encompass a range of competencies and abilities that are directly related to a person's capacity to perform well in their role and contribute positively to the workplace.</p>
+                <p>Professional skills are crucial in the recruitment process because they play a significant role in
+                    determining whether a candidate is a good fit for a particular job and organization. These skills
+                    encompass a range of competencies and abilities that are directly related to a person's capacity to
+                    perform well in their role and contribute positively to the workplace.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -122,50 +128,62 @@
         <div class="row">
             <article class="col-md-4 article-intro">
                 <a href="#">
-                    <img class="img-responsive img-rounded" src="static/images/GitHub.jpg" alt="">
+                    <img class="img-responsive img-rounded" src="../../static/images/professional_skills/GitHub.jpg"
+                        alt="">
                 </a>
                 <h3>
                     <a href="#">GitHub Polygraph</a>
                 </h3>
-                <p> is a specialized tool that harnesses the candidate's GitHub repository data to assess their programming language proficiency comprehensively. By analyzing the languages used in their repositories, it quantifies the candidate's familiarity and experience with a wide array of programming languages.</p>
+                <p> is a specialized tool that harnesses the candidate's GitHub repository data to assess their
+                    programming language proficiency comprehensively. By analyzing the languages used in their
+                    repositories, it quantifies the candidate's familiarity and experience with a wide array of
+                    programming languages.</p>
             </article>
             <article class="col-md-4 article-intro">
                 <a href="#">
-                    <img class="img-responsive img-rounded" src="static/images/Link.jpg" alt="">
+                    <img class="img-responsive img-rounded" src="../../static/images/professional_skills/Link.jpg"
+                        alt="">
                 </a>
                 <h3>
                     <a href="#">SkillSage:LinkedIn Alchemist</a>
                 </h3>
-                <p>Introducing our groundbreaking machine learning model, which leverages the wealth of information from your LinkedIn profile to predict your ideal job category. Powered by data-driven insights and cutting-edge algorithms, this innovative system offers a personalized career roadmap, aligning your unique skill set with the perfect job categories. </p>
+                <p>Introducing our groundbreaking machine learning model, which leverages the wealth of information from
+                    your LinkedIn profile to predict your ideal job category. Powered by data-driven insights and
+                    cutting-edge algorithms, this innovative system offers a personalized career roadmap, aligning your
+                    unique skill set with the perfect job categories. </p>
             </article>
 
             <article class="col-md-4 article-intro">
                 <a href="#">
-                    <img class="img-responsive img-rounded" src="static/images/ref2.jpg" alt="">
+                    <img class="img-responsive img-rounded" src="../../static/images/professional_skills/ref2.jpg"
+                        alt="">
                 </a>
                 <h3>
                     <a href="#">PastPort:Reference evaluator</a>
                 </h3>
-                <p>comprehensive employee background screening services that empower you to make informed hiring decisions. Our cutting-edge approach leverages the latest technology and industry expertise to meticulously examine candidate histories, giving you the confidence to build a team you can trust.</p>
+                <p>comprehensive employee background screening services that empower you to make informed hiring
+                    decisions. Our cutting-edge approach leverages the latest technology and industry expertise to
+                    meticulously examine candidate histories, giving you the confidence to build a team you can trust.
+                </p>
             </article>
         </div>
         <!-- /.row -->
 
     </div>
     <!-- /.container -->
-	
+
     <!-- jQuery -->
-    <script src="static/js/jquery-1.11.3.min.js"></script>
+    <script src="../../static/js/professional_skills/jquery-1.11.3.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="static/js/bootstrap.min.js"></script>
-	
-	<!-- IE10 viewport bug workaround -->
-	<script src="static/js/ie10-viewport-bug-workaround.js"></script>
-	
-	<!-- Placeholder Images -->
-	<script src="static/js/holder.min.js"></script>
-	
+    <script src="../../static/js/professional_skills/bootstrap.min.js"></script>
+
+    <!-- IE10 viewport bug workaround -->
+    <script src="../../static/js/professional_skills/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Placeholder Images -->
+    <script src="../../static/js/professional_skills/holder.min.js"></script>
+
 </body>
 <footer class="site-footer">
     <div class="footer-container">
@@ -203,4 +221,5 @@
         </div>
     </div>
 </footer>
+
 </html>
