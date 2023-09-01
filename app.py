@@ -1,4 +1,4 @@
-# personality prediction
+# personality prediction imports
 from flask import Flask, request, url_for, redirect, render_template, render_template_string, session
 import pickle
 import numpy as np
@@ -15,7 +15,7 @@ nltk.download('punkt')
 nltk.download('stopwords')
 
 
-# professional skills
+# professional skills imports
 from flask import Flask, render_template, request
 from github import Github
 import matplotlib.pyplot as plt
@@ -23,7 +23,9 @@ import io
 import base64
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
+# cv analysis imports
 
+# academic transcript imports
 
 
 
@@ -38,7 +40,7 @@ def home():
     return render_template('home.html', textarea_content="", slider_values="")
 
 
-# personality prediction - Maleesha - start
+# personality prediction - Maleesha - START -----------------------------------------------------------------------------------------
 @app.route('/responses', methods=['GET', 'POST'])
 def responses():
     return render_template('personality_prediction/responses.html', textarea_content="", slider_values="")
@@ -306,14 +308,26 @@ def calcExpected():
 
     return render_template('personality_prediction/requirement.html', job_role=job_role, experience=experience, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, textarea_content="", slider_values="")
 
-# personality prediction - Maleesha - END
+# personality prediction - Maleesha - END --------------------------------------------------------------------------------------------
 
 
-# professional skills - Sandani - START
+# professional skills - Sandani - START ------------------------------------------------------------------------------------------------
 
-@app.route('/pf_home')
-def pf_home():
-    return render_template('professional_skills/pf_home.html')
+# @app.route('/pf_home')
+# def pf_home():
+#     return render_template('professional_skills/pf_home.html')
+
+# @app.route('/pf_home/plp_form')
+# def plp_form():
+#     return render_template('professional_skills/plp_form.html')
+
+# @app.route('/pf_home/compare_form')
+# def com_form():
+#     return render_template('professional_skills/compare_form.html')
+
+# @app.route('/pf_home/job_cat_form')
+# def job_cat_form():
+#     return render_template('professional_skills/job_cat_form.html')
 
 def calculate_language_proficiency(username, access_token):
     # Authenticate with GitHub
@@ -398,14 +412,14 @@ def plp():
     
     return render_template('professional_skills/plp.html', username=None, percentage_scores=None, pie_chart=None)
 
-# professional skills - Sandani - END
+# professional skills - Sandani - END-------------------------------------------------------------------------------------------------------
 
 
-# CV Analysis - Manushi - START
-# CV Analysis - Manushi - END
+# CV Analysis - Manushi - START-------------------------------------------------------------------------------------------------------------
+# CV Analysis - Manushi - END-----------------------------------------------------------------------------------------------------------------
 
-# Academic Transcript - Shanali - START
-#Academic Transcript - Shanali - END
+# Academic Transcript - Shanali - START -------------------------------------------------------------------------------------------------------
+#Academic Transcript - Shanali - END -----------------------------------------------------------------------------------------------------------
 
 if __name__ == '__main__':
     app.run(debug=True)
