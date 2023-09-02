@@ -24,6 +24,16 @@ import base64
 from io import BytesIO
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
+from flask import Flask, render_template, request
+import pickle
+
+import pandas as pd
+from nltk.sentiment import SentimentIntensityAnalyzer
+import matplotlib.pyplot as plt
+from flask import Flask, render_template, request
+import io
+import base64
+
 # cv analysis imports
 
 # academic transcript imports
@@ -498,6 +508,138 @@ def compare():
         return render_template('professional_skills/compare.html', img_base64=img_base64)
 
     return render_template('professional_skills/compare.html')
+
+#------------LinkedIn job category ---------------------------------------------------------------------------------------------
+
+def scrape_linkedin_skills(linkedin_profile_url):
+    api_key = 'MxVwlMuCI00hrmsugxWLjA'
+    api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
+    headers = {'Authorization': 'Bearer ' + api_key}
+
+    response = requests.get(api_endpoint,
+                            params={'url': linkedin_profile_url, 'skills': 'include'},
+                            headers=headers)
+
+    profile_data = response.json()
+
+    if 'skills' in profile_data:
+        return profile_data['skills']
+    else:
+        return []
+
+model = pickle.load(open("models/professional_skills/model.pkl", "rb"))
+fitted_vectorizer = pickle.load(open("models/professional_skills/fitted_vectorizer.pkl", "rb"))
+
+@app.route('/pf_home/job_cat_form', methods=['GET', 'POST'])
+def job_cat():
+    result = None
+    if request.method == 'POST':
+        linkedin_profile_url = request.form['linkedin_profile_url']
+        skills = scrape_linkedin_skills(linkedin_profile_url)  # Calling scraping function
+        if skills:
+            #predicted_category = model.predict([skills])  #model takes a list of skills
+            predicted_category = model.predict(fitted_vectorizer.transform(skills))
+            result = f"Predicted Job Category: {predicted_category[0]}"
+    return render_template('professional_skills/job_cat_form.html', result=result)
+
+#------sentiment analysis---------------
+# Function to perform sentiment analysis and visualization for a specific row
+def analyze_sentiment_and_visualize(row):
+    # Step 2: Perform sentiment analysis
+    sid = SentimentIntensityAnalyzer()
+
+    # Calculate sentiment scores for each column
+    sentiment_scores = {}
+    for column, response in row.items():
+        response = str(response)
+        score = sid.polarity_scores(response)
+        sentiment_scores[column] = score
+
+    # Calculate overall sentiment distribution
+    labels = ['Positive', 'Negative', 'Neutral']
+    sentiment_distribution = [0, 0, 0]
+
+    for score in sentiment_scores.values():
+        max_sentiment = max(score, key=score.get)
+        
+        if max_sentiment == 'pos':
+            sentiment_distribution[0] += 1
+        elif max_sentiment == 'neg':
+            sentiment_distribution[1] += 1
+        else:
+            sentiment_distribution[2] += 1
+
+    # Create a single pie chart for sentiment distribution
+    colors = ['blue', 'red', 'green']
+    plt.figure()
+    plt.pie(sentiment_distribution, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+    plt.title('Sentiment Analysis')
+    plt.axis('equal')
+
+    # Save the plot to a BytesIO object
+    sentiment_plot = io.BytesIO()
+    plt.savefig(sentiment_plot, format='png')
+    sentiment_plot.seek(0)
+    plt.close()
+
+    # Convert the plot image to a base64-encoded string
+    plot_data = base64.b64encode(sentiment_plot.getvalue()).decode('utf-8')
+    return plot_data
+
+@app.route('/pf_home/sentiment')
+def index1():
+    return render_template('professional_skills/sentiment.html')
+
+
+@app.route('/pf_home/sentiment/sentiment_results', methods=['GET', 'POST'])
+def index2():
+    plot_data = None
+    column_names = None
+    row_content = None
+    
+    if request.method == 'POST':
+        # Get uploaded file
+        uploaded_file = request.files['file']
+        
+        if uploaded_file.filename != '':
+            data = pd.read_csv(uploaded_file)
+            columns_to_analyze = data.columns[1:]
+            data = data[columns_to_analyze]
+
+            last_row = data.iloc[-1]
+            
+            # Update sentiment analysis and visualization function to return column names
+            column_names = last_row.index.tolist()
+            plot_data = analyze_sentiment_and_visualize(last_row)
+            row_content = last_row.values.tolist()
+
+    return render_template('professional_skills/sentiment_results.html', plot_data=plot_data, column_names=column_names, row_content=row_content)
+
+
+
+@app.route('/pf_home/sentiment/sentiment_results', methods=['GET', 'POST'])
+def index3():
+    plot_data = None
+    if request.method == 'POST':
+        # Get uploaded file
+        uploaded_file = request.files['file']
+        
+        # Check if a file was uploaded
+        if uploaded_file.filename != '':
+            # Read uploaded CSV file into a DataFrame
+            data = pd.read_csv(uploaded_file)
+            
+            # Exclude the first column (timestamp)
+            columns_to_analyze = data.columns[1:]
+            data = data[columns_to_analyze]
+
+            # Get the last row in the DataFrame
+            last_row = data.iloc[-1]
+
+            # Apply sentiment analysis and visualization to the last row
+            plot_data = analyze_sentiment_and_visualize(last_row)
+
+    return render_template('professional_skills/sentiment_results.html', plot_data=plot_data)
 
 
 # professional skills - Sandani - END-------------------------------------------------------------------------------------------------------
