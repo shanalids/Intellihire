@@ -203,7 +203,7 @@ nav {
 .form-group {
     flex: 1;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -417,11 +417,17 @@ input[type='range']::-moz-range-thumb:hover {
 #requirement-form {
     max-width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
-    background-color: #E5E1E6;
+    padding: 60px;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 17px;
+    margin-left: 150px;
+}
+
+.form-content {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 textarea {
@@ -481,11 +487,11 @@ textarea {
 }
 
 .requirement-body {
-    background-color: #A2E4B8;
+    background-color: #A0E4CB;
 }
 
 .responses-body {
-    background-color: #A2E4B8;
+    background-color: #B9EDDD;
 }
 
 .responses-image-section {
@@ -592,7 +598,7 @@ textarea {
 
 body.results-container {
     /* Set the background image */
-    background-image: url('../../images/personality_prediction/bg2.jpg');
+    background-image: url('../../images/personality_prediction/bg2.png');
     /* Update the path to your image */
     background-size: cover;
     /* Adjust the image sizing */
@@ -602,7 +608,7 @@ body.results-container {
 
 body.personality-home-body {
     /* Set the background image */
-    background-image: url('../../images/personality_prediction/bg2.jpg');
+    background-image: url('../../images/personality_prediction/bg2.png');
     /* Update the path to your image */
     background-size: cover;
     /* Adjust the image sizing */
@@ -612,7 +618,7 @@ body.personality-home-body {
 
 body.requirement-body {
     /* Set the background image */
-    background-image: url('../../images/personality_prediction/bg2.jpg');
+    background-image: url('../../images/personality_prediction/bg2.png');
     /* Update the path to your image */
     background-size: cover;
     /* Adjust the image sizing */
@@ -620,7 +626,7 @@ body.requirement-body {
 
 body.responses-body {
     /* Set the background image */
-    background-image: url('../../images/personality_prediction/bg2.jpg');
+    background-image: url('../../images/personality_prediction/bg2.png');
     /* Update the path to your image */
     background-size: cover;
     /* Adjust the image sizing */

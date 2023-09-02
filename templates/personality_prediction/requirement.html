@@ -35,107 +35,111 @@
         <br />
         <div class="container">
             <div class="row">
-                <div class="col-md-10">
-                    <div class="requirement-container">
-                        <br />
-                        <form id="requirement-form" class="form-group mt-2 mt-md-0" method="POST"
-                            action="/calc_expected">
 
-                            <h4>Move the slider to indicate the importance of each trait for the job role</h4>
-                            <br />
-                            <div>
-                                <p>Job Role</p>
-                                <select name="jobrole" class="form-control" required="true">
-                                    <option value="" disabled selected>Select a job role</option>
-                                    <option value="Software Engineering">Software Engineering</option>
-                                    <option value="Data Engineering">Data Engineering</option>
-                                    <option value="Data Analyst">Data Analyst</option>
-                                    <option value="Database Administrator">Database Administrator</option>
-                                    <option value="Project Management">Project Management</option>
-                                    <option value="Network Engineer">Network Engineer</option>
-                                    <option value="IT Support/Help Desk">IT Support/Help Desk</option>
-                                    <option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
-                                    <option value="Cloud Engineer">Cloud Engineer</option>
-                                    <option value="Quality Assurance Engineer">Quality Assurance Engineer</option>
-                                    <!-- Add more job roles as needed -->
-                                </select>
-                            </div>
-                            <br />
-                            <div>
-                                <p>Experience Level</p>
-                                <label class="req-radio-btn"><input type="radio" name="experience" value="Intern"
-                                        required> Intern</label>
-                                <label class="req-radio-btn"><input type="radio" name="experience"
-                                        value="Associate">Associate</label>
-                                <label class="req-radio-btn"><input type="radio" name="experience" value="Senior Level">
-                                    Senior Level</label>
-                            </div>
-                            <br />
-                            <div>
-                                <p>1. Innovative: <span id="innovative-value">2.5</span></p>
-                                <input type="range" name="innovative" min="0" max="5" step="0.5" class="form-control"
-                                    required="true">
-                            </div>
-                            <br />
-                            <div>
-                                <p>2. Fast learner: <span id="fastlearner-value">2.5</span></p>
-                                <input type="range" name="fastlearner" min="0" max="5" step="0.5" class="form-control"
-                                    required="true">
-                            </div>
-                            <br />
-                            <div>
-                                <p>3. Organization skills: <span id="organizationskills-value">2.5</span></p>
-                                <input type="range" name="organizationskills" min="0" max="5" step="0.5"
-                                    class="form-control" required="true">
-                            </div>
-                            <br />
-                            <div>
-                                <p>4. Attention to detail: <span id="attentiontodetail-value">2.5</span></p>
-                                <input type="range" name="attentiontodetail" min="0" max="5" step="0.5"
-                                    class="form-control" required="true">
-                            </div>
-                            <br />
-                            <div>
-                                <p>5. Assertiveness: <span id="assertiveness-value">2.5</span></p>
-                                <input type="range" name="assertiveness" min="0" max="5" step="0.5" class="form-control"
-                                    required="true">
-                            </div>
-                            <br />
-                            <div>
-                                <p>6. Leadership skills: <span id="leadershipskills-value">2.5</span></p>
-                                <input type="range" name="leadershipskills" min="0" max="5" step="0.5"
-                                    class="form-control" required="true">
-                            </div>
-                            <br />
-                            <div>
-                                <p>7. Team Player: <span id="teamplayer-value">2.5</span></p>
-                                <input type="range" name="teamplayer" min="0" max="5" step="0.5" class="form-control"
-                                    required="true">
-                            </div>
-                            <br />
-                            <div>
-                                <p>8. Communication skills: <span id="communicationskills-value">2.5</span></p>
-                                <input type="range" name="communicationskills" min="0" max="5" step="0.5"
-                                    class="form-control" required="true">
-                            </div>
-                            <br />
-                            <div>
-                                <p>9. Confidence: <span id="confidence-value">2.5</span></p>
-                                <input type="range" name="confidence" min="0" max="5" step="0.5" class="form-control"
-                                    required="true">
-                            </div>
-                            <br />
-                            <div>
-                                <p>10. Adaptability to changes: <span id="adaptabilitytochanges-value">2.5</span></p>
-                                <input type="range" name="adaptabilitytochanges" min="0" max="5" step="0.5"
-                                    class="form-control" required="true">
-                            </div>
-                            <br />
-                            <button class="btn btn-outline-success " type="reset">Clear</button>
-                            <button class="btn btn-outline-primary " type="submit">Calculate</button>
-                        </form>
+                <div class="requirement-container">
+                    <br />
+                    <form id="requirement-form" class="form-group mt-2 mt-md-0" method="POST" action="/calc_expected">
+
+                        <h4 class="form-content">Move the slider to indicate the importance of each trait for the job
+                            role</h4>
                         <br />
-                    </div>
+                        <div>
+                            <p class="form-content">Job Role</p>
+                            <select name="jobrole" class="form-control" required="true">
+                                <option value="" disabled selected>Select a job role</option>
+                                <option value="Software Engineering">Software Engineering</option>
+                                <option value="Data Engineering">Data Engineering</option>
+                                <option value="Data Analyst">Data Analyst</option>
+                                <option value="Database Administrator">Database Administrator</option>
+                                <option value="Project Management">Project Management</option>
+                                <option value="Network Engineer">Network Engineer</option>
+                                <option value="IT Support/Help Desk">IT Support/Help Desk</option>
+                                <option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
+                                <option value="Cloud Engineer">Cloud Engineer</option>
+                                <option value="Quality Assurance Engineer">Quality Assurance Engineer</option>
+                                <!-- Add more job roles as needed -->
+                            </select>
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">Experience Level</p>
+                            <label class="req-radio-btn"><input type="radio" name="experience" value="Intern" required>
+                                Intern</label>
+                            <label class="req-radio-btn"><input type="radio" name="experience"
+                                    value="Associate">Associate</label>
+                            <label class="req-radio-btn"><input type="radio" name="experience" value="Senior Level">
+                                Senior Level</label>
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">1. Innovative: <span id="innovative-value">2.5</span></p>
+                            <input type="range" name="innovative" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">2. Fast learner: <span id="fastlearner-value">2.5</span></p>
+                            <input type="range" name="fastlearner" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">3. Organization skills: <span
+                                    id="organizationskills-value">2.5</span></p>
+                            <input type="range" name="organizationskills" min="0" max="5" step="0.5"
+                                class="form-control" required="true">
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">4. Attention to detail: <span
+                                    id="attentiontodetail-value">2.5</span></p>
+                            <input type="range" name="attentiontodetail" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">5. Assertiveness: <span id="assertiveness-value">2.5</span></p>
+                            <input type="range" name="assertiveness" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">6. Leadership skills: <span id="leadershipskills-value">2.5</span>
+                            </p>
+                            <input type="range" name="leadershipskills" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">7. Team Player: <span id="teamplayer-value">2.5</span></p>
+                            <input type="range" name="teamplayer" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">8. Communication skills: <span
+                                    id="communicationskills-value">2.5</span></p>
+                            <input type="range" name="communicationskills" min="0" max="5" step="0.5"
+                                class="form-control" required="true">
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">9. Confidence: <span id="confidence-value">2.5</span></p>
+                            <input type="range" name="confidence" min="0" max="5" step="0.5" class="form-control"
+                                required="true">
+                        </div>
+                        <br />
+                        <div>
+                            <p class="form-content">10. Adaptability to changes: <span
+                                    id="adaptabilitytochanges-value">2.5</span></p>
+                            <input type="range" name="adaptabilitytochanges" min="0" max="5" step="0.5"
+                                class="form-control" required="true">
+                        </div>
+                        <br />
+                        <button class="btn btn-outline-success " type="reset">Clear</button>
+                        <button class="btn btn-outline-primary " type="submit">Calculate</button>
+                    </form>
+                    <br />
                 </div>
             </div>
         </div>
