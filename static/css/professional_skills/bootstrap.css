@@ -265,6 +265,8 @@ th {
 
   /* src: url('../fonts/glyphicons-halflings-regular.eot'); */
   src: url('../../fonts/professional_skills/glyphicons-halflings-regular.eot');
+  src: url('../../fonts/professional_skills/glyphicons-halflings-regular.svg');
+  src: url('../../fonts/professional_skills/glyphicons-halflings-regular.ttf');
   src: url('../../fonts/professional_skills/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/professional_skills/glyphicons-halflings-regular.woff2') format('woff2'), url('../../fonts/professional_skills/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/professional_skills/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/professional_skills/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
