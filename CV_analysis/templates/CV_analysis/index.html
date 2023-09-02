@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <!-- <title>CV-JOB MACHING</title> -->
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navbar.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/prediction.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/dropbox.css')}}">
-
-
-    <!--fotter styles-->
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
-
-    <script>
-        function validateSkills() {
-            var skillsInput = document.querySelector('input[name="skills"]').value;
-    
-            if (skillsInput.trim() === "") {
-                // Skills input is empty, prevent the form submission
-                alert("Please enter skills before matching.");
-                return false;
-            }
-            
-            // Skills input is not empty, allow the form submission
-            return true;
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/dropbox.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index-resume.css')}}">
+    <style>
+        body {
+            background-image: url('static/images/1140535_5883.jpg'); /* Replace 'your-image.jpg' with the path to your image file */
+            background-size: cover; /* Adjust the background size as needed */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
         }
-    </script>
+    </style> 
 </head>
-<body>
+
+<body >
+
     <nav>
         <div class="nav-logo-container">
             <img src="static/images/Logo.png" alt="">
@@ -65,81 +42,108 @@
             </div>
         </div>
     </nav>
-   
-   
-            <form method="POST" enctype="multipart/form-data">
-                
-              <!--  <label for="pdf">Upload resume files</label>
-                
-                <input type="file" name="pdf" accept=".pdf" multiple><br><br>
-                <label for="jd">Select Job Description (JD) PDF:</label>
-                <input type="file" name="jd" accept=".pdf"><br><br>-->
-                
-            
 
-            <div class="frame-resume">
-                <div class="center-resume">
-                    <div class="title-resume">
-                        <h1>Upload resume files</h1>
-                    </div>
-            
-                    <div class="dropzone-resume">
-                        <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon-resume" />
-                        <input type="file" name="pdf" class="upload-input-resume" accept=".pdf" multiple />
-                    </div>
-            
-        </div>
+<div class="content-wrapper">
 
-      </div>
-
-      <div class="frame-jd">
-        <div class="center-jd">
-            <div class="title-jd">
-                <h1>Upload Job Description</h1>
-            </div>
-    
-            <div class="dropzone-jd">
-                <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon-jd" />
-                <input type="file" name="jd" class="upload-input-jd" accept=".pdf"  />
-            </div>
+    <div class="login-root">
+        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+            
           
-    
-        </div>
-    </div>
-
-    <div class="frame-skills">
-        <div class="center-skills">
-            <div class="title-skills">
-                <h1>Enter Skills</h1>
+          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;background-image: url('static/images/1140535_5883.jpg');  background-size: cover;background-repeat: no-repeat; ">
+            
+            
+            <div class="formbg-outer">
+              <div class="formbg">
+                <div class="formbg-inner padding-horizontal--48">
+                  <span class="padding-bottom--15">Resume and Job Description Matching</span>
+                  <form method="POST" enctype="multipart/form-data">
+                    <div class="field padding-bottom--24">
+                      <label for="skills">Enter Technical Proficiency</label>
+                      <input type="text" name="skills" placeholder="Enter skills here">
+                    </div>
+                    <div class="field padding-bottom--24">
+                    <label for="password">Upload Resumes</label> 
+                      <div class="grid--50-50">
+                        <div class="frame-resume">
+                            <div class="center-resume">              
+                                <div class="dropzone-resume">
+                                    <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon-resume" />
+                                    <input type="file" name="pdf" class="upload-input-resume" accept=".pdf" multiple />
+                                </div>
+                            </div>
+                        </div>
+                      
+                      </div>
+                     
+                    </div>
+                    <div class="field padding-bottom--24">
+                       
+                          
+                        <label for="password">Upload Job Description</label>
+                        <div class="grid--50-50">
+                            <div class="frame-resume">
+                                <div class="center-resume">              
+                                    <div class="dropzone-resume">
+                                        <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon-resume" />
+                                        <input type="file" name="jd" class="upload-input-jd" accept=".pdf"  />
+                                    </div>
+                                </div>
+                            </div>
+                          
+                          </div>
+                        </div>  
+                    </div>
+                    
+                    <div class="field padding-bottom--24">
+                        <input type="submit" name="submit"  name="Match" value="Continue">
+                       <!-- <button type="submit" class="btn" name="Match">Match</button>-->
+                    </div>
+                    
+                  </form>
+                </div>
+              </div>
+          
             </div>
+          </div>
+        </div>
+      </div>
+</div>
 
-            <div class="input-skills">
-                <input type="text" name="skills" placeholder="Enter skills here">
-            </div>
-        </div>
-    </div>
-    <div class="match-recruitment">
-            <img src="static/images/recruitment.jpg" class="match-recruitment-image" alt="">
-        </div>
-    <div class="match-resume-button" >
-        <button type="submit" class="btn" name="Match">Match</button>
-        <!--<input  class="btn" type="submit" value="Match">-->
-    </div>
-</form>
-    </div>
-    
-    
-    
-    {% if predictions %}
-        <ul>
-            {% for prediction in predictions %}
-                <li>{{ prediction }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+
+
+
+
+
+
+
+
+ 
+  
 </body>
 
-<!--footer begins-->
+</html>
+        
+           <!-- <form method="POST" enctype="multipart/form-data">
+            
+                <input type="text" name="skills" placeholder="Enter skills here">
+                <input type="file" name="pdf" class="upload-input-resume" accept=".pdf" multiple />
+                <input type="file" name="jd" class="upload-input-jd" accept=".pdf"  />
+                <button type="submit" class="btn" name="Match">Match</button>
+      -->
+
+
+            </form>
+    
+{% if predictions %}
+    <ul>
+        {% for prediction in predictions %}
+            <li>{{ prediction }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+</body>
+
 <footer class="site-footer">
     <div class="footer-container">
         <div class="row">
@@ -176,4 +180,7 @@
         </div>
     </div>
 </footer>
+
+ 
+
 </html>

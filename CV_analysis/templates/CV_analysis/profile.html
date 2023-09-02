@@ -1,42 +1,20 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CV Analysis Results</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-     <!--fotter styles-->
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
-
-     <!--Nav bar styles-->
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navbar.css')}}">
-
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/pro.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/profile.css')}}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
- 
-
-
 </head>
-<body>
+</head>
+<body >
+
     <nav>
         <div class="nav-logo-container">
-            <img src="static\images\Logo.pngg" alt="">
+            <img src="/static/images/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
             <a href="#">Home</a>
@@ -57,89 +35,145 @@
             </div>
         </div>
     </nav>
-<!--------------------------------------------------------------------------------------------------------------------------------->
 
-
-
-<div class="card" style="width: 50rem;">
-    <div class="card-body">
-            <div>
-                    Matching keywords:
-                    {% for keyword in profile.matching_keywords %}
-                    <span class="badge bg-success"><span class="tick">✔</span>{{ keyword }}</span>
-                    {% endfor %}
-
-
+<div class="content-wrapper">
+    <div class="main">
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                <img src="/static/images/4151017.jpg" alt="mixed vegetable salad in a mason jar." />
+               
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Matching Keywords</h2>
+                <div class="card_text">
+                    <div>
+                       
+                            {% for keyword in profile.matching_keywords %}
+                            <span class="badge bg-success"><span class="tick">✔</span>{{ keyword }}</span>
+                            {% endfor %}
+        
+        
+                    </div>
+                  <hr />
+                </div>
+              </div>
             </div>
-    </div>  
-</div>
-
-
-<div class="card" style="width: 50rem;">
-    <div class="card-body">
-            <div>
-                Skills:
-                {% set skills = profile.skills | unique %}
-                {% for skill in skills %}
+          </li>
+      
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                <img src="/static/images/19873.jpg" alt="a Reuben sandwich on wax paper." />
+                
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Technical Proficiency</h2>
+                <small>Reviewed the candidate's CV to match their skills with the given skill set</small>
+                <br>
+                <div class="card_text">
                   
-                <span class="badge bg-dark{{ skill }}">{{ skill }}</span>
-                {% endfor %}
-
-
+                    {% set skills = profile.skills | unique %}
+                    {% for skill in skills %}
+                      
+                    <span class="badge bg-success">{{ skill }}</span>
+                    {% endfor %}
+                  <hr />
+                  
+                </div>
+              </div>
             </div>
-    </div>  
-</div>
-
-<div class="card" style="width: 50rem;">
-    <div class="card-body">
-            <div>
-                Skills and frequencies:
-                {% for skill, frequency in profile.extracted_skills_frequency.items() %}
-                  <span class="badge styled-badge {{ skill }}">{{ skill }} ({{ frequency }})</span>
-                {% endfor %}
-
-
+          </li>
+      
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image">
+                
+                <img src="/static/images/4181672.jpg" alt="A side view of a plate of figs and berries." />
+                
+              </div>
+              <div class="card_content">
+                <h2 class="card_title">Technical Proficiency Summary</h2>
+                <div class="card_text">
+                    <canvas id="proficiencyChart" width="400" height="200"></canvas>
+                    <!----> {% for skill, frequency in profile.extracted_skills_frequency.items() %}
+                     <p class="skill-para">{{ skill }} {{ frequency }}</p>
+                     {% endfor %}
+                    
+                  <hr />
+                  
+                </div>
+              </div>
             </div>
-    </div>  
-</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="/../../static/js/profile-resume.js"></script>
+   
+</body>
+
+</html>
+        
+           <!-- <form method="POST" enctype="multipart/form-data">
+            
+                <input type="text" name="skills" placeholder="Enter skills here">
+                <input type="file" name="pdf" class="upload-input-resume" accept=".pdf" multiple />
+                <input type="file" name="jd" class="upload-input-jd" accept=".pdf"  />
+                <button type="submit" class="btn" name="Match">Match</button>
+      -->
+
+
+            </form>
+    
+{% if predictions %}
+    <ul>
+        {% for prediction in predictions %}
+            <li>{{ prediction }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+</body>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h4 class="footer-about">About</h4>
+                <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire, we're
+                    dedicated to
+                    simplifying talent acquisition. Our initiative strives to empower HR professionals and recruiters of
+                    the future by offering innovative solutions. We specialize in transforming the hiring landscape
+                    through smart technology, AI-driven assessments, and seamless integrations. Join us to reshape the
+                    way you hire, embracing a future where hiring complexities are a thing of the past.</p>
+            </div>
+
+
+
+            <div class="col-xs-6 col-md-3">
+                <h4 class="quick-links">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                    <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                    <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="copyright-container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
+                    <a href="#">Intellihire</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
  
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h4 class="footer-about">About</h4>
-                    <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire, we're
-                        dedicated to
-                        simplifying talent acquisition. Our initiative strives to empower HR professionals and recruiters of
-                        the future by offering innovative solutions. We specialize in transforming the hiring landscape
-                        through smart technology, AI-driven assessments, and seamless integrations. Join us to reshape the
-                        way you hire, embracing a future where hiring complexities are a thing of the past.</p>
-                </div>
-    
-    
-    
-                <div class="col-xs-6 col-md-3">
-                    <h4 class="quick-links">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-        </div>
-        <div class="copyright-container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
-                        <a href="#">Intellihire</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
+
 </html>

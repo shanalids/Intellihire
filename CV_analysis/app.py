@@ -76,7 +76,11 @@ def index():
                     print(skills_list)
                     extracted_skills_frequency = extract_skills_and_count_frequency(pdf, skills_list)
                     skills=extract_skills(pdf,skills_list)
-                    
+                    import json
+
+                    # Assuming profile.extracted_skills_frequency is a dictionary
+                    skills_data_json = json.dumps(extracted_skills_frequency)
+
 
                     # Store the analysis results in the session_data dictionary
                     session_data['results_' + uploaded_pdf.filename] = {
@@ -85,7 +89,8 @@ def index():
                         "skills":skills,
                         "jd_keywords_in_resume_table": jd_keywords_in_resume_table,
                         "matching_keywords": matching_keywords,
-                        "extracted_skills_frequency": extracted_skills_frequency
+                        "extracted_skills_frequency": extracted_skills_frequency,
+                        "skills_data_json":skills_data_json
                     }
 
                     # Append matching results
@@ -96,7 +101,8 @@ def index():
                         "jd_keywords_in_resume_table": jd_keywords_in_resume_table,
                         "matching_keywords": matching_keywords,
 
-                        "extracted_skills_frequency": extracted_skills_frequency
+                        "extracted_skills_frequency": extracted_skills_frequency,
+                        "skills_data_json":skills_data_json
                     })
 
             # Store matching_results in the session
