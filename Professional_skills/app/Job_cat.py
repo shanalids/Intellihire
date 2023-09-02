@@ -1,16 +1,26 @@
 from flask import Flask, render_template, request
 import pickle
-from ScrapeLinkedIn import scrape_linkedin_skills
+import requests
+# from ScrapeLinkedIn import scrape_linkedin_skills
 
 app = Flask(__name__)
 
-# # Load the machine learning model
-# with open('model.pkl', 'rb') as model_file:
-#     model = pickle.load(model_file)
+def scrape_linkedin_skills(linkedin_profile_url):
+    api_key = 'MxVwlMuCI00hrmsugxWLjA'
+    api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
+    headers = {'Authorization': 'Bearer ' + api_key}
 
-# # Load the fitted vectorizer
-# with open('fitted_vectorizer.pkl', 'rb') as file:
-#     fitted_vectorizer = pickle.load(file)
+    response = requests.get(api_endpoint,
+                            params={'url': linkedin_profile_url, 'skills': 'include'},
+                            headers=headers)
+
+    profile_data = response.json()
+
+    if 'skills' in profile_data:
+        return profile_data['skills']
+    else:
+        return []
+
 model = pickle.load(open("model.pkl", "rb"))
 fitted_vectorizer = pickle.load(open("fitted_vectorizer.pkl", "rb"))
 
