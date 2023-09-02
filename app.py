@@ -21,6 +21,7 @@ from github import Github
 import matplotlib.pyplot as plt
 import io
 import base64
+from io import BytesIO
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
 # cv analysis imports
@@ -317,13 +318,13 @@ def calcExpected():
 
 # professional skills - Sandani - START ------------------------------------------------------------------------------------------------
 
-# @app.route('/pf_home')
-# def pf_home():
-#     return render_template('professional_skills/pf_home.html')
+@app.route('/pf_home')
+def pf_home():
+    return render_template('professional_skills/pf_home.html')
 
 # @app.route('/pf_home/plp_form')
 # def plp_form():
-#     return render_template('professional_skills/plp_form.html')
+#     return render_template('plp_form.html')
 
 # @app.route('/pf_home/compare_form')
 # def com_form():
@@ -386,24 +387,12 @@ def generate_pie_chart(percentage_scores):
     img.seek(0)
     return base64.b64encode(img.getvalue()).decode('utf-8')
 
-# @app.route('/', methods=['GET', 'POST'])
-# def index():
-#     if request.method == 'POST':
-#         username = request.form.get('username')
-#         access_token = "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"
-        
-#         percentage_scores = calculate_language_proficiency(username, access_token)
-#         pie_chart = generate_pie_chart(percentage_scores)
-        
-#         return render_template('index2.html', username=username, percentage_scores=percentage_scores, pie_chart=pie_chart)
-    
-#     return render_template('index2.html', username=None, percentage_scores=None, pie_chart=None)
 
-@app.route('/')
-def index():
+@app.route('/pf_home/plp_form')
+def plp_form():
     return render_template('professional_skills/plp_form.html')
 
-@app.route('/plp', methods=['GET', 'POST'])
+@app.route('/pf_home/plp_form/plp', methods=['GET', 'POST'])
 def plp():
     if request.method == 'POST':
         username = request.form.get('username')
@@ -415,6 +404,101 @@ def plp():
         return render_template('professional_skills/plp.html', username=username, percentage_scores=percentage_scores, pie_chart=pie_chart)
     
     return render_template('professional_skills/plp.html', username=None, percentage_scores=None, pie_chart=None)
+
+#----------------git-compare---------------------------
+def get_language_proficiency(username):
+    # Authenticate with GitHub
+    access_token = "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"
+    g = Github(access_token)
+    user = g.get_user(username)
+    
+    language_proficiency = {}
+    repository_count = user.public_repos
+    
+    for repo in user.get_repos():
+        languages = repo.get_languages()
+        for language, value in languages.items():
+            if language in language_proficiency:
+                language_proficiency[language] += value
+            else:
+                language_proficiency[language] = value
+                
+    weighted_scores = {}
+    for language, value in language_proficiency.items():
+        weighted_score = value * (1 / repository_count)
+        weighted_scores[language] = weighted_score
+        
+    total_score = sum(weighted_scores.values())
+    percentage_scores = {
+        language: (score / total_score) * 100
+        for language, score in weighted_scores.items()
+    }
+    
+    return percentage_scores
+
+def generate_comparison_chart(current_user_scores, other_user_scores, common_languages):
+    fig, ax = plt.subplots(figsize=(10, 6))
+    bar_width = 0.4
+    index = range(len(common_languages))
+
+    bar1 = ax.bar(index, current_user_scores, bar_width, label='Current candidate', color='b', alpha=0.7)
+    bar2 = ax.bar([i + bar_width for i in index], other_user_scores, bar_width, label='Peer candidate', color='g', alpha=0.7)
+
+    def add_labels(bars):
+        for bar in bars:
+            height = bar.get_height()
+            ax.annotate(f'{height:.2f}%',
+                        xy=(bar.get_x() + bar.get_width() / 2, height),
+                        xytext=(0, 3),
+                        textcoords='offset points',
+                        ha='center', va='bottom', fontsize=10)
+
+    add_labels(bar1)
+    add_labels(bar2)
+
+    ax.set_xlabel('Programming Languages')
+    ax.set_ylabel('Proficiency (%)')
+    ax.set_title('Common Language Proficiency Comparison')
+    ax.set_xticks([i + bar_width / 2 for i in index])
+    ax.set_xticklabels(common_languages, rotation=45, ha='right')
+    ax.legend()
+    ax.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.tight_layout()
+
+    img_stream = BytesIO()
+    plt.savefig(img_stream, format='png')
+    img_stream.seek(0)
+    img_base64 = base64.b64encode(img_stream.read()).decode('utf-8')
+    plt.close()
+
+    return img_base64
+
+@app.route('/pf_home/compare_form')
+def compare_form():
+    return render_template('professional_skills/compare_form.html')
+
+@app.route('/pf_home/compare_form/compare', methods=['GET', 'POST'])
+def compare():
+    if request.method == 'POST':
+        current_username = request.form['current_username']
+        other_username = request.form['other_username']
+
+        current_user_scores = get_language_proficiency(current_username)
+        other_user_scores = get_language_proficiency(other_username)
+
+        # Compare language proficiency
+        common_languages = list(set(current_user_scores.keys()) & set(other_user_scores.keys()))
+
+        img_base64 = generate_comparison_chart(
+            [current_user_scores.get(lang, 0) for lang in common_languages],
+            [other_user_scores.get(lang, 0) for lang in common_languages],
+            common_languages
+        )
+
+        return render_template('professional_skills/compare.html', img_base64=img_base64)
+
+    return render_template('professional_skills/compare.html')
+
 
 # professional skills - Sandani - END-------------------------------------------------------------------------------------------------------
 
