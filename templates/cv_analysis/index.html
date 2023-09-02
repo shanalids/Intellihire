@@ -4,13 +4,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navbar.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/dropbox.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index-resume.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/navbar.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/footer.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/dropbox.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/index-resume.css')}}">
     <style>
         body {
-            background-image: url('static/images/1140535_5883.jpg'); /* Replace 'your-image.jpg' with the path to your image file */
+            background-image: url('../../static/images/cv_analysis/1140535_5883.jpg'); /* Replace 'your-image.jpg' with the path to your image file */
             background-size: cover; /* Adjust the background size as needed */
             background-repeat: no-repeat; /* Prevent the image from repeating */
         }
@@ -21,11 +21,11 @@
 
     <nav>
         <div class="nav-logo-container">
-            <img src="static/images/Logo.png" alt="">
+            <img src="../../static/images/cv_analysis/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
             <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
+            <a href="/ranking">CV Ranking</a>
             <a href="#">Academic Transcript</a>
             <a href="#">Professional Skills</a>
             <a href="#">Personality</a>
@@ -49,17 +49,33 @@
         <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
             
           
-          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;background-image: url('static/images/1140535_5883.jpg');  background-size: cover;background-repeat: no-repeat; ">
+          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;background-image: url('../../static/images/cv_analysis/1140535_5883.jpg');  background-size: cover;background-repeat: no-repeat; ">
             
-            
+           <!----> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!---->
             <div class="formbg-outer">
               <div class="formbg">
                 <div class="formbg-inner padding-horizontal--48">
                   <span class="padding-bottom--15">Resume and Job Description Matching</span>
+
+                  
                   <form method="POST" enctype="multipart/form-data">
                     <div class="field padding-bottom--24">
                       <label for="skills">Enter Technical Proficiency</label>
-                      <input type="text" name="skills" placeholder="Enter skills here">
+                      <input type="text" name="skills" placeholder="eg: Java ,Python">
                     </div>
                     <div class="field padding-bottom--24">
                     <label for="password">Upload Resumes</label> 
@@ -181,6 +197,6 @@
     </div>
 </footer>
 
- 
+<script src="../../static/js/cv_analysis/index-js-resume.js"></script>
 
 </html>

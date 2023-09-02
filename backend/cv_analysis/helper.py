@@ -34,7 +34,7 @@ def concat(s):
         s = s.replace(x.group(),' '+x.group().replace(' ','')+' ')
     return s
 
-def preprocess_text(x, removeStopWords=False):
+def preprocess_text_resume(x, removeStopWords=False):
     # convert to lower case
     x = str(x).lower()
     # replace unusual quotes with '

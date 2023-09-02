@@ -9,11 +9,11 @@ import pickle
 import file_new as dp
 from helper import *
 from sklearn.feature_extraction.text import CountVectorizer
-from urllib.parse import quote_plus
 from collections import Counter
 
 app = Flask(__name__)
 app.secret_key = 'cv-analysis'
+
 model = pickle.load(open("models\stkmodel.pkl", "rb"))
 saved_filename = "models\Vectorizer1.joblib"
 vectorizer = joblib.load(saved_filename)
@@ -110,9 +110,9 @@ def index():
 
             # Rank matching results and render the template
             ranking = sorted(matching_results, key=lambda x: x["matching_percentage"], reverse=True)
-            return render_template('CV_analysis/results.html', ranking=ranking)
+            return render_template('cv_analysis/results.html', ranking=ranking)
 
-    return render_template('CV_analysis/index.html', ranking=[])
+    return render_template('cv_analysis/index.html', ranking=[])
 
 
 

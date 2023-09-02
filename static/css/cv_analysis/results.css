@@ -23,7 +23,11 @@ a {
 
 h2 {
   font-size: 20px; }
-
+.mb-5{
+  font-size: 25px;
+  font-weight: bold;
+  color: #101010;
+}
 .custom-table-responsive {
   background-color: #ffb805;
   padding: 20px;
@@ -34,14 +38,16 @@ h2 {
   .custom-table thead tr, .custom-table thead th {
     border-top: none;
     border-bottom: none !important;
-    font-size: 12px;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: .1rem; }
   .custom-table tbody th, .custom-table tbody td {
     color: #101010;
-    font-weight: 400;
+    font-weight: 600;
+    
     padding-bottom: 20px;
     padding-top: 20px;
+    font-size: 15px;
     font-weight: 300; }
     .custom-table tbody th small, .custom-table tbody td small {
       color: #b3b3b3;
@@ -49,6 +55,7 @@ h2 {
   .custom-table tbody tr:not(.spacer) {
     border-radius: 7px;
     overflow: hidden;
+    font-weight: 400;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease; }
@@ -74,4 +81,15 @@ h2 {
   .table-hover tbody tr:hover {
       background-color: #4f0707; /* Change to your preferred hover background color */
   }
-
+  .button-re {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #15b8a5; /* Button background color */
+    color: #fff; 
+    font-weight: bold; /* Button text color */
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #15b8a5;/* Button border color */
+    cursor: pointer;
+    /* Add any other styling you desire */
+}

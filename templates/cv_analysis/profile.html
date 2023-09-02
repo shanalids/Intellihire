@@ -4,9 +4,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navbar.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/profile.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/navbar.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/footer.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/profile.css')}}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 </head>
@@ -14,7 +14,7 @@
 
     <nav>
         <div class="nav-logo-container">
-            <img src="/static/images/Logo.png" alt="">
+            <img src="../../static/images/cv_analysis/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
             <a href="#">Home</a>
@@ -42,7 +42,7 @@
           <li class="cards_item">
             <div class="card">
               <div class="card_image">
-                <img src="/static/images/4151017.jpg" alt="mixed vegetable salad in a mason jar." />
+                <img src="../../static/images/cv_analysis/4151017.jpg" alt="mixed vegetable salad in a mason jar." />
                
               </div>
               <div class="card_content">
@@ -65,7 +65,7 @@
           <li class="cards_item">
             <div class="card">
               <div class="card_image">
-                <img src="/static/images/19873.jpg" alt="a Reuben sandwich on wax paper." />
+                <img src="../../static/images/cv_analysis/19873.jpg" alt="a Reuben sandwich on wax paper." />
                 
               </div>
               <div class="card_content">
@@ -90,7 +90,7 @@
             <div class="card">
               <div class="card_image">
                 
-                <img src="/static/images/4181672.jpg" alt="A side view of a plate of figs and berries." />
+                <img src="../../static/images/cv_analysis/4181672.jpg" alt="A side view of a plate of figs and berries." />
                 
               </div>
               <div class="card_content">
@@ -110,31 +110,14 @@
         </ul>
       </div>
     </div>
-    <script src="/../../static/js/profile-resume.js"></script>
+   
    
 </body>
 
 </html>
         
-           <!-- <form method="POST" enctype="multipart/form-data">
-            
-                <input type="text" name="skills" placeholder="Enter skills here">
-                <input type="file" name="pdf" class="upload-input-resume" accept=".pdf" multiple />
-                <input type="file" name="jd" class="upload-input-jd" accept=".pdf"  />
-                <button type="submit" class="btn" name="Match">Match</button>
-      -->
 
-
-            </form>
-    
-{% if predictions %}
-    <ul>
-        {% for prediction in predictions %}
-            <li>{{ prediction }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
-
+<script src="../../static/js/cv_analysis/profile-resume.js"></script>
 </body>
 
 <footer class="site-footer">
@@ -174,6 +157,6 @@
     </div>
 </footer>
 
- 
+
 
 </html>
