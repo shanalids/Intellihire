@@ -14,13 +14,18 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
 
+    <link rel="stylesheet" type="text/css" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/professional_skills/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/professional_skills/senti_style.css">
+
     <title>Sentiment Analysis</title>
     
 </head>
-<body background="static/images/LinkedIn_bg.jpg">
+<body background="/static/images/professional_skills/LinkedIn_bg.jpg">
     <nav>
         <div class="nav-logo-container">
-            <img src="static/images/Logo.png" alt="">
+            <img src="/static/images/professional_skills/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
             <a href="#">Home</a>
@@ -52,10 +57,10 @@
                 <div class="text-center">
                     <h2>Employee Reference Analysis</h2>
                     <br>
-                    <img src="static/images/upload.gif" width="200" alt="">
+                    <img src="/static/images/professional_skills/upload.gif" width="200" alt="">
                     <span class="d-block mt-3"> <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Upload referee feedback responses here!</h6></span>
                     <div class="mx-5">
-                        <form method="POST" action="/sentiment_results" enctype="multipart/form-data">
+                        <form method="POST" action="/pf_home/sentiment/sentiment_results" enctype="multipart/form-data">
                          <div class="input-group mb-3 mt-4">
                             <ul>
                                 <input type="file" name="file" accept=".csv">
