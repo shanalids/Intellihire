@@ -592,7 +592,7 @@ textarea {
 
 body.results-container {
     /* Set the background image */
-    background-image: url('../images/bg2.jpg');
+    background-image: url('../../images/personality_prediction/bg2.jpg');
     /* Update the path to your image */
     background-size: cover;
     /* Adjust the image sizing */
@@ -602,7 +602,7 @@ body.results-container {
 
 body.personality-home-body {
     /* Set the background image */
-    background-image: url('../images/bg2.jpg');
+    background-image: url('../../images/personality_prediction/bg2.jpg');
     /* Update the path to your image */
     background-size: cover;
     /* Adjust the image sizing */
@@ -612,7 +612,7 @@ body.personality-home-body {
 
 body.requirement-body {
     /* Set the background image */
-    background-image: url('../images/bg2.jpg');
+    background-image: url('../../images/personality_prediction/bg2.jpg');
     /* Update the path to your image */
     background-size: cover;
     /* Adjust the image sizing */
@@ -620,7 +620,7 @@ body.requirement-body {
 
 body.responses-body {
     /* Set the background image */
-    background-image: url('../images/bg2.jpg');
+    background-image: url('../../images/personality_prediction/bg2.jpg');
     /* Update the path to your image */
     background-size: cover;
     /* Adjust the image sizing */
