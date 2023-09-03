@@ -504,28 +504,31 @@ textarea {
 }
 
 .radar-chart-container {
-    background-color: #ffff99;
-    height: 400px;
+    height: 510px;
     width: 60%;
     margin-left: 310px;
     border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
-.results-table-container {
-    background-color: #ffff99;
-    height: 350px;
-    width: 60%;
-    margin-left: 310px;
-    border-radius: 25px;
+.cluster-prediction-container {
+    margin-left: 25px;
+    padding: 25px;
+    background-color: white;
+    margin-right: 40px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.cluster-prediction-image img {
+    margin-left: 50px;
 }
 
 .results-table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 90%;
-    margin-left: 47px;
-    background-color: #E5E1E6;
+    font-size: 15px;
 }
 
 .results-table th,
@@ -566,7 +569,7 @@ textarea {
 
 .match-score {
     font-size: large;
-    background-color: #A2E4B8;
+    background-color: #A4DBE8;
 }
 
 .table-headers {
@@ -591,18 +594,18 @@ textarea {
 }
 
 .results-title {
-    color: #FEDD00;
+    color: #046A38;
     margin-left: 550px;
     font-weight: bold;
 }
 
 body.results-container {
-    background-image:
+    /* background-image:
         url('../../images/personality_prediction/bg2.png'),
-        url('../../images/personality_prediction/bg2.png');
-    background-size: 600px;
-    background-repeat: no-repeat;
-    background-position: top 500px right, top 50px left;
+        url('../../images/personality_prediction/bg2.png'); */
+    /* background-size: 600px;
+    background-repeat: no-repeat; */
+    /* background-position: top 500px right, top 50px left; */
     background-color: #B9EDDD;
 }
 
@@ -715,4 +718,28 @@ body.requirement-body {
 
 .cluster-prediction-container {
     font-weight: 600;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.results-table-container {
+    border-radius: 15px;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    margin-left: 40px;
+    padding: 25px;
+}
+
+.chart-title {
+    margin-left: 220px;
+    color: #046A38;
+    font-weight: 700;
+}
+
+#toggleSelfRatingOpenEnded {
+    width: 120px;
+    height: 40px;
+    padding: 0;
+    font-size: 17px;
 }
