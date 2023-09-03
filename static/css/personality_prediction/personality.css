@@ -417,12 +417,12 @@ input[type='range']::-moz-range-thumb:hover {
 #requirement-form {
     max-width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 60px;
-    background-color: white;
+    padding: 50px;
+    background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 17px;
-    margin-left: 150px;
+    margin-left: 180px;
 }
 
 .form-content {
@@ -438,7 +438,7 @@ textarea {
     max-width: 50%;
     margin-left: 350px;
     padding: 20px;
-    background-color: #E5E1E6;
+    background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -597,42 +597,38 @@ textarea {
 }
 
 body.results-container {
-    /* Set the background image */
-    background-image: url('../../images/personality_prediction/bg2.png');
-    /* Update the path to your image */
-    background-size: cover;
-    /* Adjust the image sizing */
+    background-image:
+        url('../../images/personality_prediction/bg2.png'),
+        url('../../images/personality_prediction/bg2.png');
+    background-size: 600px;
     background-repeat: no-repeat;
-    /* Prevent the image from repeating */
-}
-
-body.personality-home-body {
-    /* Set the background image */
-    background-image: url('../../images/personality_prediction/bg2.png');
-    /* Update the path to your image */
-    background-size: cover;
-    /* Adjust the image sizing */
-    background-repeat: no-repeat;
-    /* Prevent the image from repeating */
-}
-
-body.requirement-body {
-    /* Set the background image */
-    background-image: url('../../images/personality_prediction/bg2.png');
-    /* Update the path to your image */
-    background-size: cover;
-    /* Adjust the image sizing */
+    background-position: top 500px right, top 50px left;
+    background-color: #B9EDDD;
 }
 
 body.responses-body {
-    /* Set the background image */
-    background-image: url('../../images/personality_prediction/bg2.png');
-    /* Update the path to your image */
-    background-size: cover;
-    /* Adjust the image sizing */
-    /* background-repeat: no-repeat; */
-    /* Prevent the image from repeating */
+    background-image:
+        url('../../images/personality_prediction/bg2.png'),
+        url('../../images/personality_prediction/bg2.png'),
+        url('../../images/personality_prediction/bg2.png');
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-position: top 900px right, top 200px left, top 1600px left;
+
 }
+
+body.requirement-body {
+    background-image:
+        url('../../images/personality_prediction/bg2.png'),
+        url('../../images/personality_prediction/bg2.png');
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-position: top 600px right, top 100px left;
+}
+
+
+
+
 
 .personality-start {
     border-radius: 20px;
@@ -710,4 +706,13 @@ body.responses-body {
     font-weight: bold;
     color: #333;
     padding: 20px;
+}
+
+.tooltip-icon {
+    font-size: 20px;
+    margin-left: 250px;
+}
+
+.cluster-prediction-container {
+    font-weight: 600;
 }

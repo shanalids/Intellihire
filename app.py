@@ -35,6 +35,23 @@ import io
 import base64
 
 # cv analysis imports
+from flask import Flask, render_template, request, session
+import joblib
+import json
+import re
+from tabulate import tabulate
+import pandas as pd
+import nltk
+from backend.cv_analysis.process import *
+import numpy as np
+import pickle
+import backend.cv_analysis.file_new as dp
+from backend.cv_analysis.helper import *
+from sklearn.feature_extraction.text import CountVectorizer
+from collections import Counter
+
+
+
 
 # academic transcript imports
 
@@ -52,7 +69,7 @@ def home():
 
 
 # personality prediction - Maleesha - start
-@app.route('/personality-home')
+@app.route('/requirement')
 def personality_home():
     return render_template('personality_prediction/requirement.html')
 
@@ -258,11 +275,21 @@ def predict_scores():
         match_percentage = (opn+csn+ext+agr+neu)
         match_percentage = round(match_percentage, 2)
 
+        # Load the K-Means model from the pickle file
+        with open('models/personality_prediction/kmeans_model.pkl', 'rb') as model_file:
+            k_means_model = pickle.load(model_file)
+
+        # Prepare the input data as a list or array
+        input_data = [[ext_1, ext_2, ext_3, ext_4, ext_5, neu_1, neu_2, neu_3, neu_4, neu_5, agr_1, agr_2, agr_3, agr_4, agr_5, csn_1, csn_2, csn_3, csn_4, csn_5, opn_1, opn_2, opn_3, opn_4, opn_5]]
+
+        # Use the loaded model to make predictions
+        cluster_prediction = k_means_model.predict(input_data)
+
         # Pass the processed data to the template
-        return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
+        return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, cluster_prediction=cluster_prediction, textarea_content="", slider_values="")
 
     # Return the template for GET requests
-    return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
+    return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, cluster_prediction=cluster_prediction, textarea_content="", slider_values="")
 
 
 def preprocess_text(text):
@@ -646,6 +673,180 @@ def index3():
 
 
 # CV Analysis - Manushi - START-------------------------------------------------------------------------------------------------------------
+
+#load models for cv_analysis
+model = pickle.load(open("models/cv_analysis/stkmodel.pkl", "rb"))
+saved_filename = "models/cv_analysis/Vectorizer1.joblib"
+vectorizer = joblib.load(saved_filename)
+
+
+@app.route('/ranking', methods=['GET', 'POST'])
+def ranking():
+     # Define session_data as an empty dictionary
+    session_data = {} 
+
+
+    # Getting uploaded files
+    if request.method == 'POST':
+        uploaded_pdfs = request.files.getlist('pdf')
+        uploaded_jd = request.files.get('jd')
+        skills_list = request.form.get('skills')  # Get the entered skills from the form
+        
+        jd_text = " "
+        jd = " "
+
+        # Start preprocessing with jd
+
+        if uploaded_jd and uploaded_jd.filename.endswith('.pdf'):
+
+            jd = extract_pdf_text(uploaded_jd)
+            jd_text = preprocess_text_resume(jd)
+            
+            keywords_jd = dp.spacy_keywords(jd_text)
+            
+
+            
+            
+            matching_results = []
+
+            for uploaded_pdf in uploaded_pdfs:
+                if uploaded_pdf.filename.endswith('.pdf'):
+
+                    # Preprocessing of resume
+                    pdf = extract_pdf_text(uploaded_pdf)
+                    pdf_text = preprocess_text_resume(pdf)
+                    
+                    
+                    # Keyword extraction of resume
+                    keywords_resume = dp.nltk_keywords(pdf_text)
+
+                    # Start matching prediction
+                    # Join the elements of the list into a single string with space as a separator
+                    #concatenated_text = ' '.join(pdf_text)  # Assuming pdf_text is a list of strings
+                    #jd_text = str(jd_text) 
+                    # Now you can concatenate the resulting string with jd_text
+                    #new_data_transformed = vectorizer.transform([concatenated_text + " " + jd_text])
+                    new_data_transformed = vectorizer.transform([pdf_text + " " + jd_text])
+                    new_data_prediction = model.predict(new_data_transformed)
+                    
+                    new_data_prediction = model.predict(new_data_transformed)
+
+                    # Round matching percentage to nearest 2 decimals
+                    new_data_prediction = np.round(new_data_prediction, 2)
+
+                    jd_keywords_in_resume_table = []
+                    matching_keywords = []
+
+                    # Iterate loop for each keyword in resume
+
+                    for word in keywords_jd:
+                        if word in keywords_resume:
+                            match_result = [word, 'Match']
+                            matching_keywords.append(word)
+                        else:
+                            match_result = [word, 'No Match']
+                        jd_keywords_in_resume_table.append(match_result)
+
+                    
+                    extracted_skills_frequency = extract_skills_and_count_frequency(pdf, skills_list)
+
+                    skills=extract_skills(pdf,skills_list)
+
+                  
+
+                    # Assuming profile.extracted_skills_frequency is a dictionary
+                    skills_data_json = json.dumps(extracted_skills_frequency)
+
+
+                    # Store the analysis results in the session_data dictionary
+                    session_data['results_' + uploaded_pdf.filename] = {
+                        "pdf_filename": uploaded_pdf.filename,
+                        "matching_percentage": new_data_prediction[0],
+                        "skills":skills,
+                        "jd_keywords_in_resume_table": jd_keywords_in_resume_table,
+                        "matching_keywords": matching_keywords,
+                        "extracted_skills_frequency": extracted_skills_frequency,
+                        "skills_data_json":skills_data_json
+                    }
+                    
+                    # Append matching results
+                    matching_results.append({
+                        "pdf_filename": uploaded_pdf.filename,
+                        "matching_percentage": new_data_prediction[0],
+                        "skills":skills,
+                        "jd_keywords_in_resume_table": jd_keywords_in_resume_table,
+                        "matching_keywords": matching_keywords,
+
+                        "extracted_skills_frequency": extracted_skills_frequency,
+                        "skills_data_json":skills_data_json
+                    })
+
+            # Store matching_results in the session
+            session['matching_results'] = matching_results
+
+            # Rank matching results and render the template
+            ranking = sorted(matching_results, key=lambda x: x["matching_percentage"], reverse=True)
+            return render_template('cv_analysis/results.html', ranking=ranking)
+
+    return render_template('cv_analysis/index.html', ranking=[])
+
+
+@app.route('/profile/<int:pdf_index>')
+def view_profile(pdf_index):
+    if 'matching_results' in session:
+        matching_results = session['matching_results']
+        
+        
+        # Check if the selected PDF index is within the valid range
+        if pdf_index >= 0 and pdf_index < len(matching_results):
+            selected_profile = matching_results[pdf_index]
+            return render_template('CV_analysis/profile.html', profile=selected_profile)
+    
+    # Handle the case when the PDF index is invalid or matching results are not available
+    return "Profile not found", 404
+
+def extract_skills(resume_text, skills_list):
+    # Create a regex pattern to match skills (case-insensitive)
+    skills_pattern = r'\b(?:' + '|'.join(re.escape(skill.strip()) for skill in skills_list.split(',')) + r')\b'
+    
+    # Find all matches of skills in the resume text
+    matches = re.findall(skills_pattern, resume_text, flags=re.IGNORECASE)
+    
+    return matches
+
+
+
+def extract_skills_and_count_frequency(resume_text, skills_list):
+    # Create a regex pattern to match skills (case-insensitive)
+    skills_pattern = r'\b(?:' + '|'.join(re.escape(skill.strip()) for skill in skills_list.split(',')) + r')\b'
+    
+    # Find all matches of skills in the resume text
+    matches = re.findall(skills_pattern, resume_text, flags=re.IGNORECASE)
+    
+    # Count the frequency of each skill
+    skill_frequency = Counter(matches)
+    
+    return skill_frequency
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # CV Analysis - Manushi - END-----------------------------------------------------------------------------------------------------------------
 
 # Academic Transcript - Shanali - START -------------------------------------------------------------------------------------------------------
