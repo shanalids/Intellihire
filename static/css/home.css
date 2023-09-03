@@ -1,0 +1,155 @@
+body {
+    background-color: #FFC300;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    min-height: 90px;
+    background-color: #088F8F;
+    padding: 10px;
+}
+
+.navbar-menu-container {
+    display: none;
+}
+
+.primary-button {
+    padding: 0.9rem 1.75rem;
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.navbar-cart-icon {
+    font-size: 1.15rem;
+}
+
+.primary-button:hover {
+    background-color: rgb(234, 234, 234);
+}
+
+.navbar-menu-container svg {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#signIn {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    outline: none;
+    margin-left: 700px;
+    align-items: right;
+}
+
+#signIn:hover {
+    background-color: #FFC300;
+    box-shadow: 0 2px #727272;
+    transform: translateX(4px);
+
+}
+
+#signUp {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    outline: none;
+    margin-left: 20px;
+    align-items: right;
+}
+
+#signUp:hover {
+    background-color: #FFC300;
+    box-shadow: 0 2px #727272;
+    transform: translateX(4px);
+}
+
+/* body */
+.home-tagline {
+    font-family: 'Birthstone', sans-serif;
+    /* Apply the 'Satisfy' font */
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.home-desc {
+    font-family: 'Trebuchet MS', sans-serif;
+    /* Apply the 'Satisfy' font */
+    font-size: 15px;
+    color: #333;
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 13px;
+}
+
+.container-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background-color: #FFC300;
+
+}
+
+.home-container {
+    flex: 1;
+}
+
+.home-image {
+    padding-top: 25px;
+    padding-right: 25px;
+    flex: 1;
+    max-width: 100%;
+}
+
+.start {
+    border-radius: 20px;
+    background-color: #088F8F;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 150px;
+}
+
+.start span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.start span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.start:hover span {
+    padding-right: 25px;
+}
+
+.start:hover span:after {
+    opacity: 1;
+    right: 0;
+}

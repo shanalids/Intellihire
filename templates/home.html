@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Intellihire</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/home.css')}}">
+    <link rel="stylesheet" type="text/css"
+        href="{{url_for('static', filename='css/personality_prediction/personality.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap">
+    <style>
+        /* Additional styles can be added here */
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo-container">
+            <img src="static/images/personality_prediction/Logo.png" alt="">
+        </div>
+        <div class="navbar-links-container">
+            <a href="#">Home</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="navbar.html">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
+        </div>
+    </nav>
+
+    <!-- Include your JavaScript files here -->
+
+    <!-- <script>
+        // Your existing script content here
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.start').addEventListener('click', function () {
+                window.location.href = 'Personality_prediction/big_five.html';
+            });
+        });
+    </script> -->
+
+    <div class="container-home">
+        <div class="home-container">
+            <p class="home-tagline">Effortless Recruitment with Automation Excellence</p>
+            <p class="home-desc">Streamline your hiring process with our advanced recruitment automation software,
+                optimizing
+                efficiency and ensuring top talent acquisition</p>
+            <br />
+            <button class="start"><span>Get Started </span></button>
+        </div>
+        <img src="static/images/personality_prediction/home-image-new.png" alt="Home Image" class="home-image">
+    </div>
+    <br />
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Final Score</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="{{url_for('static', filename='css/personality_prediction/personality.css')}}">
+</head>
+
+<body class="final-score-body">
+    <nav>
+        <div class="nav-logo-container">
+            <img src="../../static/images/personality_prediction/Logo.png" alt="">
+        </div>
+        <div class="navbar-links-container">
+            <a href="#">Home</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="{{ url_for('final_score') }}">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
+        </div>
+    </nav>
+
+    <form method="POST" action="/calc_final_score">
+        <button id="next" class="btn btn-lg btn-warning" type="submit"><span>Calc</span></button>
+    </form>
+
+    <p>final score: {{ final_score }}</p>
+
+    <br />
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h4 class="footer-about">About</h4>
+                    <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire, we're
+                        dedicated to
+                        simplifying talent acquisition. Our initiative strives to empower HR professionals and
+                        recruiters of
+                        the future by offering innovative solutions. We specialize in transforming the hiring landscape
+                        through smart technology, AI-driven assessments, and seamless integrations. Join us to reshape
+                        the
+                        way you hire, embracing a future where hiring complexities are a thing of the past.</p>
+                </div>
+
+
+
+                <div class="col-xs-6 col-md-3">
+                    <h4 class="quick-links">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="copyright-container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
+                        <a href="#">Intellihire</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>

@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Comparison Result</title>
+</head>
+<body>
+    <h1>Language Proficiency Comparison</h1>
+    <img src="data:image/png;base64,{{ img_base64 }}" alt="Comparison Chart">
+    <br>
+    <a href="/">Back to Comparison</a>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparison Result</title>
+     <!-- <title>SpaCify</title> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navbar.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
+
+</head>
+<body background="/static/images/professional_skills/LinkedIn_bg.jpg" style="font-family: Arial, sans-serif; text-align: center; background-color: #f5f5f5; margin: 0; padding: 0;">
+    <nav>
+        <div class="nav-logo-container">
+            <img src="/static/images/professional_skills/Logo.png" alt="">
+        </div>
+        <div class="navbar-links-container">
+            <a href="#">Home</a>
+            <a href="#">CV Ranking</a>
+            <a href="#">Academic Transcript</a>
+            <a href="#">Professional Skills</a>
+            <a href="#">Personality</a>
+        </div>
+        <div class="navbar-menu-container">
+            <span class="bars-icon" onclick="openMenu()">&#9776;</span>
+        </div>
+        <div id="drawer" class="drawer">
+            <div class="drawer-content">
+                <ul>
+                    <!-- Add your menu items dynamically using JavaScript -->
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </nav>
+  
+    <!-- <h3 style="color: #ffffff;">Language Proficiency Comparison</h3> -->
+    <br>
+    <img src="data:image/png;base64,{{ img_base64 }}" alt="Comparison Chart" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+    <br>
+    <a href="/" style="color: #007bff; text-decoration: none;">Back to Comparison</a>
+</body>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h4 class="footer-about">About</h4>
+                <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire, we're
+                    dedicated to
+                    simplifying talent acquisition. Our initiative strives to empower HR professionals and recruiters of
+                    the future by offering innovative solutions. We specialize in transforming the hiring landscape
+                    through smart technology, AI-driven assessments, and seamless integrations. Join us to reshape the
+                    way you hire, embracing a future where hiring complexities are a thing of the past.</p>
+            </div>
+
+
+
+            <div class="col-xs-6 col-md-3">
+                <h4 class="quick-links">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                    <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                    <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="copyright-container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
+                    <a href="#">Intellihire</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

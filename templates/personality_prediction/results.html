@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Big Five Scores</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="{{url_for('static', filename='css/personality_prediction/personality.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="results-container">
+    <nav>
+        <div class="nav-logo-container">
+            <img src="../../static/images/personality_prediction/Logo.png" alt="">
+        </div>
+        <div class="navbar-links-container">
+            <a href="#">Home</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="{{ url_for('final_score') }}">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <br />
+        <h1 class="results-title">Personality Trait Scores</h1>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="results-table-container">
+                    <table class="results-table">
+                        <tr>
+                            <th class="candidate-name" colspan="6">
+                                <div class="candidate-name-left">Candidate Name: {{ name }}</div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th class="table-headers">Openness</th>
+                            <th class="table-headers">Concientiousness</th>
+                            <th class="table-headers">Extraversion</th>
+                            <th class="table-headers">Agreeableness</th>
+                            <th class="table-headers">Neuroticism</th>
+                        </tr>
+                        <tr id="selfRatingOpenEnded" style="display: none;">
+                            <th>Self-rating</th>
+                            <td>{{ opn_score1 }}</td>
+                            <td>{{ csn_score1 }}</td>
+                            <td>{{ ext_score1 }}</td>
+                            <td>{{ agr_score1 }}</td>
+                            <td>{{ neu_score1 }}</td>
+                        </tr>
+                        <tr id="openEnded" style="display: none;">
+                            <th>Open-ended</th>
+                            <td>{{ opn_score2 }}</td>
+                            <td>{{ csn_score2 }}</td>
+                            <td>{{ ext_score2 }}</td>
+                            <td>{{ agr_score2 }}</td>
+                            <td>{{ neu_score2 }}</td>
+                        </tr>
+                </div>
+                <tr>
+                    <th class="final-scores">Final Scores</th>
+                    <td class="final-scores">{{ opn_score }}</td>
+                    <td class="final-scores">{{ csn_score }}</td>
+                    <td class="final-scores">{{ ext_score }}</td>
+                    <td class="final-scores">{{ agr_score }}</td>
+                    <td class="final-scores">{{ neu_score }}</td>
+                </tr>
+                <tr>
+                    <th class="expected-scores">Expected Scores</th>
+                    <td class="expected-scores">{{ exp_openness }}</td>
+                    <td class="expected-scores">{{ exp_conscientiousness }}</td>
+                    <td class="expected-scores">{{ exp_extraversion }}</td>
+                    <td class="expected-scores">{{ exp_agreeableness }}</td>
+                    <td class="expected-scores">{{ exp_neuroticism }}</td>
+                </tr>
+                <tr>
+                    <th class="match-score" colspan="6">
+                        <div class="match-score">Candidate personality - Job role match: {{ match_percentage }}%
+                        </div>
+                    </th>
+                </tr>
+                </table>
+                <button id="toggleSelfRatingOpenEnded" class="btn btn-lg btn-warning">Show details</button>
+            </div>
+        </div>
+
+        <br />
+        <div class="col-md-6">
+            <div class="cluster-prediction-container">
+                <div class="cluster-prediction-image">
+                    <script>
+                        // Get the cluster prediction value from the template variable
+                        var clusterPrediction = {{ cluster_prediction }};
+
+                        // Define an object that maps cluster prediction values to image paths and descriptions
+                        var clusterData = {
+                            0: {
+                                imagePath: "../../static/images/personality_prediction/blue1.png",
+                                description: "Individual is assertive and confident, with a preference for routine and familiarity over novelty and change. Their self-assured and decisive nature is evident in how they approach situations."
+                            },
+                            1: {
+                                imagePath: "../../static/images/personality_prediction/blue6.png",
+                                description: "Individual stands out with exceptional organizational skills, making them methodical and structured. They create a harmonious and cooperative work environment, collaborating willingly with others to achieve shared goals. They are highly responsible and reliable, consistently meeting their commitments"
+                            },
+                            2: {
+                                imagePath: "../../static/images/personality_prediction/blue5.png",
+                                description: "The individual is characterized by being extroverted and talkative. They are outgoing and enjoy engaging with others in social settings. They often thrive in group interactions and are known for their ability to initiate and maintain conversations with ease."
+                            },
+                            3: {
+                                imagePath: "../../static/images/personality_prediction/blue3.png",
+                                description: "This individual's personality is a unique blend of innocence and conscientiousness, but their neurotic tendencies can make them appear anxious and sensitive at times. They excel in tasks thanks to their strong sense of responsibility and attention to detail."
+                            },
+                            4: {
+                                imagePath: "../../static/images/personality_prediction/blue2.png",
+                                description: "This individual has a personality characterized by being neurotic, yet they possess a high degree of agreeableness. They tend to be introverted, often valuing introspection and solitude."
+                            },
+                            5: {
+                                imagePath: "../../static/images/personality_prediction/blue4.png",
+                                description: "This personality suggests that the individual may be more relaxed and flexible in their approach to tasks and responsibilities. Additionally, they exhibit a high degree of agreeableness, suggesting they are generally cooperative, friendly, and considerate in their interactions with others."
+                            },
+                            // Add more values, image paths, and descriptions as needed
+                        };
+
+                        // Define image dimensions (in pixels)
+                        var imageWidth = 200; // Set your desired width
+                        var imageHeight = 200; // Set your desired height
+
+                        // Get the cluster data based on the cluster prediction value
+                        var data = clusterData[clusterPrediction];
+
+                        if (data) {
+                            // Get the image source and description
+                            var imagePath = data.imagePath;
+                            var description = data.description;
+
+                            // Create an image element and set its attributes
+                            var img = document.createElement("img");
+                            img.src = imagePath;
+                            img.alt = "Cluster Prediction Image";
+                            img.width = imageWidth; // Set the width
+                            img.height = imageHeight; // Set the height
+
+                            // Create a paragraph element for the description
+                            var descriptionParagraph = document.createElement("p");
+                            descriptionParagraph.textContent = description;
+
+                            // Create a div element to wrap the image and description
+                            var contentWrapper = document.createElement("div");
+
+                            // Append the image and description elements to the content wrapper
+                            contentWrapper.appendChild(img);
+                            contentWrapper.appendChild(descriptionParagraph);
+
+                            // Apply CSS styles to center the content within the container
+                            contentWrapper.style.display = "flex";
+                            contentWrapper.style.flexDirection = "column";
+                            contentWrapper.style.alignItems = "center";
+                            contentWrapper.style.textAlign = "center";
+
+                            // Append the content wrapper to the container
+                            var container = document.querySelector(".cluster-prediction-container");
+                            container.appendChild(contentWrapper);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br /> <br />
+    <div class="radar-chart-container">
+        <h3 class="chart-title">Candidate vs Expected Personalities</h3>
+        <canvas id="radarChart" width="700" height="450"></canvas>
+    </div>
+
+
+    <script>
+        // Get the context of the canvas element
+        var ctx = document.getElementById('radarChart').getContext('2d');
+
+        // expected scores
+        var expOpenness = {{ exp_openness }};
+        var expConscientiousness = {{ exp_conscientiousness }};
+        var expExtraversion = {{ exp_extraversion }};
+        var expAgreeableness = {{ exp_agreeableness }};
+        var expNeuroticism = {{ exp_neuroticism }};
+
+        // candidate scores
+        var candOpenness = {{ opn_score }};
+        var candConscientiousness = {{ csn_score }};
+        var candExtraversion = {{ ext_score }};
+        var candAgreeableness = {{ agr_score }};
+        var candNeuroticism = {{ neu_score }};
+
+        // Data for the radar chart
+        var radarData = {
+            labels: ['Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Neuroticism'],
+            datasets: [
+                {
+                    label: 'Expected Scores',
+                    data: [
+                        expOpenness,
+                        expConscientiousness,
+                        expExtraversion,
+                        expAgreeableness,
+                        expNeuroticism
+                    ],
+                    backgroundColor: 'rgba(252,143,50, 0.2)', // Adjust the color
+                    borderColor: 'rgba(237,139,0,1)', // Adjust the color
+                    borderWidth: 2
+                },
+                {
+                    label: 'Candidate Scores',
+                    data: [
+                        candOpenness,
+                        candConscientiousness,
+                        candExtraversion,
+                        candAgreeableness,
+                        candNeuroticism
+                    ],
+                    backgroundColor: 'rgba(119,221,119, 0.2)', // Adjust the color
+                    borderColor: 'rgba(0,135,62,1)', // Adjust the color
+                    borderWidth: 2
+                }
+            ]
+        };
+
+        // Radar chart configuration
+        var radarConfig = {
+            type: 'radar',
+            data: radarData,
+            options: {
+                scale: {
+                    ticks: {
+                        beginAtZero: true,
+                        max: 5,
+                        stepSize: 1
+                    },
+                    pointLabels: {
+                        fontSize: 14,
+                        fontColor: '#333' // Adjust label color
+                    },
+                    gridLines: {
+                        color: 'black' // Change grid line color to black
+                    },
+                },
+                legend: {
+                    display: false
+                }
+            }
+        };
+
+        // Create the radar chart
+        var radarChart = new Chart(ctx, radarConfig);
+    </script>
+
+    <br />
+    </div>
+    <br /><br /><br />
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h4 class="footer-about">About</h4>
+                    <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire,
+                        we're
+                        dedicated to
+                        simplifying talent acquisition. Our initiative strives to empower HR professionals and
+                        recruiters of
+                        the future by offering innovative solutions. We specialize in transforming the hiring
+                        landscape
+                        through smart technology, AI-driven assessments, and seamless integrations. Join us to
+                        reshape
+                        the
+                        way you hire, embracing a future where hiring complexities are a thing of the past.</p>
+                </div>
+
+
+
+                <div class="col-xs-6 col-md-3">
+                    <h4 class="quick-links">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="copyright-container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
+                        <a href="#">Intellihire</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../static/js/personality_prediction/personality.js"></script>
+
+</body>
+
+</html>
