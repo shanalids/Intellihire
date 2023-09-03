@@ -679,7 +679,7 @@ def index3():
 # CV Analysis - Manushi - START-------------------------------------------------------------------------------------------------------------
 
 #load models for cv_analysis
-# model = pickle.load(open("models/cv_analysis/stkmodel.pkl", "rb"))
+model = pickle.load(open("models/cv_analysis/stkmodel.pkl", "rb"))
 saved_filename = "models/cv_analysis/Vectorizer1.joblib"
 vectorizer = joblib.load(saved_filename)
 
