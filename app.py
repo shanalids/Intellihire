@@ -52,7 +52,24 @@ from collections import Counter
 
 
 # academic transcript imports
-
+from flask import Flask, render_template, request, send_file
+import os
+import spacy
+import glob
+import re
+import pytesseract
+import pandas as pd
+from PIL import Image
+from pdf2image import convert_from_path
+from sklearn.feature_extraction.text import CountVectorizer
+import joblib
+import matplotlib.pyplot as plt
+import pickle
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.svm import SVC
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
 
 
 
@@ -837,29 +854,416 @@ def extract_skills_and_count_frequency(resume_text, skills_list):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # CV Analysis - Manushi - END-----------------------------------------------------------------------------------------------------------------
 
 # Academic Transcript - Shanali - START -------------------------------------------------------------------------------------------------------
+
+# Load the trained NER model from disk
+nlp_ner = spacy.load('models/academic_transcript/IdentifyingModulesandGrades')
+
+# Load the module outline CSV file
+module_outline_df = pd.read_csv("files/academic_transcript/Module Keywords.csv")
+
+ 
+
+# Clean and preprocess text
+def clean_text(text):
+    text = re.sub(r'\s+', ' ', text)  # Remove extra whitespaces
+    text = text.strip()
+
+    return text
+
+ 
+
+@app.route("/AcademicTranscript")
+
+def index():
+    return render_template('academic_transcript/AcaedmicTranscriptsIndex.html')
+
+ 
+
+@app.route('/extract', methods=['POST'])
+
+def extract_text():
+
+    uploaded_file = request.files['file']
+
+    if uploaded_file.filename != '':
+        # Save the uploaded file temporarily
+        uploaded_file.save('files/academic_transcript/uploaded_file.pdf')
+
+        pdf_paths = glob.glob("files/academic_transcript/uploaded_file.pdf")
+        text_file_path = "files/academic_transcript/extracted_text.txt"
+
+        pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # Provide the path to your Tesseract executable
+
+        with open(text_file_path, "w", encoding="utf-8") as text_file:
+            for pdf_path in pdf_paths:
+                pages = convert_from_path(pdf_path, dpi=300)  # Adjust DPI as needed
+
+                for pageNum, imBlob in enumerate(pages):
+                    im = Image.frombytes('RGB', imBlob.size, imBlob.tobytes())  # Corrected line
+                    im = im.convert('L')  # Convert to grayscale
+                    im = im.point(lambda x: 0 if x < 200 else x)  # Threshold to remove light noise
+                    text = pytesseract.image_to_string(im, lang='eng', config='--psm 6')  # Adjust configuration
+                    text_file.write(text)
+
+        # Read the extracted text from the file with proper encoding
+        with open('files/academic_transcript/extracted_text.txt', 'r', encoding='utf-8') as file:
+            extracted_text = file.read()
+        #print(extracted_text)
+
+        # Extract sections using regular expressions
+        pattern = r'YEAR (\d+)\n([\s\S]+?)\nYear \1 Credits='
+        matches = re.findall(pattern, extracted_text)
+        sections = [match[1] for match in matches]
+        #print(sections)
+
+        # Save sections to a text file
+        output_text_file_path = "files/academic_transcript/extracted_sections.txt"
+        with open(output_text_file_path, "w") as output_text_file:
+            for section in sections:
+                output_text_file.write(section + "\n\n")
+
+        # Load the document from the text file
+        with open("files/academic_transcript/extracted_sections.txt", "r") as file:
+            text = file.read()
+
+        doc = nlp_ner(text)
+        for ent in doc.ents:
+            print(ent.text, ent.label_)
+
+        def test_ner_model(file_path, output_file):
+            with open(file_path, 'r') as file:
+                 lines = file.readlines()
+
+            # Process sections with custom NER model
+            module_titles = []
+            grades = []
+
+            for line in lines:
+                doc = nlp_ner(line.strip())
+                module_title = None
+                grade = None
+
+                for ent in doc.ents:
+                    if ent.label_ == "MODULE_TITLE":
+                        module_title = ent.text
+                    elif ent.label_ == "GRADE":
+                        grade = ent.text
+
+                if module_title and grade:  # Only append if both module title and grade exist
+                    module_titles.append(module_title)
+                    grades.append(grade)
+            # print(extracted_data)
+
+
+        # Create a DataFrame with extracted data
+            data = {"Module Title": module_titles, "Grade": grades}
+            df = pd.DataFrame(data)
+
+            # Save the DataFrame to a CSV file
+            df.to_csv(output_file, index=False)
+            print("Saved extracted data to", output_file)
+
+       
+
+        # Provide the file path to test and output file path
+        file_path = "files/academic_transcript/extracted_sections.txt"
+        output_file = "files/academic_transcript/extracted_data.csv"
+        test_ner_model(file_path, output_file)
+
+        # Initialize CountVectorizer
+        countvect = CountVectorizer()
+
+
+        model = 'models/academic_transcript/skill_prediction.pkl'
+
+        # Load the model from the file
+        with open( model, 'rb') as model_file:
+            classification_model = pickle.load(model_file)
+
+
+        # Split the tuple to access the model and vectorizer
+        model, countvect = classification_model
+
+        #print(classification_model)
+        # Assuming your classification_model tuple is defined as follows:
+        # classification_model = (SVC(kernel='linear', random_state=0), CountVectorizer())
+
+        #print(model)
+
+        # Fit the model on training data (you should do this before calling predict)
+
+        # model.fit(X_train, y_train)
+
+        # Predict using the fitted model
+        #predicted_categories = model.predict(module_title_vectors)
+
+        # Assuming your classification_model tuple is defined as follows:
+        # classification_model = (SVC(kernel='linear', random_state=0), CountVectorizer())
+
+ 
+
+        # Split the tuple to access the model and vectorizer
+        model, countvect = classification_model
+
+        # Read module titles from the first CSV file
+        module_titles_df = pd.read_csv('files/academic_transcript/extracted_data.csv')
+
+        # Extract module titles from the DataFrame
+        module_titles = module_titles_df['Module Title']
+
+        # Read module titles and module keywords from the second CSV file
+        module_keywords_df = pd.read_csv('files/academic_transcript/Module Keywords.csv')
+
+        # Create a dictionary to map module titles to their corresponding module keywords
+        module_title_to_keywords = dict(zip(module_keywords_df['Module Title'], module_keywords_df['Module Keywords']))
+
+ 
+        # Define a function to predict skill areas
+        def predict_skill_area(module_titles, module_title_to_keywords):
+            predicted_categories = []
+            for module_title in module_titles:
+                module_keywords = module_title_to_keywords.get(module_title, "")
+                combined_text = module_title.lower() + ' ' + module_keywords.lower()
+                module_title_vector = countvect.transform([combined_text])
+                predicted_category = model.predict(module_title_vector)
+                predicted_categories.append(predicted_category[0])  # Assuming you want a single prediction
+            return predicted_categories
+
+
+        # Predict skill areas using the function
+        predicted_skill_areas = predict_skill_area(module_titles, module_title_to_keywords)
+
+        # Map the module titles from the extracted data to the module titles in the module outline
+        module_titles_df['Category'] = predicted_skill_areas
+
+        # Define the grade weighting dictionary
+        grade_weighting = {
+            'A+': 10,
+            'A': 9,
+            'A-': 8,
+            'B+': 7,
+            'B': 6,
+            'B-': 5,
+            'C+': 4,
+            'C': 3,
+            'C-': 2,
+            'D+': 1,
+            'D': 1,
+            'E': 1
+        }
+
+        # Calculate the weighted grades based on the grade weighting dictionary
+        module_titles_df['Weighted Grade'] = module_titles_df['Grade'].map(grade_weighting)
+
+        # Create a table with the skill areas, module titles, module descriptions, and weighted grades
+        skill_area_table = module_titles_df[['Category', 'Module Title', 'Weighted Grade']]
+
+        # unique_categories = skill_area_table['Category'].unique()
+        # print(unique_categories)
+
+        # unique_categories = skill_area_table['Category'].unique()
+
+        # # Define the predefined categories
+        # predefined_categories = [
+        #     'System Administration',
+        #     'IT Infrastructure and Networking',
+        #     'Data Science and Analytics',
+        #     'Artificial Intelligence and Machine Learning',
+        #     'Cloud Computing',
+        #     'Cybersecurity',
+        #     'Database Management',
+        #     'Project Management',
+        #     'Programming and Software Development',
+        #     'User Experience and Design'
+        # ]
+
+        # # Find categories not present in unique_categories
+        # missing_categories = [category for category in predefined_categories if category not in unique_categories]
+
+        # # Print the missing categories
+        # print("Missing Categories:", missing_categories)
+
+        # # Create a DataFrame for missing categories and assign 0.0 as 'Weighted Grade'
+        # missing_categories_df = pd.DataFrame({'Category': missing_categories})
+        # missing_categories_df['Weighted Grade'] = 0.0
+
+        # # Print the DataFrame with missing categories and their assigned weighted grades
+        # print("Missing Categories DataFrame:")
+        # print(missing_categories_df)
+
+        #Exclude module titles with category "Core Competencies"
+        skill_area_table = skill_area_table[skill_area_table['Category'] != "core competencies and soft skills"]
+
+
+        # Calculate the weighted grades based on the grade weighting dictionary
+        module_titles_df['Weighted Grade'] = module_titles_df['Grade'].map(grade_weighting)
+        
+        # Group the skill area table by the 'Category' column and calculate the sum of the 'Weighted Grade' column for each category
+        category_totals = module_titles_df.groupby('Category')['Weighted Grade'].sum()
+
+
+        # Sort the categories by their total weighted grades in descending order
+        category_totals = category_totals.sort_values(ascending=False)
+
+        # print("cat tot:",category_totals)
+
+
+        # # Merge missing_categories_df and category_totals into one DataFrame
+        # combined_category_totals = pd.concat([missing_categories_df, category_totals.reset_index()], ignore_index=True)
+
+        # # # Sort the combined DataFrame by 'Weighted Grade' in descending order
+        # # combined_category_totals = combined_category_totals.sort_values(by='Weighted Grade', ascending=False)
+
+        # # Print the combined DataFrame
+        # print("Combined Category Totals:")
+        # print(combined_category_totals)
+
+        # # Define the custom order for categories
+        # custom_category_order = [
+        #     'Programming and Software Development',
+        #     'Data Science and Analytics',
+        #     'Database Management',
+        #     'Cloud Computing',
+        #     'Project Management',
+        #     'Cybersecurity',
+        #     'IT Infrastructure and Networking',
+        #     'Artificial Intelligence and Machine Learning',
+        #     'System Administration',
+        #     'User Experience and Design'
+        # ]
+
+        # # Convert the 'Category' column to a Categorical data type with the custom order
+        # combined_category_totals['Category'] = pd.Categorical(combined_category_totals['Category'], categories=custom_category_order, ordered=True)
+
+        # # Sort the DataFrame by the 'Category' column
+        # combined_category_totals = combined_category_totals.sort_values(by='Category')
+
+        # # Reset the index if needed
+        # # combined_category_totals = combined_category_totals.reset_index(drop=True)
+
+        # # Print the sorted DataFrame
+        # print(combined_category_totals)
+
+
+       
+
+        # Get the top 3 category totals
+        top_category_totals = category_totals.nlargest(3)
+
+        # Calculate the total sum of the top 3 category totals
+        total_sum_of_top_totals = top_category_totals.sum()
+
+        # Calculate the maximum possible sum (if all categories were in the top 3)
+        maximum_possible_sum = category_totals.sum()
+ 
+        # Calculate the final score as a percentage out of 100
+        final_score = (total_sum_of_top_totals / maximum_possible_sum) * 100
+
+        # Print the final score (you can use it as needed)
+        print(f"Final Score: {final_score:.2f}")
+
+
+        # Generate the pie chart
+        plt.figure(figsize=(12, 8))  # Adjust the size as needed
+
+        plt.pie(
+            category_totals,
+            labels=None,
+            autopct='%1.1f%%',
+            startangle=90,
+            wedgeprops=dict(edgecolor='w')  # Add white edgecolor to slices
+        )
+
+ 
+
+        # Set colors for each category
+        colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+
+ 
+
+        # Customize colors for each pie slice
+        for i, wedge in enumerate(plt.gca().patches):
+            wedge.set_facecolor(colors[i % len(colors)])
+            wedge.set_linewidth(1)  # Add border to slices
+
+
+        # Add a legend with categories and colors
+        legend_labels = category_totals.index
+
+        plt.legend(
+            legend_labels,
+            loc='center left',
+            bbox_to_anchor=(1, 0.5),
+            title='Skill Areas',
+            labelcolor='black',
+            borderaxespad=0.5  # Adjust the distance of the legend from the chart
+        )
+
+
+        # Remove unnecessary spines and ticks
+        plt.gca().spines['top'].set_visible(False)
+        plt.gca().spines['right'].set_visible(False)
+        plt.gca().spines['left'].set_visible(False)
+        plt.gca().spines['bottom'].set_visible(False)
+        plt.gca().tick_params(axis='both', which='both', length=0)
+
+ 
+
+        # Remove excess white space
+        plt.subplots_adjust(left=0.0, right=0.75)
+
+        # Save the pie chart to a file
+        pie_chart_file = 'static/images/academic_transcript/pie_chart.png'
+        plt.savefig(pie_chart_file, dpi=300)  # Adjust DPI as needed
+
+ 
+
+        # Get candidate ID and name from the form
+        candidate_id = request.form.get('candidateId')
+        candidate_name = request.form.get('candidateName')
+        position_applied = request.form.get('PositionApplied')
+
+        # # Load the trained model
+        # score_model = joblib.load('models/RandomForestRegressor.joblib')
+
+
+        # # Create a DataFrame with the 'Job role' and 'Weighted Grade' columns
+        # data = {
+        #     'Job role': [position_applied],  # Use the correct column name 'Job role' here
+        #     'Programming and Software Development': [combined_category_totals.loc[combined_category_totals['Category'] == 'Programming and Software Development', 'Weighted Grade'].values[0]],
+        #     'Data Science and Analytics': [combined_category_totals.loc[combined_category_totals['Category'] == 'Data Science and Analytics', 'Weighted Grade'].values[0]],
+        #     'Database Management': [combined_category_totals.loc[combined_category_totals['Category'] == 'Database Management', 'Weighted Grade'].values[0]],
+        #     'Cloud Computing': [combined_category_totals.loc[combined_category_totals['Category'] == 'Cloud Computing', 'Weighted Grade'].values[0]],
+        #     'Project Management': [combined_category_totals.loc[combined_category_totals['Category'] == 'Project Management', 'Weighted Grade'].values[0]],
+        #     'Cybersecurity': [combined_category_totals.loc[combined_category_totals['Category'] == 'Cybersecurity', 'Weighted Grade'].values[0]],
+        #     'IT Infrastructure and Networking': [combined_category_totals.loc[combined_category_totals['Category'] == 'IT Infrastructure and Networking', 'Weighted Grade'].values[0]],
+        #     'Artificial Intelligence and Machine Learning': [combined_category_totals.loc[combined_category_totals['Category'] == 'Artificial Intelligence and Machine Learning', 'Weighted Grade'].values[0]],
+        #     'System Administration': [combined_category_totals.loc[combined_category_totals['Category'] == 'System Administration', 'Weighted Grade'].values[0]],
+        #     'User Experience and Design': [combined_category_totals.loc[combined_category_totals['Category'] == 'User Experience and Design', 'Weighted Grade'].values[0]]
+        # }
+
+        # data_df = pd.DataFrame(data)
+        # print(data_df)
+
+        # # Perform one-hot encoding for 'Job role'
+        # data_df = pd.get_dummies(data_df, columns=['Job role'])
+
+        # # Make predictions using the trained model
+        # predicted_score = score_model.predict(data_df)
+
+        # # Print the predicted score
+        # print("Predicted Score:", predicted_score[0])
+
+
+        return render_template('academic_transcript/AcaedmicTranscriptsResults.html', pie_chart=pie_chart_file, candidate_id=candidate_id, candidate_name=candidate_name,  position_applied=position_applied, final_score=final_score)
+
+    return render_template('academic_transcript/AcaedmicTranscriptsIndex.html', error='Please upload a PDF file.')
+
+
 #Academic Transcript - Shanali - END -----------------------------------------------------------------------------------------------------------
-
-
 
 
 
