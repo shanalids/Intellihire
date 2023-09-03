@@ -1,0 +1,652 @@
+﻿Module Title,Module Keywords
+MATHEMATICS FOR COMPUTING,"Logic Control, Number Systems, Differentiation, Integration, Functions, Counting, Graph Theory, Matrices, Finite-State machines"
+Introduction to Programming,"data types, control structures, functions, pointers, arrays, files, recursion, testing, debugging, C language, LINUX operating system"
+Introduction to Computer Systems,"computer systems, computer organization, combinational logic circuits, sequential logic circuits, data communication, computer networks"
+Object Oriented Concepts,"Object Oriented Programming, design solutions, classes, relationships, C++ Language
+"
+Software Process Modeling,"Software Engineering, requirement specification, design, implementation, verification, validation, software artifacts, software systems"
+Information Systems and Data Modeling,"Information Systems, Data Modeling, Business Process Modeling, relational database systems"
+Internet and Web Technologies,"Internet, technologies, applications,  social media, effective use, organizations, individual users, design, web interfaces, UI design principles, design, web interfaces,  web technologies"
+Engineering Mathematics,"Engineering Mathematics, mathematical techniques, IT systems, engineering, electrical engineering, computer engineering"
+Network Fundamentals,"data communications, computer networks, LANs, basic configurations, routers, switches, IP addressing"
+Object Oriented Programming,"Object Oriented Programming, Java Language, concurrency programming, design patterns, software engineering concepts"
+Database Management Systems,"Database design, Hands-on experience, Schema refinement, SQL database programming, Logical database design"
+Computer Networks,"Configuration TCP, TCP/IP operation, Switching theory, Routing switching, TCP/IP configuration"
+Operating Systems and System Administration,"System administration, Lecture tutorial lab, Knowledge learn, Complete unit programming, Operating system component"
+Software Engineering,"Object-oriented, Design pattern, Software testing, Modeling language (UML), Applying design pattern"
+Digital Electronics,"Logic basic concept, Number system sequential, Engineering graduate, Computer networking engineering"
+Probability & Statistics,"Descriptive statistics, Statistical techniques, Statistical software, Statistical inference, Data analysis"
+Analogue Electronics,"Analog electronics, Circuitry using discrete devices, Engineering concepts,"
+Database Systems Administration,"Oracle Database, Database components, Database architecture, Creating a database, Controlling a database, Installing Oracle Database software, Managing Oracle Instance, Configuring Oracle network environment, User administration, Security, Managing Undo Data, Backup recovery concept"
+Routing & Switching,"Routing concepts,
+Static routing,
+Dynamic routing,
+Switched networks,
+Switch configuration, 
+VLANs,
+Access Control Lists (ACLs), 
+DHCP (Dynamic Host Configuration Protocol),
+NAT (Network Address Translation),
+Device discovery,
+Management and maintenance"
+Database Management Systems for Security,"Design and develop database solutions,
+Real-world applications,
+Relational query languages,
+Database programming
+Evaluate query plans
+Database servers
+Design and implement database maintenance plans
+Security and performance concerns"
+Introduction to Cyber Security,"Security controls
+Risk management
+Malicious software
+User authentication
+Access control
+Cryptography
+Cryptographic hashes
+Symmetric cryptography
+Asymmetric cryptography
+Public Key Infrastructure (PKI)
+Trusted systems
+Multilevel security
+OS security
+Legal and ethical aspects"
+Secure Operating Systems,"Operating systems structure
+Process management
+CPU scheduling
+Memory management
+Deadlocks
+System protection and security
+Secondary storage structure
+I/O systems
+File systems"
+Structured Analysis and Design,"Structured analysis and design
+Information systems
+Business problems
+Implementation and maintenance
+Computer-aided software engineering (CASE) tools
+Organizational matters"
+Information Systems Analysis,"Problem solving
+Effective problem solvers
+Organizational stakeholders
+Analyzing complex problems
+Appropriate solutions
+Collaboration"
+Design and Management of Computing Infrastructure,"Network design and management
+Fundamental concepts and theory
+Evolution
+Applications
+Technological advancements"
+Mobile Application Development,"Mobile application development
+Mobile technologies
+Mobile applications
+Android technologies
+Real-world requirements"
+Data Structures and Algorithms,"Data structures
+Stacks
+Queues
+Linked lists
+Trees
+Algorithms
+Designing algorithms
+Analyzing problems"
+IT Project,"Final report writing
+System testing activity
+Git report
+Progress evaluation
+ER Diagram activity
+Interface designing
+Proposal evaluation
+Scrum activity
+ITP project
+Proposal writin"
+Discrete Mathematics,"Discrete mathematics
+Logic and proof
+Sets
+Functions
+Algorithms
+Mathematical reasoning
+Relations
+Graphs
+Trees
+Formal languages
+Computability"
+Foundations of Algorithms,"Computer algorithms
+Algorithm design and analysis
+Problem-solving skills
+Advanced data structures
+Recursion
+Mathematical induction
+Algorithm analysis
+Computational complexity
+Sorting and searching
+Design paradigms
+Graph algorithms
+Randomized algorithms
+Information retrieval
+String and pattern matching
+Computational geometry"
+Advanced Networking Technologies,"Data communications
+Network infrastructure
+Business environment
+Distributed systems
+Systems architectural designs
+Layered architecture models
+Network technologies
+Security
+Network configuration
+Management techniques"
+Information Systems Project,"Data communications
+Network infrastructure
+Business environment
+Distributed systems
+Systems architectural designs
+Layered architecture models
+Network technologies
+Security
+Network configuration
+Management techniqu"
+Object Oriented Analysis and Design,"ICT industry based project
+Project goals
+Requirements gathering
+Project plans
+Implementation
+Marketing
+Stages of completion"
+Advanced Internetworking,"LAN concepts
+IPv6
+LAN design
+Scaling VLANs
+Spanning Tree Protocol (STP)
+EtherChannel
+HSRP
+Dynamic routing
+Single Area OSPF
+EIGR"
+Computer Systems Administration,"System and network administration
+Command Line Interfaces
+System administration tasks
+Network administration tasks
+Impact of system and network administration
+Problem-solving in system administratio"
+Operating Systems,"Real-time operating systems
+Fundamentals of operating systems
+Scheduling mechanisms
+Processor reserves
+Commercial operating systems"
+Embedded Systems,"Embedded system design
+Requirement analysis
+Closed-loop automatic control
+Microcontroller"
+Software Engineering Process & Quality Management,"Testing fundamentals and methods
+Specification-based test case design
+Code coverage analysis
+Functional and non-functional testing"
+Distributed Systems,"Distributed computing concepts and applications
+Distributed systems
+Approaches and technologies
+Challenges in developing distributed systems"
+Application Frameworks,"Presentation frameworks
+Persistence frameworks
+Web service frameworks
+Enterprise applications integration frameworks
+Data access frameworks
+Test technologies"
+User Experience Engineering,"User experience design
+Software development life cycle
+Design thinking
+User investigation
+Requirement engineering techniques
+User experience testing
+Secure design
+User experience design trends"
+Database Systems,"NoSQL
+Hadoop Framework
+XML integration
+Object RDBMS
+RDBMS
+Parallel and Distributed DB architectures
+Query optimization
+Database tuning
+Transactions and concurrency control technique"
+Case Studies in Software Engineering,"Software engineering topics
+Requirements engineering
+Software analysis
+Detailed design
+Software testing
+Industry-based case study"
+Software Project Management,"Agile project management tool (Azure Dashboard)
+Code quality inspection tool (SonarQube)
+Distributed version control system (Git)
+Test automation framework (Selenium)"
+Programming Applications and Frameworks,"Enterprise systems engineering
+Web-based applications development
+Rich web-based applications development"
+Theory and Practices in Statistical Modelling,"Statistical models
+Regression
+Time series
+Statistical package R"
+Data Warehousing and Business Intelligence,"Data integration
+Business intelligence
+Data quality
+Data transformation
+Data integration modeling
+Data warehouse
+Data mining
+Strategic planning
+Analytical insight
+Business challenges"
+Database Systems and Data-Driven Application,"E-business
+Business strategies
+E-business concepts
+Technical architectures
+Usability
+User experience
+E-commerce sites
+Designing e-commerce sites
+Testing usability"
+Information Retrieval and Web Analytics,"Enterprise information security
+Information assets
+Protecting information
+Security concepts
+Security practices"
+Fundamentals of Data Mining,"Theory
+Practices
+Data mining applications
+Data pre-processing methods
+Algorithms
+Frequent pattern mining
+Associations
+Classification techniques
+Clustering techniques
+Designing
+Developing
+Deploying"
+Massive Data Processing and cloud Computing,"Massive data processing
+Cloud-based infrastructure
+Development tools"
+Machine Learning and Optimization Methods,"Neural networks
+Multilayer neural networks
+Optimization
+Linear programming
+Genetic algorithms"
+Mobile Security,"Security impact on organizations
+Building effective security
+Security concerns
+Mobile operating systems (Android/IOS/Windows)
+Mobile infrastructure models
+3G, 4G, LTE
+Mobile security concepts"
+Information Security Risk Management,"Risk management approaches
+ISACA Certified in Risk and Information Systems Control (CRISC)
+Risk identification
+Risk assessment
+Risk response and mitigation
+Risk and control monitoring and reporting
+Risk assessments (RA)
+Risk management plans (RM)
+Regulatory and legal compliance
+Control framework
+Business continuity
+Disaster recovery planning
+GRC (governance, risk management, and compliance)"
+Data and Operating Systems Security,"Information assurance
+Data and operating systems security
+Data-dependent access controls
+Preventive and detective security mechanisms
+Secure database environment
+Evaluating operating system security"
+Information Security Policy and Management,"Integration and application of information security knowledge
+Case-study approach
+Information assurance strategies
+Controls selection and application
+Security policies
+Regulatory requirements
+Business constraints
+Risk communication
+Threat identification and remediation"
+Cryptography,"Cryptographic techniques
+Encryption
+Message integrity
+Digital signatures
+User authentication
+Key management
+Cryptographic hashing
+Network security protocols
+Public-key infrastructure
+Digital rights management
+Secret sharing
+Zero-knowledge protocols
+Mathematics for cryptography"
+IS Project Management,"Project management
+Information system project
+Project management knowledge areas
+Project Management Body Of Knowledge (PMBOK)
+Project management software
+Technologies"
+Organizational Business Functions 1,"Organizations
+Management practices
+Managerial concepts
+Marketing
+Organizational functions
+Organizational design
+Organizational characteristics
+Behavior of people
+Business study"
+Management Information Systems,"IT skills
+Business knowledge
+MIS professionals
+Information use in operations
+Information systems management
+Strategic use of IT
+Organizational change
+Innovation"
+Data Management and Business Intelligence,"Data integration
+Business intelligence
+Analytical insight
+Data quality
+Data transformation methods
+Data integration modeling techniques
+Data warehouse
+Data mining
+Strategic planning
+Business intelligence application"
+E Business Strategy & Architecture and Design,"E-business
+Business strategies
+E-business concepts
+Technical architectures
+Usability
+User experience
+E-commerce sites
+Designing e-commerce sites
+Testing usabilit"
+Information Security Management,"Enterprise information security
+Information assets
+Protecting information
+Security concepts
+Security practices"
+Organizational Business Functions II,"Economics
+Accounting
+Human resource management
+Financial accounting
+Fundamental economic concepts
+Market forces
+Cost of production"
+Enterprise Resource Planning,"Enterprise Resource Planning Systems
+Impact on organizations
+SAP
+Integrated information systems
+Procurement
+Production
+Sales business processes"
+Information Systems Strategic Management,"Business and enterprise in competitive markets
+Information systems strategies
+Core business strategy
+Technology and innovation
+Decision-making process
+Business strategy
+Organizational strategies"
+Directory Services and Network Management,"Network design
+Mapping and baselining
+Network and server monitoring
+Fault tolerance
+Disaster recovery
+Simple Network Management Protocol (SNMP)
+Lightweight Directory Access Protocol (LDAP)
+Cloud computing"
+Wide area Networks,"WAN technologies
+Network services
+Converged applications
+Network requirements"
+Information Storage Management,"Storing, protecting, optimizing, and managing digital information
+Storage system
+Storage networking technologies
+Backup, archive, and replication
+Cloud storage systems security
+Managing storage infrastructure accounting within changing, accounting within, management accounting"
+Business Management for IT,"Management concepts
+Economics
+Marketing management
+Accounting
+Business environment"
+Network Security Engineering,"Security fundamentals
+Network security threats
+Cryptography
+Authentication, authorization, and accounting
+Firewall technologies
+Intrusion detection system
+Intrusion prevention systems
+Virtual private network
+Managing a secure network"
+User Experience Designing,"User experience
+Design problems
+User investigation
+Requirement engineering techniques
+Usability testing
+Secure design
+User experience design trends"
+3D Modeling & Animation,"3D Modeling
+Sculpting techniques
+Character animation
+Design fundamentals
+Visual production
+Simulations"
+Digital Video Production & Delivery,"Digital video production
+Visual production
+Equipment and technology
+Audio arrangements
+Color grading
+VFX (Visual Effects)
+Digital cinema
+Marketing concepts
+Advertising"
+Digital Image Processing,"Image enhancement
+Image restoration
+Image segmentation
+Image processing methods and procedures"
+Games Technology,"Computer gaming
+Ethical and cultural aspects of computer games
+Technologies used in game making
+Game story writing"
+Research Project,"engineering industry, software engineering industry, effectively solve real, trend technology software, solve real, solve real world, engineering industry following, module provide understanding, technology software, technology software engineering"
+Current Trends in Software Engineering,"image processing, digital image, digital image processing, application digital, application digital image, digital image manipulation, morphological operator, image manipulation, use method procedure, use method"
+Image Understanding & Processing,"machine learning, deterministic algorithm, machine learning discus, technology different, algorithm technique may, discus machine learning, realworld problem cannot, discus machine, discus limitation possible, discus limitation"
+Machine Learning,"nosql web service, software development implementation, goal software, allowing concentrate, allowing concentrate actual, key concept, key concept software, actual goal software, actual goal, technology emerging"
+Enterprise Application Development,"service use, create meaningful, meaningful relationship, learning around key, learning around, almost every, every digital, design student strive, every digital experience, service use computer"
+Mobile Application Design & Development,"science unit, science unit intends, unit intends give, unit intends, neural network used, aspect deep, network used, honor degree computer, honor degree, network used realworld"
+Deep Learning,"gpu computing shared, memory parallelism map, reduce based distributed, computing shared memory, computing shared, module introduce paralle, gpu computing, parallelism map reduce, parallelism map, parallel algorithm gpu"
+Parallel Computing,"solution feature, environment take depth, enterprise storage solution, enterprise storage, programme objective, covered available, covered available enterprise, programme objective unit, unit 4th, unit 4th year"
+Database Administration and Storage Systems,"Database administration
+Storage systems
+Oracle DBMS
+Enterprise storage solutions"
+Internet of Things and Big Data Analytics,"Internet of Things (IoT)
+IoT architectures
+Data analytics
+Unstructured data
+Real-time data
+Data streams
+Data analytic techniques"
+Visual Analytics and User Experience Design,"Visual analytics
+User experience design
+Analytical reasoning techniques
+Visual representations
+Interaction techniques
+Computation graphics
+Information dashboard design"
+Security Economic Analysis,"Security economic analysis
+Cybersecurity
+Economics"
+Secure Software Engineering,"Secure software concepts
+Secure software requirements
+Secure software design
+Secure software implementation/coding"
+Cyber Forensics and Incident Response,"Digital forensics
+Computer crimes investigation
+Digital evidence
+Data acquisition and duplication
+Operating system forensics
+Email crimes
+Network forensics
+Mobile forensics
+Cloud forensics
+Incident response
+Security Operations Center (SOC)"
+Governance and Cyber Law Clinic,"IT governance
+Risk management
+Compliance (GRC)
+Cybersecurity
+Cyber law
+Legal frameworks
+Cybercrimes
+Cyberespionage
+Cyber-warfare"
+Machine Learning for Cyber Security,"Machine learning
+Information Technology
+Machine learning algorithms
+Real-world problems
+Deterministic algorithms
+Future research directions"
+Practicing Business Analyst,"Business analysis
+Business analyst role
+Requirements analysis
+Effective solutions
+Business problems"
+Human Resourse Information Systems,"HRIS (Human Resource Information Systems)
+IS roles
+Types of information systems
+HR practices
+HR analytics"
+Software Quality Assurance,"Software quality assurance
+Process management
+Improvement
+Testing
+Quality assurance techniques
+Test design and execution
+Standards, policies, and procedures"
+Knowledge Management,"Knowledge management
+Knowledge creation
+Knowledge capture
+Knowledge representation
+Knowledge storage
+Knowledge reuse
+Knowledge acquisition
+Knowledge organization
+Knowledge dissemination
+Knowledge management strategies"
+Human Computer Interaction,"Human-computer interaction
+User interface
+Software design
+User research
+Sketching and prototyping
+Usability process
+Interface evaluation"
+Enterprise Standards for Information Systems,"Automation of structural tasks
+Enterprise applications
+J2EE
+EAD methodologies
+NoSQL
+Web services
+Microservices
+IoT
+DevOps
+OData
+Cloud computing
+Big data
+Mobile application development"
+Software Defined Networks,"Software Defined Networking (SDN)
+Network control logic
+Physical routers and switches
+High-level control programs
+SDN simulation environment
+Mininet
+SDN challenges and applications"
+Internet of Things,"IoT ecosystem
+IoT services development
+Industry approach to IoT
+Real-time data analysis
+Unstructured data"
+Virtualization and Cloud Computing Technologies,"Virtualization
+Cloud computing
+Hypervisor-based virtualization
+Container-based virtualization
+Network virtualization
+Network function virtualization
+Virtualization security"
+Multimedia Project Management,"Multimedia projects
+Multimedia applications
+Multimedia delivery methods
+Multimedia software"
+Modern Topics in IT,"Current topics in IT
+Trends in IT
+Technologies in IT
+Real-world problems"
+Database Administration,"Database administration
+Oracle DBMS"
+Cloud Computing,"Cloud computing
+AWS"
+Computer Systems and Network Administration,"Network design and management
+Network servers
+Network monitoring
+Fault tolerance, because they exceed the maximum length allowed by the model."
+Object Oriented Programming,"network server, network mapping baselining, network server network, protocol ldap simple, security lightweight directoryaccess, security lightweight, network security lightweight, protocol snmp introduction, web www introduction, lightweight directoryaccess protocol"
+Network Design Management,"Network design
+Network mapping
+Baselining
+Network servers
+Network monitoring
+Fault tolerance
+Disaster recovery
+Network security
+Lightweight Directory Access Protocol (LDAP)
+Simple Network Management Protocol (SNMP)
+World Wide Web (WWW)
+Virtualization
+Cloud computing"
+Database Systems,"Object-relational databases
+NoSQL
+XML integration
+Advanced features
+Relational database systems
+Indexing
+Query optimization
+Transactions
+Concurrency control techniques"
+Business Management for IT,"Information security
+Information assurance
+Theoretical approach
+Introductory topics
+Common Body of Knowledge (CBK)
+International Information System Security Certification Consortium (ISC)²
+Security process
+CISSP certification"
+Data Science and Analytics,"Data science
+Data analytics
+Data warehousing
+Business intelligence
+Traditional methods
+Modern methods
+SQL Server
+Python"
+Human Computer Interaction,"Designing
+Evaluating
+Implementing
+Interactive computing systems
+User research
+Interaction design
+User experience design
+Software
+Standards
+Best practices
+Principles of design
+Sketching
+Prototyping
+Interface evaluation"
+Information Assurance and Security,"Information security
+Information assurance
+Theoretical approach
+Introductory topics
+Common Body of Knowledge (CBK)
+International Information System Security Certification Consortium (ISC)²
+Security process
+CISSP certification"
