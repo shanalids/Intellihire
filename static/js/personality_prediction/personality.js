@@ -1,4 +1,29 @@
-// personality.js
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the rows you want to hide
+    var selfRatingRow = document.getElementById("selfRatingOpenEnded");
+    var openEndedRow = document.getElementById("openEnded");
+
+    // Get a reference to the toggle button
+    var toggleButton = document.getElementById("toggleSelfRatingOpenEnded");
+
+    // Function to toggle the visibility of the rows
+    function toggleRows() {
+        if (selfRatingRow.style.display === "none") {
+            selfRatingRow.style.display = "table-row"; // Display the row
+            openEndedRow.style.display = "table-row"; // Display the row
+        } else {
+            selfRatingRow.style.display = "none"; // Hide the row
+            openEndedRow.style.display = "none"; // Hide the row
+        }
+    }
+
+    // Attach a click event listener to the button
+    toggleButton.addEventListener("click", toggleRows);
+});
+
+
+
 // personality.js
 document.addEventListener("DOMContentLoaded", function () {
     // Get all range inputs
@@ -35,3 +60,4 @@ function validatecsv() {
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
+
