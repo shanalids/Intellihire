@@ -139,6 +139,13 @@ def upload_selfrate():
                         datum = last_data_row[i]
                         textarea_content.append(datum)
 
+                response_26 = last_data_row[26]
+                response_27 = last_data_row[26]
+                strengths_response = response_26 + response_27
+
+                strengths_response = preprocess_text(strengths_response)
+                session['strengths_response'] = strengths_response
+
                 return render_template('personality_prediction/responses.html', textarea_first_value=textarea_first_value, slider_values=slider_values, textarea_content=textarea_content)
 
     return "No CSV file uploaded."
@@ -655,6 +662,11 @@ def index2():
             data = data[columns_to_analyze]
 
             last_row = data.iloc[-1]
+
+            text = last_row.iloc[3]
+            tokenized_strengths = extract_strengths(text)
+
+            session['tokenized_strengths'] = tokenized_strengths
             
             # Update sentiment analysis and visualization function to return column names
             column_names = last_row.index.tolist()
@@ -663,6 +675,20 @@ def index2():
 
     return render_template('professional_skills/sentiment_results.html', plot_data=plot_data, column_names=column_names, row_content=row_content)
 
+def extract_strengths(text):
+    # Tokenize the text using NLTK
+    tokens = word_tokenize(text)
+    
+    # Calculate the frequency of each token
+    token_freq = Counter(tokens)
+    
+    # Sort tokens by frequency in descending order
+    sorted_tokens = sorted(token_freq.items(), key=lambda x: x[1], reverse=True)
+    
+    # Extract all unique tokens as keywords
+    keywords = [token for token, freq in sorted_tokens]
+    
+    return keywords
 
 
 @app.route('/pf_home/sentiment/sentiment_results', methods=['GET', 'POST'])
@@ -1273,15 +1299,31 @@ def extract_text():
 @app.route('/calc_final_score', methods=['POST', 'GET'])
 def calcFinalScore():
 
-    personality_score = session.get('personality_score')
-    cv_ranking = session.get('ranking')
+    # personality_score = session.get('personality_score')
+    # cv_ranking = session.get('ranking')
 
-    matching_percentages = [result['matching_percentage'] for result in cv_ranking]
-    highest_matching_percentage = max(matching_percentages)
+    # matching_percentages = [result['matching_percentage'] for result in cv_ranking]
+    # highest_matching_percentage = max(matching_percentages)
 
-    final_score = (personality_score + highest_matching_percentage)/2
+    tokenized_strengths = session.get('tokenized_strengths ')
+    strengths_response = session.get('strengths_response')
 
-    return render_template('final_score.html', final_score=final_score, textarea_content="", slider_values="")
+    common_strengths = find_common_strengths(tokenized_strengths, strengths_response)
+
+    # final_score = (personality_score + highest_matching_percentage)/2
+
+    # return render_template('final_score.html', preprocessed_last=preprocessed_last, tokenized_strengths=tokenized_strengths, final_score=final_score, textarea_content="", slider_values="")
+    return render_template('final_score.html', common_strengths=common_strengths, textarea_content="", slider_values="")
+
+def find_common_strengths(list1, list2):
+# Convert the input lists to sets
+    set1 = set(list1)
+    set2 = set(list2)
+
+    common_words = set1.intersection(set2)
+    common_words_list = list(common_words)
+
+    return common_words_list
 
 if __name__ == '__main__':
     app.run(debug=True)
