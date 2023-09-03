@@ -51,8 +51,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from collections import Counter
 
 
-
-
 # academic transcript imports
 
 
@@ -61,6 +59,10 @@ from collections import Counter
 app = Flask(__name__)
 app.secret_key = 'personality-prediction-2023'
 
+# test
+@app.route('/final_score')
+def final_score():
+    return render_template('final_score.html')
 
 
 @app.route('/')
@@ -284,6 +286,8 @@ def predict_scores():
 
         # Use the loaded model to make predictions
         cluster_prediction = k_means_model.predict(input_data)
+
+        session['personality_score'] = match_percentage
 
         # Pass the processed data to the template
         return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, cluster_prediction=cluster_prediction, textarea_content="", slider_values="")
@@ -786,6 +790,9 @@ def ranking():
 
             # Rank matching results and render the template
             ranking = sorted(matching_results, key=lambda x: x["matching_percentage"], reverse=True)
+
+            session['ranking'] = ranking
+
             return render_template('cv_analysis/results.html', ranking=ranking)
 
     return render_template('cv_analysis/index.html', ranking=[])
@@ -851,6 +858,25 @@ def extract_skills_and_count_frequency(resume_text, skills_list):
 
 # Academic Transcript - Shanali - START -------------------------------------------------------------------------------------------------------
 #Academic Transcript - Shanali - END -----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+# Final score - START
+@app.route('/calc_final_score', methods=['POST', 'GET'])
+def calcFinalScore():
+
+    personality_score = session.get('personality_score')
+    cv_ranking = session['ranking'] = ranking
+
+    # final_score = (personality_score + cv_ranking)/2
+
+    print(personality_score)
+
+    return render_template('final_score.html', personality_score=personality_score, cv_ranking=cv_ranking, textarea_content="", slider_values="")
 
 if __name__ == '__main__':
     app.run(debug=True)
