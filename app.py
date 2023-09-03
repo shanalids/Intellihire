@@ -870,13 +870,14 @@ def extract_skills_and_count_frequency(resume_text, skills_list):
 def calcFinalScore():
 
     personality_score = session.get('personality_score')
-    cv_ranking = session['ranking'] = ranking
+    cv_ranking = session.get('ranking')
 
-    # final_score = (personality_score + cv_ranking)/2
+    matching_percentages = [result['matching_percentage'] for result in cv_ranking]
+    highest_matching_percentage = max(matching_percentages)
 
-    print(personality_score)
+    final_score = (personality_score + highest_matching_percentage)/2
 
-    return render_template('final_score.html', personality_score=personality_score, cv_ranking=cv_ranking, textarea_content="", slider_values="")
+    return render_template('final_score.html', final_score=final_score, textarea_content="", slider_values="")
 
 if __name__ == '__main__':
     app.run(debug=True)
