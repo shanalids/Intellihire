@@ -11,7 +11,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"
-        href="{{url_for('static', filename='css/personality_prediction/personality.css')}}" </head>
+        href="{{url_for('static', filename='css/personality_prediction/personality.css')}}">
+    <!-- Bootstrap Tooltip CSS and JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="../../static/js/personality_prediction/personality.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
 <body class="requirement-body">
     <nav>
@@ -26,22 +32,19 @@
             <a href="#">Personality</a>
         </div>
     </nav>
-
-    <!-- <div class="jumbotron">
-        <div class="titlecontainer">
-        </div>
-    </div> -->
     <div class="content-wrapper">
         <br />
+        <div class="instructions-container">
+            <i class="fas fa-info-circle tooltip-icon" data-toggle="tooltip" data-placement="top"
+                title="Step 1: Move the slider to indicate the importance of each trait for the job role."></i>
+        </div>
         <div class="container">
             <div class="row">
-
                 <div class="requirement-container">
                     <br />
                     <form id="requirement-form" class="form-group mt-2 mt-md-0" method="POST" action="/calc_expected">
 
-                        <h4 class="form-content">Move the slider to indicate the importance of each trait for the job
-                            role</h4>
+                        <h4 class="form-content">Expected Personality Traits for Job Role</h4>
                         <br />
                         <div>
                             <p class="form-content">Job Role</p>
@@ -167,7 +170,6 @@
             </tr>
         </table>
         <br />
-
         <form method="POST" action="/responses">
             <button id="next" class="btn btn-lg btn-warning" type="submit"><span>Next</span></button>
         </form>

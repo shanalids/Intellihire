@@ -18,5 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// function to validate the uploaded csv
+function validatecsv() {
+    var fileInput = document.getElementById('csv_file');
+    var fileName = fileInput.value;
+    var allowedExtensions = /(\.csv)$/i;
 
-// document.write("<p>This is a simple line printed using JavaScript.</p>");
+    if (!allowedExtensions.exec(fileName)) {
+        alert('Please select a CSV file.');
+        return false;
+    }
+    return true;
+}
+
+// function to show the instructions when hovered on tooltip icon
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});

@@ -69,7 +69,7 @@ def home():
 
 
 # personality prediction - Maleesha - start
-@app.route('/personality-home')
+@app.route('/requirement')
 def personality_home():
     return render_template('personality_prediction/requirement.html')
 
@@ -275,11 +275,21 @@ def predict_scores():
         match_percentage = (opn+csn+ext+agr+neu)
         match_percentage = round(match_percentage, 2)
 
+        # Load the K-Means model from the pickle file
+        with open('models/personality_prediction/kmeans_model.pkl', 'rb') as model_file:
+            k_means_model = pickle.load(model_file)
+
+        # Prepare the input data as a list or array
+        input_data = [[ext_1, ext_2, ext_3, ext_4, ext_5, neu_1, neu_2, neu_3, neu_4, neu_5, agr_1, agr_2, agr_3, agr_4, agr_5, csn_1, csn_2, csn_3, csn_4, csn_5, opn_1, opn_2, opn_3, opn_4, opn_5]]
+
+        # Use the loaded model to make predictions
+        cluster_prediction = k_means_model.predict(input_data)
+
         # Pass the processed data to the template
-        return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
+        return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, cluster_prediction=cluster_prediction, textarea_content="", slider_values="")
 
     # Return the template for GET requests
-    return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, textarea_content="", slider_values="")
+    return render_template('personality_prediction/results.html', name=name, ext_score1=ext_score1, neu_score1=neu_score1, agr_score1=agr_score1, csn_score1=csn_score1, opn_score1=opn_score1, ext_score2=ext_score2, neu_score2=neu_score2, agr_score2=agr_score2, csn_score2=csn_score2, opn_score2=opn_score2, ext_score=ext_score, neu_score=neu_score, agr_score=agr_score, csn_score=csn_score, opn_score=opn_score, exp_openness=exp_openness, exp_conscientiousness=exp_conscientiousness, exp_extraversion=exp_extraversion, exp_agreeableness=exp_agreeableness, exp_neuroticism=exp_neuroticism, match_percentage=match_percentage, cluster_prediction=cluster_prediction, textarea_content="", slider_values="")
 
 
 def preprocess_text(text):
