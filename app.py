@@ -69,6 +69,10 @@ def final_score():
 def home():
     return render_template('home.html', textarea_content="", slider_values="")
 
+# @app.route('/')
+# def home():
+#     return render_template('new_home.html', textarea_content="", slider_values="")
+
 
 # personality prediction - Maleesha - start
 @app.route('/requirement')
