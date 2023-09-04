@@ -440,6 +440,10 @@ def plp():
         access_token = "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"
         
         percentage_scores = calculate_language_proficiency(username, access_token)
+
+        #session to overall score calculation
+        session['percentage_scores'] = percentage_scores
+
         pie_chart = generate_pie_chart(percentage_scores)
         
         return render_template('professional_skills/plp.html', username=username, percentage_scores=percentage_scores, pie_chart=pie_chart)
@@ -618,12 +622,12 @@ def analyze_sentiment_and_visualize(row):
     return plot_data
 
 @app.route('/pf_home/sentiment')
-def index1():
+def senti1():
     return render_template('professional_skills/sentiment.html')
 
 
 @app.route('/pf_home/sentiment/sentiment_results', methods=['GET', 'POST'])
-def index2():
+def senti2():
     plot_data = None
     column_names = None
     row_content = None
@@ -649,7 +653,7 @@ def index2():
 
 
 @app.route('/pf_home/sentiment/sentiment_results', methods=['GET', 'POST'])
-def index3():
+def senti3():
     plot_data = None
     if request.method == 'POST':
         # Get uploaded file
@@ -679,7 +683,7 @@ def index3():
 # CV Analysis - Manushi - START-------------------------------------------------------------------------------------------------------------
 
 #load models for cv_analysis
-# model = pickle.load(open("models/cv_analysis/stkmodel.pkl", "rb"))
+model = pickle.load(open("models/cv_analysis/stkmodel.pkl", "rb"))
 saved_filename = "models/cv_analysis/Vectorizer1.joblib"
 vectorizer = joblib.load(saved_filename)
 
@@ -872,12 +876,47 @@ def calcFinalScore():
     personality_score = session.get('personality_score')
     cv_ranking = session.get('ranking')
 
+    percentage_scores = session.get('percentage_scores')
+    # Initialize an empty list to store the words
+    plp_words = []
+    # Loop through the keys of the dictionary
+    for key in percentage_scores.keys():
+        # Split the key into words using whitespace as the delimiter
+        key_words = key.split()
+        # Extend the list of words with the words from the current key
+        plp_words.extend(key_words)
+    #--------------------------------------------------------------------
     matching_percentages = [result['matching_percentage'] for result in cv_ranking]
     highest_matching_percentage = max(matching_percentages)
 
-    final_score = (personality_score + highest_matching_percentage)/2
+    
 
-    return render_template('final_score.html', final_score=final_score, textarea_content="", slider_values="")
+    # Find the entry with the highest matching_percentage 
+    entry_with_highest_percentage = max( cv_ranking, key=lambda x: x["matching_percentage"] ) 
+    #Get the skills from the entry with the highest matching_percentage 
+    skills_with_highest_percentage = entry_with_highest_percentage.get("skills", [])
+
+    # Convert the list to a set to get unique words
+    unique_words = set(skills_with_highest_percentage)
+
+    # Convert the set back to a list if needed
+    unique_words_list = list(unique_words)
+
+
+    #cv-gitHub technical skills validation-----------------------
+    github_plp_set = set(plp_words)
+    cv_plp_set = set(unique_words_list)
+    # Find the common words
+    common_words = github_plp_set.intersection(cv_plp_set)
+
+    # Calculate the percentage of common words
+    percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
+
+
+    # final_score = (personality_score + highest_matching_percentage)/2
+
+    # return render_template('final_score.html', final_score=final_score, percentage_scores = percentage_scores,  textarea_content="", slider_values="")
+    return render_template('final_score.html', final_score=final_score, percentage_common=percentage_common,  textarea_content="", slider_values="")
 
 if __name__ == '__main__':
     app.run(debug=True)
