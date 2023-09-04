@@ -920,7 +920,6 @@ def calcFinalScore():
     # final_score = (personality_score + highest_matching_percentage)/2
 
     # return render_template('final_score.html', final_score=final_score, percentage_scores = percentage_scores,  textarea_content="", slider_values="")
-    return render_template('final_score.html', final_score=final_score, percentage_common=percentage_common,  textarea_content="", slider_values="")
 
 if __name__ == '__main__':
     app.run(debug=True)
