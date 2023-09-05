@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="{{url_for('static', filename='css/personality_prediction/personality.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/final_score.css')}}">
 </head>
 
 <body class="final-score-body">
@@ -22,19 +23,40 @@
             <img src="../../static/images/personality_prediction/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
+            <a href="">Home</a>
             <a href="/ranking">CV Ranking</a>
             <a href="{{ url_for('final_score') }}">Academic Transcript</a>
             <a href="{{ url_for('pf_home') }}">Professional Skills</a>
             <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
     </nav>
+    <div class="content-wrapper">
+        <br>
+        <form method="POST" action="/calc_final_score">
+            <button id="viewFinalScoreBtn" class="btn btn-lg btn-warning" type="submit">View Final
+                Score</button>
+        </form>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="final-score-container">
+                    <p class="final-score-text"><b>The candidate suits the job role they applied for with the follwing
+                            scores:</b>
+                    </p>
+                    <!-- <p class="final-score-text">CV Match: {{ entry_with_highest_percentage }}</p> -->
+                    <p class="final-score-text">Personality Match: <b> {{ personality_score }}</b>%</p>
+                    <!-- <p class="final-score-text">Academic Transcript Match: {{ personality_score }}</p> -->
+                    <!-- <p class="final-score-text">Common Skills found in CV and GitHub: {{ percentage_common }}</p> -->
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="final-image">
+                    <img src="../static/images/personality_prediction/final-image.png" alt="" class="final-image">
+                </div>
+            </div>
 
-    <form method="POST" action="/calc_final_score">
-        <button id="next" class="btn btn-lg btn-warning" type="submit"><span>Calc</span></button>
-    </form>
-
-    <p>{{ common_strengths }}</p>
+        </div>
+    </div>
 
     <br />
     <footer class="site-footer">

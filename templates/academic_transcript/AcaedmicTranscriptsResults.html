@@ -13,28 +13,24 @@
                 display: block;
                 margin: auto;
                 max-width: 85%;
-                height: 85%;
+                height: 90%;
             }
 
             .candidate-info {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    font-size: 11px;
+                    font-size: 8px;
                     color: #000000;
-                    width: 50%;
+                    width: 100%;
                     margin: auto;
                     padding: 20px;
                     background-color: #fcf9f9;
-                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-                    border-radius: 2px;
-                    background: none;
-                    border: 2px solid #000;
+               
             }
 
         .flex-container {
             display: flex;
-            justify-content: space-between;
             align-items: flex-start;
             margin: 20px;
             
@@ -42,7 +38,7 @@
 
         .candidate-info p strong {
            font-weight: bold;
-           font-size: 23px;
+           font-size: 16px;
        }
 
        body{
@@ -64,6 +60,16 @@
             height: 100%;
             z-index: -1; /* Ensure it's behind the content */
         } 
+        
+        .card {
+            background-color: #dbdf61;
+            background-image: url('static/images/academic_transcript/abstract-dark-blurred-background-smooth-gradient-texture-color-shiny-bright-website-pattern-banner-header-sidebar-graphic-art-image.jpg');
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            align-items: baseline;
+        }
 
     </style>
     <meta charset="utf-8">
@@ -100,19 +106,39 @@
         </div>
     </nav>
     <br>
-    <h1>Academic Transcript Insights</h1>
+    <h1 style="font-family: 'Georgia', serif;">Academic Transcript Insights</h1>
     <br>
-    <div class="flex-container">
-        <div class="candidate-info">
-            <p><strong>Candidate ID: {{ candidate_id }}</strong></p>
-            <p><strong>Candidate Name: {{ candidate_name }}</strong></p>
-            <p><strong>Position Applied: {{ position_applied }}</strong></p>
-            <p><strong>Final Score: {{ final_score|round(2) }}%<strong></strong></p>
-        </div>
-        <div class="container">
-            <img class="img-pie"   src="{{ pie_chart }}" alt="Skill Areas Pie Chart">
-        </div>
-    </div>
+    <table style="margin-left: 1%; max-height: 40%;">
+        <tbody>
+            <tr height=50%>
+                <td width=30% style="margin-left: 5%;">
+                    <div background-image="b93c3ab93f4f202afcecea184618106e (1).jpg">
+                            <div class="card">
+                            <div class="flex-container">
+                                <div class="candidate-info">
+                                    <p style="font-family: 'Georgia', serif;"><strong>Candidate ID: {{ candidate_id }}</strong></p>
+                                    <p style="font-family: 'Georgia', serif;"><strong>Candidate Name: {{ candidate_name }}</strong></p>
+                                    <p style="font-family: 'Georgia', serif;"><strong>Position Applied: {{ position_applied }}</strong></p>
+                                    <p style="font-family: 'Georgia', serif;"><strong>Score: {{ ac_score|round(2) }}%<strong></strong></p>
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                    </td>
+                    <th> </th>
+                    <td>
+                            <div class="card">
+                            <div class="flex-container">
+                                <div class="container">
+                                    <img class="img-pie"   src="{{ pie_chart }}" alt="Skill Areas Pie Chart">
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>       
+            </tbody>
+    
+        </table>
 </body>
 <footer class="site-footer">
     <div class="footer-container">
