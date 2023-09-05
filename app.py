@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 import csv
 import requests
 import io  # Import the io module for working with bytes streams
-nltk.download('punkt')
-nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('stopwords')
 
 
 # professional skills imports
@@ -124,6 +124,7 @@ def upload_selfrate():
                 last_data_row = data_row
 
             if last_data_row:
+
                 # Set the first value to the textarea
                 textarea_first_value = last_data_row[0]
 
@@ -133,18 +134,10 @@ def upload_selfrate():
                         datum = last_data_row[i]
                         slider_values.append(int(datum))
 
-                # Extract values for the last textareas (remaining 5 values)
                 for i in range(26, 31):
                     if i < len(last_data_row):
                         datum = last_data_row[i]
                         textarea_content.append(datum)
-
-                response_26 = last_data_row[26]
-                response_27 = last_data_row[26]
-                strengths_response = response_26 + response_27
-
-                strengths_response = preprocess_text(strengths_response)
-                session['strengths_response'] = strengths_response
 
                 return render_template('personality_prediction/responses.html', textarea_first_value=textarea_first_value, slider_values=slider_values, textarea_content=textarea_content)
 
@@ -292,13 +285,32 @@ def predict_scores():
         neu_score = round(neu_score, 2)
 
         # Matching Percentage
-        opn = (opn_score/exp_openness)*20
-        csn = (csn_score/exp_conscientiousness)*20
-        ext = (ext_score/exp_extraversion)*20
-        agr = (agr_score/exp_agreeableness)*20
-        neu = (neu_score/exp_neuroticism)*20
+        if(opn_score<exp_openness):
+            opn = (opn_score/exp_openness)
+        else:
+            opn = 0.9
 
-        match_percentage = (opn+csn+ext+agr+neu)
+        if(csn_score<exp_conscientiousness):
+            csn = (csn_score/exp_conscientiousness)
+        else:
+            csn = 0.9
+
+        if(ext_score<exp_extraversion):
+            ext = (ext_score/exp_extraversion)
+        else:
+            ext = 0.9
+
+        if(agr_score<exp_agreeableness):
+            agr = (agr_score/exp_agreeableness)
+        else:
+            agr = 0.9
+
+        if(neu_score<exp_neuroticism):
+            neu = (neu_score/exp_neuroticism)
+        else:
+            neu = 0.9
+
+        match_percentage = (opn+csn+ext+agr+neu)*20
         match_percentage = round(match_percentage, 2)
 
         # Load the K-Means model from the pickle file
@@ -462,6 +474,8 @@ def plp():
     if request.method == 'POST':
         username = request.form.get('username')
         access_token = "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"
+
+        session['percentage_scores'] = percentage_scores
         
         percentage_scores = calculate_language_proficiency(username, access_token)
         pie_chart = generate_pie_chart(percentage_scores)
@@ -666,7 +680,7 @@ def index2():
             text = last_row.iloc[3]
             tokenized_strengths = extract_strengths(text)
 
-            session['tokenized_strengths'] = tokenized_strengths
+            # session['tokenized_strengths'] = tokenized_strengths
             
             # Update sentiment analysis and visualization function to return column names
             column_names = last_row.index.tolist()
@@ -1087,38 +1101,38 @@ def extract_text():
         # Create a table with the skill areas, module titles, module descriptions, and weighted grades
         skill_area_table = module_titles_df[['Category', 'Module Title', 'Weighted Grade']]
 
-        # unique_categories = skill_area_table['Category'].unique()
-        # print(unique_categories)
+        unique_categories = skill_area_table['Category'].unique()
+        print(unique_categories)
 
-        # unique_categories = skill_area_table['Category'].unique()
+        unique_categories = skill_area_table['Category'].unique()
 
-        # # Define the predefined categories
-        # predefined_categories = [
-        #     'System Administration',
-        #     'IT Infrastructure and Networking',
-        #     'Data Science and Analytics',
-        #     'Artificial Intelligence and Machine Learning',
-        #     'Cloud Computing',
-        #     'Cybersecurity',
-        #     'Database Management',
-        #     'Project Management',
-        #     'Programming and Software Development',
-        #     'User Experience and Design'
-        # ]
+        # Define the predefined categories
+        predefined_categories = [
+            'System Administration',
+            'IT Infrastructure and Networking',
+            'Data Science and Analytics',
+            'Artificial Intelligence and Machine Learning',
+            'Cloud Computing',
+            'Cybersecurity',
+            'Database Management',
+            'Project Management',
+            'Programming and Software Development',
+            'User Experience and Design'
+        ]
 
-        # # Find categories not present in unique_categories
-        # missing_categories = [category for category in predefined_categories if category not in unique_categories]
+        # Find categories not present in unique_categories
+        missing_categories = [category for category in predefined_categories if category not in unique_categories]
 
-        # # Print the missing categories
-        # print("Missing Categories:", missing_categories)
+        # Print the missing categories
+        print("Missing Categories:", missing_categories)
 
-        # # Create a DataFrame for missing categories and assign 0.0 as 'Weighted Grade'
-        # missing_categories_df = pd.DataFrame({'Category': missing_categories})
-        # missing_categories_df['Weighted Grade'] = 0.0
+        # Create a DataFrame for missing categories and assign 0.0 as 'Weighted Grade'
+        missing_categories_df = pd.DataFrame({'Category': missing_categories})
+        missing_categories_df['Weighted Grade'] = 0.0
 
-        # # Print the DataFrame with missing categories and their assigned weighted grades
-        # print("Missing Categories DataFrame:")
-        # print(missing_categories_df)
+        # Print the DataFrame with missing categories and their assigned weighted grades
+        print("Missing Categories DataFrame:")
+        print(missing_categories_df)
 
         #Exclude module titles with category "Core Competencies"
         skill_area_table = skill_area_table[skill_area_table['Category'] != "core competencies and soft skills"]
@@ -1137,15 +1151,755 @@ def extract_text():
         # print("cat tot:",category_totals)
 
 
-        # # Merge missing_categories_df and category_totals into one DataFrame
-        # combined_category_totals = pd.concat([missing_categories_df, category_totals.reset_index()], ignore_index=True)
+        # Merge missing_categories_df and category_totals into one DataFrame
+        combined_category_totals = pd.concat([missing_categories_df, category_totals.reset_index()], ignore_index=True)
 
-        # # # Sort the combined DataFrame by 'Weighted Grade' in descending order
-        # # combined_category_totals = combined_category_totals.sort_values(by='Weighted Grade', ascending=False)
+        # # Sort the combined DataFrame by 'Weighted Grade' in descending order
+        # combined_category_totals = combined_category_totals.sort_values(by='Weighted Grade', ascending=False)
 
-        # # Print the combined DataFrame
-        # print("Combined Category Totals:")
-        # print(combined_category_totals)
+        # Print the combined DataFrame
+        print("Combined Category Totals:")
+        print(combined_category_totals)
+
+        # Add a dictionary to map job titles to skill weights
+        job_title_to_skill_weights = {
+            'Software Engineer': {
+                'Programming and Software Development': 10,
+                'Data Science and Analytics': 5,
+                'Database Management': 4,
+                'Cloud Computing': 6,
+                'Project Management': 3,
+                'Cybersecurity': 4,
+                'IT Infrastructure and Networking': 5,
+                'Artificial Intelligence and Machine Learning': 7,
+                'System Administration': 3,
+                'User Experience and Design': 4,
+            },
+            'Data Scientist': {
+                'Programming and Software Development': 5,
+                'Data Science and Analytics': 10,
+                'Database Management': 5,
+                'Cloud Computing': 4,
+                'Project Management': 3,
+                'Cybersecurity': 3,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 9,
+                'System Administration': 2,
+                'User Experience and Design': 3,
+            },
+
+
+
+            'Machine Learning Engineer': {
+                'Programming and Software Development': 8,
+                'Data Science and Analytics': 8,
+                'Database Management': 3,
+                'Cloud Computing': 4,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 3,
+                'Artificial Intelligence and Machine Learning': 10,
+                'System Administration': 2,
+                'User Experience and Design': 4,
+            },
+            'Database Administrator': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 4,
+                'Database Management': 9,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 6,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 7,
+                'User Experience and Design': 2,
+            },
+            'Cloud Solutions Architect': {
+                'Programming and Software Development': 6,
+                'Data Science and Analytics': 3,
+                'Database Management': 4,
+                'Cloud Computing': 10,
+                'Project Management': 4,
+                'Cybersecurity': 3,
+                'IT Infrastructure and Networking': 7,
+                'Artificial Intelligence and Machine Learning': 5,
+                'System Administration': 4,
+                'User Experience and Design': 3,
+            },
+            'Project Manager': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 2,
+                'Database Management': 3,
+                'Cloud Computing': 4,
+                'Project Management': 9,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 4,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 3,
+            },
+            'Cybersecurity Analyst': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 3,
+                'Database Management': 2,
+                'Cloud Computing': 3,
+                'Project Management': 2,
+                'Cybersecurity': 9,
+                'IT Infrastructure and Networking': 5,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 4,
+                'User Experience and Design': 2,
+            },
+            'Network Engineer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 4,
+                'Cloud Computing': 3,
+                'Project Management': 2,
+                'Cybersecurity': 5,
+                'IT Infrastructure and Networking': 9,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 6,
+                'User Experience and Design': 2,
+            },
+            'AI Research Scientist': {
+                'Programming and Software Development': 7,
+                'Data Science and Analytics': 9,
+                'Database Management': 2,
+                'Cloud Computing': 4,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 3,
+                'Artificial Intelligence and Machine Learning': 10,
+                'System Administration': 2,
+                'User Experience and Design': 4,
+            },
+            'UX/UI Designer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 4,
+                'System Administration': 2,
+                'User Experience and Design': 10,
+            },
+
+            'Cybersecurity Engineer': {
+                'Programming and Software Development': 4,
+                'Data Science and Analytics': 2,
+                'Database Management': 3,
+                'Cloud Computing': 3,
+                'Project Management': 2,
+                'Cybersecurity': 10,
+                'IT Infrastructure and Networking': 7,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 4,
+                'User Experience and Design': 2,
+            },
+
+            'AI Engineer': {
+                'Programming and Software Development': 7,
+                'Data Science and Analytics': 8,
+                'Database Management': 3,
+                'Cloud Computing': 4,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 3,
+                'Artificial Intelligence and Machine Learning': 10,
+                'System Administration': 2,
+                'User Experience and Design': 4,
+            },
+
+            'Full Stack Developer': {
+                'Programming and Software Development': 10,
+                'Data Science and Analytics': 4,
+                'Database Management': 5,
+                'Cloud Computing': 4,
+                'Project Management': 4,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 3,
+                'Artificial Intelligence and Machine Learning': 5,
+                'System Administration': 3,
+                'User Experience and Design': 6,
+            },
+
+            'Front-end Developer': {
+                'Programming and Software Development': 9,
+                'Data Science and Analytics': 3,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 9,
+            },
+
+            'Back-end Developer': {
+                'Programming and Software Development': 9,
+                'Data Science and Analytics': 3,
+                'Database Management': 3,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 4,
+            },
+
+            'DevOps Engineer': {
+                'Programming and Software Development': 5,
+                'Data Science and Analytics': 2,
+                'Database Management': 3,
+                'Cloud Computing': 9,
+                'Project Management': 4,
+                'Cybersecurity': 3,
+                'IT Infrastructure and Networking': 10,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 9,
+                'User Experience and Design': 2,
+            },
+
+            'Data Analyst': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 9,
+                'Database Management': 4,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Business Intelligence Analyst': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 9,
+                'Database Management': 4,
+                'Cloud Computing': 2,
+                'Project Management': 4,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Mobile App Developer': {
+                'Programming and Software Development': 8,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 3,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 8,
+            },
+
+            'Database Developer': {
+                'Programming and Software Development': 7,
+                'Data Science and Analytics': 3,
+                'Database Management': 8,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Network Administrator': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 6,
+                'IT Infrastructure and Networking': 9,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 8,
+                'User Experience and Design': 2,
+            },
+
+            'Product Manager': {
+                'Programming and Software Development': 4,
+                'Data Science and Analytics': 3,
+                'Database Management': 2,
+                'Cloud Computing': 3,
+                'Project Management': 9,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 3,
+            },
+
+            'QA Engineer': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Cloud Security Engineer': {
+                'Programming and Software Development': 4,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 8,
+                'Project Management': 3,
+                'Cybersecurity': 9,
+                'IT Infrastructure and Networking': 6,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 4,
+                'User Experience and Design': 2,
+            },
+
+            'Data Engineer': {
+                'Programming and Software Development': 5,
+                'Data Science and Analytics': 8,
+                'Database Management': 8,
+                'Cloud Computing': 3,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Game Developer': {
+                'Programming and Software Development': 9,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 3,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 8,
+            },
+
+            'IT Support Specialist': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 8,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 6,
+                'User Experience and Design': 2,
+            },
+
+            'UI Designer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 9,
+            },
+
+            'Business Analyst': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 7,
+                'Database Management': 3,
+                'Cloud Computing': 2,
+                'Project Management': 6,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Embedded Software Engineer': {
+                'Programming and Software Development': 9,
+                'Data Science and Analytics': 3,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 3,
+            },
+            'Associate Data Engineer': {
+                'Programming and Software Development': 6,
+                'Data Science and Analytics': 6,
+                'Database Management': 7,
+                'Cloud Computing': 4,
+                'Project Management': 4,
+                'Cybersecurity': 3,
+                'IT Infrastructure and Networking': 3,
+                'Artificial Intelligence and Machine Learning': 5,
+                'System Administration': 4,
+                'User Experience and Design': 3,
+            },
+
+            'Associate Software Engineer': {
+                'Programming and Software Development': 8,
+                'Data Science and Analytics': 4,
+                'Database Management': 3,
+                'Cloud Computing': 5,
+                'Project Management': 4,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 4,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 3,
+                'User Experience and Design': 4,
+            },
+
+            'Associate Data Analyst': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 7,
+                'Database Management': 4,
+                'Cloud Computing': 3,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Associate Project Manager': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 3,
+                'Database Management': 3,
+                'Cloud Computing': 4,
+                'Project Management': 8,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 3,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 3,
+            },
+
+            'Associate DevOps Engineer': {
+                'Programming and Software Development': 4,
+                'Data Science and Analytics': 2,
+                'Database Management': 3,
+                'Cloud Computing': 7,
+                'Project Management': 4,
+                'Cybersecurity': 3,
+                'IT Infrastructure and Networking': 8,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 7,
+                'User Experience and Design': 2,
+            },
+
+            'Associate Database Administrator': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 3,
+                'Database Management': 8,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 6,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 7,
+                'User Experience and Design': 2,
+            },
+
+            'Associate Network Engineer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 3,
+                'Cloud Computing': 3,
+                'Project Management': 2,
+                'Cybersecurity': 6,
+                'IT Infrastructure and Networking': 8,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 7,
+                'User Experience and Design': 2,
+            },
+
+            'Associate Product Manager': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 3,
+                'Database Management': 3,
+                'Cloud Computing': 4,
+                'Project Management': 7,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 3,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 3,
+            },
+
+            'Associate QA Engineer': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Associate Cloud Security Engineer': {
+                'Programming and Software Development': 4,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 7,
+                'Project Management': 3,
+                'Cybersecurity': 8,
+                'IT Infrastructure and Networking': 7,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 4,
+                'User Experience and Design': 2,
+            },
+
+            'Associate Data Scientist': {
+                'Programming and Software Development': 4,
+                'Data Science and Analytics': 7,
+                'Database Management': 3,
+                'Cloud Computing': 3,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 7,
+                'System Administration': 2,
+                'User Experience and Design': 3,
+            },
+
+            'Associate UI/UX Designer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 8,
+            },
+
+            'Associate Business Analyst': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 6,
+                'Database Management': 3,
+                'Cloud Computing': 2,
+                'Project Management': 5,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Associate Embedded Software Engineer': {
+                'Programming and Software Development': 7,
+                'Data Science and Analytics': 3,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 3,
+            },
+
+            'Intern Data Analyst': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 5,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Intern Software Developer': {
+                'Programming and Software Development': 6,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 3,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Intern Data Scientist': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 7,
+                'Database Management': 3,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 5,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Intern Project Manager': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 3,
+                'Project Management': 6,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Intern DevOps Engineer': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 6,
+                'Project Management': 2,
+                'Cybersecurity': 3,
+                'IT Infrastructure and Networking': 6,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 4,
+                'User Experience and Design': 2,
+            },
+
+            'Intern Database Administrator': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 3,
+                'Database Management': 7,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 5,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 4,
+                'User Experience and Design': 2,
+            },
+
+            'Intern Network Engineer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 5,
+                'IT Infrastructure and Networking': 7,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 6,
+                'User Experience and Design': 2,
+            },
+
+            'Intern Product Manager': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 3,
+                'Project Management': 5,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Intern QA Engineer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Intern Cloud Security Engineer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 6,
+                'Project Management': 2,
+                'Cybersecurity': 7,
+                'IT Infrastructure and Networking': 6,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 3,
+                'User Experience and Design': 2,
+            },
+
+            'Intern UI/UX Designer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 6,
+            },
+
+            'Intern Business Analyst': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 5,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 4,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Intern Embedded Software Engineer': {
+                'Programming and Software Development': 6,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 2,
+                'User Experience and Design': 3,
+            },
+
+                                
+        }
+
 
         # # Define the custom order for categories
         # custom_category_order = [
@@ -1174,22 +1928,20 @@ def extract_text():
         # print(combined_category_totals)
 
 
-       
+        # # Get the top 3 category totals
+        # top_category_totals = category_totals.nlargest(3)
 
-        # Get the top 3 category totals
-        top_category_totals = category_totals.nlargest(3)
+        # # Calculate the total sum of the top 3 category totals
+        # total_sum_of_top_totals = top_category_totals.sum()
 
-        # Calculate the total sum of the top 3 category totals
-        total_sum_of_top_totals = top_category_totals.sum()
-
-        # Calculate the maximum possible sum (if all categories were in the top 3)
-        maximum_possible_sum = category_totals.sum()
+        # # Calculate the maximum possible sum (if all categories were in the top 3)
+        # maximum_possible_sum = category_totals.sum()
  
-        # Calculate the final score as a percentage out of 100
-        final_score = (total_sum_of_top_totals / maximum_possible_sum) * 100
+        # # Calculate the final score as a percentage out of 100
+        # ac_score = (total_sum_of_top_totals / maximum_possible_sum) * 100
 
-        # Print the final score (you can use it as needed)
-        print(f"Final Score: {final_score:.2f}")
+        # # Print the final score (you can use it as needed)
+        # print(f"Academic transcript Score: {ac_score:.2f}")
 
 
         # Generate the pie chart
@@ -1253,7 +2005,7 @@ def extract_text():
         position_applied = request.form.get('PositionApplied')
 
         # # Load the trained model
-        # score_model = joblib.load('models/RandomForestRegressor.joblib')
+        # score_model = joblib.load('models/academic_transcript/RandomForestRegressor.joblib')
 
 
         # # Create a DataFrame with the 'Job role' and 'Weighted Grade' columns
@@ -1283,47 +2035,104 @@ def extract_text():
         # # Print the predicted score
         # print("Predicted Score:", predicted_score[0])
 
+        # Check if the position_applied exists in the job_title_to_skill_weights dictionary
+        if position_applied in job_title_to_skill_weights:
+            # Get the skill weights for the specified job title
+            skill_weights = job_title_to_skill_weights[position_applied]
 
-        return render_template('academic_transcript/AcaedmicTranscriptsResults.html', pie_chart=pie_chart_file, candidate_id=candidate_id, candidate_name=candidate_name,  position_applied=position_applied, final_score=final_score)
+            # Initialize a variable to store the total score
+            total_score = 0
+
+            # Calculate the sum of all weighted grades for the categories
+            total_weighted_grade_sum = combined_category_totals['Weighted Grade'].sum()
+
+
+            # Iterate through the categories and calculate the score
+            for category, weighted_grade in zip(combined_category_totals['Category'], combined_category_totals['Weighted Grade']):
+                if category in skill_weights:
+                    skill_weight = skill_weights[category]
+                    # Calculate the percentage for the category based on the sum of all weighted grades
+                    category_percentage = (weighted_grade / total_weighted_grade_sum) * 100
+
+                    category_score = category_percentage * skill_weight
+                    print(category, category_score)
+                    total_score += category_score
+
+            
+            
+            # Calculate the maximum possible score for this position
+            max_possible_score = 1000
+
+            # Calculate the score as a percentage
+            ac_score = (total_score / max_possible_score) * 100
+
+            # pass ac_score to the final score
+            session['ac_score'] = ac_score
+
+            # Print or return the total score
+            print("Total Score for", position_applied, ":", ac_score)
+        else:
+            print("Job title not found in skill weights dictionary")
+
+
+        return render_template('academic_transcript/AcaedmicTranscriptsResults.html', pie_chart=pie_chart_file, candidate_id=candidate_id, candidate_name=candidate_name,  position_applied=position_applied, ac_score=ac_score)
 
     return render_template('academic_transcript/AcaedmicTranscriptsIndex.html', error='Please upload a PDF file.')
 
-
 #Academic Transcript - Shanali - END -----------------------------------------------------------------------------------------------------------
-
-
-
-
 
 # Final score - START
 @app.route('/calc_final_score', methods=['POST', 'GET'])
 def calcFinalScore():
 
-    # personality_score = session.get('personality_score')
     # cv_ranking = session.get('ranking')
 
-    # matching_percentages = [result['matching_percentage'] for result in cv_ranking]
-    # highest_matching_percentage = max(matching_percentages)
+    percentage_scores = session.get('percentage_scores')
 
-    tokenized_strengths = session.get('tokenized_strengths ')
-    strengths_response = session.get('strengths_response')
+    # # Initialize an empty list to store the words
+    # plp_words = []
+    # # Loop through the keys of the dictionary
+    # for key in percentage_scores.keys():
+    #     # Split the key into words using whitespace as the delimiter
+    #     key_words = key.split()
+    #     # Extend the list of words with the words from the current key
+    #     plp_words.extend(key_words)
+    # #--------------------------------------------------------------------
+    
+    matching_percentages = [result['matching_percentage'] for result in cv_ranking]
+    highest_matching_percentage = max(matching_percentages)
 
-    common_strengths = find_common_strengths(tokenized_strengths, strengths_response)
+    # # Find the entry with the highest matching_percentage 
+    # entry_with_highest_percentage = max( cv_ranking, key=lambda x: x["matching_percentage"] ) 
+    # #Get the skills from the entry with the highest matching_percentage 
+    # skills_with_highest_percentage = entry_with_highest_percentage.get("skills", [])
 
-    # final_score = (personality_score + highest_matching_percentage)/2
+    # # Convert the list to a set to get unique words
+    # unique_words = set(skills_with_highest_percentage)
 
-    # return render_template('final_score.html', preprocessed_last=preprocessed_last, tokenized_strengths=tokenized_strengths, final_score=final_score, textarea_content="", slider_values="")
-    return render_template('final_score.html', common_strengths=common_strengths, textarea_content="", slider_values="")
+    # # Convert the set back to a list if needed
+    # unique_words_list = list(unique_words)
 
-def find_common_strengths(list1, list2):
-# Convert the input lists to sets
-    set1 = set(list1)
-    set2 = set(list2)
 
-    common_words = set1.intersection(set2)
-    common_words_list = list(common_words)
+    # #cv-gitHub technical skills validation-----------------------
+    # github_plp_set = set(plp_words)
+    # cv_plp_set = set(unique_words_list)
+    # # Find the common words
+    # common_words = github_plp_set.intersection(cv_plp_set)
 
-    return common_words_list
+    # # Calculate the percentage of common words
+    # percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
+
+    # #Academic transcript score
+    # academic_transcript_score = session.get('ac_score')
+
+    personality_score = session.get('personality_score')
+
+
+    # return render_template('final_score.html', entry_with_highest_percentage=entry_with_highest_percentage, personality_score=personality_score, percentage_common = percentage_common,  textarea_content="", slider_values="")
+    return render_template('final_score.html', personality_score=personality_score, textarea_content="", slider_values="")
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
