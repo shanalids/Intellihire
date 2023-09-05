@@ -4,7 +4,7 @@
     <title>Academic Transcript Analysis</title>
     <style>
         
-        td {
+        .tdbuttons {
             width: 300px; /* Adjust the width as needed */
         }
 
@@ -16,11 +16,12 @@
 
         .container {
             width: 50%;
-            margin: auto;
+            margin-right: 30%;
             padding: 20px;
-            background-color: #fcf9f9;
+            background-color: #a8dcca;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+            height:100%
             
         }
         
@@ -30,6 +31,7 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             position: relative;
+            
         }
 
          body::before {
@@ -136,6 +138,39 @@
         table{
             margin-left: 20%; /* Add margin for spacing */
        }
+
+       .card {
+            background-color: #dbdf61;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            align-items: baseline;
+           
+    
+           
+        }
+
+        /* Style for card images */
+        .card img {
+            max-width: 50%;
+            height: 40%;
+            align-self: center;
+        }
+
+        /* Style for card text */
+        .card-text {
+            font-size: 18px;
+            color: #333;
+            text-align:left;
+            margin-top: 10px;
+            font-family: 'Georgia', serif
+        }
+       
+        .tbbodyside{
+            border: 1;
+        }
+
     </style>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -145,6 +180,20 @@
          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navbar.css')}}">
      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
+
+     <script>
+        function cancelAction() {
+            // Clear input fields
+            document.getElementById("candidateId").value = "";
+            document.getElementById("candidateName").value = "";
+            document.getElementById("PositionApplied").value = "";
+        
+            // Reset file input
+            var fileInput = document.getElementById("file");
+            fileInput.value = ""; // This will clear the selected file
+        }
+    </script>
+        
 </head>
 
 
@@ -174,66 +223,101 @@
     </nav>
 
     <br>
-    <h1>Academic Transcript</h1>
+   
     <br><br>
-    <div class="container" style="border: 2px solid #ccc; background: none;">
-        <form action="/extract" method="POST" enctype="multipart/form-data" >
+      <!-- Cards with images, text, and attractive sayings -->
+      <div>
+      <table style="margin-left: 1%; max-height: 40%;">
 
-            <label for="candidateId">Candidate ID</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" id="candidateId" name="candidateId" required>
-
-            <br>
+        <tbody>
             
-            <label for="candidateName">Candidate Name</label>
-            <input type="text" id="candidateName" name="candidateName" required>
+            <tr height=50%>
+                <td width=50% style="margin-left: 5%;">
+                    <div class="card">
+                        <h4 style="font-family: 'Georgia', serif; text-align: center"><b>Unlocking Potential: Harnessing the Power of Academic Transcripts for Better Recruitment</b></h4>
+                        <img src="static/images/academic_transcript/29006634_torapril43.jpg" alt="Image 2">
+                        <br>
+                        <p class="card-text">An academic transcript isn't just grades; it's a journey of growth, a testament to dedication, and a key to finding exceptional talent. It's our compass to candidates whose academic achievements reflect their commitment to excellence. Join us as we discover the brightest stars in our talent galaxy ⭐🎓✨</p>
+                    </div>
 
-            <br>
+                </td>
+                <th> </th>
+
+                <td style="margin-right: 50%;">
+                   
+        
+                    <div class="container">
+                        <form action="/extract" method="POST" enctype="multipart/form-data">
+                            <br>
+                           
+                            <h2 style="text-align: center; font-family: 'Georgia', serif;">Candidate Information</h2>
+                             <br>
+                     
+                                         
+                            <label style="font-family: 'Georgia', serif;"for="candidateId">Candidate ID</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>
+                            <input type="text" id="candidateId" name="candidateId" class="large-text-box" required >
+        
+                            <br>
+                            
+                            <label style="font-family: 'Georgia', serif;" for="candidateName">Candidate Name</label>
+                            <br>
+                            <input type="text" id="candidateName" name="candidateName" required>
+        
+                            <br>
+                            
+                            <label style="font-family: 'Georgia', serif;" for="PositionApplied">Position Applied</label>
+                            <br>
+                            <input type="text" id="PositionApplied" name="PositionApplied" required>
+        
+                            <br><br>
+                            
+                            <label style="font-family: 'Georgia', serif;" for="file">Upload Transcript PDF</label>
+                            <input type="file" name="file" accept=".pdf" required>
+                            <br><br>
+                            <table >
+        
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td class="tdbuttons">
+                                            <div class="button-container-submit">
+                                                <button style="font-family: 'Georgia', serif;" class="button-submit" type="submit">Analyze</button> 
+                                            </div>
             
-            <label for="PositionApplied">Position Applied</label>
-            <input type="text" id="PositionApplied" name="PositionApplied" required>
-
-            <br><br>
+                                        </td>
+                                        <th> </th>
             
-            <label for="file">Upload Transcript PDF</label>
-            <input type="file" name="file" accept=".pdf" required>
-            <br><br>
-
-            <table >
-
-               <tbody>
-                  
-                <tr>
-                    <td>
-                        <div class="button-container-submit">
-                            <button class="button-submit" type="submit">Analyze</button> 
-                        </div>
-
-                    </td>
-                    <th> </th>
-
-                    <td>
-                        <div class="button-container-cancel">
-                            <button class="cancel-button" onclick="cancelAction()">Cancel</button>
-                        </div>
+                                        <td class="tdbuttons">
+                                            <div class="button-container-cancel">
+                                                <button style="font-family: 'Georgia', serif;" class="cancel-button" onclick="cancelAction()">Clear</button>
+                                            </div>
+                                            
+                                        </td>
+                                    </tr>
+                                
+                                </tbody>
             
+                            </table>
+                                            <br>
+                                            
+                           
+        
+                        </form>
+                    </div>        
 
-                    </td>
-                 </tr>
-            
-               </tbody>
+                </td>
+            </tr>       
+        </tbody>
 
-           </table>
-
-
-
-        </form>
-    </div>
+    </table>
+</div>
+          
     <br><br>
         {% if error %}
         <p class="error">{{ error }}</p>
         {% endif %}
 </body>
-
 
 <footer class="site-footer">
     <div class="footer-container">
@@ -269,6 +353,7 @@
         </div>
     </div>
 </footer>
+
 </html>
 
 
