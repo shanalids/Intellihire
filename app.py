@@ -174,6 +174,7 @@ def predict_scores():
         exp_neuroticism = session.get('exp_neuroticism')
 
         name = (request.form['name'])
+        session['cand_name'] = name
 
         ext_1 = int(request.form['ext_1'])
         ext_2 = int(request.form['ext_2'])
@@ -381,6 +382,7 @@ def calcExpected():
         # expected (anti-)neuroticism score
         exp_neuroticism = (confidence + adaptability_to_changes)/2
 
+        session['jobrole'] = job_role
         session['exp_openness'] = exp_openness
         session['exp_conscientiousness'] = exp_conscientiousness
         session['exp_extraversion'] = exp_extraversion
@@ -2089,6 +2091,10 @@ def final_score():
 
 @app.route('/calc_final_score', methods=['POST', 'GET'])
 def calcFinalScore():
+
+    cand_name = session.get('cand_name')
+    jobrole = session.get('jobrole')
+
 # CV--------------------------------------------------------------------------------
     cv_ranking = session.get('ranking')
     
@@ -2136,9 +2142,7 @@ def calcFinalScore():
     # #Academic transcript score
     # academic_transcript_score = session.get('ac_score')
 
-    return render_template('final_score.html', personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
-
-
+    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
 
 if __name__ == '__main__':
     app.run(debug=True)

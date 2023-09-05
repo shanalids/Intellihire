@@ -1,160 +1,163 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/navbar.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/footer.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/profile.css')}}">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/navbar.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/footer.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cv_analysis/profile.css')}}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 </head>
-<body >
 
-    <nav>
-        <div class="nav-logo-container">
-            <img src="../../static/images/cv_analysis/Logo.png" alt="">
-        </div>
-        <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
-        </div>
-        <div class="navbar-menu-container">
-            <span class="bars-icon" onclick="openMenu()">&#9776;</span>
-        </div>
-        <div id="drawer" class="drawer">
-            <div class="drawer-content">
-                <ul>
-                    <!-- Add your menu items dynamically using JavaScript -->
-                </ul>
-                <hr>
-            </div>
-        </div>
-    </nav>
+<body>
 
-<div class="content-wrapper">
-    <div class="main">
-        <ul class="cards">
-          <li class="cards_item">
-            <div class="card">
-              <div class="card_image">
-                <img src="../../static/images/cv_analysis/4151017.jpg" alt="mixed vegetable salad in a mason jar." />
-               
-              </div>
-              <div class="card_content">
-                <h2 class="card_title">Matching Keywords</h2>
-                <div class="card_text">
-                    <div>
-                       
-                            {% for keyword in profile.matching_keywords %}
-                            <span class="badge bg-success"><span class="tick">✔</span>{{ keyword }}</span>
-                            {% endfor %}
-        
-        
-                    </div>
-                  <hr />
-                </div>
-              </div>
-            </div>
-          </li>
-      
-          <li class="cards_item">
-            <div class="card">
-              <div class="card_image">
-                <img src="../../static/images/cv_analysis/19873.jpg" alt="a Reuben sandwich on wax paper." />
-                
-              </div>
-              <div class="card_content">
-                <h2 class="card_title">Technical Proficiency</h2>
-                <small>Reviewed the candidate's CV to match their skills with the given skill set</small>
-                <br>
-                <div class="card_text">
-                  
-                    {% set skills = profile.skills | unique %}
-                    {% for skill in skills %}
-                      
-                    <span class="badge bg-success">{{ skill }}</span>
-                    {% endfor %}
-                  <hr />
-                  
-                </div>
-              </div>
-            </div>
-          </li>
-      
-          <li class="cards_item">
-            <div class="card">
-              <div class="card_image">
-                
-                <img src="../../static/images/cv_analysis/4181672.jpg" alt="A side view of a plate of figs and berries." />
-                
-              </div>
-              <div class="card_content">
-                <h2 class="card_title">Technical Proficiency Summary</h2>
-                <div class="card_text">
-                    <canvas id="proficiencyChart" width="400" height="200"></canvas>
-                    <!----> {% for skill, frequency in profile.extracted_skills_frequency.items() %}
-                     <p class="skill-para">{{ skill }} {{ frequency }}</p>
-                     {% endfor %}
-                    
-                  <hr />
-                  
-                </div>
-              </div>
-            </div>
-          </li>
+  <nav>
+    <div class="nav-logo-container">
+      <img src="../../static/images/cv_analysis/Logo.png" alt="">
+    </div>
+    <div class="navbar-links-container">
+      <a href="/">Home</a>
+      <a href="/ranking">CV Ranking</a>
+      <a href="{{ url_for('final_score') }}">Academic Transcript</a>
+      <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+      <a href="{{ url_for('personality_home') }}">Personality</a>
+    </div>
+    <div class="navbar-menu-container">
+      <span class="bars-icon" onclick="openMenu()">&#9776;</span>
+    </div>
+    <div id="drawer" class="drawer">
+      <div class="drawer-content">
+        <ul>
+          <!-- Add your menu items dynamically using JavaScript -->
         </ul>
+        <hr>
       </div>
     </div>
-   
-   
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="main">
+      <ul class="cards">
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="../../static/images/cv_analysis/4151017.jpg" alt="mixed vegetable salad in a mason jar." />
+
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Matching Keywords</h2>
+              <div class="card_text">
+                <div>
+
+                  {% for keyword in profile.matching_keywords %}
+                  <span class="badge bg-success"><span class="tick">✔</span>{{ keyword }}</span>
+                  {% endfor %}
+
+
+                </div>
+                <hr />
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+              <img src="../../static/images/cv_analysis/19873.jpg" alt="a Reuben sandwich on wax paper." />
+
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Technical Proficiency</h2>
+              <small>Reviewed the candidate's CV to match their skills with the given skill set</small>
+              <br>
+              <div class="card_text">
+
+                {% set skills = profile.skills | unique %}
+                {% for skill in skills %}
+
+                <span class="badge bg-success">{{ skill }}</span>
+                {% endfor %}
+                <hr />
+
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image">
+
+              <img src="../../static/images/cv_analysis/4181672.jpg"
+                alt="A side view of a plate of figs and berries." />
+
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Technical Proficiency Summary</h2>
+              <div class="card_text">
+                <canvas id="proficiencyChart" width="400" height="200"></canvas>
+                <!----> {% for skill, frequency in profile.extracted_skills_frequency.items() %}
+                <p class="skill-para">{{ skill }} {{ frequency }}</p>
+                {% endfor %}
+
+                <hr />
+
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
 </body>
 
 </html>
-        
+
 
 <script src="../../static/js/cv_analysis/profile-resume.js"></script>
 </body>
 
 <footer class="site-footer">
-    <div class="footer-container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6">
-                <h4 class="footer-about">About</h4>
-                <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire, we're
-                    dedicated to
-                    simplifying talent acquisition. Our initiative strives to empower HR professionals and recruiters of
-                    the future by offering innovative solutions. We specialize in transforming the hiring landscape
-                    through smart technology, AI-driven assessments, and seamless integrations. Join us to reshape the
-                    way you hire, embracing a future where hiring complexities are a thing of the past.</p>
-            </div>
+  <div class="footer-container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h4 class="footer-about">About</h4>
+        <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire, we're
+          dedicated to
+          simplifying talent acquisition. Our initiative strives to empower HR professionals and recruiters of
+          the future by offering innovative solutions. We specialize in transforming the hiring landscape
+          through smart technology, AI-driven assessments, and seamless integrations. Join us to reshape the
+          way you hire, embracing a future where hiring complexities are a thing of the past.</p>
+      </div>
 
 
 
-            <div class="col-xs-6 col-md-3">
-                <h4 class="quick-links">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                    <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                    <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <hr>
+      <div class="col-xs-6 col-md-3">
+        <h4 class="quick-links">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/about/">About Us</a></li>
+          <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+          <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="copyright-container">
-        <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-                <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
-                    <a href="#">Intellihire</a>.
-                </p>
-            </div>
-        </div>
+    <hr>
+  </div>
+  <div class="copyright-container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
+          <a href="#">Intellihire</a>.
+        </p>
+      </div>
     </div>
+  </div>
 </footer>
 
 

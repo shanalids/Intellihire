@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- <title>SpaCify</title> -->
+    <!-- <title>SpaCify</title> -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,19 +21,20 @@
     <link rel="stylesheet" type="text/css" href="/static/css/professional_skills/senti_style.css">
 
     <title>Sentiment Analysis</title>
-    
+
 </head>
+
 <body background="/static/images/professional_skills/LinkedIn_bg.jpg">
     <nav>
         <div class="nav-logo-container">
             <img src="/static/images/professional_skills/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
+            <a href="/">Home</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="{{ url_for('final_score') }}">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
         <div class="navbar-menu-container">
             <span class="bars-icon" onclick="openMenu()">&#9776;</span>
@@ -58,22 +60,25 @@
                     <h2>Employee Reference Analysis</h2>
                     <br>
                     <img src="/static/images/professional_skills/upload.gif" width="200" alt="">
-                    <span class="d-block mt-3"> <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Upload referee feedback responses here!</h6></span>
+                    <span class="d-block mt-3">
+                        <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Upload referee
+                            feedback responses here!</h6>
+                    </span>
                     <div class="mx-5">
                         <form method="POST" action="/pf_home/sentiment/sentiment_results" enctype="multipart/form-data">
-                         <div class="input-group mb-3 mt-4">
-                            <ul>
-                                <input type="file" name="file" accept=".csv">
-                                <button type="submit" class="btn btn-success">Upload and Analyze CSV</button> 
-                            </ul>
-                             
-                        </div>
+                            <div class="input-group mb-3 mt-4">
+                                <ul>
+                                    <input type="file" name="file" accept=".csv">
+                                    <button type="submit" class="btn btn-success">Upload and Analyze CSV</button>
+                                </ul>
+
+                            </div>
                         </form>
-                        </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
+    </div>
 </body>
 <footer class="site-footer">
     <div class="footer-container">
@@ -111,4 +116,5 @@
         </div>
     </div>
 </footer>
+
 </html>

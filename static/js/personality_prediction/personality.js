@@ -1,3 +1,15 @@
+function displayFileName() {
+    const fileInput = document.getElementById('csv_file');
+    const fileNameDisplay = document.getElementById('file-name-display');
+
+    if (fileInput.files.length > 0) {
+        const fileName = fileInput.files[0].name;
+        fileNameDisplay.textContent = `File: ${fileName}`;
+    } else {
+        fileNameDisplay.textContent = '';
+    }
+}
+
 // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     // Get references to the rows you want to hide
@@ -60,4 +72,3 @@ function validatecsv() {
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
-

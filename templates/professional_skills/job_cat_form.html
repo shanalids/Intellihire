@@ -41,17 +41,17 @@
 
 </head>
 
-<body  background="/static/images/professional_skills/LinkedIn_bg.jpg">
+<body background="/static/images/professional_skills/LinkedIn_bg.jpg">
     <nav>
         <div class="nav-logo-container">
             <img src="/static/images/professional_skills/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
+            <a href="/">Home</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="{{ url_for('final_score') }}">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
         <div class="navbar-menu-container">
             <span class="bars-icon" onclick="openMenu()">&#9776;</span>
@@ -65,22 +65,25 @@
             </div>
         </div>
     </nav>
-   
+
     <div class="row d-flex justify-content-center align-items-center rows">
-        
+
         <div class="col-md-6" class="text-center">
-    
-               
+
+
             <div class="card">
-    
-               
+
+
                 <div class="text-center">
-    
+
                     <h2>Predict Candidate's Job Category</h2>
                     <br>
                     <img src="/static/images/professional_skills/LinkedIn.gif" width="200" alt="">
-                    <span class="d-block mt-3"> <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Enter the candidate LinkedIn URL here!</h6></span>
-    
+                    <span class="d-block mt-3">
+                        <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Enter the
+                            candidate LinkedIn URL here!</h6>
+                    </span>
+
                     <div class="mx-5">
                         <form method="POST">
                             <div class="input-group mb-3 mt-4">
@@ -139,4 +142,5 @@
         </div>
     </div>
 </footer>
+
 </html>

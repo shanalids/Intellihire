@@ -37,17 +37,17 @@
     <link rel="stylesheet" type="text/css" href="/static/css/footer.css">
 </head>
 
-<body  background="/static/images/professional_skills/LinkedIn_bg.jpg">
+<body background="/static/images/professional_skills/LinkedIn_bg.jpg">
     <nav>
         <div class="nav-logo-container">
             <img src="/static/images/professional_skills/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
+            <a href="/">Home</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="{{ url_for('final_score') }}">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
         <div class="navbar-menu-container">
             <span class="bars-icon" onclick="openMenu()">&#9776;</span>
@@ -61,40 +61,43 @@
             </div>
         </div>
     </nav>
-   
+
     <div class="row d-flex justify-content-center align-items-center rows">
-        <div class="col-md-6" class="text-center"> 
+        <div class="col-md-6" class="text-center">
             <div class="card">
                 <div class="text-center">
-    
+
                     <h2>Github Language Proficiency Comparison</h2>
                     <br>
                     <img src="/static/images/professional_skills/github2.gif" width="200" alt="">
-                    <span class="d-block mt-3"> <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Enter the candidates' GitHub usernames here!</h6></span>
+                    <span class="d-block mt-3">
+                        <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Enter the
+                            candidates' GitHub usernames here!</h6>
+                    </span>
                     <div class="mx-5">
-    
-    
-                       <div class="input-group mb-3 mt-4">
 
-                        
-                        <form method="POST" action="/pf_home/compare_form/compare">
-                            <label for="current_username">Current User:</label>
-                            <input type="text" class="form-control" name="current_username" required><br>
-                            <label for="other_username">Other User:</label>
-                            <input type="text"  class="form-control" name="other_username" required><br>
-                            <input type="submit" class="btn btn-success" value="Compare">
-                        </form>
-                         
-                         
+
+                        <div class="input-group mb-3 mt-4">
+
+
+                            <form method="POST" action="/pf_home/compare_form/compare">
+                                <label for="current_username">Current User:</label>
+                                <input type="text" class="form-control" name="current_username" required><br>
+                                <label for="other_username">Other User:</label>
+                                <input type="text" class="form-control" name="other_username" required><br>
+                                <input type="submit" class="btn btn-success" value="Compare">
+                            </form>
+
+
                         </div>
-                
-    
+
+
                     </div>
-                    
+
                 </div>
-             
+
             </div>
-            
+
         </div>
 </body>
 <footer class="site-footer">
@@ -133,4 +136,5 @@
         </div>
     </div>
 </footer>
+
 </html>
