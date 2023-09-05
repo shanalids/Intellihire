@@ -65,13 +65,13 @@ def final_score():
     return render_template('final_score.html')
 
 
-@app.route('/')
-def home():
-    return render_template('home.html', textarea_content="", slider_values="")
-
 # @app.route('/')
 # def home():
-#     return render_template('new_home.html', textarea_content="", slider_values="")
+#     return render_template('home.html', textarea_content="", slider_values="")
+
+@app.route('/')
+def home():
+    return render_template('new_home.html', textarea_content="", slider_values="")
 
 
 # personality prediction - Maleesha - start
@@ -892,8 +892,6 @@ def calcFinalScore():
     #--------------------------------------------------------------------
     matching_percentages = [result['matching_percentage'] for result in cv_ranking]
     highest_matching_percentage = max(matching_percentages)
-
-    
 
     # Find the entry with the highest matching_percentage 
     entry_with_highest_percentage = max( cv_ranking, key=lambda x: x["matching_percentage"] ) 
