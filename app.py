@@ -76,15 +76,15 @@ from sklearn.preprocessing import OneHotEncoder
 app = Flask(__name__)
 app.secret_key = 'personality-prediction-2023'
 
-# test
-@app.route('/final_score')
-def final_score():
-    return render_template('final_score.html')
 
+# @app.route('/')
+# def home():
+#     return render_template('home.html', textarea_content="", slider_values="")
 
 @app.route('/')
 def home():
-    return render_template('home.html', textarea_content="", slider_values="")
+    return render_template('new_home.html', textarea_content="", slider_values="")
+
 
 
 # personality prediction - Maleesha - start
@@ -474,10 +474,10 @@ def plp():
     if request.method == 'POST':
         username = request.form.get('username')
         access_token = "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"
-
-        session['percentage_scores'] = percentage_scores
         
         percentage_scores = calculate_language_proficiency(username, access_token)
+        session['percentage_scores'] = percentage_scores
+
         pie_chart = generate_pie_chart(percentage_scores)
         
         return render_template('professional_skills/plp.html', username=username, percentage_scores=percentage_scores, pie_chart=pie_chart)
@@ -1101,8 +1101,8 @@ def extract_text():
         # Create a table with the skill areas, module titles, module descriptions, and weighted grades
         skill_area_table = module_titles_df[['Category', 'Module Title', 'Weighted Grade']]
 
-        # unique_categories = skill_area_table['Category'].unique()
-        # print(unique_categories)
+        unique_categories = skill_area_table['Category'].unique()
+        print(unique_categories)
 
         unique_categories = skill_area_table['Category'].unique()
 
@@ -2039,10 +2039,6 @@ def extract_text():
         if position_applied in job_title_to_skill_weights:
             # Get the skill weights for the specified job title
             skill_weights = job_title_to_skill_weights[position_applied]
-        # Check if the position_applied exists in the job_title_to_skill_weights dictionary
-        if position_applied in job_title_to_skill_weights:
-            # Get the skill weights for the specified job title
-            skill_weights = job_title_to_skill_weights[position_applied]
 
             # Initialize a variable to store the total score
             total_score = 0
@@ -2078,71 +2074,69 @@ def extract_text():
 
         return render_template('academic_transcript/AcaedmicTranscriptsResults.html', pie_chart=pie_chart_file, candidate_id=candidate_id, candidate_name=candidate_name,  position_applied=position_applied, ac_score=ac_score)
 
-            # Calculate the sum of all weighted grades for the categories
-            total_weighted_grade_sum = combined_category_totals['Weighted Grade'].sum()
+    return render_template('academic_transcript/AcaedmicTranscriptsIndex.html', error='Please upload a PDF file.')
 
 
 
 #Academic Transcript - Shanali - END -----------------------------------------------------------------------------------------------------------
 
-
-
-
-
 # Final score - START
+
+@app.route('/final_score')
+def final_score():
+    return render_template('final_score.html')
+
+
 @app.route('/calc_final_score', methods=['POST', 'GET'])
 def calcFinalScore():
-
-    # cv_ranking = session.get('ranking')
-
-    percentage_scores = session.get('percentage_scores')
-
-    # # Initialize an empty list to store the words
-    # plp_words = []
-    # # Loop through the keys of the dictionary
-    # for key in percentage_scores.keys():
-    #     # Split the key into words using whitespace as the delimiter
-    #     key_words = key.split()
-    #     # Extend the list of words with the words from the current key
-    #     plp_words.extend(key_words)
-    # #--------------------------------------------------------------------
-
-    #Academic transcript score
-    academic_transcript_score = session.get('ac_score')
-    
+# CV--------------------------------------------------------------------------------
+    cv_ranking = session.get('ranking')
     
     matching_percentages = [result['matching_percentage'] for result in cv_ranking]
     highest_matching_percentage = max(matching_percentages)
 
-    # # Find the entry with the highest matching_percentage 
-    # entry_with_highest_percentage = max( cv_ranking, key=lambda x: x["matching_percentage"] ) 
-    # #Get the skills from the entry with the highest matching_percentage 
-    # skills_with_highest_percentage = entry_with_highest_percentage.get("skills", [])
+    # Find the entry with the highest matching_percentage 
+    entry_with_highest_percentage = max( cv_ranking, key=lambda x: x["matching_percentage"] ) 
+    #Get the skills from the entry with the highest matching_percentage 
+    skills_with_highest_percentage = entry_with_highest_percentage.get("skills", [])
 
-    # # Convert the list to a set to get unique words
-    # unique_words = set(skills_with_highest_percentage)
+    # Convert the list to a set to get unique words
+    unique_words = set(skills_with_highest_percentage)
 
-    # # Convert the set back to a list if needed
-    # unique_words_list = list(unique_words)
+    # Convert the set back to a list if needed
+    unique_words_list = list(unique_words)
 
+# GITHUB-------------------------------------------------------------
+    percentage_scores = session.get('percentage_scores')
 
-    # #cv-gitHub technical skills validation-----------------------
-    # github_plp_set = set(plp_words)
-    # cv_plp_set = set(unique_words_list)
-    # # Find the common words
-    # common_words = github_plp_set.intersection(cv_plp_set)
+    # Initialize an empty list to store the words
+    plp_words = []
+    # Loop through the keys of the dictionary
+    for key in percentage_scores.keys():
+        # Split the key into words using whitespace as the delimiter
+        key_words = key.split()
+        # Extend the list of words with the words from the current key
+        plp_words.extend(key_words)
 
-    # # Calculate the percentage of common words
-    # percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
+    #cv-gitHub technical skills validation-----------------------
+    github_plp_set = set(plp_words)
+    cv_plp_set = set(unique_words_list)
+    # Find the common words
+    common_words = github_plp_set.intersection(cv_plp_set)
+
+    # Calculate the percentage of common words
+    percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
+
+# PERSONALITY-----------------------------------------------------------------------------------------
+
+    personality_score = session.get('personality_score')
+
+# ACADEMIC TRANSCRIPT---------------------------------------------------------------------------------
 
     # #Academic transcript score
     # academic_transcript_score = session.get('ac_score')
 
-    personality_score = session.get('personality_score')
-
-
-    # return render_template('final_score.html', entry_with_highest_percentage=entry_with_highest_percentage, personality_score=personality_score, percentage_common = percentage_common,  textarea_content="", slider_values="")
-    return render_template('final_score.html', personality_score=personality_score, textarea_content="", slider_values="")
+    return render_template('final_score.html', personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
 
 
 
