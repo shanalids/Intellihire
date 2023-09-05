@@ -1101,8 +1101,8 @@ def extract_text():
         # Create a table with the skill areas, module titles, module descriptions, and weighted grades
         skill_area_table = module_titles_df[['Category', 'Module Title', 'Weighted Grade']]
 
-        unique_categories = skill_area_table['Category'].unique()
-        print(unique_categories)
+        # unique_categories = skill_area_table['Category'].unique()
+        # print(unique_categories)
 
         unique_categories = skill_area_table['Category'].unique()
 
@@ -2039,6 +2039,10 @@ def extract_text():
         if position_applied in job_title_to_skill_weights:
             # Get the skill weights for the specified job title
             skill_weights = job_title_to_skill_weights[position_applied]
+        # Check if the position_applied exists in the job_title_to_skill_weights dictionary
+        if position_applied in job_title_to_skill_weights:
+            # Get the skill weights for the specified job title
+            skill_weights = job_title_to_skill_weights[position_applied]
 
             # Initialize a variable to store the total score
             total_score = 0
@@ -2066,9 +2070,6 @@ def extract_text():
             # Calculate the score as a percentage
             ac_score = (total_score / max_possible_score) * 100
 
-            # pass ac_score to the final score
-            session['ac_score'] = ac_score
-
             # Print or return the total score
             print("Total Score for", position_applied, ":", ac_score)
         else:
@@ -2077,9 +2078,16 @@ def extract_text():
 
         return render_template('academic_transcript/AcaedmicTranscriptsResults.html', pie_chart=pie_chart_file, candidate_id=candidate_id, candidate_name=candidate_name,  position_applied=position_applied, ac_score=ac_score)
 
-    return render_template('academic_transcript/AcaedmicTranscriptsIndex.html', error='Please upload a PDF file.')
+            # Calculate the sum of all weighted grades for the categories
+            total_weighted_grade_sum = combined_category_totals['Weighted Grade'].sum()
+
+
 
 #Academic Transcript - Shanali - END -----------------------------------------------------------------------------------------------------------
+
+
+
+
 
 # Final score - START
 @app.route('/calc_final_score', methods=['POST', 'GET'])
@@ -2098,6 +2106,10 @@ def calcFinalScore():
     #     # Extend the list of words with the words from the current key
     #     plp_words.extend(key_words)
     # #--------------------------------------------------------------------
+
+    #Academic transcript score
+    academic_transcript_score = session.get('ac_score')
+    
     
     matching_percentages = [result['matching_percentage'] for result in cv_ranking]
     highest_matching_percentage = max(matching_percentages)
