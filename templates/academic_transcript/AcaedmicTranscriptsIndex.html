@@ -203,12 +203,12 @@
             <img src="static/images/academic_transcript/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="/">Home</a>
+            <a href="#">Home</a>
             <a href="/ranking">CV Ranking</a>
             <a href="http://127.0.0.1:5000/AcademicTranscript">Academic Transcript</a>
             <a href="{{ url_for('pf_home') }}">Professional Skills</a>
             <a href="{{ url_for('personality_home') }}">Personality</a>
-        </div>
+          </div>
         <div class="navbar-menu-container">
             <span class="bars-icon" onclick="openMenu()">&#9776;</span>
         </div>
@@ -268,7 +268,62 @@
                             
                             <label style="font-family: 'Georgia', serif;" for="PositionApplied">Position Applied</label>
                             <br>
-                            <input type="text" id="PositionApplied" name="PositionApplied" required>
+                            <select id="PositionApplied" name="PositionApplied" required>
+                                    <option value="Software Engineer">Software Engineer</option>
+                                    <option value="Data Scientist">Data Scientist</option>
+                                    <option value="Data Engineer">Data Engineer</option>
+                                    <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                                    <option value="Data Analyst">Data Analyst</option>
+                                    <option value="Database Administrator">Database Administrator</option>
+                                    <option value="Project Manager">Project Manager</option>
+                                    <option value="Cyber Security Analyst">Cyber Security Analyst</option>
+                                    <option value="Network Engineer">Network Engineer</option> 
+                                    <option value="UI/UX Designer">UI/UX Designer</option>
+                                    <option value="Cyber Security Engineer">Cyber Security Engineer</option>
+                                    <option value="Cloud Engineer">Cloud Engineer</option>
+                                    <option value="Quality Assurance Engineer">Quality Assurance Engineer</option>
+                                    <option value="Cloud Security Engineer">Cloud Security Engineer</option>
+                                    <option value="IT Support Specialist">IT Support Specialist</option>
+                                    <option value="Business Analyst">Business Analyst</option>
+
+                                    <option value="Associate Software Engineer">Associate Software Engineer</option>
+                                    <option value="Associate Data Scientist">Associate Data Scientist</option>
+                                    <option value="Associate Data Engineer">Associate Data Engineer</option>
+                                    <option value="Associate Machine Learning Engineer">Associate Machine Learning Engineer</option>
+                                    <option value="Associate Data Analyst">Associate Data Analyst</option>
+                                    <option value="Associate Database Administrator">Associate Database Administrator</option>
+                                    <option value="Associate Project Manager">Associate Project Manager</option>
+                                    <option value="Associate Cyber Security Analyst">Associate Cyber Security Analyst</option>
+                                    <option value="Associate Network Engineer">Associate Network Engineer</option>
+                                    <option value="Associate UI/UX Designer">Associate UI/UX Designer</option>
+                                    <option value="Associate Cyber Security Engineer">Associate Cyber Security Engineer</option>
+                                    <option value="Associate Cloud Engineer">Associate Cloud Engineer</option>       
+                                    <option value="Associate Quality Assurance Engineer">Associate Quality Assurance Engineer</option>
+                                    <option value="Associate Cloud Security Engineer">Associate Cloud Security Engineer</option>
+                                    <option value="Associate IT Support Specialist">Associate IT Support Specialist</option>
+                                    <option value="Associate Business Analyst">Associate Business Analyst</option>
+                              
+
+
+                                    <option value="Intern Software Engineer">Intern Software Engineer</option>
+                                    <option value="Intern Data Scientist">Intern Data Scientist</option>
+                                    <option value="Intern Data Engineer">Intern Data Engineer</option>
+                                    <option value="Intern Machine Learning Engineer">Intern Machine Learning Engineer</option>
+                                    <option value="Intern Data Analyst">Intern Data Analyst</option>
+                                    <option value="Intern Database Administrator">Intern Database Administrator</option>                                   
+                                    <option value="Intern Project Manager">Intern Project Manager</option>
+                                    <option value="Intern Cyber Security Analyst">Intern Cyber Security Analyst</option>
+                                    <option value="Intern Network Engineer">Intern Network Engineer</option>
+                                    <option value="Intern UI/UX Designer">Intern UI/UX Designer</option>
+                                    <option value="Intern Cyber Security Engineer">Intern Cyber Security Engineer</option>
+                                    <option value="Intern Cloud Engineer">Intern Cloud Engineer</option>
+                                    <option value="Intern Quality Assurance Engineer">Intern Quality Assurance Engineer</option>
+                                    <option value="Intern Cloud Security Engineer">Intern Cloud Security Engineer</option>
+                                    <option value="Intern IT Support Specialist">Intern IT Support Specialist</option>
+                                    <option value="Intern Business Analyst">Intern Business Analyst</option>
+                                    
+
+                            </select>
         
                             <br><br>
                             
