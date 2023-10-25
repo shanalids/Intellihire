@@ -49,6 +49,7 @@ import backend.cv_analysis.file_new as dp
 from backend.cv_analysis.helper import *
 from sklearn.feature_extraction.text import CountVectorizer
 from collections import Counter
+from flask import jsonify
 
 
 # academic transcript imports
