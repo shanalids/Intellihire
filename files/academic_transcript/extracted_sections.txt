@@ -1,0 +1,44 @@
+Code Module Title Semester Period Credits Grade
+EC143 Data Communications & Computer Networks - I 1 Apr - 2016 4 B+
+EL120 English Language Skills - I 1 Apr - 2016 4 B+
+17100 Computer Fundamentals 1 Apr - 2016 4 A
+IT101 Introduction to Programming Environments (C++ / UNIX) 1 Apr - 2016 5 A+
+MA140 Mathematics for Information Technology 1 Apr - 2016 4 A-
+EL121 English Language Skills - I 2 Oct - 2016 3 A-
+1T102 Software Technology - I (Data Structures) 2 Oct - 2016 4 A+
+1T103 Database Management Systems - I 2 Oct - 2016 4 At
+17104 Internet Technology and Applications 2 Oct - 2016 4 A
+MA141 Foundations of Computer Science 2 Oct - 2016 4 A-
+
+Code Module Title Semester Period Credits Grade .
+CG200 Computer Graphics & Multimedia 1 Jun - 2017 4 B+
+IT200 Software Technology - II (OOP) 1 Jun - 2017 4 B+
+1T202 Database Management Systems - I 1 Jun - 2017 4 B+
+IT220 Software Engineering - I 1 Jun - 2017 4 B+
+MA220 Probability & Statistics 1 Jun - 2017 4 A
+EC244 Data Communications & Computer Networks - II 2 Nov - 2017 4 A
+17201 Systems Programming and Design 2 Nov - 2017 4 A
+7221 Software Engineering - II 2 Nov - 2017 4 B+
+IT222 Information Technology Project 2 Nov - 2017 4 A-
+1T240 Design and Analysis of Aigorithms 2 Nov - 2017 4 A
+
+Code Module Title Semester Period Credits Grade
+IT3050* Employability Skills Development - Seminar 1 Jun - 2018 1 B
+SE3010 Software Engineering Process & Quality Management 1 May - 2018 4 B
+SE3020 Distributed Systems 1 Jun - 2018 4 A
+SE3030 Software Architecture 1 Jun - 2018 4 A-
+SE3040 Application Frameworks 1 Jun - 2018 4 B+
+1T3110* Industry Placement 2 Jun - 2020 8 A
+SE3050 User Experience Engineering 2 Oct - 2018 3 B+
+SE3060 Database Systems 2 Oct - 2018 4 B+
+SE3070 Case Studies in Software Engineering 2 Oct - 2018 4 B-
+SE3080 Software Project Management 2 Oct - 2018 3 B-
+
+Code Module Title Semester Period Credits Grade
+1T4070* Preparation for the Professional World 1 Jun - 2019 2 A
+SE4010 Current Trends in Software Engineering 1 Jun - 2019 4 B+
+SE4060 Machine Learning 1 Jun - 2019 4 A-
+1T405 Comprehensive Design & Analysis Project 2 Oct - 2019 20 A
+SE4030 Secure Software Development 2 Oct - 2019 4 A
+SE4072 Deep Learning 2 Oct - 2019 4 A-
+

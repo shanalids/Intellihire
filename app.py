@@ -1190,6 +1190,18 @@ def extract_text():
                 'User Experience and Design': 3,
             },
 
+             'Data Engineer': {
+                'Programming and Software Development': 7,
+                'Data Science and Analytics': 10,
+                'Database Management': 9,
+                'Cloud Computing': 8,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 3,
+                'Artificial Intelligence and Machine Learning': 9,
+                'System Administration': 2,
+                'User Experience and Design': 4,
+            },
 
 
             'Machine Learning Engineer': {
@@ -2068,6 +2080,8 @@ def extract_text():
             # Calculate the score as a percentage
             ac_score = (total_score / max_possible_score) * 100
 
+            session['ac_score'] = ac_score
+
             # Print or return the total score
             print("Total Score for", position_applied, ":", ac_score)
         else:
@@ -2077,8 +2091,6 @@ def extract_text():
         return render_template('academic_transcript/AcaedmicTranscriptsResults.html', pie_chart=pie_chart_file, candidate_id=candidate_id, candidate_name=candidate_name,  position_applied=position_applied, ac_score=ac_score)
 
     return render_template('academic_transcript/AcaedmicTranscriptsIndex.html', error='Please upload a PDF file.')
-
-
 
 #Academic Transcript - Shanali - END -----------------------------------------------------------------------------------------------------------
 
@@ -2112,26 +2124,26 @@ def calcFinalScore():
     # Convert the set back to a list if needed
     unique_words_list = list(unique_words)
 
-# GITHUB-------------------------------------------------------------
-    percentage_scores = session.get('percentage_scores')
+# # GITHUB-------------------------------------------------------------
+#     percentage_scores = session.get('percentage_scores')
 
-    # Initialize an empty list to store the words
-    plp_words = []
-    # Loop through the keys of the dictionary
-    for key in percentage_scores.keys():
-        # Split the key into words using whitespace as the delimiter
-        key_words = key.split()
-        # Extend the list of words with the words from the current key
-        plp_words.extend(key_words)
+#     # Initialize an empty list to store the words
+#     plp_words = []
+#     # Loop through the keys of the dictionary
+#     for key in percentage_scores.keys():
+#         # Split the key into words using whitespace as the delimiter
+#         key_words = key.split()
+#         # Extend the list of words with the words from the current key
+#         plp_words.extend(key_words)
 
-    #cv-gitHub technical skills validation-----------------------
-    github_plp_set = set(plp_words)
-    cv_plp_set = set(unique_words_list)
-    # Find the common words
-    common_words = github_plp_set.intersection(cv_plp_set)
+#     #cv-gitHub technical skills validation-----------------------
+#     github_plp_set = set(plp_words)
+#     cv_plp_set = set(unique_words_list)
+#     # Find the common words
+#     common_words = github_plp_set.intersection(cv_plp_set)
 
-    # Calculate the percentage of common words
-    percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
+#     # Calculate the percentage of common words
+#     percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
 
 # PERSONALITY-----------------------------------------------------------------------------------------
 
@@ -2140,9 +2152,9 @@ def calcFinalScore():
 # ACADEMIC TRANSCRIPT---------------------------------------------------------------------------------
 
     # #Academic transcript score
-    # academic_transcript_score = session.get('ac_score')
+    ac_score= session.get('ac_score')
 
-    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
+    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, ac_score=ac_score, textarea_content="", slider_values="")
 
 if __name__ == '__main__':
     app.run(debug=True)
