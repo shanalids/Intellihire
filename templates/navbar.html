@@ -19,11 +19,12 @@
             <img src="static/images/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
         <div class="navbar-menu-container">
             <span class="bars-icon" onclick="openMenu()">&#9776;</span>

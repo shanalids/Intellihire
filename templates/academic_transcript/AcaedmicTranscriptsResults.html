@@ -88,8 +88,9 @@
         </div>
         <div class="navbar-links-container">
             <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
             <a href="/ranking">CV Ranking</a>
-            <a href="http://127.0.0.1:5000/AcademicTranscript">Academic Transcript</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
             <a href="{{ url_for('pf_home') }}">Professional Skills</a>
             <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
@@ -119,7 +120,7 @@
                                     <p style="font-family: 'Georgia', serif;"><strong>Candidate ID: {{ candidate_id }}</strong></p>
                                     <p style="font-family: 'Georgia', serif;"><strong>Candidate Name: {{ candidate_name }}</strong></p>
                                     <p style="font-family: 'Georgia', serif;"><strong>Position Applied: {{ position_applied }}</strong></p>
-                                    <p style="font-family: 'Georgia', serif;"><strong>Score: {{ ac_score|round(2) }}%<strong></strong></p>
+                                    <p style="font-family: 'Georgia', serif;"><strong>Score: {{ ac_score }}%<strong></strong></p>
                                 </div>
                             </div>
                             </div>
