@@ -895,8 +895,39 @@ def extract_skills_and_count_frequency(resume_text, skills_list):
     return skill_frequency
 
 
+#------------chatbot -START-----------------------------------------------
+
+
+
+@app.route('/bot')
+def chatbot():
+    
+    return render_template('CV_analysis/chatbot-home.html')
+
+
+@app.route('/get_bot_response', methods=['POST'])
+def get_bot_response():
+    user_message = request.json['message']
+
+    rasa_response = requests.post('http://localhost:5005/webhooks/rest/webhook', json={'message': user_message})
+    bot_response = rasa_response.json()[0]['text']
+
+    return jsonify({'bot_response': bot_response})
+
+
+@app.route('/download_pdf')
+def download_pdf():
+
+    pdf_filename = "chatbot/output.pdf"
+    return send_file(pdf_filename, as_attachment=True)
+
+
+#------------chatbot -END------------------------------------------------
+
+
 
 # CV Analysis - Manushi - END-----------------------------------------------------------------------------------------------------------------
+
 
 # Academic Transcript - Shanali - START -------------------------------------------------------------------------------------------------------
 
