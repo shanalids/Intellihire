@@ -1,22 +1,18 @@
-:* Code Se te Module Title Semester Period Credits Grade
-"163022. Applied Information Assurance 1 Oct - 2019 4 c
-1E3012 Introduction to Cyber Security 1 Jun - 2019 4 B-
-1E3032 Network Security 1 Jun - 2019 4 B+
-E3042 Secure Software Systems 1 Jul - 2019 4 B-
-IE3052 Information Security Risk Management 1 Jun - 2019 4 B
-TE3062 Data Security 2 Oct - 2019 4 A-
-1E3072 Information Security Policy and Management 2 Oct - 2019 4 C+
-E3082 Cryptography 2 Oct - 2019 4 A
-1E3092 Information Security Project 2 Oct - 2019 4 A-
-1E3102 Enterprise Standards for Information Secuirty 2 Oct - 2019 4 B-
-1T3110* Industry Placement 2 Oct - 2019 8 B-
+173031 Database Systems and Data-Driven Application 1 Jun - 2022 4 c
+173011 Theory and Practices in Statistical Modelling 1 Apr - 2021 4 B+
+173021 Data Warehousing and Business Intelligence - 1 Apr - 2021 4 B+
+1T3030 Programming Applications and Frameworks 1 Apr - 2021 4 A
+1T3050° Employability Skills Development - Seminar 1 Apr - 2021 1 Cc
+T3041 Information Retrieval and Web 2 Oct - 2021 4 B+
+173051 Fundamentals of Data Mining 2 Oct - 2021 4 B+
+173061 Massive Data Processing and Cloud 2 Oct - 2021 4 B-
+173071 Machine Learning and Optimization 2 Oct - 2021 4 B-
+1T3110* Industry Placement 2 Oct - 2021 8 Cc
 
-Ey “Code SE ES sda eae ee ee Semesters eo co pee tiecrads a
-Codes i Aci cutiatntiter capes Dec ata Module Title 8 Sette tiene sonmomMestetrs oo ats TP ENO” dst ase
-1E4012 Offensive Hacking Tactical and Strategic 1 Jun - 2020 4 A-
-E4042 Secure Software Engineering 1 Apr - 2020 4 B+
-1T4070* Preparation for the Professional World 1 Apr - 2020 2 A+
-E4032 Information Cyberwarfare 2 Oct - 2020 4 A-
-1E4072 Governance and Cyber Law Clinic 2 Oct - 2020 4 B
-174010 Research Project 2 Oct - 2020 16 A-
+174021 Internet of Things and Big Data Analytics 1 Jun - 2022 4 B-
+114031 Visual Analytics and User Experience Design 1 Jun - 2022 4 A-
+1T4070* Preparation for the Professional World 1 Jun - 2022 2 A
+T4010 Research Project 2 Dec - 2022 16 B+
+4011 Database Administration and Storage Systems 2 Nov - 2022 4 A-
+174041 Introduction to Information Security Analytics 2 Dec - 2022 4 A
 

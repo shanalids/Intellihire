@@ -1237,7 +1237,7 @@ def extract_text():
 
 
             'Machine Learning Engineer': {
-                'Programming and Software Development': 8,
+                'Programming and Software Development': 6,
                 'Data Science and Analytics': 8,
                 'Database Management': 3,
                 'Cloud Computing': 4,
@@ -1248,6 +1248,20 @@ def extract_text():
                 'System Administration': 2,
                 'User Experience and Design': 4,
             },
+
+            'Data Analyst': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 9,
+                'Database Management': 4,
+                'Cloud Computing': 2,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
             'Database Administrator': {
                 'Programming and Software Development': 3,
                 'Data Science and Analytics': 4,
@@ -1260,42 +1274,33 @@ def extract_text():
                 'System Administration': 7,
                 'User Experience and Design': 2,
             },
-            'Cloud Solutions Architect': {
-                'Programming and Software Development': 6,
-                'Data Science and Analytics': 3,
-                'Database Management': 4,
-                'Cloud Computing': 10,
-                'Project Management': 4,
-                'Cybersecurity': 3,
-                'IT Infrastructure and Networking': 7,
-                'Artificial Intelligence and Machine Learning': 5,
-                'System Administration': 4,
-                'User Experience and Design': 3,
-            },
+            
             'Project Manager': {
-                'Programming and Software Development': 3,
+                'Programming and Software Development': 7,
                 'Data Science and Analytics': 2,
                 'Database Management': 3,
                 'Cloud Computing': 4,
-                'Project Management': 9,
+                'Project Management': 10,
                 'Cybersecurity': 2,
                 'IT Infrastructure and Networking': 4,
                 'Artificial Intelligence and Machine Learning': 3,
                 'System Administration': 2,
                 'User Experience and Design': 3,
             },
-            'Cybersecurity Analyst': {
-                'Programming and Software Development': 3,
-                'Data Science and Analytics': 3,
+
+            'Cyber Security Analyst': {
+                'Programming and Software Development': 6,
+                'Data Science and Analytics': 7,
                 'Database Management': 2,
                 'Cloud Computing': 3,
                 'Project Management': 2,
-                'Cybersecurity': 9,
+                'Cybersecurity': 10,
                 'IT Infrastructure and Networking': 5,
-                'Artificial Intelligence and Machine Learning': 3,
+                'Artificial Intelligence and Machine Learning': 5,
                 'System Administration': 4,
                 'User Experience and Design': 2,
             },
+
             'Network Engineer': {
                 'Programming and Software Development': 2,
                 'Data Science and Analytics': 2,
@@ -1308,19 +1313,9 @@ def extract_text():
                 'System Administration': 6,
                 'User Experience and Design': 2,
             },
-            'AI Research Scientist': {
-                'Programming and Software Development': 7,
-                'Data Science and Analytics': 9,
-                'Database Management': 2,
-                'Cloud Computing': 4,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 3,
-                'Artificial Intelligence and Machine Learning': 10,
-                'System Administration': 2,
-                'User Experience and Design': 4,
-            },
-            'UX/UI Designer': {
+
+            
+            'UI/UX Designer': {
                 'Programming and Software Development': 2,
                 'Data Science and Analytics': 2,
                 'Database Management': 2,
@@ -1333,15 +1328,15 @@ def extract_text():
                 'User Experience and Design': 10,
             },
 
-            'Cybersecurity Engineer': {
-                'Programming and Software Development': 4,
+            'Cyber Security Engineer': {
+                'Programming and Software Development':7,
                 'Data Science and Analytics': 2,
                 'Database Management': 3,
                 'Cloud Computing': 3,
                 'Project Management': 2,
                 'Cybersecurity': 10,
                 'IT Infrastructure and Networking': 7,
-                'Artificial Intelligence and Machine Learning': 3,
+                'Artificial Intelligence and Machine Learning': 5,
                 'System Administration': 4,
                 'User Experience and Design': 2,
             },
@@ -1359,46 +1354,8 @@ def extract_text():
                 'User Experience and Design': 4,
             },
 
-            'Full Stack Developer': {
-                'Programming and Software Development': 10,
-                'Data Science and Analytics': 4,
-                'Database Management': 5,
-                'Cloud Computing': 4,
-                'Project Management': 4,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 3,
-                'Artificial Intelligence and Machine Learning': 5,
-                'System Administration': 3,
-                'User Experience and Design': 6,
-            },
-
-            'Front-end Developer': {
-                'Programming and Software Development': 9,
-                'Data Science and Analytics': 3,
-                'Database Management': 2,
-                'Cloud Computing': 2,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 3,
-                'System Administration': 2,
-                'User Experience and Design': 9,
-            },
-
-            'Back-end Developer': {
-                'Programming and Software Development': 9,
-                'Data Science and Analytics': 3,
-                'Database Management': 3,
-                'Cloud Computing': 2,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 2,
-                'System Administration': 2,
-                'User Experience and Design': 4,
-            },
-
-            'DevOps Engineer': {
+            
+            'Cloud Engineer': {
                 'Programming and Software Development': 5,
                 'Data Science and Analytics': 2,
                 'Database Management': 3,
@@ -1411,92 +1368,15 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'Data Analyst': {
-                'Programming and Software Development': 3,
-                'Data Science and Analytics': 9,
-                'Database Management': 4,
-                'Cloud Computing': 2,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 3,
-                'System Administration': 2,
-                'User Experience and Design': 2,
-            },
 
-            'Business Intelligence Analyst': {
-                'Programming and Software Development': 2,
-                'Data Science and Analytics': 9,
-                'Database Management': 4,
-                'Cloud Computing': 2,
-                'Project Management': 4,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 3,
-                'System Administration': 2,
-                'User Experience and Design': 2,
-            },
-
-            'Mobile App Developer': {
-                'Programming and Software Development': 8,
+            'Quality Assurance Engineer': {
+                'Programming and Software Development': 6,
                 'Data Science and Analytics': 2,
-                'Database Management': 2,
-                'Cloud Computing': 3,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 2,
-                'System Administration': 2,
-                'User Experience and Design': 8,
-            },
-
-            'Database Developer': {
-                'Programming and Software Development': 7,
-                'Data Science and Analytics': 3,
-                'Database Management': 8,
+                'Database Management': 5,
                 'Cloud Computing': 2,
                 'Project Management': 3,
                 'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 2,
-                'System Administration': 2,
-                'User Experience and Design': 2,
-            },
-
-            'Network Administrator': {
-                'Programming and Software Development': 2,
-                'Data Science and Analytics': 2,
-                'Database Management': 2,
-                'Cloud Computing': 2,
-                'Project Management': 2,
-                'Cybersecurity': 6,
-                'IT Infrastructure and Networking': 9,
-                'Artificial Intelligence and Machine Learning': 2,
-                'System Administration': 8,
-                'User Experience and Design': 2,
-            },
-
-            'Product Manager': {
-                'Programming and Software Development': 4,
-                'Data Science and Analytics': 3,
-                'Database Management': 2,
-                'Cloud Computing': 3,
-                'Project Management': 9,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 3,
-                'System Administration': 2,
-                'User Experience and Design': 3,
-            },
-
-            'QA Engineer': {
-                'Programming and Software Development': 3,
-                'Data Science and Analytics': 2,
-                'Database Management': 2,
-                'Cloud Computing': 2,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
+                'IT Infrastructure and Networking': 7,
                 'Artificial Intelligence and Machine Learning': 2,
                 'System Administration': 2,
                 'User Experience and Design': 2,
@@ -1506,7 +1386,7 @@ def extract_text():
                 'Programming and Software Development': 4,
                 'Data Science and Analytics': 2,
                 'Database Management': 2,
-                'Cloud Computing': 8,
+                'Cloud Computing': 10,
                 'Project Management': 3,
                 'Cybersecurity': 9,
                 'IT Infrastructure and Networking': 6,
@@ -1515,34 +1395,9 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'Data Engineer': {
-                'Programming and Software Development': 5,
-                'Data Science and Analytics': 8,
-                'Database Management': 8,
-                'Cloud Computing': 3,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 2,
-                'System Administration': 2,
-                'User Experience and Design': 2,
-            },
-
-            'Game Developer': {
-                'Programming and Software Development': 9,
-                'Data Science and Analytics': 2,
-                'Database Management': 2,
-                'Cloud Computing': 3,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 3,
-                'System Administration': 2,
-                'User Experience and Design': 8,
-            },
 
             'IT Support Specialist': {
-                'Programming and Software Development': 2,
+                'Programming and Software Development': 8,
                 'Data Science and Analytics': 2,
                 'Database Management': 2,
                 'Cloud Computing': 2,
@@ -1554,18 +1409,6 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'UI Designer': {
-                'Programming and Software Development': 2,
-                'Data Science and Analytics': 2,
-                'Database Management': 2,
-                'Cloud Computing': 2,
-                'Project Management': 2,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 3,
-                'System Administration': 2,
-                'User Experience and Design': 9,
-            },
 
             'Business Analyst': {
                 'Programming and Software Development': 3,
@@ -1580,18 +1423,32 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'Embedded Software Engineer': {
-                'Programming and Software Development': 9,
-                'Data Science and Analytics': 3,
-                'Database Management': 2,
-                'Cloud Computing': 2,
-                'Project Management': 2,
+            'Associate Software Engineer': {
+                'Programming and Software Development': 10,
+                'Data Science and Analytics': 4,
+                'Database Management': 3,
+                'Cloud Computing': 5,
+                'Project Management': 4,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 4,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 3,
+                'User Experience and Design': 4,
+            },
+
+            'Associate Data Scientist': {
+                'Programming and Software Development': 4,
+                'Data Science and Analytics': 7,
+                'Database Management': 3,
+                'Cloud Computing': 3,
+                'Project Management': 3,
                 'Cybersecurity': 2,
                 'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 2,
+                'Artificial Intelligence and Machine Learning': 7,
                 'System Administration': 2,
                 'User Experience and Design': 3,
             },
+
             'Associate Data Engineer': {
                 'Programming and Software Development': 6,
                 'Data Science and Analytics': 6,
@@ -1605,29 +1462,43 @@ def extract_text():
                 'User Experience and Design': 3,
             },
 
-            'Associate Software Engineer': {
-                'Programming and Software Development': 8,
-                'Data Science and Analytics': 4,
-                'Database Management': 3,
-                'Cloud Computing': 5,
-                'Project Management': 4,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 4,
-                'Artificial Intelligence and Machine Learning': 3,
-                'System Administration': 3,
-                'User Experience and Design': 4,
-            },
-
-            'Associate Data Analyst': {
-                'Programming and Software Development': 3,
-                'Data Science and Analytics': 7,
+            'Associate Machine Learning Engineer': {
+                'Programming and Software Development': 7,
+                'Data Science and Analytics': 8,
                 'Database Management': 4,
                 'Cloud Computing': 3,
                 'Project Management': 3,
                 'Cybersecurity': 2,
                 'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 3,
+                'Artificial Intelligence and Machine Learning': 10,
                 'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Associate Data Analyst': {
+                'Programming and Software Development': 6,
+                'Data Science and Analytics': 10,
+                'Database Management': 7,
+                'Cloud Computing': 3,
+                'Project Management': 3,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 5,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+
+            'Associate Database Administrator': {
+                'Programming and Software Development': 6,
+                'Data Science and Analytics': 3,
+                'Database Management': 10,
+                'Cloud Computing': 2,
+                'Project Management': 5,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 7,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 8,
                 'User Experience and Design': 2,
             },
 
@@ -1636,7 +1507,7 @@ def extract_text():
                 'Data Science and Analytics': 3,
                 'Database Management': 3,
                 'Cloud Computing': 4,
-                'Project Management': 8,
+                'Project Management': 10,
                 'Cybersecurity': 2,
                 'IT Infrastructure and Networking': 3,
                 'Artificial Intelligence and Machine Learning': 3,
@@ -1644,30 +1515,17 @@ def extract_text():
                 'User Experience and Design': 3,
             },
 
-            'Associate DevOps Engineer': {
-                'Programming and Software Development': 4,
-                'Data Science and Analytics': 2,
-                'Database Management': 3,
-                'Cloud Computing': 7,
-                'Project Management': 4,
-                'Cybersecurity': 3,
-                'IT Infrastructure and Networking': 8,
-                'Artificial Intelligence and Machine Learning': 3,
-                'System Administration': 7,
-                'User Experience and Design': 2,
-            },
-
-            'Associate Database Administrator': {
-                'Programming and Software Development': 2,
+            'Associate Cyber Security Analyst': {
+                'Programming and Software Development': 5,
                 'Data Science and Analytics': 3,
-                'Database Management': 8,
-                'Cloud Computing': 2,
+                'Database Management': 3,
+                'Cloud Computing': 4,
                 'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 6,
-                'Artificial Intelligence and Machine Learning': 2,
-                'System Administration': 7,
-                'User Experience and Design': 2,
+                'Cybersecurity': 10,
+                'IT Infrastructure and Networking': 3,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 2,
+                'User Experience and Design': 3,
             },
 
             'Associate Network Engineer': {
@@ -1683,20 +1541,47 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'Associate Product Manager': {
-                'Programming and Software Development': 3,
-                'Data Science and Analytics': 3,
-                'Database Management': 3,
-                'Cloud Computing': 4,
-                'Project Management': 7,
+            'Associate UI/UX Designer': {
+                'Programming and Software Development': 2,
+                'Data Science and Analytics': 2,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 3,
                 'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 3,
+                'IT Infrastructure and Networking': 2,
                 'Artificial Intelligence and Machine Learning': 3,
                 'System Administration': 2,
-                'User Experience and Design': 3,
+                'User Experience and Design': 10,
             },
 
-            'Associate QA Engineer': {
+            'Associate Cyber Security Engineer': {
+                'Programming and Software Development': 4,
+                'Data Science and Analytics': 8,
+                'Database Management': 6,
+                'Cloud Computing': 7,
+                'Project Management': 4,
+                'Cybersecurity': 10,
+                'IT Infrastructure and Networking': 8,
+                'Artificial Intelligence and Machine Learning': 6,
+                'System Administration': 7,
+                'User Experience and Design': 2,
+            },
+
+
+            'Associate Cloud Engineer': {
+                'Programming and Software Development': 4,
+                'Data Science and Analytics': 8,
+                'Database Management': 3,
+                'Cloud Computing': 10,
+                'Project Management': 4,
+                'Cybersecurity': 3,
+                'IT Infrastructure and Networking': 8,
+                'Artificial Intelligence and Machine Learning': 6,
+                'System Administration': 7,
+                'User Experience and Design': 2,
+            },
+
+            'Associate Quality Assurance Engineer': {
                 'Programming and Software Development': 3,
                 'Data Science and Analytics': 2,
                 'Database Management': 2,
@@ -1722,30 +1607,18 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'Associate Data Scientist': {
-                'Programming and Software Development': 4,
-                'Data Science and Analytics': 7,
-                'Database Management': 3,
-                'Cloud Computing': 3,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 7,
-                'System Administration': 2,
-                'User Experience and Design': 3,
-            },
 
-            'Associate UI/UX Designer': {
-                'Programming and Software Development': 2,
-                'Data Science and Analytics': 2,
-                'Database Management': 2,
-                'Cloud Computing': 2,
-                'Project Management': 3,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 3,
-                'System Administration': 2,
-                'User Experience and Design': 8,
+            'Associate IT Support Specialist': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 6,
+                'Database Management': 8,
+                'Cloud Computing': 3,
+                'Project Management': 4,
+                'Cybersecurity': 7,
+                'IT Infrastructure and Networking': 9,
+                'Artificial Intelligence and Machine Learning': 2,
+                'System Administration': 10,
+                'User Experience and Design': 6,
             },
 
             'Associate Business Analyst': {
@@ -1761,33 +1634,33 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'Associate Embedded Software Engineer': {
-                'Programming and Software Development': 7,
-                'Data Science and Analytics': 3,
-                'Database Management': 2,
-                'Cloud Computing': 2,
-                'Project Management': 2,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 2,
-                'System Administration': 2,
-                'User Experience and Design': 3,
-            },
-
             'Intern Data Analyst': {
                 'Programming and Software Development': 2,
-                'Data Science and Analytics': 5,
+                'Data Science and Analytics': 10,
                 'Database Management': 2,
                 'Cloud Computing': 2,
                 'Project Management': 2,
                 'Cybersecurity': 2,
                 'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 2,
+                'Artificial Intelligence and Machine Learning': 8,
                 'System Administration': 2,
                 'User Experience and Design': 2,
             },
 
-            'Intern Software Developer': {
+            'Intern Data Engineer': {
+                'Programming and Software Development': 6,
+                'Data Science and Analytics': 9,
+                'Database Management': 2,
+                'Cloud Computing': 8,
+                'Project Management': 2,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 2,
+                'Artificial Intelligence and Machine Learning': 8,
+                'System Administration': 2,
+                'User Experience and Design': 2,
+            },
+
+            'Intern Software Engineer': {
                 'Programming and Software Development': 6,
                 'Data Science and Analytics': 2,
                 'Database Management': 2,
@@ -1826,7 +1699,7 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'Intern DevOps Engineer': {
+            'Intern Cloud Engineer': {
                 'Programming and Software Development': 3,
                 'Data Science and Analytics': 2,
                 'Database Management': 2,
@@ -1865,20 +1738,8 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'Intern Product Manager': {
-                'Programming and Software Development': 2,
-                'Data Science and Analytics': 2,
-                'Database Management': 2,
-                'Cloud Computing': 3,
-                'Project Management': 5,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
-                'Artificial Intelligence and Machine Learning': 2,
-                'System Administration': 2,
-                'User Experience and Design': 2,
-            },
 
-            'Intern QA Engineer': {
+            'Intern Quality Assurance Engineer': {
                 'Programming and Software Development': 2,
                 'Data Science and Analytics': 2,
                 'Database Management': 2,
@@ -1917,6 +1778,19 @@ def extract_text():
                 'User Experience and Design': 6,
             },
 
+            'Intern IT Support Specialist': {
+                'Programming and Software Development': 7,
+                'Data Science and Analytics': 6,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 7,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 10,
+                'Artificial Intelligence and Machine Learning': 3,
+                'System Administration': 10,
+                'User Experience and Design': 6,
+            },
+
             'Intern Business Analyst': {
                 'Programming and Software Development': 2,
                 'Data Science and Analytics': 5,
@@ -1930,19 +1804,46 @@ def extract_text():
                 'User Experience and Design': 2,
             },
 
-            'Intern Embedded Software Engineer': {
-                'Programming and Software Development': 6,
-                'Data Science and Analytics': 2,
+            'Intern Cyber Security Analyst': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 8,
                 'Database Management': 2,
                 'Cloud Computing': 2,
-                'Project Management': 2,
-                'Cybersecurity': 2,
-                'IT Infrastructure and Networking': 2,
+                'Project Management': 4,
+                'Cybersecurity': 10,
+                'IT Infrastructure and Networking': 7,
                 'Artificial Intelligence and Machine Learning': 2,
-                'System Administration': 2,
-                'User Experience and Design': 3,
+                'System Administration': 9,
+                'User Experience and Design': 2,
             },
 
+            'Intern Cyber Security Engineer': {
+                'Programming and Software Development': 3,
+                'Data Science and Analytics': 5,
+                'Database Management': 4,
+                'Cloud Computing': 2,
+                'Project Management': 4,
+                'Cybersecurity': 10,
+                'IT Infrastructure and Networking': 6,
+                'Artificial Intelligence and Machine Learning': 5,
+                'System Administration': 8,
+                'User Experience and Design': 4,
+            },
+
+            'Intern Machine Learning Engineer': {
+                'Programming and Software Development': 7,
+                'Data Science and Analytics': 9,
+                'Database Management': 2,
+                'Cloud Computing': 2,
+                'Project Management': 4,
+                'Cybersecurity': 2,
+                'IT Infrastructure and Networking': 4,
+                'Artificial Intelligence and Machine Learning': 10,
+                'System Administration': 7,
+                'User Experience and Design': 2,
+            },
+
+            
                                 
         }
 
@@ -2110,7 +2011,11 @@ def extract_text():
             max_possible_score = 1000
 
             # Calculate the score as a percentage
-            ac_score = (total_score / max_possible_score) * 100
+            ac_score1 = (total_score / max_possible_score) * 100
+
+            # Round off ac_score to 2 decimal places
+            ac_score = round(ac_score1, 2)
+
 
             session['ac_score'] = ac_score
 
@@ -2186,7 +2091,12 @@ def calcFinalScore():
     # #Academic transcript score
     ac_score= session.get('ac_score')
 
+    #Without sandani's
     return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, ac_score=ac_score, textarea_content="", slider_values="")
+
+    #With sandani's , once the token issue is solved.
+    # return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, ac_score=ac_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
