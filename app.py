@@ -2098,4 +2098,4 @@ def calcFinalScore():
     # return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, ac_score=ac_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
