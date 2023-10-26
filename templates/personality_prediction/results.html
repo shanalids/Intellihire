@@ -21,9 +21,10 @@
             <img src="../../static/images/personality_prediction/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
             <a href="/ranking">CV Ranking</a>
-            <a href="{{ url_for('final_score') }}">Academic Transcript</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
             <a href="{{ url_for('pf_home') }}">Professional Skills</a>
             <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
@@ -68,7 +69,7 @@
                         </tr>
                 </div>
                 <tr>
-                    <th class="final-scores">Final Scores</th>
+                    <th class="final-scores">Candidate Scores</th>
                     <td class="final-scores">{{ opn_score }}</td>
                     <td class="final-scores">{{ csn_score }}</td>
                     <td class="final-scores">{{ ext_score }}</td>
@@ -178,10 +179,8 @@
     </div>
 
     <br /> <br />
-    <div class="radar-chart-container">
-        <h3 class="chart-title">Candidate vs Expected Personalities</h3>
-        <canvas id="radarChart" width="700" height="450"></canvas>
-    </div>
+    <h3 class="chart-title">Candidate vs Expected Personalities</h3>
+    <canvas id="radarChart" width="500" height="450"></canvas>
 
 
     <script>
@@ -266,7 +265,7 @@
 
     <br />
     </div>
-    <br /><br /><br />
+    <br />
     <footer class="site-footer">
         <div class="footer-container">
             <div class="row">

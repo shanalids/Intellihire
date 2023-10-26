@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Intellihire</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="/static/css/home/css/bootstrap.css" />
+
+  <!-- font awesome style -->
+  <link href="/static/css/home/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/home/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="/static/css/home/css/responsive.css" rel="stylesheet" />
+
+  <link href="/static/css/navbar.css" rel="stylesheet" />
+  <link href="/static/css/footer.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav>
+          <div class="nav-logo-container">
+              <img src="/static/images/professional_skills/Logo.png" alt="">
+          </div>
+          <div class="navbar-links-container">
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
+          </div>
+          <div class="navbar-menu-container">
+              <span class="bars-icon" onclick="openMenu()">&#9776;</span>
+          </div>
+          <div id="drawer" class="drawer">
+              <div class="drawer-content">
+                  <ul>
+                      <!-- Add your menu items dynamically using JavaScript -->
+                  </ul>
+                  <hr>
+              </div>
+          </div>
+      </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="/static/images/home/about-img.png" alt="">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1>
+                      Effortless Recruitment with Automation Excellence
+                    </h1>
+                    <p>Streamline your hiring process with our advanced recruitment automation software, optimizing efficiency and ensuring top talent acquisition
+                    
+                      </p>
+                    <div class="btn-box">
+                      <a href="" class="btn1">
+                        Get Started
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- service section -->
+  <section class="service_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Services
+        </h2>
+        <p>
+         Optimize the recruitment process efficiently.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="/static/images/home/s1.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                CV analysis
+               </h5>
+               <p>
+                 Evaluate candidates' resumes by matching them with the job description.
+               </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="/static/images/home/s2.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Academic Transcript Analysis
+              </h5>
+              <p>
+                Evaluate candidates' academic transcript and skills proficiency.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="/static/images/home/s3.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Professional Skills Analysis
+              </h5>
+              <p>
+                Evaluate candidates' professional skills proficiency.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box">
+            <div class="img-box">
+              <img src="/static/images/home/s4.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Personality Prediction
+              </h5>
+              <p>
+                Evaluate candidate personalities with precesion
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+       
+      </div>
+    </div>
+  </section>
+  <!-- end service section -->
+
+ 
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

@@ -21,11 +21,12 @@
             <img src="/static/images/professional_skills/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
         <div class="navbar-menu-container">
             <span class="bars-icon" onclick="openMenu()">&#9776;</span>
@@ -41,45 +42,45 @@
     </nav>
 
     <div class="row d-flex justify-content-center align-items-center rows">
-        
+
         <div class="col-md-6" class="text-center">
-    
-               
+
+
             <div class="card">
-    
-               
+
+
                 <div class="text-center">
-    
-                    
-                    
-                  
+
+
+
+
                     <div class="mx-5">
-    
-    
-                       <div class="input-group mb-3 mt-4">
-                        <br>
-                        {% if username %}
-                        <h3> Programming Language Proficiency for {{ username }}:</h3>
-                        <ul>
-                            {% for language, percentage in percentage_scores.items() %}
-                                <li>{{ language }}:  {{ "%.2f"|format(percentage) }}%</li>
-                            {% endfor %}
-                        </ul>
-                        <!-- <h3> Visualization:</h3> -->
-                        <img src="data:image/png;base64,{{ pie_chart }}" alt="Pie Chart">
-                    {% endif %}
-                    <br>
-                    <a href="/">Back to Calculator</a>
-                         
-                         
+
+
+                        <div class="input-group mb-3 mt-4">
+                            <br>
+                            {% if username %}
+                            <h3> Programming Language Proficiency for {{ username }}:</h3>
+                            <ul>
+                                {% for language, percentage in percentage_scores.items() %}
+                                <li>{{ language }}: {{ "%.2f"|format(percentage) }}%</li>
+                                {% endfor %}
+                            </ul>
+                            <!-- <h3> Visualization:</h3> -->
+                            <img src="data:image/png;base64,{{ pie_chart }}" alt="Pie Chart">
+                            {% endif %}
+                            <br>
+                            <a href="/">Back to Calculator</a>
+
+
                         </div>
-                       
+
                     </div>
-                    
+
                 </div>
-             
+
             </div>
-            
+
         </div>
 </body>
 <footer class="site-footer">
@@ -118,4 +119,5 @@
         </div>
     </div>
 </footer>
+
 </html>

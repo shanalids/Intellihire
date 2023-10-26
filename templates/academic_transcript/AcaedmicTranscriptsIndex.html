@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Academic Transcript Analysis</title>
+    <style>
+        
+        .tdbuttons {
+            width: 300px; /* Adjust the width as needed */
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        .container {
+            width: 50%;
+            margin-right: 30%;
+            padding: 20px;
+            background-color: #a8dcca;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            height:100%
+            
+        }
+        
+        body{
+            background-image: url('static/images/academic_transcript/20124662_6233047.jpg'); /* Replace 'your-image.jpg' with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            
+        }
+
+         body::before {
+            content: "";
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the last value (0.5) for transparency */
+            /* Other background properties go here, e.g., background-image for a gradient */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure it's behind the content */
+        } */
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: none;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        .button-container-submit {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-width: 100%;
+        }
+
+        .button-container-cancel{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-width: 100%;
+        }
+
+        .cancel-button {
+            background-color: #dc3545;
+        }
+
+        /* Adjust the button styles as needed */
+        button{
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+         }
+
+         .button-submit{
+            background-color: #091273;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            min-width: 50%
+         }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width:70%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .cancel-button {
+            background-color: #535151;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            min-width: 50%
+        }
+
+        .cancel-button:hover {
+            background-color: #aaa;
+        }
+
+        table{
+            margin-left: 20%; /* Add margin for spacing */
+       }
+
+       .card {
+            background-color: #dbdf61;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            align-items: baseline;
+           
+    
+           
+        }
+
+        /* Style for card images */
+        .card img {
+            max-width: 50%;
+            height: 40%;
+            align-self: center;
+        }
+
+        /* Style for card text */
+        .card-text {
+            font-size: 18px;
+            color: #333;
+            text-align:left;
+            margin-top: 10px;
+            font-family: 'Georgia', serif
+        }
+       
+        .tbbodyside{
+            border: 1;
+        }
+
+    </style>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navbar.css')}}">
+     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
+
+     <script>
+        function cancelAction() {
+            // Clear input fields
+            document.getElementById("candidateId").value = "";
+            document.getElementById("candidateName").value = "";
+            document.getElementById("PositionApplied").value = "";
+        
+            // Reset file input
+            var fileInput = document.getElementById("file");
+            fileInput.value = ""; // This will clear the selected file
+        }
+    </script>
+        
+</head>
+
+
+<body>
+    <nav>
+        <div class="nav-logo-container">
+            <img src="static/images/academic_transcript/Logo.png" alt="">
+        </div>
+        <div class="navbar-links-container">
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
+          </div>
+        <div class="navbar-menu-container">
+            <span class="bars-icon" onclick="openMenu()">&#9776;</span>
+        </div>
+        <div id="drawer" class="drawer">
+            <div class="drawer-content">
+                <ul>
+                    <!-- Add your menu items dynamically using JavaScript -->
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+   
+    <br><br>
+      <!-- Cards with images, text, and attractive sayings -->
+      <div>
+      <table style="margin-left: 1%; max-height: 40%;">
+
+        <tbody>
+            
+            <tr height=50%>
+                <td width=50% style="margin-left: 5%;">
+                    <div class="card">
+                        <h4 style="font-family: 'Georgia', serif; text-align: center"><b>Unlocking Potential: Harnessing the Power of Academic Transcripts for Better Recruitment</b></h4>
+                        <img src="static/images/academic_transcript/29006634_torapril43.jpg" alt="Image 2">
+                        <br>
+                        <p class="card-text">An academic transcript isn't just grades; it's a journey of growth, a testament to dedication, and a key to finding exceptional talent. It's our compass to candidates whose academic achievements reflect their commitment to excellence. Join us as we discover the brightest stars in our talent galaxy ⭐🎓✨</p>
+                    </div>
+
+                </td>
+                <th> </th>
+
+                <td style="margin-right: 50%;">
+                   
+        
+                    <div class="container">
+                        <form action="/extract" method="POST" enctype="multipart/form-data">
+                            <br>
+                           
+                            <h2 style="text-align: center; font-family: 'Georgia', serif;">Candidate Information</h2>
+                             <br>
+                     
+                                         
+                            <label style="font-family: 'Georgia', serif;"for="candidateId">Candidate ID</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br>
+                            <input type="text" id="candidateId" name="candidateId" class="large-text-box" required >
+        
+                            <br>
+                            
+                            <label style="font-family: 'Georgia', serif;" for="candidateName">Candidate Name</label>
+                            <br>
+                            <input type="text" id="candidateName" name="candidateName" required>
+        
+                            <br>
+                            
+                            <label style="font-family: 'Georgia', serif;" for="PositionApplied">Position Applied</label>
+                            <br>
+                            <select id="PositionApplied" name="PositionApplied" required>
+                                    <option value="Software Engineer">Software Engineer</option>
+                                    <option value="Data Scientist">Data Scientist</option>
+                                    <option value="Data Engineer">Data Engineer</option>
+                                    <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                                    <option value="Data Analyst">Data Analyst</option>
+                                    <option value="Database Administrator">Database Administrator</option>
+                                    <option value="Project Manager">Project Manager</option>
+                                    <option value="Cyber Security Analyst">Cyber Security Analyst</option>
+                                    <option value="Network Engineer">Network Engineer</option> 
+                                    <option value="UI/UX Designer">UI/UX Designer</option>
+                                    <option value="Cyber Security Engineer">Cyber Security Engineer</option>
+                                    <option value="Cloud Engineer">Cloud Engineer</option>
+                                    <option value="Quality Assurance Engineer">Quality Assurance Engineer</option>
+                                    <option value="Cloud Security Engineer">Cloud Security Engineer</option>
+                                    <option value="IT Support Specialist">IT Support Specialist</option>
+                                    <option value="Business Analyst">Business Analyst</option>
+
+                                    <option value="Associate Software Engineer">Associate Software Engineer</option>
+                                    <option value="Associate Data Scientist">Associate Data Scientist</option>
+                                    <option value="Associate Data Engineer">Associate Data Engineer</option>
+                                    <option value="Associate Machine Learning Engineer">Associate Machine Learning Engineer</option>
+                                    <option value="Associate Data Analyst">Associate Data Analyst</option>
+                                    <option value="Associate Database Administrator">Associate Database Administrator</option>
+                                    <option value="Associate Project Manager">Associate Project Manager</option>
+                                    <option value="Associate Cyber Security Analyst">Associate Cyber Security Analyst</option>
+                                    <option value="Associate Network Engineer">Associate Network Engineer</option>
+                                    <option value="Associate UI/UX Designer">Associate UI/UX Designer</option>
+                                    <option value="Associate Cyber Security Engineer">Associate Cyber Security Engineer</option>
+                                    <option value="Associate Cloud Engineer">Associate Cloud Engineer</option>       
+                                    <option value="Associate Quality Assurance Engineer">Associate Quality Assurance Engineer</option>
+                                    <option value="Associate Cloud Security Engineer">Associate Cloud Security Engineer</option>
+                                    <option value="Associate IT Support Specialist">Associate IT Support Specialist</option>
+                                    <option value="Associate Business Analyst">Associate Business Analyst</option>
+                              
+
+
+                                    <option value="Intern Software Engineer">Intern Software Engineer</option>
+                                    <option value="Intern Data Scientist">Intern Data Scientist</option>
+                                    <option value="Intern Data Engineer">Intern Data Engineer</option>
+                                    <option value="Intern Machine Learning Engineer">Intern Machine Learning Engineer</option>
+                                    <option value="Intern Data Analyst">Intern Data Analyst</option>
+                                    <option value="Intern Database Administrator">Intern Database Administrator</option>                                   
+                                    <option value="Intern Project Manager">Intern Project Manager</option>
+                                    <option value="Intern Cyber Security Analyst">Intern Cyber Security Analyst</option>
+                                    <option value="Intern Network Engineer">Intern Network Engineer</option>
+                                    <option value="Intern UI/UX Designer">Intern UI/UX Designer</option>
+                                    <option value="Intern Cyber Security Engineer">Intern Cyber Security Engineer</option>
+                                    <option value="Intern Cloud Engineer">Intern Cloud Engineer</option>
+                                    <option value="Intern Quality Assurance Engineer">Intern Quality Assurance Engineer</option>
+                                    <option value="Intern Cloud Security Engineer">Intern Cloud Security Engineer</option>
+                                    <option value="Intern IT Support Specialist">Intern IT Support Specialist</option>
+                                    <option value="Intern Business Analyst">Intern Business Analyst</option>
+                                    
+
+                            </select>
+        
+                            <br><br>
+                            
+                            <label style="font-family: 'Georgia', serif;" for="file">Upload Transcript PDF</label>
+                            <input type="file" name="file" accept=".pdf" required>
+                            <br><br>
+                            <table >
+        
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td class="tdbuttons">
+                                            <div class="button-container-submit">
+                                                <button style="font-family: 'Georgia', serif;" class="button-submit" type="submit">Analyze</button> 
+                                            </div>
+            
+                                        </td>
+                                        <th> </th>
+            
+                                        <td class="tdbuttons">
+                                            <div class="button-container-cancel">
+                                                <button style="font-family: 'Georgia', serif;" class="cancel-button" onclick="cancelAction()">Clear</button>
+                                            </div>
+                                            
+                                        </td>
+                                    </tr>
+                                
+                                </tbody>
+            
+                            </table>
+                                            <br>
+                                            
+                           
+        
+                        </form>
+                    </div>        
+
+                </td>
+            </tr>       
+        </tbody>
+
+    </table>
+</div>
+          
+    <br><br>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+</body>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h4 class="footer-about">About</h4>
+                <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire, we're
+                    dedicated to
+                    simplifying talent acquisition. Our initiative strives to empower HR professionals and recruiters of
+                    the future by offering innovative solutions. We specialize in transforming the hiring landscape
+                    through smart technology, AI-driven assessments, and seamless integrations. Join us to reshape the
+                    way you hire, embracing a future where hiring complexities are a thing of the past.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h4 class="quick-links">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                    <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                    <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="copyright-container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
+                    <a href="#">Intellihire</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
+
+

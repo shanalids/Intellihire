@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- <title>SpaCify</title> -->
+    <!-- <title>SpaCify</title> -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,19 +21,21 @@
     <link rel="stylesheet" type="text/css" href="/static/css/professional_skills/senti_style.css">
 
     <title>Sentiment Analysis</title>
-    
+
 </head>
+
 <body>
     <nav>
         <div class="nav-logo-container">
             <img src="/static/images/professional_skills/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
         <div class="navbar-menu-container">
             <span class="bars-icon" onclick="openMenu()">&#9776;</span>
@@ -46,38 +49,41 @@
             </div>
         </div>
     </nav>
-  
-    
+
+
     <div class="container">
         <div class="left">
             {% if column_names and row_content %}
-                <!-- Display column names as questions and row contents as answers -->
+            <!-- Display column names as questions and row contents as answers -->
 
-                <h2>Referee Feedback on candidate</h2>
+            <h2>Referee Feedback on candidate</h2>
+            <br>
+            <dl>
+                {% for index in range(column_names|length) %}
+                <dt>{{ index + 1 }}. {{ column_names[index] }}</dt>
+                <dd>
+                    <li>{{ row_content[index] }}</li>
+                </dd>
                 <br>
-                <dl>
-                    {% for index in range(column_names|length) %}
-                    <dt>{{ index + 1 }}. {{ column_names[index] }}</dt>
-                        <dd><li>{{ row_content[index] }}</li></dd>
-                        <br>
-                    {% endfor %}
-                </dl>
+                {% endfor %}
+            </dl>
             {% endif %}
         </div>
-        
+
         <div class="right">
             {% if plot_data %}
-                <!-- Display sentiment analysis plot -->
-                <img src="data:image/png;base64,{{ plot_data }}" alt="Sentiment Analysis Plot" class="plot">
+            <!-- Display sentiment analysis plot -->
+            <img src="data:image/png;base64,{{ plot_data }}" alt="Sentiment Analysis Plot" class="plot">
             {% endif %}
         </div>
     </div>
-    
+
     <!-- <form action="/" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept=".csv">
         <button type="submit">Upload and Analyze CSV</button>
     </form> -->
     <a href="/" style="color: #007bff; text-decoration: none;">Back to Analysis</a>
+    <p>{{ text}}</p>
 </body>
 <footer class="site-footer">
     <div class="footer-container">
@@ -115,4 +121,5 @@
         </div>
     </div>
 </footer>
+
 </html>

@@ -18,9 +18,10 @@
             <img src="../../static/images/cv_analysis/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
             <a href="/ranking">CV Ranking</a>
-            <a href="{{ url_for('final_score') }}">Academic Transcript</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
             <a href="{{ url_for('pf_home') }}">Professional Skills</a>
             <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
@@ -73,6 +74,8 @@
                             {% endfor %}
                         </tbody>
                     </table>
+                    <button id="calcFinalScore" class="btn btn-lg btn-white" type="submit"> <a href="/final_score">Final
+                            Score>></a></button>
                 </div>
             </div>
         </div>

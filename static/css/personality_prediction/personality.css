@@ -348,7 +348,7 @@ input[type='range']::-moz-range-thumb:hover {
     width: 120px;
     transition: all 0.5s;
     cursor: pointer;
-    margin-left: 580px;
+    margin-left: 640px;
     margin-bottom: 20px;
 }
 
@@ -415,14 +415,14 @@ input[type='range']::-moz-range-thumb:hover {
 }
 
 #requirement-form {
-    max-width: 100%;
+    max-width: 42%;
     font-family: Arial, Helvetica, sans-serif;
     padding: 50px;
     background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 17px;
-    margin-left: 180px;
+    margin-left: 420px;
 }
 
 .form-content {
@@ -508,6 +508,7 @@ textarea {
     width: 60%;
     margin-left: 310px;
     border-radius: 25px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -519,6 +520,7 @@ textarea {
     justify-content: center;
     align-items: center;
     height: 100%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .cluster-prediction-image img {
@@ -729,10 +731,11 @@ body.requirement-body {
     width: 100%;
     margin-left: 40px;
     padding: 25px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .chart-title {
-    margin-left: 220px;
+    margin-left: 510px;
     color: #046A38;
     font-weight: 700;
 }
@@ -742,4 +745,24 @@ body.requirement-body {
     height: 40px;
     padding: 0;
     font-size: 17px;
+}
+
+.title-expected {
+    color: #046A38;
+    margin-left: 420px;
+    font-weight: bold;
+}
+
+.req-text {
+    margin-left: 25px;
+}
+
+#file-name-display {
+    font-size: 16x;
+}
+
+.title-responses {
+    color: #046A38;
+    margin-left: 560px;
+    font-weight: bold;
 }

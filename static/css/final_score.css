@@ -1,0 +1,27 @@
+#viewFinalScoreBtn {
+    margin-left: 650px;
+}
+
+.final-score-text {
+    font-size: 20px;
+}
+
+.final-score-container {
+    margin-left: 100px;
+    background-color: white;
+    width: 700px;
+    height: 400px;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.final-image {
+    width: 500px;
+    height: auto;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+.final-score-body {
+    background-color: #61C2A2;
+}

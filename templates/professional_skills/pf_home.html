@@ -31,11 +31,16 @@
 
     <link rel="stylesheet" type="text/css" href="../../static/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../../static/css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../../static/fonts/professional_skills/glyphicons-halflings-regular.eot">
-    <link rel="stylesheet" type="text/css" href="../../static/fonts/professional_skills/glyphicons-halflings-regular.ttf">
-    <link rel="stylesheet" type="text/css" href="../../static/fonts/professional_skills/glyphicons-halflings-regular.woff">
-    <link rel="stylesheet" type="text/css" href="../../static/fonts/professional_skills/glyphicons-halflings-regular.woff2">
-    <link rel="stylesheet" type="text/css" href="../../static/fonts/professional_skills/glyphicons-halflings-regular.svg">
+    <link rel="stylesheet" type="text/css"
+        href="../../static/fonts/professional_skills/glyphicons-halflings-regular.eot">
+    <link rel="stylesheet" type="text/css"
+        href="../../static/fonts/professional_skills/glyphicons-halflings-regular.ttf">
+    <link rel="stylesheet" type="text/css"
+        href="../../static/fonts/professional_skills/glyphicons-halflings-regular.woff">
+    <link rel="stylesheet" type="text/css"
+        href="../../static/fonts/professional_skills/glyphicons-halflings-regular.woff2">
+    <link rel="stylesheet" type="text/css"
+        href="../../static/fonts/professional_skills/glyphicons-halflings-regular.svg">
 
 </head>
 
@@ -45,11 +50,12 @@
             <img src="../../static/images/professional_skills/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
         <div class="navbar-menu-container">
             <span class="bars-icon" onclick="openMenu()">&#9776;</span>
@@ -85,8 +91,7 @@
                     <div class="item">
                         <h2>SkillSage:LinkedIn Alchemist</h2>
                         <p>Classify job category through LinkedIn skills based analyzer</p>
-                        <p><a class="btn btn-primary"
-                                href="pf_home/job_cat_form">Predict</a></p>
+                        <p><a class="btn btn-primary" href="pf_home/job_cat_form">Predict</a></p>
                     </div>
                     <div class="item">
                         <h2>PastPort</h2>

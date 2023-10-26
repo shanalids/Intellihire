@@ -1,0 +1,60 @@
+YEAR 1
+Code Module Title Semester Pericd Credits Grose:
+171010 Introductiois to Programming | 1 Jun - 2017 4 | A
+T1020 Introduction to Computer Systems 1 Jun - 2017 4 A
+71030 Mathematics for Computing 1 Jun - 2017 4 A-
+71040 Communication Skills 1 Jun - 2017 3 A
+T1050 Object Oriented Concepts 2 Nov - 2017 2 A
+T1060 Scftware Process Modeling 2 Nov - 2017 3 A-
+T1970 Provability & Statistics 2 Nov - 2017 2 A-
+T7080 English for Academic Purposes 2 Nov - 2017 3 B+
+T1090 Information Systems & Data Modeling 2 Nov - 2017 4 A-
+T1100 Internet & Web Technologies 2 Nov - 2017 4 A
+Year 1 Credits=34.00 Year 1 Grade Points=129.70 Year 1 GPA=3.81- — ~
+STATUS: Completed YEAR 1
+Dean's List Recognition 1st Semester and 2nd Semester
+YEAR 2 ;
+Core = Module Title sie Semester aia Period Credits ‘Grave
+172520 Software Engineering 1 May - 2018 4 A
+2030 Object Oriented Programming 1 Jun - 2018 4 A
+T2040 Database Management Systems 1 Jun - 2016 4 Ky
+$3206) Operating Systems and System Administration i Jun - 2018 4 A-
+T2910 Mobile Application Nevelopment 2 Oct - 2018 4 A
+72959 Computer Networks 7 Oct - 2018 4 us
+172076 Lata Structures & Algovithms é Oct - 201& 4 A
+112026 ST Project 2 Oct - 2618 4 A
+2090 Professional Skills 2 Oct - 201% 2 b+
+1%2100° Employability Skills Development - Seminar 2 Oct: 2088 NonCrecs At
+|
+Year 2 Credits=34.90 Year 2 Grade Points=129.40 Year 2 GPAs3.G1
+IT2102°- Non GPA lhodule
+STATUS: Completed YEAR 2
+$$ Danan’ dist Recognition 1st Semesver and 2ud Semester 0
+Sie” YEAR 3
+a code Module Title Semester Period Credits Grade
+7 173050* Employability Skills Development - Seminar 1 Jun - 2019 1 A
+SE3010 Software Engineering Process & Quality Management 1 Jun - 2019 4 A-
+SE3020 Distributed Systems 1 Jun - 2019 4 A
+SE3030 Software Architecture 1 Jun - 2019 4 B+
+SE3040 Application Frameworks 1 Jun - 2019 4 B+
+1T3110* Industry Placement 2 Oct - 2019 8 A-
+SE3050 User Experience Engineering 2 Oct - 2019 3 A-
+SE3060 Database Systems 2 Oct - 2019 4 C+
+SE3070 Case Studies in Software Engineering 2 Oct - 2019 4 C+
+SE3080 Software Project Management 2 Oct - 2019 3 B+
+Year 3 Credits=30.00 Year 3 Grade Points=96.60 Year 3 GPA=3.22
+1T3710, 1T3050° - Non GPA Module
+STATUS: Completed YEAR 3
+YEAR 4
+Code | Module Title Semester Period Credits Grade
+1T4060 Machine Learning 1 Apr - 2020 4 A-
+114070* Preparation for the Professional World 1 Apr - 2020 2 A
+SE4010 Current Trends in Software Engineering 1 Jun - 2020 4 A-
+1T4010 Research Project 2 Oct - 2020 16 A
+SE4030 Secure Software Development 2 Oct - 2020 4 A
+S£4050 Deep Learning 2 Oct - 2020 4 A
+Year 4 Credits=32.00 Year 4 Grade Points=125.60 Year 4 GPA=3.93
+114070° - Non GPA Module
+STATUS: Completed YEAR 4
+Dean's List Recognition 1st Semester and 2nd Semester
+CamScanner

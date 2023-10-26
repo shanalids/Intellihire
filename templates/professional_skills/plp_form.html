@@ -21,17 +21,18 @@
 
 </head>
 
-<body  background="/static/images/professional_skills/LinkedIn_bg.jpg">
+<body background="/static/images/professional_skills/LinkedIn_bg.jpg">
     <nav>
         <div class="nav-logo-container">
             <img src="/static/images/professional_skills/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
         <div class="navbar-menu-container">
             <span class="bars-icon" onclick="openMenu()">&#9776;</span>
@@ -45,36 +46,41 @@
             </div>
         </div>
     </nav>
-   
+
     <div class="row d-flex justify-content-center align-items-center rows">
-        
+
         <div class="col-md-6" class="text-center">
-    
-               
+
+
             <div class="card">
-    
-               
+
+
                 <div class="text-center">
-    
+
                     <h2>Github Language Proficiency</h2>
                     <br>
                     <img src="/static/images/professional_skills/github.gif" width="200" alt="">
-                    <span class="d-block mt-3"> <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Enter the candidate GitHub username here!</h6></span>
-    
+                    <span class="d-block mt-3">
+                        <h6 style="font-family:verdana;" style="font-size:160%;" style="color:black;">Enter the
+                            candidate GitHub username here!</h6>
+                    </span>
+
                     <div class="mx-5">
-    
+
                         <form method="POST" action="/pf_home/plp_form/plp">
-                       <div class="input-group mb-3 mt-4">
-                       
-                            <input type="text" class="form-control" placeholder="Enter username" id="username" name="username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group mb-3 mt-4">
+
+                                <input type="text" class="form-control" placeholder="Enter username" id="username"
+                                    name="username" aria-label="Recipient's username" aria-describedby="button-addon2">
                                 <br>
-                       <button class="btn btn-success border-rad" type="submit" id="button-addon2">Calculate</button>  
-                       </div>
+                                <button class="btn btn-success border-rad" type="submit"
+                                    id="button-addon2">Calculate</button>
+                            </div>
                         </form>
-                         
-                         
-                        </div>
-                        <!-- <br>
+
+
+                    </div>
+                    <!-- <br>
                         {% if username %}
                         <h3> Programming Language Proficiency for {{ username }}:</h3>
                         <ul>
@@ -85,14 +91,14 @@
                         <h3> Visualization:</h3>
                         <img src="data:image/png;base64,{{ pie_chart }}" alt="Pie Chart">
                     {% endif %} -->
-    
-                    </div>
-                    
+
                 </div>
-             
+
             </div>
-            
+
         </div>
+
+    </div>
 </body>
 <footer class="site-footer">
     <div class="footer-container">
@@ -130,4 +136,5 @@
         </div>
     </div>
 </footer>
+
 </html>
