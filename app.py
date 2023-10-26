@@ -849,28 +849,42 @@ def ranking():
             session['matching_results'] = matching_results
 
             # Rank matching results and render the template
+            
             ranking = sorted(matching_results, key=lambda x: x["matching_percentage"], reverse=True)
 
             session['ranking'] = ranking
-
-            return render_template('cv_analysis/results.html', ranking=ranking)
+            return redirect(url_for('results'))
+            # return render_template('cv_analysis/results.html', ranking=ranking)
 
     return render_template('cv_analysis/index.html', ranking=[])
 
+# Route for displaying results
+@app.route('/results')
+def results():
+    # Retrieve the matching results and ranking from the session
+    # matching_results = session.get('matching_results', [])
+    ranking = session.get('ranking', [])
+
+    # You can perform additional processing or formatting of data if needed
+
+    # return render_template('cv_analysis/results.html', ranking=ranking, matching_results=matching_results)
+    return render_template('cv_analysis/results.html', ranking=ranking)
 
 @app.route('/profile/<int:pdf_index>')
 def view_profile(pdf_index):
     if 'matching_results' in session:
-        matching_results = session['matching_results']
+        matching_results = session['ranking']
         
         
         # Check if the selected PDF index is within the valid range
         if pdf_index >= 0 and pdf_index < len(matching_results):
             selected_profile = matching_results[pdf_index]
+            
             return render_template('CV_analysis/profile.html', profile=selected_profile)
-    
+            
     # Handle the case when the PDF index is invalid or matching results are not available
     return "Profile not found", 404
+    
 
 def extract_skills(resume_text, skills_list):
     # Create a regex pattern to match skills (case-insensitive)
