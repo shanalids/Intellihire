@@ -51,12 +51,16 @@
                     <p class="final-score-text">CV Match: <b> {{ highest_matching_percentage }}</b>%</p>
                     <p class="final-score-text">Personality Match: <b> {{ personality_score }}</b>%</p>
                     <p class="final-score-text">Academic Transcript Match: <b>{{ ac_score }}</b>%</p>
+                    <p class="final-score-text">Predicted Job Category: <b>{{ predicted_category }}</b>%</p>
+                    <p class="final-score-text">Reference Positive Sentiment: <b>{{ positive_percentage }}</b>%</p>
                     <!-- <p class="final-score-text">Skills commonly found in CVs and GitHub profile: <b>{{ common_words}}</b></p>
                     <p class="final-score-text">Overlap in skills between a CV and GitHub profile:
                         <b>{{
                             percentage_common
                             }}%</b>
-                    </p> -->
+                    </p>
+                    <!-- LinkedIn Predicted JobCat -->
+                    <!-- Recomendation letter sentiment analysis score -->
 
                     <button id="downloadPDFBtn" class="btn btn-lg btn-primary" onclick="downloadPDF('{{ cand_name }}', '{{ jobrole }}', '{{ highest_matching_percentage }}', '{{ personality_score }}', '{{ ac_score }}')">Download as PDF</button>
                 </div>
@@ -70,6 +74,7 @@
 
         </div>
     </div>
+
 
     <br />
     <footer class="site-footer">

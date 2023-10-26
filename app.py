@@ -416,7 +416,7 @@ def pf_home():
 
 def calculate_language_proficiency(username, access_token):
     # Authenticate with GitHub
-    access_token = "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"
+    access_token = "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"
     g = Github(access_token)
     user = g.get_user(username)
     
@@ -476,7 +476,7 @@ def plp_form():
 def plp():
     if request.method == 'POST':
         username = request.form.get('username')
-        access_token = "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"
+        access_token = "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"
         
         percentage_scores = calculate_language_proficiency(username, access_token)
         session['percentage_scores'] = percentage_scores
@@ -490,7 +490,7 @@ def plp():
 #----------------git-compare---------------------------
 def get_language_proficiency(username):
     # Authenticate with GitHub
-    access_token = "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"
+    access_token = "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"
     g = Github(access_token)
     user = g.get_user(username)
     
@@ -611,6 +611,9 @@ def job_cat():
         if skills:
             #predicted_category = model.predict([skills])  #model takes a list of skills
             predicted_category = link_model.predict(fitted_vectorizer.transform(skills))
+
+            session['predicted_category'] = predicted_category
+
             result = f"Predicted Job Category: {predicted_category[0]}"
     return render_template('professional_skills/job_cat_form.html', result=result)
 
@@ -641,6 +644,12 @@ def analyze_sentiment_and_visualize(row):
         else:
             sentiment_distribution[2] += 1
 
+    # Calculate positive percentage
+    positive_percentage = (sentiment_distribution[0] / sum(sentiment_distribution)) * 100
+
+    # Store positive percentage in the session
+    session['positive_percentage'] = positive_percentage
+
     # Create a single pie chart for sentiment distribution
     colors = ['blue', 'red', 'green']
     plt.figure()
@@ -659,12 +668,12 @@ def analyze_sentiment_and_visualize(row):
     return plot_data
 
 @app.route('/pf_home/sentiment')
-def index1():
+def senti1():
     return render_template('professional_skills/sentiment.html')
 
 
 @app.route('/pf_home/sentiment/sentiment_results', methods=['GET', 'POST'])
-def index2():
+def senti2():
     plot_data = None
     column_names = None
     row_content = None
@@ -709,7 +718,7 @@ def extract_strengths(text):
 
 
 @app.route('/pf_home/sentiment/sentiment_results', methods=['GET', 'POST'])
-def index3():
+def senti3():
     plot_data = None
     if request.method == 'POST':
         # Get uploaded file
@@ -849,28 +858,42 @@ def ranking():
             session['matching_results'] = matching_results
 
             # Rank matching results and render the template
+            
             ranking = sorted(matching_results, key=lambda x: x["matching_percentage"], reverse=True)
 
             session['ranking'] = ranking
-
-            return render_template('cv_analysis/results.html', ranking=ranking)
+            return redirect(url_for('results'))
+            # return render_template('cv_analysis/results.html', ranking=ranking)
 
     return render_template('cv_analysis/index.html', ranking=[])
 
+# Route for displaying results
+@app.route('/results')
+def results():
+    # Retrieve the matching results and ranking from the session
+    # matching_results = session.get('matching_results', [])
+    ranking = session.get('ranking', [])
+
+    # You can perform additional processing or formatting of data if needed
+
+    # return render_template('cv_analysis/results.html', ranking=ranking, matching_results=matching_results)
+    return render_template('cv_analysis/results.html', ranking=ranking)
 
 @app.route('/profile/<int:pdf_index>')
 def view_profile(pdf_index):
     if 'matching_results' in session:
-        matching_results = session['matching_results']
+        matching_results = session['ranking']
         
         
         # Check if the selected PDF index is within the valid range
         if pdf_index >= 0 and pdf_index < len(matching_results):
             selected_profile = matching_results[pdf_index]
+            
             return render_template('CV_analysis/profile.html', profile=selected_profile)
-    
+            
     # Handle the case when the PDF index is invalid or matching results are not available
     return "Profile not found", 404
+    
 
 def extract_skills(resume_text, skills_list):
     # Create a regex pattern to match skills (case-insensitive)
@@ -2061,27 +2084,31 @@ def calcFinalScore():
     # Convert the set back to a list if needed
     unique_words_list = list(unique_words)
 
-# # GITHUB-------------------------------------------------------------
-#     percentage_scores = session.get('percentage_scores')
+# GITHUB-------------------------------------------------------------
+    percentage_scores = session.get('percentage_scores')
 
-#     # Initialize an empty list to store the words
-#     plp_words = []
-#     # Loop through the keys of the dictionary
-#     for key in percentage_scores.keys():
-#         # Split the key into words using whitespace as the delimiter
-#         key_words = key.split()
-#         # Extend the list of words with the words from the current key
-#         plp_words.extend(key_words)
+    # Initialize an empty list to store the words
+    plp_words = []
+    # Loop through the keys of the dictionary
+    for key in percentage_scores.keys():
+        # Split the key into words using whitespace as the delimiter
+        key_words = key.split()
+        # Extend the list of words with the words from the current key
+        plp_words.extend(key_words)
 
-#     #cv-gitHub technical skills validation-----------------------
-#     github_plp_set = set(plp_words)
-#     cv_plp_set = set(unique_words_list)
-#     # Find the common words
-#     common_words = github_plp_set.intersection(cv_plp_set)
+    #cv-gitHub technical skills validation-----------------------
+    github_plp_set = set(plp_words)
+    cv_plp_set = set(unique_words_list)
+    # Find the common words
+    common_words = github_plp_set.intersection(cv_plp_set)
 
-#     # Calculate the percentage of common words
-#     percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
+    # Calculate the percentage of common words
+    percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
 
+#LinkedIn Predicted Job Category-------------------------------------------
+    predicted_category = session.get('predicted_category')
+#Recommendation Positive sentiment-----------------------------------------
+    positive_percentage = session.get('positive_percentage')
 # PERSONALITY-----------------------------------------------------------------------------------------
 
     personality_score = session.get('personality_score')
@@ -2091,12 +2118,11 @@ def calcFinalScore():
     # #Academic transcript score
     ac_score= session.get('ac_score')
 
-    #Without sandani's
-    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, ac_score=ac_score, textarea_content="", slider_values="")
+    # #Without sandani's
+    # return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, ac_score=ac_score, textarea_content="", slider_values="")
 
-    #With sandani's , once the token issue is solved.
-    # return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, ac_score=ac_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
-
+    # With sandani's , once the token issue is solved.
+    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, ac_score=ac_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
 
 if __name__ == '__main__':
     app.run(debug=True)

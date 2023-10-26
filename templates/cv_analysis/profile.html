@@ -41,6 +41,11 @@
 
   <div class="content-wrapper">
     <div class="main">
+      <div class="card-match">
+        
+        <h1> Matching Percentage -  {{ profile.matching_percentage}}%</h1>
+       
+      </div>
       <ul class="cards">
         <li class="cards_item">
           <div class="card">
@@ -52,12 +57,12 @@
               <h2 class="card_title">Matching Keywords</h2>
               <div class="card_text">
                 <div>
-
+                  
                   {% for keyword in profile.matching_keywords %}
                   <span class="badge bg-success"><span class="tick">✔</span>{{ keyword }}</span>
                   {% endfor %}
 
-
+                 
                 </div>
                 <hr />
               </div>
@@ -112,9 +117,14 @@
           </div>
         </li>
       </ul>
+      
     </div>
   </div>
-
+  <div class="text-center mt-4">
+    <button id="next-btn" class="btn btn-success"><a href="/final_score" style="text-decoration: none; color: white;">NEXT >></a></button>
+</div>
+<button id="calcFinalScore" class="btn btn-lg btn-white" type="submit"> <a href="/final_score">Final
+  Score>></a></button>
 
 </body>
 
