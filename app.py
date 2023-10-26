@@ -852,11 +852,21 @@ def ranking():
             ranking = sorted(matching_results, key=lambda x: x["matching_percentage"], reverse=True)
 
             session['ranking'] = ranking
-
-            return render_template('cv_analysis/results.html', ranking=ranking)
+            return redirect(url_for('results'))
+            # return render_template('cv_analysis/results.html', ranking=ranking)
 
     return render_template('cv_analysis/index.html', ranking=[])
 
+# Route for displaying results
+@app.route('/results')
+def results():
+    # Retrieve the matching results and ranking from the session
+    matching_results = session.get('matching_results', [])
+    ranking = session.get('ranking', [])
+
+    # You can perform additional processing or formatting of data if needed
+
+    return render_template('cv_analysis/results.html', ranking=ranking, matching_results=matching_results)
 
 @app.route('/profile/<int:pdf_index>')
 def view_profile(pdf_index):
