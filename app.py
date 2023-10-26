@@ -879,7 +879,7 @@ def view_profile(pdf_index):
         # Check if the selected PDF index is within the valid range
         if pdf_index >= 0 and pdf_index < len(matching_results):
             selected_profile = matching_results[pdf_index]
-            
+            session['selected_matching_percentage'] = selected_profile['matching_percentage']
             return render_template('CV_analysis/profile.html', profile=selected_profile)
             
     # Handle the case when the PDF index is invalid or matching results are not available
@@ -2059,21 +2059,21 @@ def calcFinalScore():
     jobrole = session.get('jobrole')
 
 # CV--------------------------------------------------------------------------------
-    cv_ranking = session.get('ranking')
+    # cv_ranking = session.get('ranking')
     
-    matching_percentages = [result['matching_percentage'] for result in cv_ranking]
-    highest_matching_percentage = max(matching_percentages)
+    # matching_percentages = [result['matching_percentage'] for result in cv_ranking]
+    # highest_matching_percentage = max(matching_percentages)
 
-    # Find the entry with the highest matching_percentage 
-    entry_with_highest_percentage = max( cv_ranking, key=lambda x: x["matching_percentage"] ) 
-    #Get the skills from the entry with the highest matching_percentage 
-    skills_with_highest_percentage = entry_with_highest_percentage.get("skills", [])
+    # # Find the entry with the highest matching_percentage 
+    # entry_with_highest_percentage = max( cv_ranking, key=lambda x: x["matching_percentage"] ) 
+    # #Get the skills from the entry with the highest matching_percentage 
+    # skills_with_highest_percentage = entry_with_highest_percentage.get("skills", [])
 
-    # Convert the list to a set to get unique words
-    unique_words = set(skills_with_highest_percentage)
+    # # Convert the list to a set to get unique words
+    # unique_words = set(skills_with_highest_percentage)
 
-    # Convert the set back to a list if needed
-    unique_words_list = list(unique_words)
+    # # Convert the set back to a list if needed
+    # unique_words_list = list(unique_words)
 # # GITHUB-------------------------------------------------------------
 #     percentage_scores = session.get('percentage_scores')
 
@@ -2105,7 +2105,7 @@ def calcFinalScore():
     ac_score= session.get('ac_score')
 
     #Without sandani's
-    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, ac_score=ac_score, textarea_content="", slider_values="")
+    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, ac_score=ac_score, textarea_content="", slider_values="")
 
     #With sandani's , once the token issue is solved.
     # return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, ac_score=ac_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
