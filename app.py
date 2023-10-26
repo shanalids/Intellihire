@@ -416,7 +416,7 @@ def pf_home():
 
 def calculate_language_proficiency(username, access_token):
     # Authenticate with GitHub
-    access_token = "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"
+    access_token = "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"
     g = Github(access_token)
     user = g.get_user(username)
     
@@ -476,7 +476,7 @@ def plp_form():
 def plp():
     if request.method == 'POST':
         username = request.form.get('username')
-        access_token = "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"
+        access_token = "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"
         
         percentage_scores = calculate_language_proficiency(username, access_token)
         session['percentage_scores'] = percentage_scores
@@ -2074,26 +2074,27 @@ def calcFinalScore():
 
     # # Convert the set back to a list if needed
     # unique_words_list = list(unique_words)
-# # GITHUB-------------------------------------------------------------
-#     percentage_scores = session.get('percentage_scores')
 
-#     # Initialize an empty list to store the words
-#     plp_words = []
-#     # Loop through the keys of the dictionary
-#     for key in percentage_scores.keys():
-#         # Split the key into words using whitespace as the delimiter
-#         key_words = key.split()
-#         # Extend the list of words with the words from the current key
-#         plp_words.extend(key_words)
+# GITHUB-------------------------------------------------------------
+    percentage_scores = session.get('percentage_scores')
 
-#     #cv-gitHub technical skills validation-----------------------
-#     github_plp_set = set(plp_words)
-#     cv_plp_set = set(unique_words_list)
-#     # Find the common words
-#     common_words = github_plp_set.intersection(cv_plp_set)
+    # Initialize an empty list to store the words
+    plp_words = []
+    # Loop through the keys of the dictionary
+    for key in percentage_scores.keys():
+        # Split the key into words using whitespace as the delimiter
+        key_words = key.split()
+        # Extend the list of words with the words from the current key
+        plp_words.extend(key_words)
 
-#     # Calculate the percentage of common words
-#     percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
+    #cv-gitHub technical skills validation-----------------------
+    github_plp_set = set(plp_words)
+    cv_plp_set = set(unique_words_list)
+    # Find the common words
+    common_words = github_plp_set.intersection(cv_plp_set)
+
+    # Calculate the percentage of common words
+    percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
 
 # PERSONALITY-----------------------------------------------------------------------------------------
 
@@ -2105,10 +2106,10 @@ def calcFinalScore():
     ac_score= session.get('ac_score')
 
     #Without sandani's
-    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, ac_score=ac_score, textarea_content="", slider_values="")
+    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, ac_score=ac_score, textarea_content="", slider_values="")
 
-    #With sandani's , once the token issue is solved.
-    # return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, ac_score=ac_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
+    # With sandani's , once the token issue is solved.
+    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, ac_score=ac_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
 
 if __name__ == '__main__':
     app.run(debug=True)
