@@ -1,124 +1,129 @@
-ae; - om
-n'..'O@
-anata
-iy a Pak
-MT TT)
-Ne
-SRI LANKA
-INSTITUTE OF INFORMATION TECHNOLOGY
-This is to certify that
-having successfully completed
-the prescribed course of study and the examinations
-of the Sri Lanka Institute of Information Technology
-on the Ist day of January 2023
-was admitted to
-the Honours Degree of
-Bachelor of Science in Information Technology
-at the Convocation held in Colombo
-witness our hands
-March 2023
-Vice-Chancellor
-Professor Lalith Gamage
-LONE
-Oo) Oo) ProYVtée-Chancellor (Com
-es r Professor Chandimal Jayawardena
-ag ~—
-Cree ap:
-Kegletration No: IT19 162706 pinkie Keats , .
-Certificate No: KSCIE 10014 nities iiligvenahekT aeiee
-3 ee ee
-Ae a2 ers A S08 eo ee
-Oe ‘ an ae
-fase kes pe eee TT yr
-S aemmena SLIT
-“phate ‘TTT
-hs) eae ape
+a rs
+am af
+a Tl Bl
+VLE
+NI | | | B B y
 ACADEMIC TRANSCRIPT
-NAME OF CANDIDATE Meegasthenne Walawwe Srisinghe Siriwardana Mudiyanselage Tharindu Maheesha Bandara
-Munasinghe
-PROGRAMME Bachetor of Science Honours in Information Technology
-: FIELD OF SPECIALIZATION Data Science
+NAME OF CANDIDATE Athapaththu Mudiyanselage Hirantha Bandara Athapaththu
+PROGRAMME Bachelor of Science Honours in Information Technology
+FIELD OF SPECIALIZATION Software Engineering 4
 MEDIUM OF INSTRUCTION English
-' REGISTRATION NO 1119162706
-MONTH & YEAR OF ADMISSION January, 2019
-ane ht rae
+REGISTRATION NO 1716131002
+MONTH & YEAR OF ADMISSION = January, 2016
 YEAR 1
- TT1010 Introduction to Programming 1 Apr - 2019 4 A
-171020 Introduction to Computer Systems 1 Apr - 2019 4 C+
-i 11030 Mathematics for Computing 1 Apr - 2019 4 B
-171040 Communication Skills : 1 Apr - 2019 3 A-
-, 1T1050 Object Oriented Concepts 2 Oct - 2019 2 A
-171060 Software Process Modeling 2 Oct - 2019 3 A
-111080 English for Academic Purposes 2 Oct - 2019 3 B
-111090 Information Systems & Data Modeling 2 Oct - 2019 4 A
-171100 Internet & Web Technclogies 2 Oct - 2019 4 A-
-| Year 1 Credits=31.00 Year 1 Grade Points=108.10 Year 1 GPA=3.49
-STATUS: Completed YEAR 1
+Code Module Title Semester Period Credits Grade
+EC143 Data Communications & Computer Networks - I 1 Apr - 2016 4 B+
+EL120 English Language Skills - I 1 Apr - 2016 4 B+
+17100 Computer Fundamentals 1 Apr - 2016 4 A
+IT101 Introduction to Programming Environments (C++ / UNIX) 1 Apr - 2016 5 A+
+MA140 Mathematics for Information Technology 1 Apr - 2016 4 A-
+EL121 English Language Skills - I 2 Oct - 2016 3 A-
+1T102 Software Technology - I (Data Structures) 2 Oct - 2016 4 A+
+1T103 Database Management Systems - I 2 Oct - 2016 4 At
+17104 Internet Technology and Applications 2 Oct - 2016 4 A
+MA141 Foundations of Computer Science 2 Oct - 2016 4 A-
+Year 1 Credits=40.00 Year 1 Grade Points=151.10 Year 1 GPA=3.78
+STATUS : Completed YEAR 1
 Dean's List Recognition 2nd Semester
-‘ YEAR 2
--  r2020 Software Engineering 1 Apr - 2020 4 A
-Ps WE _ 172030 Object Oriented Programming 1 . Jun - 2020 4 A
-’ 172040 Database Management Systems 1 Apr - 2020 4 A
-{é 112050 Computer Networks 1 Jun - 2020 4 A
-112060 Operating Systems and System Administration 1 Apr - 2020 4 B+
-! 112010 Mobile Application Development 2 Oct - 2020 4 B+
-172070 Data Structures & Algorithms 2 Oct - 2020 4 A
-112080 IT Project 2 Oct - 2020 4 A
-Ce . 172090 Professional Skills 2 Oct - 2020 2 By
-> * §T2100° Employability Skills Development - Seminar 2 Oct - 2020 Non-Credit C+
-oe, 112110 _—~Probability & Statistics 2 bet +2020 ; ‘
-33)" Year 2 Credits=37.00 Year 2 Grade Points=141.00 Year 2 GPA=3.81
- S.¢-  $T12100*-Non-GPA Module
-7 we STATUS: Completed YEAR 2
-Peak 8 Dean's List Recognition 1st Semester & 2nd Semester
-aie > FY He ,
-ae SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY
-ey %, sis SLIIT Malabe Campus, New Kandy Road, Malabe. oe
-See ido: Tol: 494(0)11 2413900 Fax : +94(0)11 2413901 E-mail : info@sliit.lk URL : www.stiit
-re See ie
-Fra aly TRE Der 5 -
-” ter A a ae
-HASTA sh oo SO SD hie ee
-j SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY
-pe of Candidate : aameich Walawwe Srisinghe Siriwardana Mudiyanselage Tharindu Maheesha Bandara Registration No:IT19162706
+YEAR 2
+Code Module Title Semester Period Credits Grade .
+CG200 Computer Graphics & Multimedia 1 Jun - 2017 4 B+
+IT200 Software Technology - II (OOP) 1 Jun - 2017 4 B+
+1T202 Database Management Systems - I 1 Jun - 2017 4 B+
+IT220 Software Engineering - I 1 Jun - 2017 4 B+
+MA220 Probability & Statistics 1 Jun - 2017 4 A
+EC244 Data Communications & Computer Networks - II 2 Nov - 2017 4 A
+17201 Systems Programming and Design 2 Nov - 2017 4 A
+7221 Software Engineering - II 2 Nov - 2017 4 B+
+IT222 Information Technology Project 2 Nov - 2017 4 A-
+1T240 Design and Analysis of Aigorithms 2 Nov - 2017 4 A
+Year 2 Credits=40.00 Year 2 Grade Points=144.80 Year 2 GPA=3.62
+STATUS : Completed YEAR 2
+Dean's List Recognition 2nd Semester
+SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY Page 1 of 3
+SLIIT Malabe Campus, New Kandy Road, Malabe
+Tel: +94(0)11 230 1904 Fax: +94(0)11 230 1906 E-Mail: info@sliit.Ik URL: www.sliit.tk
+i) — A
+san SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY
+Sagpee ;
+Name of Candidate : Athapaththu Mudiyanselage Hirantha Bandara Athapaththu Registration No:IT16131002
 YEAR 3
-173031 Database Systems and Data-Driven Application 1 Jun - 2022 4 c
-173011 Theory and Practices in Statistical Modelling 1 Apr - 2021 4 B+
-173021 Data Warehousing and Business Intelligence - 1 Apr - 2021 4 B+
-1T3030 Programming Applications and Frameworks 1 Apr - 2021 4 A
-1T3050° Employability Skills Development - Seminar 1 Apr - 2021 1 Cc
-T3041 Information Retrieval and Web 2 Oct - 2021 4 B+
-173051 Fundamentals of Data Mining 2 Oct - 2021 4 B+
-173061 Massive Data Processing and Cloud 2 Oct - 2021 4 B-
-173071 Machine Learning and Optimization 2 Oct - 2021 4 B-
-1T3110* Industry Placement 2 Oct - 2021 8 Cc
-Year 3 Credits=32.00 Year 3 Grade Points=98.40 Year 3 GPA=3.08
-1T3050*81T3110*-Non-GPA Modules
-STATUS: Completed YEAR 3
+Code Module Title Semester Period Credits Grade
+IT3050* Employability Skills Development - Seminar 1 Jun - 2018 1 B
+SE3010 Software Engineering Process & Quality Management 1 May - 2018 4 B
+SE3020 Distributed Systems 1 Jun - 2018 4 A
+SE3030 Software Architecture 1 Jun - 2018 4 A-
+SE3040 Application Frameworks 1 Jun - 2018 4 B+
+1T3110* Industry Placement 2 Jun - 2020 8 A
+SE3050 User Experience Engineering 2 Oct - 2018 3 B+
+SE3060 Database Systems 2 Oct - 2018 4 B+
+SE3070 Case Studies in Software Engineering 2 Oct - 2018 4 B-
+SE3080 Software Project Management 2 Oct - 2018 3 B-
+Year 3 Credits=30.00 Year 3 Grade Points=98.00 Year 3 GPA=3.27
+*IT3050 & 1T3110 - Non GPA module
+STATUS : Completed YEAR 3
 YEAR 4
-174021 Internet of Things and Big Data Analytics 1 Jun - 2022 4 B-
-114031 Visual Analytics and User Experience Design 1 Jun - 2022 4 A-
-1T4070* Preparation for the Professional World 1 Jun - 2022 2 A
-T4010 Research Project 2 Dec - 2022 16 B+
-4011 Database Administration and Storage Systems 2 Nov - 2022 4 A-
-174041 Introduction to Information Security Analytics 2 Dec - 2022 4 A
-Year 4 Credits=32.00 Year 4 Grade Points=109.20 Year 4 GPA=3.41
-1T4070*-Non-GPA Module ,
-STATUS: Completed YEAR 4
-GPA SUMMARY :
+Code Module Title Semester Period Credits Grade
+1T4070* Preparation for the Professional World 1 Jun - 2019 2 A
+SE4010 Current Trends in Software Engineering 1 Jun - 2019 4 B+
+SE4060 Machine Learning 1 Jun - 2019 4 A-
+1T405 Comprehensive Design & Analysis Project 2 Oct - 2019 20 A
+SE4030 Secure Software Development 2 Oct - 2019 4 A
+SE4072 Deep Learning 2 Oct - 2019 4 A-
+Year 4 Credits=36.00 Year 4 Grade Points=138.80 Year 4 GPA=3.86
+*IT4070 — Non GPA module
+STATUS : Completed YEAR 4
+Dean's List Recognition 2nd Semester
+GPA SUMMARY
 WGPA YEARLY WEIGHTS
-(Year 2-20% Year3-30% Year4-50%) Weighted GPA =3.39
-TOTAL CREDITS 143.00
+(Year 2-20% Year3-30% Year4-50%) Weighted GPA =3.62 5
+TOTAL CREDITS 157.00
 STATUS: COMPLETED PRESCRIBED REQUIREMENTS FOR THE AWARD OF THE DEGREE IN BACHELOR OF SCIENCE HONOURS IN
-INFORMATION TECHNOLOGY WITH THE SECOND-CLASS HONOURS UPPER DIVISION ON THE 157 OF JANUARY 2023.
-Date: 2223 SOF LBS remen
-7 DA rou ‘C
-Prepared by? wn Ahe ayy genres nena da l.
-Checked by: ...«<. of aadtatcasceseGapaeshanee Senior Manager —— Affairs (Registry & Examinatioas)
-Certified bys onset CEO a ececssmereere —— Dunishka Rathegama
-Senior Manager Academic Affairs (Reg'stry & Exornatons)
-~End of Transcript~ mart ie " _ oe |
-wba tiie
-Page 2 of S
-Ted: 230 1904-5 rit |
-| bax: 230 1906 be-entall: beso o whdit. th UR}: ww. stiieth
+INFORMATION TECHNOLOGY WITH THE SECOND CLASS HONOURS UPPER DIVISION ON THE 1ST NOVEMBER 2019.
+Prepared by: Pare ee as Senior Manager AcademicAffairs: (Registy)
+Checked by :.....4 i
+Certified by sx: ‘ ia eT Dunishka Rathugama
+Senior Manager Academic Affairs (Registry & Exerineions)
+~End of Transcript~ BBusMgt, PGDip BusMg! (Auckland), MBA (Edinburgh)
+Sri Lanka Institute of information Technology
+Page 2 of 3
+Tel: 230 1904-5 Fax: 230 1906 E-mail: info@sliit.Ik URL: www.sliit.tk
+eon SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY “~
+Supe “te
+Changes to information in this document are totally prohibited and candidates are held responsible for any such changes or
+additions.
+Grading Scheme
+| Grade Grade Points Marks Range
+Ss 2 90 - 100
+a 0-89
+75-79
+70-74
+Bb TTCSdSCSCCCCCC}!—S~C“‘;‘;C*~*' 65-69
+[3s SCOrY)SC~<C~;S;~C~CTN—“C;™~*~*~*Y 60-64
+[To TCOCdSCSCSCSCSSST23]——SCSC~C~“‘dSTCS*~*~*~*~SCCSTC*
+a ee x) 45 - 54
+40-44
+35-39
+a 30-34
+SX) Ce:
+incomplete
+Conceded Pass
+Note: Grades C to A+ &PC- Pass
+Grades E to C- - Fail
+Weighted Grade Point Average (WGPA)
+The class of degree to be awarded shall be determined on the basis of a Weighted Grade Point Average. Year 2 , Year 3 and Year 4
+GPA’s are assigned with 20%, 30% and 50% weights respectively for Weighted GPA computation.
+SLIIT Qualification Framework -Faculty of Computing
+Level of Completion Qualification Minimum Credit Required
+Associate Diploma 30 Credits
+Advanced Diploma 00 Credits
+BSc (Hons) Degree 120 Credits
+Class Awards
+WGPA 3.7 - First Class Honours
+3.3 WGPA <3.7 - Second Class Honours Upper Division
+3.0 WGPA <3.3 - Second Class Honours Lower Division
+2.0SWGPA <3.0 - Pass
+Medium of Instruction
+The medium of instruction in all degree and diploma programmes offered by SLIIT is English.
+a Page 3 of 3
+Tel: 230 1904-5 Fax: 230 1906 E-mail: info@sliit.lk URL: www-.sliit.Ik
