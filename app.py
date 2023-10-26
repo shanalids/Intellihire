@@ -611,6 +611,9 @@ def job_cat():
         if skills:
             #predicted_category = model.predict([skills])  #model takes a list of skills
             predicted_category = link_model.predict(fitted_vectorizer.transform(skills))
+
+            session['predicted_category'] = predicted_category
+
             result = f"Predicted Job Category: {predicted_category[0]}"
     return render_template('professional_skills/job_cat_form.html', result=result)
 
@@ -640,6 +643,12 @@ def analyze_sentiment_and_visualize(row):
             sentiment_distribution[1] += 1
         else:
             sentiment_distribution[2] += 1
+
+    # Calculate positive percentage
+    positive_percentage = (sentiment_distribution[0] / sum(sentiment_distribution)) * 100
+
+    # Store positive percentage in the session
+    session['positive_percentage'] = positive_percentage
 
     # Create a single pie chart for sentiment distribution
     colors = ['blue', 'red', 'green']
@@ -2082,6 +2091,10 @@ def calcFinalScore():
 #     # Calculate the percentage of common words
 #     percentage_common = (len(common_words) / (len(github_plp_set) + len(cv_plp_set))) * 100
 
+#LinkedIn Predicted Job Category-------------------------------------------
+    predicted_category = session.get('predicted_category')
+#Recommendation Positive sentiment-----------------------------------------
+    positive_percentage = session.get('positive_percentage')
 # PERSONALITY-----------------------------------------------------------------------------------------
 
     personality_score = session.get('personality_score')
