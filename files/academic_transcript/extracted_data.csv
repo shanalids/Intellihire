@@ -1,27 +1,18 @@
 Module Title,Grade
-Introductiois to Programming |,A
-Introduction to Computer Systems,A
-71030 Mathematics for Computing,A-
-71040 Communication Skills,A
-Object Oriented Concepts,A
-Scftware Process Modeling,A-
-Provability & Statistics,A-
-English for Academic Purposes,B+
-Information Systems & Data Modeling,A-
-Internet & Web Technologies,A
-Employability Skills Development - Seminar,A
-Software Engineering Process & Quality Management,A-
-Distributed Systems,A
-Software Architecture,B+
-Application Frameworks,B+
-Industry Placement,A-
-User Experience Engineering,A-
-Database Systems,C+
-Case Studies in Software Engineering,C+
-Software Project Management,B+
-Machine Learning,A-
-Preparation for the Professional World,A
-Current Trends in Software Engineering,A-
-Research Project,A
-Secure Software Development,A
-Deep Learning,A
+"""163022. Applied Information Assurance",c
+Introduction to Cyber Security,B-
+Network Security,B+
+Secure Software Systems,B-
+Information Security Risk Management,B
+Data Security,A-
+Information Security Policy and Management,C+
+Cryptography,A
+Information Security Project,A-
+Enterprise Standards for Information Secuirty,B-
+Industry Placement,B-
+Offensive Hacking Tactical and Strategic,A-
+Secure Software Engineering,B+
+Preparation for the Professional World,A+
+Information Cyberwarfare,A-
+Governance and Cyber Law Clinic,B
+Research Project,A-

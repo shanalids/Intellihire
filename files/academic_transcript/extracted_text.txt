@@ -1,60 +1,139 @@
-YEAR 1
-Code Module Title Semester Pericd Credits Grose:
-171010 Introductiois to Programming | 1 Jun - 2017 4 | A
-T1020 Introduction to Computer Systems 1 Jun - 2017 4 A
-71030 Mathematics for Computing 1 Jun - 2017 4 A-
-71040 Communication Skills 1 Jun - 2017 3 A
-T1050 Object Oriented Concepts 2 Nov - 2017 2 A
-T1060 Scftware Process Modeling 2 Nov - 2017 3 A-
-T1970 Provability & Statistics 2 Nov - 2017 2 A-
-T7080 English for Academic Purposes 2 Nov - 2017 3 B+
-T1090 Information Systems & Data Modeling 2 Nov - 2017 4 A-
-T1100 Internet & Web Technologies 2 Nov - 2017 4 A
-Year 1 Credits=34.00 Year 1 Grade Points=129.70 Year 1 GPA=3.81- — ~
-STATUS: Completed YEAR 1
-Dean's List Recognition 1st Semester and 2nd Semester
-YEAR 2 ;
-Core = Module Title sie Semester aia Period Credits ‘Grave
-172520 Software Engineering 1 May - 2018 4 A
-2030 Object Oriented Programming 1 Jun - 2018 4 A
-T2040 Database Management Systems 1 Jun - 2016 4 Ky
-$3206) Operating Systems and System Administration i Jun - 2018 4 A-
-T2910 Mobile Application Nevelopment 2 Oct - 2018 4 A
-72959 Computer Networks 7 Oct - 2018 4 us
-172076 Lata Structures & Algovithms é Oct - 201& 4 A
-112026 ST Project 2 Oct - 2618 4 A
-2090 Professional Skills 2 Oct - 201% 2 b+
-1%2100° Employability Skills Development - Seminar 2 Oct: 2088 NonCrecs At
+? rT a
+f an FS oe
+/ tT Tt
+SLUT
+NJ q | B Bp 4
+| ACADEMIC TRANSCRIPT
+NAME OF CANDIDATE Weeraddana Haritha Chanuka
+PROGRAMME Bacherlor of Science Honours in Information Technology
+FIELD OF SPECIALIZATION Cyber Security
+MEDIUM OF INSTRUCTION English
+REGISTRATION NO 1117106702
+MONTH & YEAR OF ADMISSION january , 2017
+reenter ee RMRSEEeR ne ee ee ee
+YEAR 1 si
+Po SE SAS Si SRR CEA titan igs Ge AC aeyeaNRs acT a rne eernin aaenape 2a ms EC SRS Oo ee cae arose rns
+© Code 22 Se Le teh aces ct MOTE Title OS Sa ‘ais cebemestefnrrs*- « “Period: ~~ “Credits Grade
+Cee i SEIU PSS ESR SU acs isco AERO mses asi eet Se yeas SOG a ae
+111010 Introduction to Programming 1 Jun - 2017 4 A+
+T1020 Introduction to Computer Systems 1 Jun - 2017 4 8
+1T1030 Mathematics for Computing 1 Jun - 2017 4 B
+T1040 Communication Skills 1 Jun - 2017 3 C+
+T1050 Object Oriented Concepts 2 Nov - 2017 2 3
+T1060 Software Process Modeling 2 Nov - 2017 3 B-
+171070 Probability & Statistics 2 Nov - 2017 3 B+
+T1080 English for Academic Purposes 2 Nov - 2017 3 B
+1T1090 Information Systems & Data Modeling 2 Nov - 2017 4 B+
+171100 Internet & Web Technologies 2 Nov - 2017 4 B+
+Year 1 Credits=34.00 Year 1 Grade Points=106.30 Year 1 GPA=3.13
+| STATUS : Completed YEAR 1
+YEAR 2
+sees Sn eer hg eg ape Ns NT ETE SERIE ISTE AE Ty SLIT bg ree icecream SOA Reed er SES eet SY eA
+-- COd8 sora lea ses agceigmeerpore Ny OUIe Title piste arn ee eae nts de Sen wonremeores Penod cart, Credivs pec fae:
+rs SOUR ace a Sen een Eee css
+172020 Software Engineering 1 May - 2018 4 A
+: 172030 Object Oriented Programming 1 Jun - 2018 4 A-
+} 112040 Database Management Systems. 1 Jun ~ 2018 4 A
+172060 Operating Systems and System Administration 1 Jun - 2018 4 A
+112010 Mobile Applicaticn Development 2 Oct - 2018 4 A-
+172050 Computer Networks 2 Oct - 2018 4 A-
+112070 Data Structures & Algorithms 2 Oct - 2018 4 A-
+| 172080 IT Project 2 Oct - 2018 4 A
 |
-Year 2 Credits=34.90 Year 2 Grade Points=129.40 Year 2 GPAs3.G1
-IT2102°- Non GPA lhodule
-STATUS: Completed YEAR 2
-$$ Danan’ dist Recognition 1st Semesver and 2ud Semester 0
-Sie” YEAR 3
-a code Module Title Semester Period Credits Grade
-7 173050* Employability Skills Development - Seminar 1 Jun - 2019 1 A
-SE3010 Software Engineering Process & Quality Management 1 Jun - 2019 4 A-
-SE3020 Distributed Systems 1 Jun - 2019 4 A
-SE3030 Software Architecture 1 Jun - 2019 4 B+
-SE3040 Application Frameworks 1 Jun - 2019 4 B+
-1T3110* Industry Placement 2 Oct - 2019 8 A-
-SE3050 User Experience Engineering 2 Oct - 2019 3 A-
-SE3060 Database Systems 2 Oct - 2019 4 C+
-SE3070 Case Studies in Software Engineering 2 Oct - 2019 4 C+
-SE3080 Software Project Management 2 Oct - 2019 3 B+
-Year 3 Credits=30.00 Year 3 Grade Points=96.60 Year 3 GPA=3.22
-1T3710, 1T3050° - Non GPA Module
-STATUS: Completed YEAR 3
+172090 Frofessional Skills 2 Oct - 2018 2 C+
+| 1T2100* Employability Skills Development - Seminar 2 Oct- 2018  NonCredic A
+| Year 2 Credits=34.00 Year 2 Grade Points=126.60 Year 2 GPA=3.72
+"172100 - Non GPA Module
+| STATUS : Completed YEAR 2
+a eee
+SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY
+| SLIT Malabe Campus, New Kandy Road, Malabe. Page 1 of 3
+| Tel : +94(0)11 230 1904 Fax : +94(0)11 230 1906 E-mail : info@sliit.1k URL : info@sliit.Jk
+{
+; 7
+sti SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY
+sae
+y Name of Candidate : Weeraddana Haritha Chanuka Registration No:IT17 106702
+/ YEAR 3
+:* Code Se te Module Title Semester Period Credits Grade
+"163022. Applied Information Assurance 1 Oct - 2019 4 c
+1E3012 Introduction to Cyber Security 1 Jun - 2019 4 B-
+1E3032 Network Security 1 Jun - 2019 4 B+
+E3042 Secure Software Systems 1 Jul - 2019 4 B-
+IE3052 Information Security Risk Management 1 Jun - 2019 4 B
+TE3062 Data Security 2 Oct - 2019 4 A-
+1E3072 Information Security Policy and Management 2 Oct - 2019 4 C+
+E3082 Cryptography 2 Oct - 2019 4 A
+1E3092 Information Security Project 2 Oct - 2019 4 A-
+1E3102 Enterprise Standards for Information Secuirty 2 Oct - 2019 4 B-
+1T3110* Industry Placement 2 Oct - 2019 8 B-
+Year 3 Credits=40.00 Year 3 Grade Points=120.40 Year 3 GPA=3.01
+"1T3110- Non GPA Module
+STATUS : Completed YEAR 3
 YEAR 4
-Code | Module Title Semester Period Credits Grade
-1T4060 Machine Learning 1 Apr - 2020 4 A-
-114070* Preparation for the Professional World 1 Apr - 2020 2 A
-SE4010 Current Trends in Software Engineering 1 Jun - 2020 4 A-
-1T4010 Research Project 2 Oct - 2020 16 A
-SE4030 Secure Software Development 2 Oct - 2020 4 A
-S£4050 Deep Learning 2 Oct - 2020 4 A
-Year 4 Credits=32.00 Year 4 Grade Points=125.60 Year 4 GPA=3.93
-114070° - Non GPA Module
-STATUS: Completed YEAR 4
-Dean's List Recognition 1st Semester and 2nd Semester
-CamScanner
+Ey “Code SE ES sda eae ee ee Semesters eo co pee tiecrads a
+Codes i Aci cutiatntiter capes Dec ata Module Title 8 Sette tiene sonmomMestetrs oo ats TP ENO” dst ase
+1E4012 Offensive Hacking Tactical and Strategic 1 Jun - 2020 4 A-
+E4042 Secure Software Engineering 1 Apr - 2020 4 B+
+1T4070* Preparation for the Professional World 1 Apr - 2020 2 A+
+E4032 Information Cyberwarfare 2 Oct - 2020 4 A-
+1E4072 Governance and Cyber Law Clinic 2 Oct - 2020 4 B
+174010 Research Project 2 Oct - 2020 16 A-
+Year 4 Credits=32.00 Year 4 Grade Points=114.00 Year 4 GPA=3.56
+*{T4070- Non GPA Module
+STATUS : Completed YEAR 4
+wo EE ———————————————————————————
+GPA SUMMARY
+WGPA YEARLY WEIGHTS
+(Year 2-20% Year3-30% Year4-50%) Weighted GPA =3.43
+TOTAL CREDITS 150.00
+a a ————————————————————E
+STATUS: COMPLETED PRESCRIBED peu ReMeN TS FOR THE AWARD OF THE DEGREE IN BACHELOR OF SCIENCE HONOURS IN
+INFORMATION TECHNOLOGY WITH THE SECOND CLASS HONOURS UPPER DIVISION ON THE 1ST OF JANUARY 2021.
+Date: 15th June 2021
+(4
+Checked by: .....escresed otha el ome Se 2a
+‘ a Senior Manager Academic Affairs (Registry & Examinations)
+. Certified DY se aero rece :
+ee ~End of Transcript~ Dunishka Rathugama
+Senior Manager Academic Altsirs (Registry & Examinations)
+BBusMgt,PGDip BusMgt (Aucktand), MBA (Edinburgh)
+Sri Lanka Institute of Information Technology
+Page 2 of 3
+Tel: 230 1904-5 Fax: 230 £906 E-mail: infora'sliit.k URL: www.stitlk
+oete SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY \
+TREERE
+euanpes to Information In this document are totally prohibited and candidates are held responsible for any such changes or
+a ions.
+Grading Scheme
+Grade Points Marks Range
+PE a a ] eee Jes ered
+(a a Ed nea ale)
+LC MENG ioe e200 eee ee
+ge ea 45-64
+40-44
+(eC
+en oa
+a ee REL
+{aL Incomplete
+CRNA Race, Connie Pavey
+Note: Grades CtoAt &PC- Pass
+Grades EtoC- - Fail
+ee S —___ a
+Weighted Grade Point Average (WGPA)
+The class of degree to be awarded shall be determined on the basis of a Weighted Grade Point Average. Year 2, Year3and Year 4 GPA's
+are assigned with 20%, 30% and 50% weights respectively for Weighted GPA computation.
+EER ee ee eee
+SLIT Qualification Framework -Faculty of Computing
+Level of Completion Qualification Minimum Credit Required
+wo SS eS a as
+Class Awards
+WGPA 3.7 - First Class Honours
+3.3<5WGPA <3.7 - Second Class Honours Upper Division
+3.05WGPA <3.3 - Second Class Honours Lower Division
+2.0SWGPA <3.0 - Pass
+a aE a ce aT ESS ES SS
+Medium of instruction
+The medium of Instruction in all degree and diploma programmes offered by SLIIT Is English. ;
+Page 3 of 3
+Tel: 230 1904-5 Fax: 230 1906 E-mail: info‘@ sliit. lk URL: www.sliit.tk

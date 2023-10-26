@@ -1,32 +1,22 @@
-Code Module Title Semester Pericd Credits Grose:
-171010 Introductiois to Programming | 1 Jun - 2017 4 | A
-T1020 Introduction to Computer Systems 1 Jun - 2017 4 A
-71030 Mathematics for Computing 1 Jun - 2017 4 A-
-71040 Communication Skills 1 Jun - 2017 3 A
-T1050 Object Oriented Concepts 2 Nov - 2017 2 A
-T1060 Scftware Process Modeling 2 Nov - 2017 3 A-
-T1970 Provability & Statistics 2 Nov - 2017 2 A-
-T7080 English for Academic Purposes 2 Nov - 2017 3 B+
-T1090 Information Systems & Data Modeling 2 Nov - 2017 4 A-
-T1100 Internet & Web Technologies 2 Nov - 2017 4 A
+:* Code Se te Module Title Semester Period Credits Grade
+"163022. Applied Information Assurance 1 Oct - 2019 4 c
+1E3012 Introduction to Cyber Security 1 Jun - 2019 4 B-
+1E3032 Network Security 1 Jun - 2019 4 B+
+E3042 Secure Software Systems 1 Jul - 2019 4 B-
+IE3052 Information Security Risk Management 1 Jun - 2019 4 B
+TE3062 Data Security 2 Oct - 2019 4 A-
+1E3072 Information Security Policy and Management 2 Oct - 2019 4 C+
+E3082 Cryptography 2 Oct - 2019 4 A
+1E3092 Information Security Project 2 Oct - 2019 4 A-
+1E3102 Enterprise Standards for Information Secuirty 2 Oct - 2019 4 B-
+1T3110* Industry Placement 2 Oct - 2019 8 B-
 
-a code Module Title Semester Period Credits Grade
-7 173050* Employability Skills Development - Seminar 1 Jun - 2019 1 A
-SE3010 Software Engineering Process & Quality Management 1 Jun - 2019 4 A-
-SE3020 Distributed Systems 1 Jun - 2019 4 A
-SE3030 Software Architecture 1 Jun - 2019 4 B+
-SE3040 Application Frameworks 1 Jun - 2019 4 B+
-1T3110* Industry Placement 2 Oct - 2019 8 A-
-SE3050 User Experience Engineering 2 Oct - 2019 3 A-
-SE3060 Database Systems 2 Oct - 2019 4 C+
-SE3070 Case Studies in Software Engineering 2 Oct - 2019 4 C+
-SE3080 Software Project Management 2 Oct - 2019 3 B+
-
-Code | Module Title Semester Period Credits Grade
-1T4060 Machine Learning 1 Apr - 2020 4 A-
-114070* Preparation for the Professional World 1 Apr - 2020 2 A
-SE4010 Current Trends in Software Engineering 1 Jun - 2020 4 A-
-1T4010 Research Project 2 Oct - 2020 16 A
-SE4030 Secure Software Development 2 Oct - 2020 4 A
-S£4050 Deep Learning 2 Oct - 2020 4 A
+Ey “Code SE ES sda eae ee ee Semesters eo co pee tiecrads a
+Codes i Aci cutiatntiter capes Dec ata Module Title 8 Sette tiene sonmomMestetrs oo ats TP ENO” dst ase
+1E4012 Offensive Hacking Tactical and Strategic 1 Jun - 2020 4 A-
+E4042 Secure Software Engineering 1 Apr - 2020 4 B+
+1T4070* Preparation for the Professional World 1 Apr - 2020 2 A+
+E4032 Information Cyberwarfare 2 Oct - 2020 4 A-
+1E4072 Governance and Cyber Law Clinic 2 Oct - 2020 4 B
+174010 Research Project 2 Oct - 2020 16 A-
 
