@@ -28,11 +28,12 @@
             <img src="../../static/images/personality_prediction/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
-            <a href="#">Home</a>
-            <a href="#">CV Ranking</a>
-            <a href="#">Academic Transcript</a>
-            <a href="#">Professional Skills</a>
-            <a href="#">Personality</a>
+            <a href="/">Home</a>
+            <a href="/bot">JD Bot</a>
+            <a href="/ranking">CV Ranking</a>
+            <a href="/AcademicTranscript">Academic Transcript</a>
+            <a href="{{ url_for('pf_home') }}">Professional Skills</a>
+            <a href="{{ url_for('personality_home') }}">Personality</a>
         </div>
     </nav>
 
@@ -47,17 +48,21 @@
         <br />
         <div class="instructions-container">
             <i class="fas fa-info-circle tooltip-icon" data-toggle="tooltip" data-placement="top"
-                title="Hover over me for instructions"></i>
+                title="Select the csv file containing candidate responses and click on the 'Upload Responses' button."></i>
         </div>
+
+        <h2 class="title-responses">Candidate Responses</h2>
+        <br>
         <form id="upload-responses" action="/upload_responses" method="post" enctype="multipart/form-data"
             onsubmit="return validatecsv();">
             <label for="csv_file" class="btn btn-lg btn-warning">
                 <i class="fas fa-upload"></i> Choose File
-                <input type="file" name="csv_file" id="csv_file" style="display: none;">
+                <input type="file" name="csv_file" id="csv_file" style="display: none;" onchange="displayFileName()">
             </label>
-            <br />
+            <div id="file-name-display"></div>
             <input class="btn btn-lg btn-warning" role="button" type="submit" value="Upload Responses">
         </form>
+
 
         <br />
 

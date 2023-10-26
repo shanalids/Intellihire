@@ -1,0 +1,97 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: interactive story 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_job_description
+  - action: name_form
+  - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: first_name
+  - slot_was_set:
+    - first_name: vincent
+  - slot_was_set:
+    - requested_slot: last_name
+  - slot_was_set:
+    - last_name: vincent-mcvincent
+  - slot_was_set:
+      - requested_slot: job_title
+  - slot_was_set:
+      - job_title: software engineer
+  - slot_was_set:
+      - requested_slot: job_summery
+  - slot_was_set:
+      - job_summery: The job involves developing and maintaining software applications, participating in code reviews, and collaborating with the development team to deliver high-quality software solutions.
+  - slot_was_set:
+      - requested_slot: job_Responsibilities
+  - slot_was_set:
+      - job_Responsibilities: The main responsibilities include writing clean and efficient code, troubleshooting and debugging issues, conducting system tests, and documenting software specifications.
+  - slot_was_set:
+      - requested_slot: job_Qualifications
+  - slot_was_set:
+      - job_Qualifications: The required qualifications include a bachelor's degree in Computer Science or a related field, strong programming skills in Python and Java, experience with database management, and familiarity with software development methodologies.
+  - slot_was_set:
+      - requested_slot: job_Education
+  - slot_was_set:
+      - job_Education: A bachelor's degree in Computer Science or a related field is required.
+  - slot_was_set:
+      - requested_slot: job_Employment_Type
+  - slot_was_set:
+      - job_Employment_Type: This is a full-time position.
+  - slot_was_set:
+      - requested_slot: job_Work_Schedule
+  - slot_was_set:
+      - job_Work_Schedule: The typical work schedule for this role is Monday to Friday, 9:00 AM to 5:00 PM.
+  - slot_was_set:
+      - requested_slot: job_Location
+  - slot_was_set:
+      - job_Location: The job is located in our main office in New York City
+  - slot_was_set:
+      - requested_slot: job_Salary
+  - slot_was_set:
+      - job_Salary: The salary range for this position is $70,000 to $90,000 per year, depending on experience. We also offer health insurance, retirement plans, and paid time off.
+  - slot_was_set:
+      - requested_slot: job_Application_Process
+  - slot_was_set:
+      - job_Application_Process: Interested candidates can apply by submitting their resume and a cover letter through our online application portal on our company website
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action : action_print_slots
+  - action: utter_submit
+  - action: utter_slots_values
+
+- story: run again
+  steps:
+  - intent: again
+  - action: action_run_interactive_story_1

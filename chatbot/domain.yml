@@ -1,0 +1,197 @@
+version: "3.1"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- deny
+- request_job_description
+- goodbye
+- affirm
+- mood_great
+- mood_unhappy
+- bot_challenge
+- again
+
+
+forms:
+  name_form:
+    required_slots:
+      - first_name
+      - last_name
+      - job_title
+      - job_summery
+      - job_Responsibilities
+      - job_Qualifications
+      - job_Education
+      - job_Employment_Type
+      - job_Work_Schedule
+      - job_Location
+      - job_Salary
+      - job_Application_Process
+
+
+
+slots:
+  first_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: name_form
+           requested_slot: first_name
+  last_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+         - active_loop: name_form
+           requested_slot: last_name
+  job_title:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_title
+  job_summery:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_summery
+  job_Responsibilities:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_Responsibilities
+  job_Qualifications:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_Qualifications
+  job_Education:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_Education
+  job_Employment_Type:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_Employment_Type
+
+  job_Work_Schedule:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_Work_Schedule
+
+  job_Location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_Location
+  job_Salary:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_Salary
+
+  job_Application_Process:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: name_form
+            requested_slot: job_Application_Process
+
+
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_first_name:
+  - text: What is your first name?
+  utter_ask_last_name:
+  - text: So {first_name}, what is your last name?
+  utter_ask_job_title:
+    - text: What is the job title or position for which you are creating the job description?
+      buttons:
+        - title: "software Engineer"
+          payload: "/softwear engineer"
+        - title: "Data Engineer"
+          payload: "/data engineer"
+          
+  utter_ask_job_summery:
+    - text: Could you please provide a brief summary of the job?
+  utter_ask_job_Responsibilities:
+    - text: What are the main responsibilities and duties associated with this role?
+  utter_ask_job_Qualifications:
+    - text: What qualifications and skills are required for this position?
+  utter_ask_job_Education:
+    - text: What level of education is required? (e.g., Bachelor's degree, Master's degree)
+  utter_ask_job_Employment_Type:
+    - text: Is this a full-time or part-time position?
+  utter_ask_job_Work_Schedule:
+    - text: What will be the typical work schedule or working hours for this role?
+  utter_ask_job_Location:
+    - text: Where will the job be located? (e.g., city, country)
+  utter_ask_job_Salary:
+    - text: What is the expected salary range and any additional benefits offered for this position?
+  utter_ask_job_Application_Process:
+    - text: How should interested candidates apply for this job? (e.g., submit a resume, fill out an online application)
+
+  utter_submit:
+  - text: Ok. Thanks!
+  utter_slots_values:
+  - text: I will create your job description !
+
+actions:
+
+- utter_greet
+- utter_slots_values
+- utter_submit
+- action_print_slots
+- action_set_slot_message
+- validate_name_form
+- action_run_interactive_story_1
+

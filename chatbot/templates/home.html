@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/navbar.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/footer.css')}}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        #chatbox {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 10px;
+        overflow-y: auto;
+        height: 400px; /* Set the desired height of the chatbox */
+    }
+
+    .message-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-message {
+        background-color: #DCF8C6; /* Light green background for user messages */
+        color: #000; /* Black text color for user messages */
+        border-radius: 10px;
+        padding: 10px;
+        text-align: left;
+        margin: 10px 0;
+        max-width: 70%; /* Adjust the maximum width as needed */
+        word-wrap: break-word; /* Wrap long messages */
+    }
+
+    .bot-message {
+        background-color: #EDEFF2; /* Light gray background for bot messages */
+        color: #000; /* Black text color for bot messages */
+        border-radius: 10px;
+        padding: 10px;
+        text-align: left;
+        margin: 10px 0;
+        max-width: 70%; /* Adjust the maximum width as needed */
+        word-wrap: break-word; /* Wrap long messages */
+    }
+
+        #userInput {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        #sendButton {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #sendButton:hover {
+            background-color: #0056b3;
+        }
+        .download-button {
+        background-color: #007bff; /* Button background color */
+        color: #fff; /* Button text color */
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none; /* Remove underline for links */
+        display: inline-block;
+        margin-top: 10px; /* Adjust spacing as needed */
+
+        margin-right: 10px; /* Adjust right margin as needed */
+        margin-bottom: 10px; /* Adjust bottom margin as needed */
+        margin-left: 10px; /* Adjust left margin as needed */
+    }
+
+    .download-button:hover {
+        background-color: #0056b3; /* Button background color on hover */
+    }
+    </style>
+    
+</head>
+
+<body >
+
+    <nav>
+        <div class="nav-logo-container">
+            <img src="static/images/Logo.png" alt="">
+        </div>
+        <div class="navbar-links-container">
+            <a href="#">Home</a>
+            <a href="#">CV Ranking</a>
+            <a href="#">Academic Transcript</a>
+            <a href="#">Professional Skills</a>
+            <a href="#">Personality</a>
+        </div>
+        <div class="navbar-menu-container">
+            <span class="bars-icon" onclick="openMenu()">&#9776;</span>
+        </div>
+        <div id="drawer" class="drawer">
+            <div class="drawer-content">
+                <ul>
+                    <!-- Add your menu items dynamically using JavaScript -->
+                </ul>
+                <hr>
+            </div>
+        </div>
+    </nav>
+
+<div class="content-wrapper">
+
+
+
+
+    <h1>Rasa Chatbot Integration</h1>
+    <div id="chatbox">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button id="sendButton">Send</button>
+    </div>
+    
+    
+    <div>
+        <br>
+        <br>
+    <p>Download the created Job descrption from here</p>
+    <a href="/download_pdf" download="output.pdf"><button class="download-button">Download PDF</button></a>
+
+
+    
+
+
+
+
+
+
+
+</div>
+
+<script>
+    const chatbox = document.getElementById('chatbox');
+    const userInput = document.getElementById('userInput');
+    const sendButton = document.getElementById('sendButton');
+
+    sendButton.addEventListener('click', sendMessage);
+
+    function sendMessage() {
+        const userMessage = userInput.value;
+        chatbox.innerHTML += `<p class="user-message">You: ${userMessage}</p>`;
+
+        fetch('/get_bot_response', {
+            method: 'POST',
+            body: JSON.stringify({ message: userMessage }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            const botResponse = data.bot_response;
+            chatbox.innerHTML += `<p class="bot-message">Bot: ${botResponse}</p>`;
+            chatbox.scrollTop = chatbox.scrollHeight;
+        });
+
+        userInput.value = '';
+
+
+ 
+    }
+
+    
+  
+
+</script>
+
+</body>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h4 class="footer-about">About</h4>
+                <p class="text-justify">Intellihire.com <i>Revolutionize Recruitment</i>: At IntelliHire, we're
+                    dedicated to
+                    simplifying talent acquisition. Our initiative strives to empower HR professionals and recruiters of
+                    the future by offering innovative solutions. We specialize in transforming the hiring landscape
+                    through smart technology, AI-driven assessments, and seamless integrations. Join us to reshape the
+                    way you hire, embracing a future where hiring complexities are a thing of the past.</p>
+            </div>
+
+
+
+            <div class="col-xs-6 col-md-3">
+                <h4 class="quick-links">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                    <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                    <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="copyright-container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="" copyright-text>Copyright &copy; 2017 All Rights Reserved by
+                    <a href="#">Intellihire</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/../../static/js/index-js-resume.js"></script>
+
+</html>
