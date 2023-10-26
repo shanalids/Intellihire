@@ -1,124 +1,60 @@
-ae; - om
-n'..'O@
-anata
-iy a Pak
-MT TT)
-Ne
-SRI LANKA
-INSTITUTE OF INFORMATION TECHNOLOGY
-This is to certify that
-having successfully completed
-the prescribed course of study and the examinations
-of the Sri Lanka Institute of Information Technology
-on the Ist day of January 2023
-was admitted to
-the Honours Degree of
-Bachelor of Science in Information Technology
-at the Convocation held in Colombo
-witness our hands
-March 2023
-Vice-Chancellor
-Professor Lalith Gamage
-LONE
-Oo) Oo) ProYVtée-Chancellor (Com
-es r Professor Chandimal Jayawardena
-ag ~—
-Cree ap:
-Kegletration No: IT19 162706 pinkie Keats , .
-Certificate No: KSCIE 10014 nities iiligvenahekT aeiee
-3 ee ee
-Ae a2 ers A S08 eo ee
-Oe ‘ an ae
-fase kes pe eee TT yr
-S aemmena SLIT
-“phate ‘TTT
-hs) eae ape
-ACADEMIC TRANSCRIPT
-NAME OF CANDIDATE Meegasthenne Walawwe Srisinghe Siriwardana Mudiyanselage Tharindu Maheesha Bandara
-Munasinghe
-PROGRAMME Bachetor of Science Honours in Information Technology
-: FIELD OF SPECIALIZATION Data Science
-MEDIUM OF INSTRUCTION English
-' REGISTRATION NO 1119162706
-MONTH & YEAR OF ADMISSION January, 2019
-ane ht rae
 YEAR 1
- TT1010 Introduction to Programming 1 Apr - 2019 4 A
-171020 Introduction to Computer Systems 1 Apr - 2019 4 C+
-i 11030 Mathematics for Computing 1 Apr - 2019 4 B
-171040 Communication Skills : 1 Apr - 2019 3 A-
-, 1T1050 Object Oriented Concepts 2 Oct - 2019 2 A
-171060 Software Process Modeling 2 Oct - 2019 3 A
-111080 English for Academic Purposes 2 Oct - 2019 3 B
-111090 Information Systems & Data Modeling 2 Oct - 2019 4 A
-171100 Internet & Web Technclogies 2 Oct - 2019 4 A-
-| Year 1 Credits=31.00 Year 1 Grade Points=108.10 Year 1 GPA=3.49
+Code Module Title Semester Pericd Credits Grose:
+171010 Introductiois to Programming | 1 Jun - 2017 4 | A
+T1020 Introduction to Computer Systems 1 Jun - 2017 4 A
+71030 Mathematics for Computing 1 Jun - 2017 4 A-
+71040 Communication Skills 1 Jun - 2017 3 A
+T1050 Object Oriented Concepts 2 Nov - 2017 2 A
+T1060 Scftware Process Modeling 2 Nov - 2017 3 A-
+T1970 Provability & Statistics 2 Nov - 2017 2 A-
+T7080 English for Academic Purposes 2 Nov - 2017 3 B+
+T1090 Information Systems & Data Modeling 2 Nov - 2017 4 A-
+T1100 Internet & Web Technologies 2 Nov - 2017 4 A
+Year 1 Credits=34.00 Year 1 Grade Points=129.70 Year 1 GPA=3.81- — ~
 STATUS: Completed YEAR 1
-Dean's List Recognition 2nd Semester
-‘ YEAR 2
--  r2020 Software Engineering 1 Apr - 2020 4 A
-Ps WE _ 172030 Object Oriented Programming 1 . Jun - 2020 4 A
-’ 172040 Database Management Systems 1 Apr - 2020 4 A
-{é 112050 Computer Networks 1 Jun - 2020 4 A
-112060 Operating Systems and System Administration 1 Apr - 2020 4 B+
-! 112010 Mobile Application Development 2 Oct - 2020 4 B+
-172070 Data Structures & Algorithms 2 Oct - 2020 4 A
-112080 IT Project 2 Oct - 2020 4 A
-Ce . 172090 Professional Skills 2 Oct - 2020 2 By
-> * §T2100° Employability Skills Development - Seminar 2 Oct - 2020 Non-Credit C+
-oe, 112110 _—~Probability & Statistics 2 bet +2020 ; ‘
-33)" Year 2 Credits=37.00 Year 2 Grade Points=141.00 Year 2 GPA=3.81
- S.¢-  $T12100*-Non-GPA Module
-7 we STATUS: Completed YEAR 2
-Peak 8 Dean's List Recognition 1st Semester & 2nd Semester
-aie > FY He ,
-ae SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY
-ey %, sis SLIIT Malabe Campus, New Kandy Road, Malabe. oe
-See ido: Tol: 494(0)11 2413900 Fax : +94(0)11 2413901 E-mail : info@sliit.lk URL : www.stiit
-re See ie
-Fra aly TRE Der 5 -
-” ter A a ae
-HASTA sh oo SO SD hie ee
-j SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY
-pe of Candidate : aameich Walawwe Srisinghe Siriwardana Mudiyanselage Tharindu Maheesha Bandara Registration No:IT19162706
-YEAR 3
-173031 Database Systems and Data-Driven Application 1 Jun - 2022 4 c
-173011 Theory and Practices in Statistical Modelling 1 Apr - 2021 4 B+
-173021 Data Warehousing and Business Intelligence - 1 Apr - 2021 4 B+
-1T3030 Programming Applications and Frameworks 1 Apr - 2021 4 A
-1T3050° Employability Skills Development - Seminar 1 Apr - 2021 1 Cc
-T3041 Information Retrieval and Web 2 Oct - 2021 4 B+
-173051 Fundamentals of Data Mining 2 Oct - 2021 4 B+
-173061 Massive Data Processing and Cloud 2 Oct - 2021 4 B-
-173071 Machine Learning and Optimization 2 Oct - 2021 4 B-
-1T3110* Industry Placement 2 Oct - 2021 8 Cc
-Year 3 Credits=32.00 Year 3 Grade Points=98.40 Year 3 GPA=3.08
-1T3050*81T3110*-Non-GPA Modules
+Dean's List Recognition 1st Semester and 2nd Semester
+YEAR 2 ;
+Core = Module Title sie Semester aia Period Credits ‘Grave
+172520 Software Engineering 1 May - 2018 4 A
+2030 Object Oriented Programming 1 Jun - 2018 4 A
+T2040 Database Management Systems 1 Jun - 2016 4 Ky
+$3206) Operating Systems and System Administration i Jun - 2018 4 A-
+T2910 Mobile Application Nevelopment 2 Oct - 2018 4 A
+72959 Computer Networks 7 Oct - 2018 4 us
+172076 Lata Structures & Algovithms é Oct - 201& 4 A
+112026 ST Project 2 Oct - 2618 4 A
+2090 Professional Skills 2 Oct - 201% 2 b+
+1%2100° Employability Skills Development - Seminar 2 Oct: 2088 NonCrecs At
+|
+Year 2 Credits=34.90 Year 2 Grade Points=129.40 Year 2 GPAs3.G1
+IT2102°- Non GPA lhodule
+STATUS: Completed YEAR 2
+$$ Danan’ dist Recognition 1st Semesver and 2ud Semester 0
+Sie” YEAR 3
+a code Module Title Semester Period Credits Grade
+7 173050* Employability Skills Development - Seminar 1 Jun - 2019 1 A
+SE3010 Software Engineering Process & Quality Management 1 Jun - 2019 4 A-
+SE3020 Distributed Systems 1 Jun - 2019 4 A
+SE3030 Software Architecture 1 Jun - 2019 4 B+
+SE3040 Application Frameworks 1 Jun - 2019 4 B+
+1T3110* Industry Placement 2 Oct - 2019 8 A-
+SE3050 User Experience Engineering 2 Oct - 2019 3 A-
+SE3060 Database Systems 2 Oct - 2019 4 C+
+SE3070 Case Studies in Software Engineering 2 Oct - 2019 4 C+
+SE3080 Software Project Management 2 Oct - 2019 3 B+
+Year 3 Credits=30.00 Year 3 Grade Points=96.60 Year 3 GPA=3.22
+1T3710, 1T3050° - Non GPA Module
 STATUS: Completed YEAR 3
 YEAR 4
-174021 Internet of Things and Big Data Analytics 1 Jun - 2022 4 B-
-114031 Visual Analytics and User Experience Design 1 Jun - 2022 4 A-
-1T4070* Preparation for the Professional World 1 Jun - 2022 2 A
-T4010 Research Project 2 Dec - 2022 16 B+
-4011 Database Administration and Storage Systems 2 Nov - 2022 4 A-
-174041 Introduction to Information Security Analytics 2 Dec - 2022 4 A
-Year 4 Credits=32.00 Year 4 Grade Points=109.20 Year 4 GPA=3.41
-1T4070*-Non-GPA Module ,
+Code | Module Title Semester Period Credits Grade
+1T4060 Machine Learning 1 Apr - 2020 4 A-
+114070* Preparation for the Professional World 1 Apr - 2020 2 A
+SE4010 Current Trends in Software Engineering 1 Jun - 2020 4 A-
+1T4010 Research Project 2 Oct - 2020 16 A
+SE4030 Secure Software Development 2 Oct - 2020 4 A
+S£4050 Deep Learning 2 Oct - 2020 4 A
+Year 4 Credits=32.00 Year 4 Grade Points=125.60 Year 4 GPA=3.93
+114070° - Non GPA Module
 STATUS: Completed YEAR 4
-GPA SUMMARY :
-WGPA YEARLY WEIGHTS
-(Year 2-20% Year3-30% Year4-50%) Weighted GPA =3.39
-TOTAL CREDITS 143.00
-STATUS: COMPLETED PRESCRIBED REQUIREMENTS FOR THE AWARD OF THE DEGREE IN BACHELOR OF SCIENCE HONOURS IN
-INFORMATION TECHNOLOGY WITH THE SECOND-CLASS HONOURS UPPER DIVISION ON THE 157 OF JANUARY 2023.
-Date: 2223 SOF LBS remen
-7 DA rou ‘C
-Prepared by? wn Ahe ayy genres nena da l.
-Checked by: ...«<. of aadtatcasceseGapaeshanee Senior Manager —— Affairs (Registry & Examinatioas)
-Certified bys onset CEO a ececssmereere —— Dunishka Rathegama
-Senior Manager Academic Affairs (Reg'stry & Exornatons)
-~End of Transcript~ mart ie " _ oe |
-wba tiie
-Page 2 of S
-Ted: 230 1904-5 rit |
-| bax: 230 1906 be-entall: beso o whdit. th UR}: ww. stiieth
+Dean's List Recognition 1st Semester and 2nd Semester
+CamScanner

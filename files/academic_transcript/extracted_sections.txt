@@ -1,18 +1,32 @@
-173031 Database Systems and Data-Driven Application 1 Jun - 2022 4 c
-173011 Theory and Practices in Statistical Modelling 1 Apr - 2021 4 B+
-173021 Data Warehousing and Business Intelligence - 1 Apr - 2021 4 B+
-1T3030 Programming Applications and Frameworks 1 Apr - 2021 4 A
-1T3050° Employability Skills Development - Seminar 1 Apr - 2021 1 Cc
-T3041 Information Retrieval and Web 2 Oct - 2021 4 B+
-173051 Fundamentals of Data Mining 2 Oct - 2021 4 B+
-173061 Massive Data Processing and Cloud 2 Oct - 2021 4 B-
-173071 Machine Learning and Optimization 2 Oct - 2021 4 B-
-1T3110* Industry Placement 2 Oct - 2021 8 Cc
+Code Module Title Semester Pericd Credits Grose:
+171010 Introductiois to Programming | 1 Jun - 2017 4 | A
+T1020 Introduction to Computer Systems 1 Jun - 2017 4 A
+71030 Mathematics for Computing 1 Jun - 2017 4 A-
+71040 Communication Skills 1 Jun - 2017 3 A
+T1050 Object Oriented Concepts 2 Nov - 2017 2 A
+T1060 Scftware Process Modeling 2 Nov - 2017 3 A-
+T1970 Provability & Statistics 2 Nov - 2017 2 A-
+T7080 English for Academic Purposes 2 Nov - 2017 3 B+
+T1090 Information Systems & Data Modeling 2 Nov - 2017 4 A-
+T1100 Internet & Web Technologies 2 Nov - 2017 4 A
 
-174021 Internet of Things and Big Data Analytics 1 Jun - 2022 4 B-
-114031 Visual Analytics and User Experience Design 1 Jun - 2022 4 A-
-1T4070* Preparation for the Professional World 1 Jun - 2022 2 A
-T4010 Research Project 2 Dec - 2022 16 B+
-4011 Database Administration and Storage Systems 2 Nov - 2022 4 A-
-174041 Introduction to Information Security Analytics 2 Dec - 2022 4 A
+a code Module Title Semester Period Credits Grade
+7 173050* Employability Skills Development - Seminar 1 Jun - 2019 1 A
+SE3010 Software Engineering Process & Quality Management 1 Jun - 2019 4 A-
+SE3020 Distributed Systems 1 Jun - 2019 4 A
+SE3030 Software Architecture 1 Jun - 2019 4 B+
+SE3040 Application Frameworks 1 Jun - 2019 4 B+
+1T3110* Industry Placement 2 Oct - 2019 8 A-
+SE3050 User Experience Engineering 2 Oct - 2019 3 A-
+SE3060 Database Systems 2 Oct - 2019 4 C+
+SE3070 Case Studies in Software Engineering 2 Oct - 2019 4 C+
+SE3080 Software Project Management 2 Oct - 2019 3 B+
+
+Code | Module Title Semester Period Credits Grade
+1T4060 Machine Learning 1 Apr - 2020 4 A-
+114070* Preparation for the Professional World 1 Apr - 2020 2 A
+SE4010 Current Trends in Software Engineering 1 Jun - 2020 4 A-
+1T4010 Research Project 2 Oct - 2020 16 A
+SE4030 Secure Software Development 2 Oct - 2020 4 A
+S£4050 Deep Learning 2 Oct - 2020 4 A
 
