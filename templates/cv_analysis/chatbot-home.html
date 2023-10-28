@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
@@ -20,10 +20,10 @@
             color: #333;
         }
         #chatbox {
-        background-color: #fff;
+        background-color: #ffffff;
         border: 1px solid #ccc;
         border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
         max-width: 600px;
         margin: 20px auto;
         padding: 10px;
@@ -61,7 +61,7 @@
         #userInput {
             width: 70%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 5px solid #ccc;
             border-radius: 5px;
             margin-right: 10px;
             font-size: 16px;
@@ -108,7 +108,7 @@
 
     <nav>
         <div class="nav-logo-container">
-            <img src="static/images/Logo.png" alt="">
+            <img src="../../static/images/cv_analysis/Logo.png" alt="">
         </div>
         <div class="navbar-links-container">
             <a href="/">Home</a>
@@ -136,9 +136,23 @@
 
 
 
-    <h1>Rasa Chatbot Integration</h1>
-    <div id="chatbox">
-    </div>
+    <h1>Job Description Generation</h1>
+    <div class="container"  style="width: 100%;">
+        <div class="row" style="width: 100%;">
+          <div >
+            <!-- Column -->
+            <img src="../../static/images/cv_analysis/bot.jpg" alt="" style="width: 350px; ">
+          </div>
+          <div class="col">
+            <div id="chatbox">
+            </div>
+          </div>
+          <div >
+            <!-- Column -->
+          </div>
+        </div>
+      </div>
+    
     <div style="display: flex; justify-content: center; align-items: center;">
         <input type="text" id="userInput" placeholder="Type your message...">
         <button id="sendButton">Send</button>
@@ -148,10 +162,11 @@
     <div>
         <br>
         <br>
-    <p>Download the created Job descrption from here</p>
+        <div class="text-center mt-4">
+    <h4>Download the created Job descrption from here</h4>
     <a href="/download_pdf" download="output.pdf"><button class="download-button">Download PDF</button></a>
 
-
+</div>
     
 
 
