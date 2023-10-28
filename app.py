@@ -584,7 +584,7 @@ def compare():
 #------------LinkedIn job category ---------------------------------------------------------------------------------------------
 
 def scrape_linkedin_skills(linkedin_profile_url):
-    api_key = 'YMJ1T-ETnLHCCtrAvSE1Xg'
+    api_key = '9D-mKt3-m74E0Kacy5Z89A'
     api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
     headers = {'Authorization': 'Bearer ' + api_key}
 
@@ -611,9 +611,6 @@ def job_cat():
         if skills:
             #predicted_category = model.predict([skills])  #model takes a list of skills
             predicted_category = link_model.predict(fitted_vectorizer.transform(skills))
-
-            session['predicted_category'] = predicted_category
-
             result = f"Predicted Job Category: {predicted_category[0]}"
     return render_template('professional_skills/job_cat_form.html', result=result)
 
@@ -643,13 +640,13 @@ def analyze_sentiment_and_visualize(row):
             sentiment_distribution[1] += 1
         else:
             sentiment_distribution[2] += 1
-
+#--------------------------------------------------
     # Calculate positive percentage
-    positive_percentage = (sentiment_distribution[0] / sum(sentiment_distribution)) * 100
-
+    prepositive_percentage = (sentiment_distribution[0] / sum(sentiment_distribution)) * 100
+    positive_percentage = round(prepositive_percentage, 2)
     # Store positive percentage in the session
     session['positive_percentage'] = positive_percentage
-
+#-------------------------------------------------------
     # Create a single pie chart for sentiment distribution
     colors = ['blue', 'red', 'green']
     plt.figure()
@@ -677,6 +674,7 @@ def senti2():
     plot_data = None
     column_names = None
     row_content = None
+    positive_percentage = None
     
     if request.method == 'POST':
         # Get uploaded file
@@ -698,6 +696,7 @@ def senti2():
             column_names = last_row.index.tolist()
             plot_data = analyze_sentiment_and_visualize(last_row)
             row_content = last_row.values.tolist()
+            positive_percentage = session.get('positive_percentage', None) 
 
     return render_template('professional_skills/sentiment_results.html', plot_data=plot_data, column_names=column_names, row_content=row_content)
 
@@ -2054,21 +2053,21 @@ def calcFinalScore():
     jobrole = session.get('jobrole')
 
 # CV--------------------------------------------------------------------------------
-    cv_ranking = session.get('ranking')
+    # cv_ranking = session.get('ranking')
     
-    matching_percentages = [result['matching_percentage'] for result in cv_ranking]
-    highest_matching_percentage = max(matching_percentages)
+    # matching_percentages = [result['matching_percentage'] for result in cv_ranking]
+    # highest_matching_percentage = max(matching_percentages)
 
-    # Find the entry with the highest matching_percentage 
-    entry_with_highest_percentage = max( cv_ranking, key=lambda x: x["matching_percentage"] ) 
-    #Get the skills from the entry with the highest matching_percentage 
-    skills_with_highest_percentage = entry_with_highest_percentage.get("skills", [])
+    # # Find the entry with the highest matching_percentage 
+    # entry_with_highest_percentage = max( cv_ranking, key=lambda x: x["matching_percentage"] ) 
+    # #Get the skills from the entry with the highest matching_percentage 
+    # skills_with_highest_percentage = entry_with_highest_percentage.get("skills", [])
 
-    # Convert the list to a set to get unique words
-    unique_words = set(skills_with_highest_percentage)
+    # # Convert the list to a set to get unique words
+    # unique_words = set(skills_with_highest_percentage)
 
-    # Convert the set back to a list if needed
-    unique_words_list = list(unique_words)
+    # # Convert the set back to a list if needed
+    # unique_words_list = list(unique_words)
 
 # # GITHUB-------------------------------------------------------------
 #     percentage_scores = session.get('percentage_scores')
@@ -2105,8 +2104,8 @@ def calcFinalScore():
     ac_score= session.get('ac_score')
 
     #Without sandani's
-    return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, ac_score=ac_score, textarea_content="", slider_values="")
-
+    # return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, personality_score=personality_score, highest_matching_percentage=highest_matching_percentage, ac_score=ac_score, textarea_content="", slider_values="")
+    return render_template('final_score.html', predicted_category=predicted_category, positive_percentage=positive_percentage, textarea_content="", slider_values="")
     #With sandani's , once the token issue is solved.
     # return render_template('final_score.html', cand_name=cand_name, jobrole=jobrole, common_words=common_words, personality_score=personality_score, ac_score=ac_score, highest_matching_percentage=highest_matching_percentage, percentage_common=percentage_common, textarea_content="", slider_values="")
 
